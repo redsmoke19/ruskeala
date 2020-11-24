@@ -1,0 +1,38 @@
+.nav {
+    &__top {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        border-bottom: 1px solid #ededed;
+        padding: 13px 20px;
+        margin-bottom: 20px;
+    }
+    &__phone {
+        margin-left: 10px;
+    }
+}
+
+.social-nav {
+    padding: 0 20px;
+    display: flex;
+    &__link {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #7D7D7D;
+        display: block;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+    &__icon {
+        position: absolute;
+        fill: white;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

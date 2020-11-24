@@ -1,0 +1,11 @@
+@import "./sandwich/sandwich.scss";
+
+header { flex: 0 0 auto; }
+
+.header {
+    &__top {
+        display: flex;
+        justify-content: flex-end;
+        padding: 8px 20px;
+    }
+}
