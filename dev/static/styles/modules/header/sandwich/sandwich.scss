@@ -1,37 +1,36 @@
 .sandwich {
-    cursor: pointer;
-    height: 24px;
+  cursor: pointer;
+  height: 24px;
+  position: absolute;
+  width: 24px;
+  top: 11px;
+  left: 20px;
+  z-index: 2;
+  &__line {
+    background-color: #000000;
+    display: block;
+    height: 2px;
+    left: calc(50% - 9px);
+    top: calc(50% - 1px);
     position: absolute;
-    width: 24px;
-    top: 11px;
-    left: 20px;
-    &.is {
-        &-active {
-            .sandwich__line {
-                &--top {
-                    top: 10px;
-                    transform: rotate(45deg);
-                }
-                &--middle { opacity: 0; }
-                &--bottom {
-                    top: 10px;
-                    transform: rotate(-45deg);
-                }
-            }
-        }
+    transition: all linear .4s;
+    width: 18px;
+    border-radius: 3px;
+    &--top { transform: translateY(-5px); }
+    &--bottom { transform: translateY(5px); }
+  }
+  &.sandwich-open {
+    .sandwich__line {
+      &--middle {
+        background-color: transparent;
+        transform: translateX(70%);
+      }
+      &--top {
+        transform: rotate(-45deg);
+      }
+      &--bottom {
+        transform: rotate(45deg);
+      }
     }
-    &__line {
-        background-color: #000000;
-        display: block;
-        height: 2px;
-        left: 50%;
-        position: absolute;
-        transition: all linear .4s;
-        transform: translateX(-50%);
-        width: 18px;
-        border-radius: 3px;
-        &--top { top: 6px; }
-        &--middle { top: 11px; }
-        &--bottom { top: 16px; }
-    }
+  }
 }

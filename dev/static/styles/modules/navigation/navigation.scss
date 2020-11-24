@@ -1,38 +1,49 @@
 .nav {
-    &__top {
-        align-items: center;
-        display: flex;
-        justify-content: flex-end;
-        border-bottom: 1px solid #ededed;
-        padding: 13px 20px;
-        margin-bottom: 20px;
+  background-color: $white;
+  height: 100vh;
+  overflow: auto;
+  position: absolute;
+  pointer-events: none;
+  transform: translate(-100%, 0);
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1) 0s;
+  top: 0;
+  width: 100%;
+  &--open {
+    pointer-events: all;
+    transform: translate(0, 0);
+    z-index: 1;
+  }
+  &__phone {
+    align-items: center;
+    background-color: $white;
+    border-bottom: 1px solid #ededed;
+    display: flex;
+    font-family: $base-font;
+    font-size: 18px;
+    font-weight: 700;
+    justify-content: flex-end;
+    line-height: 22px;
+    left: 0;
+    margin-bottom: 20px;
+    padding: 13px 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    a {
+      color: $black;
+      margin-left: 10px;
+      text-decoration: none;
     }
-    &__phone {
-        margin-left: 10px;
-    }
+  }
+  &__social {
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+  &__menu {
+    padding: 0 30px;
+  }
 }
 
-.social-nav {
-    padding: 0 20px;
-    display: flex;
-    &__link {
-        position: relative;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: #7D7D7D;
-        display: block;
-    }
-    &__item {
-        &:not(:last-child) {
-            margin-right: 10px;
-        }
-    }
-    &__icon {
-        position: absolute;
-        fill: white;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
+@import "nav-social";
+@import "nav-menu";

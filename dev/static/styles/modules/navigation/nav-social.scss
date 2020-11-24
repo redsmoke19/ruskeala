@@ -1,0 +1,23 @@
+.social-nav {
+  display: flex;
+  &__link {
+    background-color: $grey-color;
+    border-radius: 50%;
+    display: block;
+    height: 40px;
+    position: relative;
+    width: 40px;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  &__icon {
+    fill: white;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
