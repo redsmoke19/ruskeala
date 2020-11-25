@@ -3,5 +3,7 @@ header.header
         a.header__logo-link(href="#" data-red="blue")
             +icon('logo-mobile', 'header-logo', '91', '30')
     .header__nav
-        include ./sandwich/sandwich
-        include ./../navigation/navigation
+        include ./../navigation/sandwich/sandwich
+        include ./../navigation/main-nav/navigation
+    .header__sub-nav
+        include ./../navigation/sub-nav/sub-navigation.pug

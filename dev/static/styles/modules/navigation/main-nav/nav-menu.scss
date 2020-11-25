@@ -8,6 +8,7 @@
     }
   }
   &__link {
+    border-radius: 35px;
     color: $black;
     cursor: pointer;
     display: inline-block;
@@ -15,13 +16,23 @@
     padding: 10px;
     text-decoration: none;
     text-transform: uppercase;
+    transition: all linear 0.15s;
     &--active {
       background-color: $orange-color;
       border-radius: 35px;
       color: $white;
       padding: 10px 15px;
       svg {
-        fill: white;
+        fill: $white;
+        transition: all linear 0.15s;
+      }
+    }
+    &:hover {
+      background-color: $orange-color;
+      border-radius: 35px;
+      color: $white;
+      svg {
+        fill: $white;
       }
     }
   }
@@ -34,7 +45,15 @@
 }
 
 .menu-sub-nav {
-  padding: 10px 10px 0 10px;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  transition: all linear 0.15s;
+  opacity: 0;
+  &--open {
+    opacity: 1;
+    margin-top: 10px;
+  }
   &__column {
     &:not(:last-child) {
       margin-bottom: 10px;

@@ -1,7 +1,7 @@
 .nav {
   background-color: $white;
   height: 100vh;
-  overflow: auto;
+  overflow: hidden;
   position: absolute;
   pointer-events: none;
   transform: translate(-100%, 0);
@@ -9,6 +9,7 @@
   top: 0;
   width: 100%;
   &--open {
+    overflow: auto;
     pointer-events: all;
     transform: translate(0, 0);
     z-index: 1;
