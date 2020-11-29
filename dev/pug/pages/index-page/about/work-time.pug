@@ -1,0 +1,57 @@
+section.work-time
+	.container
+		.work-time__content
+			h2.work-time__title.section__title Часы работы
+			.work-time__table.timetable
+				.timetable__top
+					.timetable__title Территория парка
+					.timetable__restrictions
+						+icon('icon-disabled-person', 'timetable__icon timetable__icon--disabled-person', '14', '20')
+						span.timetable__zero-plus 0+
+				.timetable__middle
+					.timetable__left
+						+icon('icon-sunny-clear', 'timetable__icon timetable__icon--sunny-clear', '20', '20')
+						span.timetable__summer Лето
+					.timetable__center
+						span.timetable__week Ежедневно
+					.timetable__right
+						span.timetable__work-time 10:00 - 19:00
+						span.timetable__work-time 10:00 - 21:00
+				.timetable__middle
+					.timetable__left
+						+icon('icon-autumn', 'timetable__icon timetable__icon--autumn', '20', '20')
+						span.timetable__summer Осень
+					.timetable__center
+						span.timetable__week Пн-Чт, Вс:
+						span.timetable__week Пт-Сб:
+					.timetable__right
+						span.timetable__work-time 10:00 - 19:00
+						span.timetable__work-time 10:00 - 21:00
+				.timetable__middle
+					.timetable__left
+						+icon('icon-ice-snow', 'timetable__icon timetable__icon--ice-snow', '20', '20')
+						span.timetable__summer Зима
+					.timetable__center
+						span.timetable__week Пн-Чт, Вс:
+						span.timetable__week Пт-Сб:
+					.timetable__right
+						span.timetable__work-time 10:00 - 19:00
+						span.timetable__work-time 10:00 - 21:00
+				.timetable__middle
+					.timetable__left
+						+icon('icon-spring', 'timetable__icon timetable__icon--spring', '20', '20')
+						span.timetable__summer Весна
+					.timetable__center
+						span.timetable__week Пн-Чт, Вс:
+						span.timetable__week Пт-Сб:
+					.timetable__right
+						span.timetable__work-time 10:00 - 19:00
+						span.timetable__work-time 10:00 - 21:00
+				.timetable__bottom
+					+icon('icon-attention', 'timetable__icon timetable__icon--attention', '18', '18')
+					p.timetable__attention Кассы закрываются за час до завершения работы парка.
+			.work-time__bottom
+				+icon('icon-warning', 'work-time__icon work-time__icon--warning', '22', '19')
+				p.work-time__attention 7 сентября парк будет работать до 19:00 в связи с проведением  музыкального концерта
+				a.work-time__link(href="#") Подробнее
+			button.button.work-time__button Расписание всех услуг

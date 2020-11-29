@@ -1,6 +1,19 @@
 extends layout/main
 
 block variables
-	-var title = 'Главная страница'
+	-var title = 'Парк Рускеала. Главная страница'
+	-var pageClass = 'index-page'
 
 block content
+	main(class=pageClass)
+		include pages/index-page/hero
+		include pages/index-page/about/about
+		include pages/index-page/excursions-index
+		include pages/index-page/entertainment
+		include pages/index-page/food-souvenirs
+		include pages/index-page/piipun-hotel
+		include pages/index-page/gallery-ruskeala
+		include modules/map/map
+		include pages/index-page/reviews
+		include pages/index-page/media-review
+		include pages/index-page/our-partners

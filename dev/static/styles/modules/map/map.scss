@@ -1,0 +1,38 @@
+.map {
+  margin-bottom: 60px;
+  //background: url("../images/content/map-ruskeala1x.png") no-repeat center;
+  //background-size: auto 587px;
+  &__content {
+    background-color: $white;
+    box-shadow: 0 0 50px rgba(48, 51, 129, 0.15);
+    margin-top: -260px;
+    position: relative;
+    padding: 20px;
+    pointer-events: all;
+    z-index: 11111;
+  }
+  &__title {
+    color: rgba($black, 0.8);
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+  &__location {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  &__icon {
+    fill: $icon-light-grey-color;
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+  &__address {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  &__text {
+    font-size: 13px;
+    line-height: 23px;
+    margin-bottom: 20px;
+  }
+}

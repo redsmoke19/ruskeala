@@ -1,0 +1,18 @@
+form.confirm-form
+	.confirm-form__inner
+		+icon('icon-form-user', 'confirm-form__icon confirm-form__icon--user', '20', '20')
+		input.confirm-form__input(type="text" name="youName" placeholder="Имя Фамилия *" required)
+	.confirm-form__inner
+		+icon('icon-form-phone', 'confirm-form__icon confirm-form__icon--phone', '20', '20')
+		input.confirm-form__input(type="text" name="youPhone" placeholder="Номер телефона *" required)
+	.confirm-form__inner
+		+icon('icon-form-mail', 'confirm-form__icon confirm-form__icon--mail', '20', '15')
+		input.confirm-form__input(type="text" name="youMail" placeholder="E-mail *" required)
+	.confirm-form__inner
+		+icon('icon-form-mail', 'confirm-form__icon confirm-form__icon--mail', '20', '15')
+		input.confirm-form__input(type="text" name="youConfirmMail" placeholder="Подтвердите e-mail *" required)
+	.confirm-form__accept
+		input.confirm-form__checkbox.visually-hidden(type="checkbox" id="confirm-form__checkbox" required)
+		label.confirm-form__label(for="confirm-form__checkbox") Согласен с условиями
+			a(href="#") пользовательского соглашения
+	button.button.confirm-form__button(type="submit") Заказать

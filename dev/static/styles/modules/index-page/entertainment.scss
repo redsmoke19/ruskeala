@@ -1,0 +1,58 @@
+.entertainment {
+  .container { padding-right: 0; }
+  margin-bottom: 60px;
+  &__title { margin-bottom: 20px; }
+  &__item {
+    &--enter-park {
+      background: linear-gradient(0deg, rgba(2, 25, 43, 0.5) 0%, rgba(16, 13, 1, 0) 71.17%), url("../images/content/enter-park-entertainment-mobile1x.png") no-repeat center;
+      background-size: cover;
+      @media screen and (-webkit-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background: linear-gradient(0deg, rgba(2, 25, 43, 0.5) 0%, rgba(16, 13, 1, 0) 71.17%), url("../images/content/enter-park-entertainment-mobile2x.png") no-repeat center;
+        background-size: cover;
+      }
+    }
+    &--boat-trip-lake {
+      background: linear-gradient(0deg, rgba(2, 25, 43, 0.5) 0%, rgba(16, 13, 1, 0) 71.17%), url("../images/content/boat-trip-lake-entertainment-mobile1x.png") no-repeat center;
+      background-size: cover;
+      @media screen and (-webkit-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background: linear-gradient(0deg, rgba(2, 25, 43, 0.5) 0%, rgba(16, 13, 1, 0) 71.17%), url("../images/content/boat-trip-lake-entertainment-mobile2x.png") no-repeat center;
+        background-size: cover;
+      }
+    }
+    &--boat-trip-plot {
+      background: linear-gradient(0deg, rgba(2, 25, 43, 0.5) 0%, rgba(16, 13, 1, 0) 71.17%), url("../images/content/boat-trip-plot-entertainment-mobile1x.png") no-repeat center;
+      background-size: cover;
+      @media screen and (-webkit-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background: linear-gradient(0deg, rgba(2, 25, 43, 0.5) 0%, rgba(16, 13, 1, 0) 71.17%), url("../images/content/boat-trip-plot-entertainment-mobile2x.png") no-repeat center;
+        background-size: cover;
+      }
+    }
+    &--exposition {
+      background: linear-gradient(0deg, rgba(2, 25, 43, 0.5) 0%, rgba(16, 13, 1, 0) 71.17%), url("../images/content/exposition-entertainment-mobile1x.png") no-repeat center;
+      background-size: cover;
+      @media screen and (-webkit-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background: linear-gradient(0deg, rgba(2, 25, 43, 0.5) 0%, rgba(16, 13, 1, 0) 71.17%), url("../images/content/exposition-entertainment-mobile2x.png") no-repeat center;
+        background-size: cover;
+      }
+    }
+    &--trolley {
+      background: linear-gradient(0deg, rgba(2, 25, 43, 0.5) 0%, rgba(16, 13, 1, 0) 71.17%), url("../images/content/trolley-entertainment-mobile1x.png") no-repeat center;
+      background-size: cover;
+      @media screen and (-webkit-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background: linear-gradient(0deg, rgba(2, 25, 43, 0.5) 0%, rgba(16, 13, 1, 0) 71.17%), url("../images/content/trolley-entertainment-mobile2x.png") no-repeat center;
+        background-size: cover;
+      }
+    }
+    &--secret-paths {
+      background: linear-gradient(0deg, rgba(2, 25, 43, 0.5) 0%, rgba(16, 13, 1, 0) 71.17%), url("../images/content/secret-paths-entertainment-mobile1x.png") no-repeat center;
+      background-size: cover;
+      @media screen and (-webkit-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background: linear-gradient(0deg, rgba(2, 25, 43, 0.5) 0%, rgba(16, 13, 1, 0) 71.17%), url("../images/content/secret-paths-entertainment-mobile2x.png") no-repeat center;
+        background-size: cover;
+      }
+    }
+  }
+  &__button {
+    background-color: $button-light-blue-color;
+  }
+}

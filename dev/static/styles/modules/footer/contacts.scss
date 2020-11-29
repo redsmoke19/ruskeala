@@ -1,0 +1,83 @@
+.contacts-footer {
+  font-size: 15px;
+  line-height: 25px;
+  &__picture {
+    display: block;
+    height: 520px;
+    overflow: inherit;
+  }
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  &__content {
+    position: relative;
+    padding-top: 95px;
+  }
+  &__logo {
+    left: 30px;
+    position: absolute;
+    top: -95px;
+  }
+  &__phone {
+    align-items: center;
+    display: flex;
+    margin-bottom: 25px;
+  }
+  &__phone-link {
+    color: $black;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  &__location {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  &__icon--location {
+    fill: $icon-light-grey-color;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+  &__address {
+    padding-left: 34px;
+  }
+  &__link {
+    display: block;
+    text-decoration: underline;
+    &:first-of-type { margin-bottom: 10px; }
+  }
+  &__reserved { margin-top: 20px; }
+}
+
+.social-footer {
+  align-items: center;
+  display: flex;
+  margin-bottom: 20px;
+  &__item {
+    &:not(:last-child) { margin-right: 10px; }
+  }
+  &__link {
+    border-radius: 50%;
+    display: inline-block;
+    height: 40px;
+    position: relative;
+    width: 40px;
+    &--vk { background-color: $vk-color; }
+    &--fb { background-color: $fb-color; }
+    &--inst { background-color: $inst-color; }
+    &--tripadvisor { background-color: $tripadvisor-color; }
+  }
+  &__icon {
+    fill: $white;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

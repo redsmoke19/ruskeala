@@ -1,0 +1,12 @@
+.slider {
+  &__button {
+    display: inline-block;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    &--next { transform: rotate(180deg); }
+  }
+  &__icon {
+    &--white { fill: $white; }
+  }
+}

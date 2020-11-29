@@ -1,0 +1,70 @@
+.confirm-form {
+  background: url("../images/common/confirm-form-bg1x.png") no-repeat center;
+  background-size: cover;
+  padding: 40px 20px 50px;
+  &__inner {
+    position: relative;
+    margin-bottom: 22px;
+  }
+  &__icon {
+    fill: $input-color;
+    left: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__input {
+    background-color: transparent;
+    border: 1px solid $black-green-color;
+    border-radius: 5px;
+    color: $input-color;
+    font-weight: 500;
+    padding: 15px 20px 15px 50px;
+    width: 100%;
+  }
+  &__accept {
+    display: flex;
+    margin-bottom: 22px;
+    position: relative;
+  }
+  &__checkbox {
+    +label::before {
+      border: 3px solid $input-color;
+      border-radius: 5px;
+      content: "";
+      height: 24px;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+    }
+  }
+  &__checkbox:checked+label::after {
+    position: absolute;
+    content: "";
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 13px;
+    height: 11px;
+    background-image: url("../images/common/icon-checked-confirm-form.svg");
+  }
+  &__label {
+    color: $input-color;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    padding-left: 47px;
+    a {
+      color: $input-color;
+      display: block;
+      text-decoration: underline;
+      transition: all ease-out .15s;
+      &:hover { opacity: .8;}
+    }
+  }
+  &__button {
+    width: 100%;
+  }
+}

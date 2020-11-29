@@ -1,0 +1,19 @@
+section.write-us
+	.container
+		.write-us__content
+			h2.write-us__title.section__title Напишите нам
+			p.write-us__text Оставьте свое сообщение в этой форме, мы получим его на e-mail и обязательно с вами свяжемся!
+			form.write-us__form.write-form
+				.write-form__top
+					.write-form__field
+						+icon('icon-form-user', 'write-form__icon write-form__icon--user', '20', '20')
+						input.write-form__input(type="text" name="writeFormName" placeholder="Имя Фамилия *")
+					.write-form__field
+						+icon('icon-form-mail', 'write-form__icon write-form__icon--mail', '20', '15')
+						input.write-form__input(type="text" name="writeFormMail" placeholder="E-mail *")
+				.write-form__field
+					+icon('icon-form-message', 'write-form__icon write-form__icon--message', '21', '21')
+					textarea.write-form__input.write-form__input--textarea(name="writeFormName" placeholder="Сообщение" rows="1")
+				.write-form__bottom
+					p.write-form__consent Нажимая кнопку "Отправить" вы соглашаетесь с  и даёте согласие на обработку персональных данных.
+					button.write-form__send.button(type="submit") Отправить

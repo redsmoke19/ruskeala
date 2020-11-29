@@ -4,6 +4,7 @@ header { flex: 0 0 auto; }
 
 .header {
   position: relative;
+  padding-bottom: 10px;
   &__top {
     display: flex;
     justify-content: flex-end;

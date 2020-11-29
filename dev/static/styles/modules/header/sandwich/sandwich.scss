@@ -5,7 +5,7 @@
   width: 24px;
   top: 11px;
   left: 20px;
-  z-index: 2;
+  z-index: 3;
   &__line {
     background-color: #000000;
     display: block;
@@ -20,6 +20,7 @@
     &--bottom { transform: translateY(5px); }
   }
   &.sandwich-open {
+    position: fixed;
     .sandwich__line {
       &--middle {
         background-color: transparent;
@@ -34,3 +35,5 @@
     }
   }
 }
+
+

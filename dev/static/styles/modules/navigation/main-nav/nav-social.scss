@@ -6,7 +6,11 @@
     display: block;
     height: 40px;
     position: relative;
+    transition: all ease-out .15s;
     width: 40px;
+    &:hover {
+      background-color: $orange-dark-color;
+    }
   }
   &__item {
     &:not(:last-child) {

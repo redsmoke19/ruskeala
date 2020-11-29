@@ -1,0 +1,92 @@
+.buy-ticket {
+  margin-bottom: 60px;
+  .container { padding-right: 0; }
+  &__header {
+    display: flex;
+    flex-direction: column;
+  }
+  &__inner {
+    background-color: $white;
+    box-shadow: 0 0 50px rgba(48, 51, 129, 0.15);
+    border: 1px solid $border-middle-grey-color;
+    margin-bottom: 20px;
+    padding: 20px 0 20px 20px;
+  }
+  &__note {
+    color: rgba($black, 0.8);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-right: 20px;
+  }
+  &__month {
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  &__footer {
+    padding-right: 20px;
+  }
+  &__button {
+    width: 100%;
+  }
+}
+
+.choose-ticket {
+  display: flex;
+  &__item {
+    align-items: center;
+    border: 1px solid $border-dark-grey-color;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    //flex-basis: 70%;
+    padding: 20px;
+    width: 180px;
+  }
+  &__top {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  &__date {
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  &__seats {
+    color: $text-color-grey;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+  }
+  &__name {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  &__button {
+    background-color: transparent;
+    color: $orange-dark-color;
+    border: 1px solid $orange-color;
+    padding: 7px 25px;
+    &:hover {
+      background-color: $orange-dark-color;
+      color: $white;
+    }
+  }
+}

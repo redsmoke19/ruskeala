@@ -1,0 +1,50 @@
+section.enter-ticket
+	.enter-ticket__wrapper
+		button.enter-ticket__close
+			+icon('icon-small-close', 'enter-ticket__icon enter-ticket__icon--close', '18', '18')
+		h2.enter-ticket__title Входной билет
+		span.enter-ticket__selected-date 1 августа, суббота
+		.enter-ticket__day
+			.enter-ticket__date.datepicker__wrapper.datepicker__wrapper--enter-ticket
+				input(type="text").enter-ticket__datepicker.datepicker__input
+				+icon('icon-calendar', 'datepicker__icon datepicker__icon--enter-ticket', '18', '20')
+			include time-select/time-select
+		.enter-ticket__table.select-ticket
+			.select-ticket__row
+				.select-ticket__left
+					span.select-ticket__age Взрослый
+					span.select-ticket__price 550.00
+				.select-ticket__right
+					button.select-ticket__button.select-ticket__button--minus(aria-lable="убрать один билет")
+					span.select-ticket__current 0
+					button.select-ticket__button.select-ticket__button--plus(aria-lable="добавить один билет")
+			.select-ticket__row
+				.select-ticket__left
+					span.select-ticket__age Лица 60 лет и старше
+					span.select-ticket__price 250.00
+				.select-ticket__right
+					button.select-ticket__button.select-ticket__button--minus(aria-lable="убрать один билет")
+					span.select-ticket__current 0
+					button.select-ticket__button.select-ticket__button--plus(aria-lable="добавить один билет")
+			.select-ticket__row
+				.select-ticket__left
+					span.select-ticket__age Студент
+					span.select-ticket__price 250.00
+				.select-ticket__right
+					button.select-ticket__button.select-ticket__button--minus(aria-lable="убрать один билет")
+					span.select-ticket__current 0
+					button.select-ticket__button.select-ticket__button--plus(aria-lable="добавить один билет")
+			.select-ticket__row
+				.select-ticket__left
+					span.select-ticket__age Школьникам
+					span.select-ticket__price 150.00
+				.select-ticket__right
+					button.select-ticket__button.select-ticket__button--minus(aria-lable="убрать один билет")
+					span.select-ticket__current 0
+					button.select-ticket__button.select-ticket__button--plus(aria-lable="добавить один билет")
+		p.enter-ticket__total Итого: <span class="js-enter-ticket__total">1850,00</span>
+		.enter-ticket__accept
+			input.enter-ticket__checkbox(type="checkbox" id="enter-ticket__checkbox" checked)
+			label.enter-ticket__label(for="enter-ticket__checkbox") Купить входной билет в парк
+	.enter-ticket__form
+		include form-confirm/form-confirm

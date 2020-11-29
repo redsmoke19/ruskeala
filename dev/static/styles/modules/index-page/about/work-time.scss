@@ -1,0 +1,116 @@
+.work-time {
+  padding: 40px 0;
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__bottom {
+    background-color: $bg-grey-color;
+    margin-bottom: 20px;
+    padding: 20px 20px 20px 54px;
+    position: relative;
+  }
+  &__icon {
+    &--warning {
+      fill: $yellow-light-color;
+      position: absolute;
+      left: 20px;
+    }
+  }
+  &__attention {
+    color: $black-color-middle;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    margin-bottom: 5px;
+  }
+  &__link {
+    color: $orange-dark-color;
+    display: inline-block;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all ease-out .15s;
+    &:hover { color: rgba($orange-color, 0.7); }
+  }
+  &__button {
+    width: 100%;
+  }
+}
+
+.timetable {
+  border: 2px solid $border-dark-grey-color;
+  box-shadow: 0 0 50px rgba(48, 51, 129, 0.15);
+  padding: 20px;
+  &__top {
+    align-items: center;
+    display: flex;
+    margin-bottom: 23px;
+  }
+  &__restrictions {
+    margin-left: auto;
+  }
+  &__icon {
+    fill: transparent;
+    stroke-width: 2px;
+    flex-shrink: 0;
+    &--disabled-person { fill: $light-grey-color; }
+    &--sunny-clear { stroke: $yellow-color; }
+    &--autumn { stroke: $red-color; }
+    &--ice-snow { stroke: $blue-color; }
+    &--spring { stroke: $green-color; }
+    &--attention { fill: $red-dark-color; }
+  }
+  &__title {
+    color: $black-color-middle;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  &__zero-plus {
+    color: $light-grey-color;
+    font-size: 11px;
+    line-height: 13px;
+    border: 2px solid $light-grey-color;
+    border-radius: 50%;
+    margin-left: 15px;
+    padding: 3px;
+  }
+  &__middle {
+    align-items: center;
+    display: flex;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  &__left {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 23%;
+  }
+  &__center {
+    display: flex;
+    flex-direction: column;
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+  }
+  &__week { font-weight: 700; }
+  &__bottom {
+    align-items: flex-start;
+    border-top: 1px solid $border-middle-grey-color;
+    display: flex;
+    padding-top: 20px;
+  }
+  &__attention {
+    color: $black-color-middle;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    margin-left: 8px;
+  }
+}

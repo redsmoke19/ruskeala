@@ -1,7 +1,37 @@
-@mixin box($width,$height: $width) {
-  width: $width;
-  height: $height;
+@mixin confirm-checkbox-label($color-text, $border-color, $font-weight, $margin-right) {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  + label {
+    align-items: center;
+    color: $color-text;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: $font-weight;
+    display: flex;
+    user-select: none;
+    &::before {
+      content: '';
+      cursor: pointer;
+      background-repeat: no-repeat;
+      background-position: center center;
+      border: 3px solid $border-color;
+      border-radius: 5px;
+      display: inline-block;
+      height: 24px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      margin-right: $margin-right;
+      width: 24px;
+    }
+  }
 }
+
+@mixin confirm-checkbox-checked($url, $size) {
+  background-image: url("../images/common/icon-checked.svg");
+  background-size: 13px 11px;
+}
+
 @mixin cover-background {
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,13 +44,13 @@ $units: 1px !default;
     @media screen and (max-width: if(unitless($res-first), ($res-first - 1) *$units, $res-first)) {
       @content;
     }
-  }
-  @else if $res-first < $res-last {
+  } @else if $res-first < $res-last {
     @media screen and (min-width: if(unitless($res-first), $res-first*$units, $res-first)) and (max-width: if(unitless($res-last), $res-last*$units, $res-last)) {
       @content;
     }
   }
 }
+
 @mixin min-screen($res) {
   @media screen and (min-width: if(unitless($res), $res*$units, $res)) {
     @content;

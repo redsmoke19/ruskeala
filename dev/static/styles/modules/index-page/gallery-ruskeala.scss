@@ -1,0 +1,16 @@
+.gallery-ruskeala {
+  margin-bottom: 60px;
+  .container { padding-right: 0; }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__picture {
+    width: auto;
+  }
+  &__inner {
+    margin-bottom: 20px;
+  }
+  &__button {
+    width: 100%;
+  }
+}

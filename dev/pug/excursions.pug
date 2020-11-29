@@ -1,0 +1,9 @@
+extends layout/main
+
+block variables
+	-var title = 'Экскурсии по парку Рускеала'
+	-var pageClass = 'excursions-page'
+
+block content
+	main(class=pageClass)
+		include pages/excursions-page/excursions

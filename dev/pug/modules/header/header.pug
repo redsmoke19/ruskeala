@@ -1,6 +1,6 @@
 header.header
     .header__top
-        a.header__logo-link(href="#" data-red="blue")
+        a.header__logo-link(href=pageClass === "index-page" ? false : "index.html" data-red="blue")
             +icon('logo-mobile', 'header-logo', '91', '30')
     .header__nav
         include ./../navigation/sandwich/sandwich

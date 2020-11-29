@@ -1,0 +1,65 @@
+section.buy-ticket
+	.container
+		.buy-ticket__content
+			.buy-ticket__header
+				h2.buy-ticket__title.section__title Купить билет
+				span.buy-ticket__note в парк Рускеала
+			.buy-ticket__inner
+				.buy-ticket__top
+					.buy-ticket__date.datepicker__wrapper.datepicker__wrapper--buy-ticket
+						input(type="text").buy-ticket__datepicker.datepicker__input
+						+icon('icon-calendar', 'datepicker__icon datepicker__icon--enter-ticket', '18', '20')
+					span.buy-ticket__month Август
+				ul.buy-ticket__list.choose-ticket.swiper-container
+					.swiper-wrapper
+						li.choose-ticket__item.swiper-slide
+							.choose-ticket__top
+								span.choose-ticket__date 1 августа, Сб
+								span.choose-ticket__seats Мест: 100
+							.choose-ticket__bottom
+								span.choose-ticket__name Входной билет
+								button.button.choose-ticket__button Купить
+						li.choose-ticket__item.swiper-slide
+							.choose-ticket__top
+								span.choose-ticket__date 2 августа, Вс
+								span.choose-ticket__seats Мест: 100
+							.choose-ticket__bottom
+								span.choose-ticket__name Входной билет
+								button.button.choose-ticket__button Купить
+						li.choose-ticket__item.swiper-slide
+							.choose-ticket__top
+								span.choose-ticket__date 3 августа, Пн
+								span.choose-ticket__seats Мест: 100
+							.choose-ticket__bottom
+								span.choose-ticket__name Входной билет
+								button.button.choose-ticket__button Купить
+						li.choose-ticket__item.swiper-slide
+							.choose-ticket__top
+								span.choose-ticket__date 4 августа, Вт
+								span.choose-ticket__seats Мест: 100
+							.choose-ticket__bottom
+								span.choose-ticket__name Входной билет
+								button.button.choose-ticket__button Купить
+						li.choose-ticket__item.swiper-slide
+							.choose-ticket__top
+								span.choose-ticket__date 5 августа, Ср
+								span.choose-ticket__seats Мест: 100
+							.choose-ticket__bottom
+								span.choose-ticket__name Входной билет
+								button.button.choose-ticket__button Купить
+						li.choose-ticket__item.swiper-slide
+							.choose-ticket__top
+								span.choose-ticket__date 6 августа, Чт
+								span.choose-ticket__seats Мест: 100
+							.choose-ticket__bottom
+								span.choose-ticket__name Входной билет
+								button.button.choose-ticket__button Купить
+						li.choose-ticket__item.swiper-slide
+							.choose-ticket__top
+								span.choose-ticket__date 7 августа, Пт
+								span.choose-ticket__seats Мест: 100
+							.choose-ticket__bottom
+								span.choose-ticket__name Входной билет
+								button.button.choose-ticket__button Купить
+			.buy-ticket__footer
+				button.buy-ticket__button.button Правила заказа, оплаты и получения билетов

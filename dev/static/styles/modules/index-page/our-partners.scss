@@ -1,0 +1,26 @@
+.our-partners {
+  margin-bottom: 80px;
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__list {
+    margin-bottom: 40px;
+  }
+  &__img {
+    margin: 0 auto;
+  }
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    .swiper-pagination-bullet {
+      background: $grey-color;
+      height: 15px;
+      opacity: 1;
+      width: 15px;
+      &:not(:last-child) { margin-right: 30px; }
+    }
+    .swiper-pagination-bullet-active {
+      background-color: $bg-dark-red;
+    }
+  }
+}

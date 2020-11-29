@@ -1,0 +1,35 @@
+.button {
+  border: none;
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: $white;
+  background-color: $orange-dark-color;
+  padding: 10px 30px;
+  border-radius: 54px;
+  cursor: pointer;
+  transition: all ease-out .15s;
+  &:hover {
+    color: $border-grey-color;
+    background-color: rgba($orange-color, 0.7);
+  }
+  &--transparent {
+    background-color: transparent;
+    border: 2px solid $white;
+    &:hover {
+      background-color: transparent;
+      border-color: rgba($white, 0.7);
+      color: $border-grey-color;
+    }
+  }
+  &--orange-transparent {
+    color: $orange-dark-color;
+    background-color: transparent;
+    border: 2px solid $orange-dark-color;
+    &:hover {
+      color: $white;
+      background-color: $orange-dark-color;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.index-page {
+  &__bg-item {
+    border-radius: 10px;
+    height: 235px;
+    padding: 13px;
+    position: relative;
+    width: 235px;
+    &::before {
+      background-color: rgba($black, 0.4);
+      bottom: 0;
+      content: "";
+      height: 104px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+    &::after {
+      background-color: rgba($black, 0.4);
+      content: "";
+      position: absolute;
+      height: 40%;
+      width: 55px;
+      left: 0;
+      bottom: 104px;
+    }
+  }
+  &__bg-inner {
+    align-items: flex-start;
+    border: 1px solid rgba($white, 0.5);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    padding: 24px 17px;
+    position: relative;
+    z-index: 1;
+  }
+  &__bg-button {
+    border-radius: 5px;
+    color: $white;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    margin-bottom: 12px;
+    padding: 10px;
+    text-decoration: none;
+  }
+  &__bg-name {
+    color: $white;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 20px;
+  }
+}
+
+@import "hero";
+@import "about/work-time";
+@import "about/buy-ticket";
+@import "excursions-index";
+@import "entertainment";
+@import "food-souvenirs";
+@import "piipun-hotel";
+@import "gallery-ruskeala";
+@import "reviews";
+@import "media-reviews";
+@import "our-partners";

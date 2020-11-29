@@ -1,0 +1,62 @@
+.hero {
+  background: #181818 url("../images/common/hero-bg1x.png") no-repeat center;
+  background-size: cover;
+  color: $white;
+  padding: 30px 0 40px;
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 39px;
+    margin-bottom: 10px;
+  }
+  &__note {
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 36px;
+  }
+  &__subtitle {
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    margin-bottom: 20px;
+  }
+  &__button {
+    font-size: 16px;
+    line-height: 26px;
+    padding: 10px 20px;
+  }
+}
+
+.hero-advantages {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  &__item {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    &:not(:last-child) { margin-bottom: 30px; }
+  }
+  &__icon {
+    fill: transparent;
+    flex-shrink: 0;
+    margin-right: 30px;
+    stroke: $white;
+    stroke-width: 2px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

@@ -1,0 +1,56 @@
+.reviews {
+  margin-bottom: 60px;
+  &__img {
+    height: auto;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  &__title {
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+.feedback {
+  margin-bottom: 20px;
+  &__item {
+    display: flex;
+    font-size: 13px;
+    line-height: 16px;
+    flex-direction: column;
+  }
+  &__top {
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+  }
+  &__img {
+    margin-right: 20px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+  &__name {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 5px;
+  }
+  &__date {
+    color: $text-color-dark-grey;
+  }
+  &__text {
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+  &__note {
+    color: $text-color-dark-grey;
+    font-style: italic;
+  }
+  &__button {
+    &--next { left: 52px; }
+    &--prev { margin-right: 20px; }
+  }
+}

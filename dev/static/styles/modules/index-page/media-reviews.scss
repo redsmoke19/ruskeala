@@ -1,0 +1,27 @@
+.media-reviews {
+  margin-bottom: 60px;
+  &__text {
+    margin-bottom: 0;
+  }
+  &__list {
+    margin-bottom: 20px;
+  }
+  &__item {
+    display: flex;
+    font-size: 13px;
+    line-height: 16px;
+    flex-direction: column;
+  }
+  &__button {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    &--next {
+      transform: rotate(180deg);
+      left: 52px;
+    }
+    &--prev {
+      margin-right: 20px;
+    }
+  }
+}

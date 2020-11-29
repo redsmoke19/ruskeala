@@ -1,0 +1,50 @@
+.write-us {
+  margin-bottom: 40px;
+  &__title {
+    margin-bottom: 15px;
+  }
+  &__text {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+
+.write-form {
+  &__field {
+    position: relative;
+  }
+  &__icon {
+    fill: $icon-light-grey-color;
+    position: absolute;
+    top: calc(50% - 2px);
+    transform: translateY(-50%);
+    &--message { top: 26px; }
+  }
+  &__input {
+    color: $black;
+    border: none;
+    border-bottom: 2px solid $border-grey-color;
+    font-weight: 700;
+    padding: 15px 20px 15px 34px;
+    width: 100%;
+    &::placeholder {
+      color: $placeholder-grey-color;
+    }
+    &--textarea {
+      height: 56px;
+      min-height: 56px;
+      resize: vertical;
+    }
+  }
+  &__bottom {
+    margin-top: 15px;
+  }
+  &__consent {
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 15px;
+  }
+  &__send {
+    width: 100%;
+  }
+}
