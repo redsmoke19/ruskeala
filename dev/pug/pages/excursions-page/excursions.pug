@@ -1,65 +1,198 @@
 section.excursions
 	h1.visually-hidden Страница с возможными экскурсиями в парке Рускеала
-	.excursions__images.swiper-container.excursions__slider--canyon
-		ul.excursions__image-list.excursions-images.swiper-wrapper
-			li.excursions-images__item.swiper-slide
-				picture.excursions__picture
-					//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-					//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
-					//source(media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.png 1x, static/images/content/index-can-desktop2x.png 2x")
-					img.excursions__img(src="static/images/content/excursions/canyon-1-mobile1x.png" srcset="static/images/content/excursions/canyon-1-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон")
-			li.excursions-images__item.swiper-slide
-				picture.excursions__picture
-					//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-					//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
-					//source(media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.png 1x, static/images/content/index-can-desktop2x.png 2x")
-					img.excursions__img(src="static/images/content/excursions/canyon-2-mobile1x.png" srcset="static/images/content/excursions/canyon-2-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон")
-			li.excursions-images__item.swiper-slide
-				picture.excursions__picture
-					//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-					//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
-					//source(media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.png 1x, static/images/content/index-can-desktop2x.png 2x")
-					img.excursions__img(src="static/images/content/excursions/canyon-3-mobile1x.png" srcset="static/images/content/excursions/canyon-3-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон")
-			li.excursions-images__item.swiper-slide
-				picture.excursions__picture
-					//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-					//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
-					//source(media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.png 1x, static/images/content/index-can-desktop2x.png 2x")
-					img.excursions__img(src="static/images/content/excursions/canyon-4-mobile1x.png" srcset="static/images/content/excursions/canyon-4-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон")
-		.slider__button.slider__button--prev.excursions__slider-button.excursions__slider-button--prev
-			+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '30', '30')
-		.slider__button.slider__button--next.excursions__slider-button.excursions__slider-button--next
-			+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--next', '30', '30')
-	.container
-		.excursions__content
-			span.excursions__sub-title Экскурсия
-			h2.excursions__title «Мраморный каньон»
-			ul.excursions__info.excursion-info
-				li.excursion-info__item
-					+icon('icon-chronometer', 'excursion-info__icon excursion-info__icon--chrono', '24', '24')
-					span.excursion-info__limit 90 мин.
-				li.excursion-info__item
-					+icon('icon-route', 'excursion-info__icon excursion-info__icon--route', '24', '24')
-					span.excursion-info__limit 1600 м.
-				li.excursion-info__item
-					+icon('icon-baby-boy', 'excursion-info__icon excursion-info__icon--baby-boy', '24', '24')
-					span.excursion-info__limit 0+
-				li.excursion-info__item
-					+icon('icon-group-people', 'excursion-info__icon excursion-info__icon--group-people', '24', '24')
-					span.excursion-info__limit 4-20 чел.
-			p.excursions__text Замечательно подходит для знакомства с парком. Гостей ждёт главная локация парка - мраморные склоны каньона. Пройдите в "Сухой штольне" и наглядно познакомьтесь с историей горного дела. На маршруте открыта мастерская по камнеобработке. Гости могут наблюдать за работой мастера и приобрести авторские сувениры.
-			.excursions__bottom
-				.excursions__route
-					.excursions__box
-						+icon('icon-trail-map', 'excursions__icon excursions__icon--trail-map', '32', '32')
-						a.excursions__link(href="#") Посмотреть маршрут
-					span.excursions__cost Стоимость экскурсии
-					.excursions__price
-						span.excursions__count 500
-						span.excursions__person руб./чел
-					button.button.button--white.excursions__buy Купить билет
-				.excursions__map
-					.excursions__box
-						+icon('icon-location-map', 'excursions__icon excursions__icon--location-map', '32', '32')
-						a.excursions__link(href="#") Интерактивная карта
-					button.button.button--transparent.excursions__add Дополнительно
+	ul.excursions__list
+		li.excursions__item
+			.excursions__images.swiper-container.excursions__slider--canyon
+				ul.excursions__image-list.excursions-images.swiper-wrapper
+					li.excursions-images__item.swiper-slide
+						picture.excursions__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							//source(media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.png 1x, static/images/content/index-can-desktop2x.png 2x")
+							img.excursions__img(src="static/images/content/excursions/canyon-1-mobile1x.png" srcset="static/images/content/excursions/canyon-1-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон")
+					li.excursions-images__item.swiper-slide
+						picture.excursions__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							//source(media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.png 1x, static/images/content/index-can-desktop2x.png 2x")
+							img.excursions__img(src="static/images/content/excursions/canyon-2-mobile1x.png" srcset="static/images/content/excursions/canyon-2-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон")
+					li.excursions-images__item.swiper-slide
+						picture.excursions__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							//source(media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.png 1x, static/images/content/index-can-desktop2x.png 2x")
+							img.excursions__img(src="static/images/content/excursions/canyon-3-mobile1x.png" srcset="static/images/content/excursions/canyon-3-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон")
+					li.excursions-images__item.swiper-slide
+						picture.excursions__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							//source(media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.png 1x, static/images/content/index-can-desktop2x.png 2x")
+							img.excursions__img(src="static/images/content/excursions/canyon-4-mobile1x.png" srcset="static/images/content/excursions/canyon-4-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон")
+				.slider__button.slider__button--prev.slider__button--white.excursions__slider-button.excursions__slider-button--prev
+					+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '30', '30')
+				.slider__button.slider__button--next.slider__button--white.excursions__slider-button.excursions__slider-button--next
+					+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--next', '30', '30')
+			.excursions__content
+				.container
+					span.excursions__sub-title Экскурсия
+					h2.excursions__title «Мраморный каньон»
+					ul.excursions__info.excursion-info
+						li.excursion-info__item
+							+icon('icon-chronometer', 'excursion-info__icon excursion-info__icon--chrono', '24', '24')
+							span.excursion-info__limit 90 мин.
+						li.excursion-info__item
+							+icon('icon-route', 'excursion-info__icon excursion-info__icon--route', '24', '24')
+							span.excursion-info__limit 1600 м.
+						li.excursion-info__item
+							+icon('icon-baby-boy', 'excursion-info__icon excursion-info__icon--baby-boy', '24', '24')
+							span.excursion-info__limit 0+
+						li.excursion-info__item
+							+icon('icon-group-people', 'excursion-info__icon excursion-info__icon--group-people', '24', '24')
+							span.excursion-info__limit 4-20 чел.
+					p.excursions__text Замечательно подходит для знакомства с парком. Гостей ждёт главная локация парка - мраморные склоны каньона. Пройдите в "Сухой штольне" и наглядно познакомьтесь с историей горного дела. На маршруте открыта мастерская по камнеобработке. Гости могут наблюдать за работой мастера и приобрести авторские сувениры.
+					.excursions__bottom
+						.excursions__route
+							.excursions__box
+								+icon('icon-trail-map', 'excursions__icon excursions__icon--trail-map', '32', '32')
+								a.excursions__link(href="#") Посмотреть маршрут
+							span.excursions__cost Стоимость экскурсии
+							.excursions__price
+								span.excursions__count 500
+								span.excursions__person руб. / чел
+							button.button.button--white.excursions__buy Купить билет
+						.excursions__map
+							.excursions__box
+								+icon('icon-location-map', 'excursions__icon excursions__icon--location-map', '32', '32')
+								a.excursions__link(href="#") Интерактивная карта
+							p.excursions__note <b>Важно!</b>  Стоимость входного билета не входит в стоимость экскурсии. Входной билет <span class="js-buyticket-open">приобретается отдельно</span>.
+							button.button.button--transparent.button--dashed.excursions__add Дополнительно
+		li.excursions__item
+			.excursions__images.swiper-container.excursions__slider--master
+				ul.excursions__image-list.excursions-images.swiper-wrapper
+					li.excursions-images__item.swiper-slide
+						picture.excursions__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							//source(media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.png 1x, static/images/content/index-can-desktop2x.png 2x")
+							img.excursions__img(src="static/images/content/excursions/master-1-mobile1x.png" srcset="static/images/content/excursions/master-1-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон")
+					li.excursions-images__item.swiper-slide
+						picture.excursions__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							//source(media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.png 1x, static/images/content/index-can-desktop2x.png 2x")
+							img.excursions__img(src="static/images/content/excursions/master-2-mobile1x.png" srcset="static/images/content/excursions/master-2-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон")
+					li.excursions-images__item.swiper-slide
+						picture.excursions__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							//source(media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.png 1x, static/images/content/index-can-desktop2x.png 2x")
+							img.excursions__img(src="static/images/content/excursions/master-3-mobile1x.png" srcset="static/images/content/excursions/master-3-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон")
+					li.excursions-images__item.swiper-slide
+						picture.excursions__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							//source(media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.png 1x, static/images/content/index-can-desktop2x.png 2x")
+							img.excursions__img(src="static/images/content/excursions/master-4-mobile1x.png" srcset="static/images/content/excursions/master-4-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон")
+				.slider__button.slider__button--prev.slider__button--white.excursions__slider-button.excursions__slider-button--prev
+					+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '30', '30')
+				.slider__button.slider__button--next.slider__button--white.excursions__slider-button.excursions__slider-button--next
+					+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--next', '30', '30')
+			.excursions__content
+				.container
+					span.excursions__sub-title Экскурсия
+					h2.excursions__title «Дорога горных мастеров»
+					ul.excursions__info.excursion-info
+						li.excursion-info__item
+							+icon('icon-chronometer', 'excursion-info__icon excursion-info__icon--chrono', '24', '24')
+							span.excursion-info__limit 120 мин.
+						li.excursion-info__item
+							+icon('icon-route', 'excursion-info__icon excursion-info__icon--route', '24', '24')
+							span.excursion-info__limit 2600 м.
+						li.excursion-info__item
+							+icon('icon-baby-boy', 'excursion-info__icon excursion-info__icon--baby-boy', '24', '24')
+							span.excursion-info__limit 0+
+						li.excursion-info__item
+							+icon('icon-group-people', 'excursion-info__icon excursion-info__icon--group-people', '24', '24')
+							span.excursion-info__limit 4-20 чел.
+					p.excursions__text Экскурсия «Дорогой горных мастеров» предлагает максимум в Рускеала: включает экскурсию «Мраморный каньон» и проходит по наземной части парка. Провал «мраморное сердце» позволит заглянуть в подземною часть парка, а Итальянский карьер порадует неповторимым мрамором.
+					.excursions__bottom
+						.excursions__route
+							.excursions__box
+								+icon('icon-trail-map', 'excursions__icon excursions__icon--trail-map', '32', '32')
+								a.excursions__link(href="#") Посмотреть маршрут
+							span.excursions__cost Стоимость экскурсии
+							.excursions__price
+								span.excursions__count 550
+								span.excursions__person руб. / чел
+							button.button.button--white.excursions__buy Купить билет
+						.excursions__map
+							.excursions__box
+								+icon('icon-location-map', 'excursions__icon excursions__icon--location-map', '32', '32')
+								a.excursions__link(href="#") Интерактивная карта
+							p.excursions__note <b>Важно!</b>  Стоимость входного билета не входит в стоимость экскурсии. Входной билет <span class="js-buyticket-open">приобретается отдельно</span>.
+							button.button.button--transparent.button--dashed.excursions__add Дополнительно
+		li.excursions__item
+			.excursions__images.swiper-container.excursions__slider--under-ruskeala
+				ul.excursions__image-list.excursions-images.swiper-wrapper
+					li.excursions-images__item.swiper-slide
+						picture.excursions__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							//source(media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.png 1x, static/images/content/index-can-desktop2x.png 2x")
+							img.excursions__img(src="static/images/content/excursions/under-ruskeala-1-mobile1x.png" srcset="static/images/content/excursions/under-ruskeala-1-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон")
+					li.excursions-images__item.swiper-slide
+						picture.excursions__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							//source(media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.png 1x, static/images/content/index-can-desktop2x.png 2x")
+							img.excursions__img(src="static/images/content/excursions/under-ruskeala-2-mobile1x.png" srcset="static/images/content/excursions/under-ruskeala-2-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон")
+					li.excursions-images__item.swiper-slide
+						picture.excursions__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							//source(media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.png 1x, static/images/content/index-can-desktop2x.png 2x")
+							img.excursions__img(src="static/images/content/excursions/under-ruskeala-3-mobile1x.png" srcset="static/images/content/excursions/under-ruskeala-3-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон")
+					li.excursions-images__item.swiper-slide
+						picture.excursions__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							//source(media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.png 1x, static/images/content/index-can-desktop2x.png 2x")
+							img.excursions__img(src="static/images/content/excursions/under-ruskeala-4-mobile1x.png" srcset="static/images/content/excursions/under-ruskeala-4-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон")
+				.slider__button.slider__button--prev.slider__button--white.excursions__slider-button.excursions__slider-button--prev
+					+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '30', '30')
+				.slider__button.slider__button--next.slider__button--white.excursions__slider-button.excursions__slider-button--next
+					+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--next', '30', '30')
+			.excursions__content
+				.container
+					span.excursions__sub-title Экскурсия
+					h2.excursions__title «Подземная Рускеала»
+					ul.excursions__info.excursion-info
+						li.excursion-info__item
+							+icon('icon-chronometer', 'excursion-info__icon excursion-info__icon--chrono', '24', '24')
+							span.excursion-info__limit 60 мин.
+						li.excursion-info__item
+							+icon('icon-route', 'excursion-info__icon excursion-info__icon--route', '24', '24')
+							span.excursion-info__limit 850 м.
+						li.excursion-info__item
+							+icon('icon-baby-boy', 'excursion-info__icon excursion-info__icon--baby-boy', '24', '24')
+							span.excursion-info__limit 7+
+						li.excursion-info__item
+							+icon('icon-group-people', 'excursion-info__icon excursion-info__icon--group-people', '24', '24')
+							span.excursion-info__limit 4-12 чел.
+					p.excursions__text Уникальная экскурсия, которая покажет Мраморный каньон изнутри и позволит прикоснуться к истории создания места добычи мрамора. В тёплое время года, после прогулки по штольням, гости наблюдают за изумрудной гладью мраморного каньона, во время водной прогулки на плавучей платформе.
+					.excursions__bottom
+						.excursions__route
+							.excursions__box
+								+icon('icon-trail-map', 'excursions__icon excursions__icon--trail-map', '32', '32')
+								a.excursions__link(href="#") Посмотреть маршрут
+							span.excursions__cost Стоимость экскурсии
+							.excursions__price
+								span.excursions__count 1 500
+								span.excursions__person руб. / чел
+							button.button.button--white.excursions__buy Купить билет
+						.excursions__map
+							.excursions__box
+								+icon('icon-location-map', 'excursions__icon excursions__icon--location-map', '32', '32')
+								a.excursions__link(href="#") Интерактивная карта
+							p.excursions__note <b>Важно!</b>  Стоимость входного билета не входит в стоимость экскурсии. Входной билет <span class="js-buyticket-open">приобретается отдельно</span>.
+							button.button.button--transparent.button--dashed.excursions__add Дополнительно

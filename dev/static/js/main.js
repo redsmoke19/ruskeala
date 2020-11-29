@@ -33,7 +33,7 @@
     //Open Close Modal
     let modalOpen = function(element, className) {
       document.body.classList.add('overflow-hidden');
-      wrapper.classList.add('overflow-hidden');
+      // wrapper.classList.add('overflow-hidden');
       element.classList.add(className);
     }
     let modalClose = function(element, className) {
@@ -69,7 +69,6 @@
         } else {
           subMenuElement.style.maxHeight = subMenuElement.scrollHeight + 'px';
         }
-        ;
       });
     });
   };

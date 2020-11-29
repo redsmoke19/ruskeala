@@ -47,7 +47,6 @@
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    //flex-basis: 70%;
     padding: 20px;
     width: 180px;
   }
@@ -80,13 +79,7 @@
     margin-bottom: 10px;
   }
   &__button {
-    background-color: transparent;
-    color: $orange-dark-color;
-    border: 1px solid $orange-color;
+    border-width: 1px;
     padding: 7px 25px;
-    &:hover {
-      background-color: $orange-dark-color;
-      color: $white;
-    }
   }
 }

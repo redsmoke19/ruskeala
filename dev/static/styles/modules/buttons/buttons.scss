@@ -10,10 +10,8 @@
   border-radius: 54px;
   cursor: pointer;
   transition: all ease-out .15s;
-  &:hover {
-    color: $border-grey-color;
-    background-color: rgba($orange-color, 0.7);
-  }
+  &:hover { background-color: $orange-light-color; }
+  &:active { background-color: $orange-active-color; }
   &--transparent {
     background-color: transparent;
     border: 2px solid $white;
@@ -31,5 +29,15 @@
       color: $white;
       background-color: $orange-dark-color;
     }
+    &:active { background-color: $orange-active-color; }
+  }
+  &--white {
+    background-color: $white;
+    color: $black;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  &--dashed {
+    border-style: dashed;
   }
 }
