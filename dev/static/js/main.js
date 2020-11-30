@@ -29,8 +29,8 @@
   };
   sandwichToggle();
 
+  // Open Close Modal
   const modalToggle = function() {
-    //Open Close Modal
     let modalOpen = function(element, className) {
       document.body.classList.add('overflow-hidden');
       // wrapper.classList.add('overflow-hidden');
@@ -102,6 +102,12 @@
     slidesOffsetAfter: 20,
     preventClicks: true,
     preventClicksPropagation: true,
+    breakpoints: {
+      1280: {
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
+      },
+    }
   });
 
   //DatePicker

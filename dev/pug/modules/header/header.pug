@@ -1,9 +1,13 @@
 header.header
     .header__top
         a.header__logo-link(href=pageClass === "index-page" ? false : "index.html" data-red="blue")
-            +icon('logo-mobile', 'header-logo', '91', '30')
-    .header__nav
-        include ./../navigation/sandwich/sandwich
-        include ./../navigation/main-nav/navigation
-    .header__sub-nav
-        include ./../navigation/sub-nav/sub-navigation.pug
+            //- +icon('logo-mobile', 'header-logo', '91', '30')
+            picture
+                source(media="(min-width: 1280px)" srcset="static/images/common/logo-ruskeala.svg")
+                img.header__logo(src="./static/images/common/logo-mobile.svg" alt="Логотип" width="91" height="30")
+    .header__wrapper
+        .header__main-nav
+            include ./../navigation/sandwich/sandwich
+            include ./../navigation/main-nav/navigation
+        .header__sub-nav
+            include ./../navigation/sub-nav/sub-navigation.pug

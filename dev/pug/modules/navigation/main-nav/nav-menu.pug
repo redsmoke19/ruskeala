@@ -1,21 +1,23 @@
 li.menu-nav__item
 	a.menu-nav__link.js-menu-link Услуги
 		+icon('icon-menu-arrow', 'menu-nav__icon menu-nav__icon--arrow', '10', '7.5')
-	ul.menu-sub-nav
+	ul.menu-sub-nav.menu-sub-nav--excursions
+		li.menu-sub-nav__column.menu-sub-nav__column--excursions
+			ul
+				li.menu-sub-nav__item
+					span.menu-sub-nav__title.menu-sub-nav__title--white Экскурсии
+				li.menu-sub-nav__item
+					a.menu-sub-nav__link.menu-sub-nav__link--white(href="#") «Мраморный каньон»
+				li.menu-sub-nav__item
+					a.menu-sub-nav__link.menu-sub-nav__link--white(href="#") «Подземная Рускеала»
+				li.menu-sub-nav__item
+					a.menu-sub-nav__link.menu-sub-nav__link--white(href="#") «Мраморный каньон»
+				li.menu-sub-nav__item
+					button.menu-sub-nav__button.button.button--orange-transparent Купить билет
 		li.menu-sub-nav__column
 			ul
 				li.menu-sub-nav__item
-					span.menu-sub-nav__title Экскурсии
-				li.menu-sub-nav__item
-					a.menu-sub-nav__link(href="#") «Мраморный каньон»
-				li.menu-sub-nav__item
-					a.menu-sub-nav__link(href="#") «Подземная Рускеала»
-				li.menu-sub-nav__item
-					a.menu-sub-nav__link(href="#") «Мраморный каньон»
-		li.menu-sub-nav__column
-			ul
-				li.menu-sub-nav__item
-					span.menu-sub-nav__title Активный отдых
+					span.menu-sub-nav__title.menu-sub-nav__title--black Активный отдых
 				li.menu-sub-nav__item
 					a.menu-sub-nav__link(href="#") Вход в парк
 				li.menu-sub-nav__item
@@ -43,7 +45,7 @@ li.menu-nav__item
 li.menu-nav__item
 	a.menu-nav__link.js-menu-link Посетителям
 		+icon('icon-menu-arrow', 'menu-nav__icon menu-nav__icon--arrow', '10', '7.5')
-	ul.menu-sub-nav
+	ul.menu-sub-nav.menu-sub-nav--guest
 		li.menu-sub-nav__item
 			a.menu-sub-nav__link(href="#") Как добраться
 		li.menu-sub-nav__item

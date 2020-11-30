@@ -2,9 +2,22 @@
   font-size: 13px;
   line-height: 16px;
   padding-bottom: 20px;
+  @media screen and (min-width: $desktop-size) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 10px;
+    padding: 0;
+  }
   &__item {
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 20px;
+      // position: relative;
+    }
     &:not(:last-child) {
       margin-bottom: 10px;
+      @media screen and (min-width: $desktop-size) {
+        margin: 0 10px 0 0;
+      }
     }
   }
   &__link {
@@ -13,15 +26,21 @@
     cursor: pointer;
     display: inline-block;
     font-weight: 800;
-    padding: 10px;
+    padding: 10px 15px;
     text-decoration: none;
     text-transform: uppercase;
     transition: all linear 0.15s;
+    @media screen and (min-width: $desktop-size) {
+      align-items: center;
+      display: flex;
+      padding: 10px;
+      white-space: nowrap;
+    }
     &--active {
       background-color: $orange-color;
       border-radius: 35px;
       color: $white;
-      padding: 10px 15px;
+      padding: 10px;
       svg {
         fill: $white;
         transition: all linear 0.15s;
@@ -50,18 +69,56 @@
   padding: 0 10px;
   transition: all linear 0.15s;
   opacity: 0;
+  @media screen and (min-width: $desktop-size) {
+    background-color: $white;
+    box-shadow: 0px 0px 50px rgba(48, 51, 129, 0.15);
+    display: flex;
+    max-width: 0;
+    padding: 0;
+    position: absolute;
+    top: 40px;
+  }
+  &--guest {
+    @media screen and (min-width: $desktop-size) {
+      border-top: 5px solid $bg-dark-red;
+      flex-direction: column;
+      padding: 50px;
+      li {
+        &:not(:last-child) { margin-bottom: 15px; }
+      }
+    }
+  }
   &--open {
     opacity: 1;
     margin-top: 10px;
+    @media screen and (min-width: $desktop-size) {
+      max-width: 1184px;
+      margin-top: 0;
+    }
   }
   &__column {
+    @media screen and (min-width: $desktop-size) {
+      padding: 50px;
+    }
     &:not(:last-child) {
       margin-bottom: 10px;
+      @media screen and (min-width: $desktop-size) {
+        margin-bottom: 0;
+      }
+    }
+    &--excursions {
+      @media screen and (min-width: $desktop-size) {
+      background-color: $bg-light-black-color;
+      }
     }
   }
   &__item {
     &:not(:last-child) {
       margin-bottom: 5px;
+      @media screen and (min-width: $desktop-size) { margin-bottom: 15px; }
+    }
+    @media screen and (min-width: $desktop-size) {
+      &:first-child { margin-bottom: 40px; }
     }
   }
   &__title {
@@ -69,6 +126,15 @@
     font-size: 15px;
     font-weight: 700;
     line-height: 25px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 22px;
+    }
+    &--white {
+      @media screen and (min-width: $desktop-size) { color: $white; }
+    }
+    &--black {
+      @media screen and (min-width: $desktop-size) { color: $black; }
+    }
   }
   &__link {
     color: $black;
@@ -76,5 +142,21 @@
     font-weight: 500;
     padding: 5px 0;
     text-decoration: none;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 25px;
+      padding: 0;
+    }
+    &--white {
+      @media screen and (min-width: $desktop-size) { color: $white; }
+    }
+  }
+  &__button {
+    display: none;
+    @media screen and (min-width: $desktop-size) { 
+      display: block;
+      margin-top: 33px;
+    }
   }
 }

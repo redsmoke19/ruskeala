@@ -1,5 +1,8 @@
 .social-nav {
   display: flex;
+  @media screen and (min-width: $desktop-size) {
+    flex-direction: column;
+  }
   &__link {
     background-color: $grey-color;
     border-radius: 50%;
@@ -15,6 +18,9 @@
   &__item {
     &:not(:last-child) {
       margin-right: 10px;
+      @media screen and (min-width: $desktop-size) {
+        margin: 0 0 10px 0;
+      }
     }
   }
   &__icon {

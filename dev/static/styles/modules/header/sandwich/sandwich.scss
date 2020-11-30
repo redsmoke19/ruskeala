@@ -6,6 +6,9 @@
   top: 11px;
   left: 20px;
   z-index: 3;
+  @media screen and (min-width: $desktop-size) {
+    display: none;
+  }
   &__line {
     background-color: #000000;
     display: block;

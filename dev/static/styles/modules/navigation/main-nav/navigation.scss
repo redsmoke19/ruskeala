@@ -17,6 +17,16 @@
     pointer-events: all;
     transform: translate(0, 0);
   }
+  @media screen and (min-width: $desktop-size) {
+    align-items: flex-start;
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    overflow: inherit;
+    position: relative;
+    pointer-events: all;
+    transform: translate(0, 0);
+  }
   &__phone {
     align-items: center;
     background-color: $white;
@@ -39,10 +49,27 @@
       margin-left: 10px;
       text-decoration: none;
     }
+    @media screen and (min-width: $desktop-size) {
+      border: none;
+      order: 2;
+      margin: 0;
+      padding: 4px 0 0 0;
+      position: relative;
+      top: auto;
+      white-space: nowrap;
+      width: auto;
+    }
   }
   &__social {
     margin-bottom: 20px;
     padding: 0 20px;
+    @media screen and (min-width: $desktop-size) {
+      left: -50px;
+      padding: 0;
+      position: absolute;
+      top: 328px;
+      z-index: 3;
+    }
   }
   &__menu {
     padding: 0 30px;
