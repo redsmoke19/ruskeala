@@ -4,11 +4,15 @@ header {
 }
 
 .header {
-  position: relative;
+  background-color: $white;
   padding-bottom: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
   @media screen and (min-width: $desktop-size) {
     display: flex;
     padding: 20px 0;
+    z-index: 5;
   }
   &__top {
     display: flex;
@@ -17,7 +21,7 @@ header {
     @media screen and (min-width: $desktop-size) {
       align-items: center;
       flex-shrink: 0;
-      left: 3%;
+      left: 2%;
       padding: 0;
       position: absolute;
       top: 50%;

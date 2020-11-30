@@ -1,28 +1,27 @@
 nav.sub-nav
-	.container
-		.swiper-container.sub-nav__wrapper
-			ul.swiper-wrapper.sub-nav__list
-				li.swiper-slide.sub-nav__item
-					a.sub-nav__link.js-buyticket-open
-						+icon('icon-payment', 'sub-nav__icon sub-nav__icon--payment', '26', '26')
-						span.sub-nav__label Купить билет
-				li.swiper-slide.sub-nav__item
-					a.sub-nav__link(href= pageClass === "excursions-page" ? false : "excursions.html")
-						+icon('icon-ecscur', 'sub-nav__icon sub-nav__icon--ecscur', '26', '26')
-						span.sub-nav__label Экскурсии
-				li.swiper-slide.sub-nav__item
-					a.sub-nav__link(href="#")
-						+icon('icon-entertainment', 'sub-nav__icon sub-nav__icon--entertainment', '26', '26')
-						span.sub-nav__label Развлечения
-				li.swiper-slide.sub-nav__item
-					a.sub-nav__link(href="#")
-						+icon('icon-food', 'sub-nav__icon sub-nav__icon--food', '26', '26')
-						span.sub-nav__label Где поесть
-				li.swiper-slide.sub-nav__item
-					a.sub-nav__link(href="#")
-						+icon('icon-hotel', 'sub-nav__icon sub-nav__icon--hotel', '26', '26')
-						span.sub-nav__label Гостиница
-				li.swiper-slide.sub-nav__item
-					a.sub-nav__link(href="#")
-						+icon('icon-location', 'sub-nav__icon sub-nav__icon--location', '26', '26')
-						span.sub-nav__label Как добраться
+	.swiper-container.sub-nav__wrapper
+		ul.swiper-wrapper.sub-nav__list
+			li.swiper-slide.sub-nav__item
+				a.sub-nav__link.js-buyticket-open
+					+icon('icon-payment', 'sub-nav__icon sub-nav__icon--payment', '26', '26')
+					span.sub-nav__label Купить билет
+			li.swiper-slide.sub-nav__item
+				a.sub-nav__link(href= pageClass === "excursions-page" ? false : "excursions.html")
+					+icon('icon-ecscur', 'sub-nav__icon sub-nav__icon--ecscur', '26', '26')
+					span.sub-nav__label Экскурсии
+			li.swiper-slide.sub-nav__item
+				a.sub-nav__link(href="#")
+					+icon('icon-entertainment', 'sub-nav__icon sub-nav__icon--entertainment', '26', '26')
+					span.sub-nav__label Развлечения
+			li.swiper-slide.sub-nav__item
+				a.sub-nav__link(href="#")
+					+icon('icon-food', 'sub-nav__icon sub-nav__icon--food', '26', '26')
+					span.sub-nav__label Где поесть
+			li.swiper-slide.sub-nav__item
+				a.sub-nav__link(href="#")
+					+icon('icon-hotel', 'sub-nav__icon sub-nav__icon--hotel', '26', '26')
+					span.sub-nav__label Гостиница
+			li.swiper-slide.sub-nav__item
+				a.sub-nav__link(href="#")
+					+icon('icon-location', 'sub-nav__icon sub-nav__icon--location', '26', '26')
+					span.sub-nav__label Как добраться

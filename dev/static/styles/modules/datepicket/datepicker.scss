@@ -4,6 +4,9 @@
     position: relative;
     &--enter-ticket {
       width: 47%;
+      @media screen and (min-width: $desktop-size) {
+        width: 165px;
+      }
     }
     &--buy-ticket {
       width: 50%;
@@ -21,6 +24,10 @@
     position: relative;
     width: 100%;
     z-index: 1;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
   &__icon {
     fill: $orange-dark-color;
@@ -53,7 +60,6 @@
     background: $orange-dark-color;
     color: $white;
   }
-  //&-current.&-active { color: $white; }
   &-arrow {
     &::after {
       border-color: $orange-dark-color;

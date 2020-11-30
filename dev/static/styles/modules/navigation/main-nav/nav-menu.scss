@@ -154,7 +154,7 @@
   }
   &__button {
     display: none;
-    @media screen and (min-width: $desktop-size) { 
+    @media screen and (min-width: $desktop-size) {
       display: block;
       margin-top: 33px;
     }

@@ -62,7 +62,7 @@ button { outline: none; }
 .wrapper {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: auto;
 }
 
 .content { flex: 1 0 auto; }
@@ -72,6 +72,10 @@ button { outline: none; }
   max-width: $content;
   padding: 0 20px;
   width: 100%;
+  @media screen and (min-width: $desktop-size) {
+    padding: 0;
+    width: 74%;
+  }
 }
 
 //Модули

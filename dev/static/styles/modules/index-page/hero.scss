@@ -1,8 +1,23 @@
 .hero {
-  background: #181818 url("../images/common/hero-bg1x.png") no-repeat center;
+  background: linear-gradient(rgba(#181818, 0.5), rgba(#181818 ,0.5)), url("../images/common/hero-bg1x.png") no-repeat center top;
   background-size: cover;
   color: $white;
   padding: 30px 0 40px;
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(#181818, 0.5), rgba(#181818 ,0.5)), url("../images/common/hero-bg2x.png");
+  }
+  @media screen and (min-width: $desktop-size) {
+    background: linear-gradient(rgba(#181818, 0.5), rgba(#181818 ,0.5)), url("../images/common/hero-bg-desktop1x.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 136px 0 160px;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(#181818, 0.5), rgba(#181818 ,0.5)), url("../images/common/hero-bg-desktop2x.png");
+    }
+  }
   &__content {
     display: flex;
     flex-direction: column;
@@ -12,28 +27,65 @@
     font-size: 32px;
     line-height: 39px;
     margin-bottom: 10px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 35px;
+      line-height: 43px;
+      margin-bottom: 5px;
+    }
   }
   &__note {
     font-weight: 600;
     line-height: 20px;
     margin-bottom: 36px;
+    @media screen and (min-width: $desktop-size) {
+      font-weight: 400;
+      margin-bottom: 60px;
+    }
+  }
+  &__inner {
+    @media screen and (min-width: $desktop-size) {
+      align-items: flex-start;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__open-park {
+    @media screen and (min-width: $desktop-size) {
+      flex-basis: 32%;
+    }
+    @media screen and (min-width: $large-size) {
+      flex-basis: 450px;
+    }
   }
   &__subtitle {
     font-weight: 900;
     font-size: 25px;
     line-height: 30px;
     margin-bottom: 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 40px;
+      line-height: 49px;
+      margin-bottom: 40px;
+    }
   }
   &__text {
     font-weight: 500;
     font-size: 14px;
     line-height: 23px;
     margin-bottom: 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 40px;
+    }
   }
   &__button {
     font-size: 16px;
     line-height: 26px;
     padding: 10px 20px;
+    @media screen and (min-width: $desktop-size) {
+      padding: 10px 30px;
+    }
   }
 }
 
@@ -41,11 +93,31 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;
+  @media screen and (min-width: $desktop-size) {
+    flex-basis: 58%;
+    flex-shrink: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: $large-size) {
+    flex-basis: 686px;
+  }
   &__item {
     align-items: center;
     display: flex;
     flex-direction: row;
     &:not(:last-child) { margin-bottom: 30px; }
+    @media screen and (min-width: $desktop-size) {
+      align-items: center;
+      width: 47%;
+      &:not(:last-child) { margin-bottom: 0; }
+      &:nth-child(-n+4) { margin-bottom: 57px; }
+    }
+    @media screen and (min-width: $large-size) {
+      width: 320px;
+    }
   }
   &__icon {
     fill: transparent;
