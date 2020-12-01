@@ -1,0 +1,18 @@
+.about {
+    @media screen and (min-width: $desktop-size) {
+        margin-bottom: 140px;
+        padding-top: 130px;
+    }
+    > .container {
+       padding: 0;
+    }
+    &__content {
+        @media screen and (min-width: $desktop-size) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+@import "work-time";
+@import "buy-ticket";

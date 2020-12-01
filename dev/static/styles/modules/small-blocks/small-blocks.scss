@@ -19,4 +19,12 @@
   font-weight: 900;
   font-size: 30px;
   line-height: 37px;
+  @media screen and (min-width: $desktop-size) {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  @media screen and (min-width: $large-size) {
+    font-size: 40px;
+    line-height: 49px;
+  }
 }

@@ -1,16 +1,57 @@
 (function() {
   'use strict';
   //Sliders
-  const slirers = function() {
-    const chooseTicketSlider = new Swiper('.choose-ticket', {
-      direction: 'horizontal',
-      spaceBetween: 20,
-      slidesPerView: 'auto',
-      grabCursor: true,
-      slidesOffsetAfter: 20,
-      preventClicks: true,
-      preventClicksPropagation: true,
-    });
+  const sliders = function() {
+    // https://medium.com/@networkaaron/swiper-how-to-destroy-swiper-on-min-width-breakpoints-a947491ddec8
+    const breakpoint = window.matchMedia('(min-width: 1280px)');
+    let chooseTicketSlider;
+
+    const breakpointChecker = function() {
+      let resizeTimeout;
+      if (!resizeTimeout) {
+        resizeTimeout = setTimeout(function() {
+          resizeTimeout = null;
+          actualResizeHandler();
+        }, 100);
+      }
+
+      function actualResizeHandler() {
+        if (breakpoint.matches === true) {
+          if (chooseTicketSlider !== undefined) chooseTicketSlider.destroy(true, true);
+        } else if (breakpoint.matches === false) {
+          enableSwiper();
+        }
+      };
+    };
+
+    const enableSwiper = function() {
+      chooseTicketSlider = new Swiper('.buy-ticket__slider', {
+        direction: 'horizontal',
+        spaceBetween: 20,
+        slidesPerView: 'auto',
+        grabCursor: true,
+        slidesOffsetAfter: 20,
+        preventClicks: true,
+        preventClicksPropagation: true,
+      });
+    };
+
+    breakpoint.addListener(breakpointChecker);
+    breakpointChecker();
+
+    // let chooseTicketSlider = new Swiper('.buy-ticket__slider', {
+    //   direction: 'horizontal',
+    //   spaceBetween: 20,
+    //   slidesPerView: 'auto',
+    //   grabCursor: true,
+    //   slidesOffsetAfter: 20,
+    //   preventClicks: true,
+    //   preventClicksPropagation: true,
+    // });
+
+    // if (window.matchMedia('(min-width: 1280px').matches) {
+    //   chooseTicketSlider.destroy(false, true);
+    // }
 
     const excursionsSlider = new Swiper('.excursions-index__wrapper', {
       direction: 'horizontal',
@@ -109,7 +150,7 @@
       },
     });
   };
-  slirers();
+  sliders();
 
   //DatePicker
   const datePicker = function() {
@@ -136,4 +177,25 @@
     });
   }
   datePicker();
+
+  // (function() {
+  //   window.addEventListener('resize', resizeThrottler, false);
+  //   let resizeTimeout;
+
+  //   function resizeThrottler() {
+  //     if (!resizeTimeout) {
+  //       resizeTimeout = setTimeout(function() {
+  //         resizeTimeout = null;
+  //         actualResizeHandler();
+  //       }, 66);
+  //     }
+  //   }
+
+  //   function actualResizeHandler() {
+  //     if (window.matchMedia('(min-width: 1280px)').matches) {}
+  //     if (window.matchMedia('(max-width: 1279px)').matches) {
+  //       console.log('< 1280');
+  //     }
+  //   }
+  // })();
 })();

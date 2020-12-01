@@ -1,19 +1,46 @@
 .work-time {
   padding: 40px 0;
+  @media screen and (min-width: $desktop-size) {
+    flex-basis: 48%;
+    flex-shrink: 0;
+    padding: 0;
+  }
+  .container {
+    @media screen and (min-width: $desktop-size) {
+      margin: 0;
+      max-width: 100%;
+      padding: 0;
+      width: 100%;
+    }
+  }
   &__title {
     margin-bottom: 20px;
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 40px;
+    }
   }
   &__bottom {
     background-color: $bg-grey-color;
     margin-bottom: 20px;
     padding: 20px 20px 20px 54px;
     position: relative;
+    @media screen and (min-width: $desktop-size) {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      padding: 30px 40px 30px 92px;
+    }
+    
   }
   &__icon {
     &--warning {
       fill: $yellow-light-color;
       position: absolute;
       left: 20px;
+      @media screen and (min-width: $desktop-size) {
+        left: 40px;
+      }
     }
   }
   &__attention {
@@ -22,6 +49,12 @@
     font-weight: 400;
     line-height: 15px;
     margin-bottom: 5px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 13px;
+      flex-basis: 63%;
+      line-height: 16px;
+      margin-bottom: 0;
+    }
   }
   &__link {
     color: $orange-dark-color;
@@ -31,9 +64,16 @@
     text-transform: uppercase;
     transition: all ease-out .15s;
     &:hover { color: rgba($orange-color, 0.7); }
+    @media screen and (min-width: $desktop-size) {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
   &__button {
     width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      width: auto;
+    }
   }
 }
 
@@ -41,10 +81,16 @@
   border: 2px solid $border-dark-grey-color;
   box-shadow: 0 0 50px rgba(48, 51, 129, 0.15);
   padding: 20px;
+  @media screen and (min-width: $desktop-size) {
+    padding: 30px 40px;
+  }
   &__top {
     align-items: center;
     display: flex;
     margin-bottom: 23px;
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 30px;
+    }
   }
   &__restrictions {
     margin-left: auto;
@@ -53,18 +99,38 @@
     fill: transparent;
     stroke-width: 2px;
     flex-shrink: 0;
-    &--disabled-person { fill: $light-grey-color; }
+    @media screen and (min-width: $desktop-size) {
+      height: 40px;
+      width: 40px;
+    }
+    &--disabled-person { 
+      fill: $light-grey-color; 
+      @media screen and (min-width: $desktop-size) {
+        height: 23px;
+        width: 16px;
+      }
+    }
     &--sunny-clear { stroke: $yellow-color; }
     &--autumn { stroke: $red-color; }
     &--ice-snow { stroke: $blue-color; }
     &--spring { stroke: $green-color; }
-    &--attention { fill: $red-dark-color; }
+    &--attention { 
+      fill: $red-dark-color;
+      @media screen and (min-width: $desktop-size) {
+        height: 18px;
+        width: 18px;
+      }
+    }
   }
   &__title {
     color: $black-color-middle;
     font-weight: 900;
     font-size: 15px;
     line-height: 18px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 22px;
+      line-height: 27px;
+    }
   }
   &__zero-plus {
     color: $light-grey-color;
@@ -74,6 +140,9 @@
     border-radius: 50%;
     margin-left: 15px;
     padding: 3px;
+    @media screen and (min-width: $desktop-size) {
+      padding: 5px;
+    }
   }
   &__middle {
     align-items: center;
@@ -83,12 +152,27 @@
     line-height: 15px;
     justify-content: space-between;
     margin-bottom: 25px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 15px;
+      line-height: 18px;
+    }
   }
   &__left {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
     flex-basis: 23%;
+    @media screen and (min-width: $desktop-size) {
+      align-items: center;
+      flex-direction: row;
+      flex-basis: 30%;
+      margin-right: 15%;
+    }
+  }
+  &__summer {
+    @media screen and (min-width: $desktop-size) {
+      margin-left: 20px;
+    }
   }
   &__center {
     display: flex;
@@ -99,7 +183,14 @@
     flex-direction: column;
     margin-left: auto;
   }
-  &__week { font-weight: 700; }
+  &__week { 
+    font-weight: 700;
+  }
+  &__work-time {
+    @media screen and (min-width: $desktop-size) {
+      &:not(:last-child) { margin-bottom: 5px; }
+    }
+  }
   &__bottom {
     align-items: flex-start;
     border-top: 1px solid $border-middle-grey-color;
@@ -112,5 +203,10 @@
     font-weight: 400;
     line-height: 15px;
     margin-left: 8px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 15px;
+      line-height: 18px;
+      margin-left: 20px;
+    }
   }
 }

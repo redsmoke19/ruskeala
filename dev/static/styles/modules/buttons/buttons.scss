@@ -12,6 +12,9 @@
   transition: all ease-out .15s;
   &:hover { background-color: $orange-light-color; }
   &:active { background-color: $orange-active-color; }
+  @media screen and (min-width: $desktop-size) {
+    padding: 15px 30px;
+  }
   &--transparent {
     background-color: transparent;
     border: 2px solid $white;
