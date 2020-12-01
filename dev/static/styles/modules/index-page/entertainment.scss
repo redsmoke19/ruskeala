@@ -1,7 +1,23 @@
 .entertainment {
   .container { padding-right: 0; }
   margin-bottom: 60px;
-  &__title { margin-bottom: 20px; }
+  &__title {
+    margin-bottom: 20px;
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 60px;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 80px;
+      line-height: 98px;
+    }
+  }
+  &__list {
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
   &__item {
     &--enter-park {
       background: linear-gradient(0deg, rgba(2, 25, 43, 0.5) 0%, rgba(16, 13, 1, 0) 71.17%), url("../images/content/enter-park-entertainment-mobile1x.png") no-repeat center;
@@ -50,6 +66,18 @@
         background: linear-gradient(0deg, rgba(2, 25, 43, 0.5) 0%, rgba(16, 13, 1, 0) 71.17%), url("../images/content/secret-paths-entertainment-mobile2x.png") no-repeat center;
         background-size: cover;
       }
+    }
+    &:hover {
+      .index-page__more {
+        @media screen and (min-width: $desktop-size) {
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+    }
+    @media screen and (min-width: $desktop-size) {
+      &:nth-child(-n+3) { margin-bottom: 2%; }
+      &:not(:nth-child(3)):not(:last-child) { margin-right: 18px; }
     }
   }
   &__button {

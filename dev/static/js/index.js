@@ -3,29 +3,54 @@
   //Sliders
   const sliders = function() {
     // https://medium.com/@networkaaron/swiper-how-to-destroy-swiper-on-min-width-breakpoints-a947491ddec8
-    const breakpoint = window.matchMedia('(min-width: 1280px)');
+    const breakpointDesktop = window.matchMedia('(min-width: 1280px)');
     let chooseTicketSlider;
+    let excursionsSlider;
+    let entertainmentSlider;
+    console.log(breakpointDesktop);
 
     const breakpointChecker = function() {
       let resizeTimeout;
       if (!resizeTimeout) {
         resizeTimeout = setTimeout(function() {
           resizeTimeout = null;
-          actualResizeHandler();
+          resizeHandlerDesktop();
         }, 100);
       }
 
-      function actualResizeHandler() {
-        if (breakpoint.matches === true) {
+      function resizeHandlerDesktop() {
+        if (breakpointDesktop.matches === true) {
           if (chooseTicketSlider !== undefined) chooseTicketSlider.destroy(true, true);
-        } else if (breakpoint.matches === false) {
-          enableSwiper();
+          if (excursionsSlider !== undefined) excursionsSlider.destroy(true, true);
+          if (entertainmentSlider !== undefined) entertainmentSlider.destroy(true, true);
+        } else if (breakpointDesktop.matches === false) {
+          enableSwiperDesktop();
         }
-      };
+      }
     };
 
-    const enableSwiper = function() {
+    const enableSwiperDesktop = function() {
       chooseTicketSlider = new Swiper('.buy-ticket__slider', {
+        direction: 'horizontal',
+        spaceBetween: 20,
+        slidesPerView: 'auto',
+        grabCursor: true,
+        slidesOffsetAfter: 20,
+        preventClicks: true,
+        preventClicksPropagation: true,
+      });
+
+      excursionsSlider = new Swiper('.excursions-index__wrapper', {
+        direction: 'horizontal',
+        spaceBetween: 20,
+        slidesPerView: 'auto',
+        grabCursor: true,
+        slidesOffsetAfter: 20,
+        preventClicks: true,
+        preventClicksPropagation: true,
+      });
+
+      entertainmentSlider = new Swiper('.entertainment__slider', {
         direction: 'horizontal',
         spaceBetween: 20,
         slidesPerView: 'auto',
@@ -36,42 +61,8 @@
       });
     };
 
-    breakpoint.addListener(breakpointChecker);
+    breakpointDesktop.addListener(breakpointChecker);
     breakpointChecker();
-
-    // let chooseTicketSlider = new Swiper('.buy-ticket__slider', {
-    //   direction: 'horizontal',
-    //   spaceBetween: 20,
-    //   slidesPerView: 'auto',
-    //   grabCursor: true,
-    //   slidesOffsetAfter: 20,
-    //   preventClicks: true,
-    //   preventClicksPropagation: true,
-    // });
-
-    // if (window.matchMedia('(min-width: 1280px').matches) {
-    //   chooseTicketSlider.destroy(false, true);
-    // }
-
-    const excursionsSlider = new Swiper('.excursions-index__wrapper', {
-      direction: 'horizontal',
-      spaceBetween: 20,
-      slidesPerView: 'auto',
-      grabCursor: true,
-      slidesOffsetAfter: 20,
-      preventClicks: true,
-      preventClicksPropagation: true,
-    });
-
-    const entertainmentSlider = new Swiper('.entertainment__list', {
-      direction: 'horizontal',
-      spaceBetween: 20,
-      slidesPerView: 'auto',
-      grabCursor: true,
-      slidesOffsetAfter: 20,
-      preventClicks: true,
-      preventClicksPropagation: true,
-    });
 
     const foodSuverirsSlider = new Swiper('.food-souvenirs__list', {
       direction: 'horizontal',
