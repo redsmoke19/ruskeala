@@ -1,6 +1,14 @@
-footer {
+.footer {
   flex: 0 0 auto;
   padding-bottom: 60px;
+  position: relative;
+  &__inner {
+    @media screen and (min-width: $desktop-size) {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
 
 @import "write-us";

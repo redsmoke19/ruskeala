@@ -1,5 +1,15 @@
 .write-us {
   margin-bottom: 40px;
+  .container {
+    @media screen and (min-width: $desktop-size) {
+      padding: 0;
+      width: auto;
+      margin: 0;
+    }
+  }
+  @media screen and (min-width: $desktop-size) {
+    order: 1;
+  }
   &__title {
     margin-bottom: 15px;
   }

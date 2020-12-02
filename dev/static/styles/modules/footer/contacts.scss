@@ -1,16 +1,33 @@
 .contacts-footer {
   font-size: 15px;
   line-height: 25px;
+  .container {
+    @media screen and (min-width: $desktop-size) {
+      padding: 0;
+      width: auto;
+      margin: 0;
+    }
+  }
   &__picture {
     display: block;
     height: 520px;
     overflow: inherit;
+    @media screen and (min-width: $desktop-size) {
+      height: auto;
+    }
   }
   &__img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: center;
+    @media screen and (min-width: $desktop-size) {
+      bottom: 0;
+      height: 800px;
+      left: 0;
+      position: absolute;
+      width: 17.5%;
+    }
   }
   &__content {
     position: relative;

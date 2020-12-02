@@ -1,15 +1,14 @@
 section.piipun-hotel
-	.container
-		.piipun-hotel__content
-			picture.piipun-hotel__picture
-				//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-				//source(type="image/webp" media="(min-width: 768px)" srcset="static/images/content/index-can-tablet1x.webp, static/images/content/index-can-tablet2x.webp 2x")
-				//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
-				//source(media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.png 1x, static/images/content/index-can-desktop2x.png 2x")
-				//source(media="(min-width: 768px)" srcset="static/images/content/index-can-tablet1x.png 1x, static/images/content/index-can-tablet2x.png 2x")
-				img.piipun-hotel__img(src="static/images/content/piipun-hotel-piha-mobile1x.png" srcset="static/images/content/piipun-hotel-piha-mobile2x.png 2x" width="280" height="280" alt="гостиница Piipun Piha")
+	picture.piipun-hotel__picture
+			//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+			//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+			source(media="(min-width: 1280px)" srcset="static/images/content/piipun-hotel-piha-desktop1x.png 1x, static/images/content/piipun-hotel-piha-desktop2x.png 2x")
+			img.piipun-hotel__img(src="static/images/content/piipun-hotel-piha-mobile1x.png" srcset="static/images/content/piipun-hotel-piha-mobile2x.png 2x" width="280" height="280" alt="гостиница Piipun Piha")
+	.piipun-hotel__content
+		.container
 			.piipun-hotel__inner
-				h3.piipun-hotel__subtitle Официальная гостиница Горного парка
+				+icon('icon-booking', 'piipun-hotel__icon', '130', '190')
+				h3.piipun-hotel__subtitle Официальная гостиница<br> Горного парка
 				h2.piipun-hotel__title.section__title PIIPUN PIHA
 				p.piipun-hotel__text Гостиница с уютными номерами по приемлемым ценам, ресторан и летнее кафе на самом берегу Ладоги. Идеальная атмосфера для отдыха с семьей или друзьями.
 				button.button.piipun-hotel__button Забронировать номер

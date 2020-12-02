@@ -1,10 +1,38 @@
 .media-reviews {
   margin-bottom: 60px;
+  @media screen and (min-width: $desktop-size) {
+    margin-bottom: 140px;
+  }
+  &__content {
+    @media screen and (min-width: $desktop-size) {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__box-images {
+    @media screen and (min-width: $desktop-size) {
+      order: 2;
+      width: 56%;
+    }
+  }
+  &__body {
+    @media screen and (min-width: $desktop-size) {
+      padding-right: 30px;
+      width: 44%;
+    }
+    @media screen and (min-width: $large-size) {
+      padding-right: 82px;
+    }
+  }
   &__text {
     margin-bottom: 0;
   }
   &__list {
     margin-bottom: 20px;
+    @media screen and (min-width: $large-size) {
+      margin-bottom: 24px;
+    }
   }
   &__item {
     display: flex;
@@ -16,6 +44,10 @@
     display: inline-block;
     height: 32px;
     width: 32px;
+    @media screen and (min-width: $desktop-size) {
+      height: 48px;
+      width: 48px;
+    }
     &--next {
       transform: rotate(180deg);
       left: 52px;

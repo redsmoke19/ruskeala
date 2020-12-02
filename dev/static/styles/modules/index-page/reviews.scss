@@ -1,19 +1,58 @@
 .reviews {
   margin-bottom: 60px;
+  @media screen and (min-width: $desktop-size) {
+    margin-bottom: 140px;
+  }
+  &__content {
+    @media screen and (min-width: $desktop-size) {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__box-images {
+    @media screen and (min-width: $desktop-size) {
+      width: 56%;
+    }
+  }
+  &__body {
+    @media screen and (min-width: $desktop-size) {
+      padding-left: 30px;
+      width: 44%;
+    }
+    @media screen and (min-width: $large-size) {
+      padding-left: 82px;
+    }
+  }
   &__img {
     height: auto;
     margin-bottom: 20px;
     width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 0;
+    }
   }
   &__title {
     font-size: 25px;
     line-height: 30px;
     margin-bottom: 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 32px;
+      line-height: 39px;
+      margin-bottom: 40px;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 40px;
+      line-height: 49px;
+    }
   }
 }
 
 .feedback {
   margin-bottom: 20px;
+  @media screen and (min-width: $desktop-size) {
+    margin-bottom: 24px;
+  }
   &__item {
     display: flex;
     font-size: 13px;
@@ -24,9 +63,16 @@
     align-items: center;
     display: flex;
     margin-bottom: 10px;
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 20px;
+    }
   }
   &__img {
     margin-right: 20px;
+    @media screen and (min-width: $desktop-size) {
+      height: 100px;
+      width: 100px;
+    }
   }
   &__info {
     display: flex;
@@ -37,19 +83,51 @@
     font-weight: 700;
     line-height: 22px;
     margin-bottom: 5px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 20px;
+      line-height: 27px;
+      margin-bottom: 10px;
+    }
   }
   &__date {
     color: $text-color-dark-grey;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 15px;
+      line-height: 18px;
+    }
   }
   &__text {
     line-height: 20px;
     margin-bottom: 10px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 15px;
+      line-height: 22px;
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 18px;
+      line-height: 28px;
+    }
   }
   &__note {
     color: $text-color-dark-grey;
     font-style: italic;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+  &__icon {
+    @media screen and (min-width: $desktop-size) {
+      height: 48px;
+      width: 48px;
+    }
   }
   &__button {
+    @media screen and (min-width: $desktop-size) {
+      height: 48px;
+      width: 48px;
+    }
     &--next { left: 52px; }
     &--prev { margin-right: 20px; }
   }

@@ -7,7 +7,7 @@
     let chooseTicketSlider;
     let excursionsSlider;
     let entertainmentSlider;
-    console.log(breakpointDesktop);
+    let foodSuverirsSlider;
 
     const breakpointChecker = function() {
       let resizeTimeout;
@@ -23,6 +23,7 @@
           if (chooseTicketSlider !== undefined) chooseTicketSlider.destroy(true, true);
           if (excursionsSlider !== undefined) excursionsSlider.destroy(true, true);
           if (entertainmentSlider !== undefined) entertainmentSlider.destroy(true, true);
+          if (foodSuverirsSlider !== undefined) foodSuverirsSlider.destroy(true, true);
         } else if (breakpointDesktop.matches === false) {
           enableSwiperDesktop();
         }
@@ -59,20 +60,20 @@
         preventClicks: true,
         preventClicksPropagation: true,
       });
+
+      foodSuverirsSlider = new Swiper('.food-souvenirs__slider', {
+        direction: 'horizontal',
+        spaceBetween: 20,
+        slidesPerView: 'auto',
+        grabCursor: true,
+        slidesOffsetAfter: 20,
+        preventClicks: true,
+        preventClicksPropagation: true,
+      });
     };
 
     breakpointDesktop.addListener(breakpointChecker);
     breakpointChecker();
-
-    const foodSuverirsSlider = new Swiper('.food-souvenirs__list', {
-      direction: 'horizontal',
-      spaceBetween: 20,
-      slidesPerView: 'auto',
-      grabCursor: true,
-      slidesOffsetAfter: 20,
-      preventClicks: true,
-      preventClicksPropagation: true,
-    });
 
     const galleyRuskealaSlider = new Swiper('.gallery-ruskeala__inner', {
       direction: 'horizontal',
@@ -95,14 +96,25 @@
       },
       preventClicks: true,
       preventClicksPropagation: true,
+      breakpoints: {
+        1280: {
+          autoHeight: false,
+          allowTouchMove: false,
+        }
+      },
     });
     const feedbackImagesSlider = new Swiper('.reviews__images', {
       direction: 'horizontal',
       slidesPerView: 1,
       spaceBetween: 20,
-      autoHeight: true,
       preventClicks: true,
       preventClicksPropagation: true,
+      breakpoints: {
+        1280: {
+          autoHeight: false,
+          allowTouchMove: false,
+        }
+      },
     });
     feedbackTextSlider.controller.control = feedbackImagesSlider;
     feedbackImagesSlider.controller.control = feedbackTextSlider;
@@ -118,6 +130,12 @@
       },
       preventClicks: true,
       preventClicksPropagation: true,
+      breakpoints: {
+        1280: {
+          autoHeight: false,
+          allowTouchMove: false,
+        }
+      },
     });
     const mediaFeedbackImageSlider = new Swiper('.media-reviews__images', {
       direction: 'horizontal',
@@ -126,11 +144,17 @@
       autoHeight: true,
       preventClicks: true,
       preventClicksPropagation: true,
+      breakpoints: {
+        1280: {
+          autoHeight: false,
+          allowTouchMove: false,
+        }
+      },
     });
     mediaFeedbackTextSlider.controller.control = mediaFeedbackImageSlider;
     mediaFeedbackImageSlider.controller.control = mediaFeedbackTextSlider;
 
-    const ourPartnersSlider = new Swiper('.our-partners__list', {
+    const ourPartnersSlider = new Swiper('.our-partners__slider', {
       direction: 'horizontal',
       preventClicks: true,
       preventClicksPropagation: true,
@@ -138,6 +162,12 @@
         el: '.our-partners__pagination',
         type: 'bullets',
         clickable: true,
+      },
+      breakpoints: {
+        1280: {
+          slidesPerView: 'auto',
+          spaceBetween: 40,
+        },
       },
     });
   };

@@ -13,7 +13,7 @@
   &:hover { background-color: $orange-light-color; }
   &:active { background-color: $orange-active-color; }
   @media screen and (min-width: $desktop-size) {
-    padding: 15px 30px;
+    padding: 15px 35px;
   }
   &--transparent {
     background-color: transparent;

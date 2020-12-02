@@ -6,8 +6,17 @@
   &__list {
     margin-bottom: 40px;
   }
+  &__item {
+    @media screen and (min-width: $desktop-size) {
+      width: auto;
+    }
+  }
   &__img {
     margin: 0 auto;
+    @media screen and (min-width: $desktop-size) {
+      height: 200px;
+      width: 325px;
+    }
   }
   &__pagination {
     display: flex;

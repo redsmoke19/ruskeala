@@ -1,5 +1,8 @@
 .gallery-ruskeala {
   margin-bottom: 60px;
+  @media screen and (min-width: $desktop-size) {
+    margin-bottom: 140px;
+  }
   .container { padding-right: 0; }
   &__title {
     margin-bottom: 20px;
