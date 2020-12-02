@@ -7,27 +7,28 @@
 			img.contacts-footer__img(src="static/images/content/footer-image-mobile1x.png" srcset="static/images/content/footer-image-mobile2x.png 2x" width="320" height="520" alt="Озеро в парке")
 	.contacts-footer__content
 		.container
-			img.contacts-footer__logo(src="./static/images/common/logo-ruskeala.svg" alt="Логотип парка Рускеала" width="162" height="173")
-			.contacts-footer__inner
-				.contacts-footer__phone
-					+icon('icon-header-phone', 'contacts-footer__icon--phone', '24', '24')
-					a.contacts-footer__phone-link(href="tel:+79214614012") +7 (921) 461-40-13
-				ul.contacts-footer__social.social-footer
-					li.social-footer__item
-						a.social-footer__link.social-footer__link--vk(href="#" aria-label="Ссылка на наше местоположение")
-							+icon('icon-vk', 'social-footer__icon social-footer__icon--vk', '25', '25')
-					li.social-footer__item
-						a.social-footer__link.social-footer__link--fb(href="#" aria-label="Ссылка на наше местоположение")
-							+icon('icon-fb', 'social-footer__icon social-footer__icon--fb', '20', '20')
-					li.social-footer__item
-						a.social-footer__link.social-footer__link--inst(href="#" aria-label="Ссылка на наше местоположение")
-							+icon('icon-inst', 'social-footer__icon social-footer__icon--inst', '20', '20')
-					li.social-footer__item
-						a.social-footer__link.social-footer__link--tripadvisor(href="#" aria-label="Ссылка на наше местоположение")
-							+icon('icon-tripadvisor', 'social-footer__icon social-footer__icon--tripadvisor', '25', '18')
-				.contacts-footer__location
-					+icon('icon-map-location', 'contacts-footer__icon--location', '24', '24')
-					p.contacts-footer__address Ул. Мраморная, 1, п. Рускеала, Республика Карелия, Россия, 186759
-				a.contacts-footer__link Правила парка
-				a.contacts-footer__link Политика конфиденциальности
-				p.contacts-footer__reserved 2020, Горный парк «Рускеала» все права защищены
+			.contacts-footer__box
+				img.contacts-footer__logo(src="./static/images/common/logo-ruskeala.svg" alt="Логотип парка Рускеала" width="162" height="173")
+				.contacts-footer__inner
+					.contacts-footer__phone
+						+icon('icon-header-phone', 'contacts-footer__icon--phone', '24', '24')
+						a.contacts-footer__phone-link(href="tel:+79214614012") +7 (921) 461-40-13
+					ul.contacts-footer__social.social-footer
+						li.social-footer__item
+							a.social-footer__link.social-footer__link--vk(href="#" aria-label="Ссылка на наше местоположение")
+								+icon('icon-vk', 'social-footer__icon social-footer__icon--vk', '25', '25')
+						li.social-footer__item
+							a.social-footer__link.social-footer__link--fb(href="#" aria-label="Ссылка на наше местоположение")
+								+icon('icon-fb', 'social-footer__icon social-footer__icon--fb', '20', '20')
+						li.social-footer__item
+							a.social-footer__link.social-footer__link--inst(href="#" aria-label="Ссылка на наше местоположение")
+								+icon('icon-inst', 'social-footer__icon social-footer__icon--inst', '20', '20')
+						li.social-footer__item
+							a.social-footer__link.social-footer__link--tripadvisor(href="#" aria-label="Ссылка на наше местоположение")
+								+icon('icon-tripadvisor', 'social-footer__icon social-footer__icon--tripadvisor', '25', '18')
+					.contacts-footer__location
+						+icon('icon-map-location', 'contacts-footer__icon--location', '24', '24')
+						p.contacts-footer__address Ул. Мраморная, 1, п. Рускеала, Республика Карелия, Россия, 186759
+					a.contacts-footer__link(href="#") Правила парка
+					a.contacts-footer__link(href="#") Политика конфиденциальности
+					p.contacts-footer__reserved 2020, Горный парк «Рускеала» все права защищены

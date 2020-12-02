@@ -4,6 +4,17 @@
     height: 230px;
     overflow: inherit;
   }
+  &__item {
+    @media screen and (min-width: $desktop-size) {
+      position: relative;
+    }
+  }
+  &__images {
+    @media screen and (min-width: $desktop-size) {
+      position: absolute;
+      width: 100%;
+    }
+  }
   &__img {
     height: 100%;
     object-fit: cover;
@@ -23,6 +34,11 @@
     background-color: $bg-black-color;
     color: $white;
     padding: 20px 0 55px;
+    @media screen and (min-width: $desktop-size) {
+      //background-color: transparent;
+      //position: relative;
+      //z-index: 2;
+    }
   }
   &__sub-title {
     display: inline-block;
@@ -134,4 +150,9 @@
     font-weight: 900;
     line-height: 26px;
   }
+}
+
+.excursions-page .map {
+  margin-bottom: 0;
+  margin-top: 140px;
 }

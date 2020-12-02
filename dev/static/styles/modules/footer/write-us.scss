@@ -1,5 +1,10 @@
 .write-us {
   margin-bottom: 40px;
+  @media screen and (min-width: $desktop-size) {
+    flex-basis: 48.6%;
+    order: 1;
+    margin-bottom: 0;
+  }
   .container {
     @media screen and (min-width: $desktop-size) {
       padding: 0;
@@ -7,21 +12,46 @@
       margin: 0;
     }
   }
-  @media screen and (min-width: $desktop-size) {
-    order: 1;
-  }
   &__title {
     margin-bottom: 15px;
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 30px;
+    }
   }
   &__text {
     font-size: 13px;
     line-height: 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 15px;
+      line-height: 20px;
+      margin-bottom: 40px;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 22px;
+      line-height: 32px;
+    }
   }
 }
 
 .write-form {
+  &__top {
+    @media screen and (min-width: $desktop-size) {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 23px;
+    }
+  }
   &__field {
     position: relative;
+    @media screen and (min-width: $desktop-size) {
+      width: 47%;
+    }
+    &--textarea {
+      @media screen and (min-width: $desktop-size) {
+        width: 100%;
+      }
+    }
   }
   &__icon {
     fill: $icon-light-grey-color;
@@ -48,13 +78,33 @@
   }
   &__bottom {
     margin-top: 15px;
+    @media screen and (min-width: $desktop-size) {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
   }
   &__consent {
     font-size: 13px;
     line-height: 20px;
     margin-bottom: 15px;
+    @media screen and (min-width: $desktop-size) {
+      //font-size: 15px;
+      //line-height: 24px;
+      margin-bottom: 0;
+      flex-basis: 47%;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 15px;
+      line-height: 24px;
+    }
   }
   &__send {
     width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      flex-basis: 47%;
+      padding: 20px 35px;
+    }
   }
 }

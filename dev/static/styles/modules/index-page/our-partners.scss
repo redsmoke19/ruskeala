@@ -1,5 +1,8 @@
 .our-partners {
   margin-bottom: 80px;
+  @media screen and (min-width: $desktop-size) {
+    margin-bottom: 0;
+  }
   &__title {
     margin-bottom: 40px;
   }

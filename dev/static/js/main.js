@@ -14,7 +14,7 @@
       let targetClassToggle = this.getAttribute('data-target-class-toggle');
       this.classList.toggle('sandwich-open');
       document.body.classList.toggle('overflow-hidden');
-      wrapper.classList.toggle('overflow-hidden');
+      // wrapper.classList.toggle('overflow-hidden');
       if (targetId && targetClassToggle) {
         document.getElementById(targetId).classList.toggle(targetClassToggle);
       }
@@ -33,7 +33,7 @@
   const modalToggle = function() {
     let modalOpen = function(element, className) {
       document.body.classList.add('overflow-hidden');
-      // wrapper.classList.add('overflow-hidden');
+      wrapper.classList.add('overflow-hidden');
       element.classList.add(className);
     }
     let modalClose = function(element, className) {
@@ -93,22 +93,42 @@
   select();
 
   //Sliders
-  const subMenuMobileSlider = new Swiper('.sub-nav__wrapper', {
-    direction: 'horizontal',
-    spaceBetween: 15,
-    slidesPerView: 'auto',
-    grabCursor: true,
-    slidesOffsetBefore: 20,
-    slidesOffsetAfter: 20,
-    preventClicks: true,
-    preventClicksPropagation: true,
-    breakpoints: {
-      1280: {
-        slidesOffsetBefore: 0,
-        slidesOffsetAfter: 0,
-      },
+  const breakpointDesktop = window.matchMedia('(min-width: 1280px)');
+  let subMenuMobileSlider;
+
+  const breakpointChecker = function() {
+    let resizeTimeout;
+    if (!resizeTimeout) {
+      resizeTimeout = setTimeout(function() {
+        resizeTimeout = null;
+        resizeHandlerDesktop();
+      }, 100);
     }
-  });
+
+    function resizeHandlerDesktop() {
+      if (breakpointDesktop.matches === true) {
+        if (subMenuMobileSlider !== undefined) subMenuMobileSlider.destroy(true, true);
+      } else if (breakpointDesktop.matches === false) {
+        enableSubMenu();
+      }
+    }
+  };
+
+  const enableSubMenu = function () {
+    subMenuMobileSlider = new Swiper('.sub-nav__wrapper', {
+      direction: 'horizontal',
+      spaceBetween: 15,
+      slidesPerView: 'auto',
+      grabCursor: true,
+      slidesOffsetBefore: 20,
+      slidesOffsetAfter: 20,
+      preventClicks: true,
+      preventClicksPropagation: true,
+    });
+  }
+
+  breakpointDesktop.addListener(breakpointChecker);
+  breakpointChecker();
 
   //DatePicker
   const datePickers = function() {
