@@ -22,11 +22,15 @@
     line-height: 16px;
     padding: 11px 15px;
     position: relative;
+    transition: all ease-out 0.15s;
     width: 100%;
     z-index: 1;
     @media screen and (min-width: $desktop-size) {
       font-size: 18px;
       line-height: 22px;
+      &:hover {
+        box-shadow: 0 0 10px rgba(48, 51, 129, 0.1);
+      }
     }
   }
   &__icon {

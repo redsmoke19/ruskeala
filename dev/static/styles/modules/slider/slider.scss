@@ -4,14 +4,9 @@
     cursor: pointer;
     height: 32px;
     width: 32px;
-    &--next { transform: rotate(180deg); }
-    &--white {
-      &.swiper-button-disabled {
-        svg { fill: $grey-color; }
-      }
+    &.swiper-button-disabled svg {
+      fill: $grey-color;
     }
-  }
-  &__icon {
-    &--white { fill: $white; }
+    &--next { transform: rotate(180deg); }
   }
 }

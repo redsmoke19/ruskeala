@@ -1,0 +1,52 @@
+section.excursions-ticket.ticket-modal
+    .excursions-ticket__inner.ticket-modal__inner
+        .excursions-ticket__wrapper.ticket-modal__wrapper
+            button.excursions-ticket__close
+                +icon('icon-small-close', 'enter-ticket__icon enter-ticket__icon--close', '18', '18')
+            h2.excursions-ticket__title.ticket-modal__title Входной билет В ЦЫРК
+            .excursions-ticket__date-wrap.ticket-modal__date-wrap
+                span.excursions-ticket__selected-date.ticket-modal__selected-date.ticket-modal__selected-date--excursion 1 августа, суббота
+                .excursions-ticket__day.ticket-modal__day.ticket-modal__day--excursion
+                    .excursions-ticket__date.datepicker__wrapper.datepicker__wrapper--enter-ticket
+                        input(type="text").excursions-ticket__datepicker.datepicker__input
+                        +icon('icon-calendar', 'datepicker__icon datepicker__icon--enter-ticket', '18', '20')
+                    include time-select/time-select
+            .excursions-ticket__table.ticket-modal__table.select-ticket
+                .select-ticket__row
+                    .select-ticket__left
+                        span.select-ticket__age Взрослый
+                        span.select-ticket__price 550.00
+                    .select-ticket__right
+                        button.select-ticket__button.select-ticket__button--minus(aria-label="убрать один билет")
+                        span.select-ticket__current 0
+                        button.select-ticket__button.select-ticket__button--plus(aria-label="добавить один билет")
+                .select-ticket__row
+                    .select-ticket__left
+                        span.select-ticket__age Лица 60 лет и старше
+                        span.select-ticket__price 250.00
+                    .select-ticket__right
+                        button.select-ticket__button.select-ticket__button--minus(aria-label="убрать один билет")
+                        span.select-ticket__current 0
+                        button.select-ticket__button.select-ticket__button--plus(aria-label="добавить один билет")
+                .select-ticket__row
+                    .select-ticket__left
+                        span.select-ticket__age Студент
+                        span.select-ticket__price 250.00
+                    .select-ticket__right
+                        button.select-ticket__button.select-ticket__button--minus(aria-label="убрать один билет")
+                        span.select-ticket__current 0
+                        button.select-ticket__button.select-ticket__button--plus(aria-label="добавить один билет")
+                .select-ticket__row
+                    .select-ticket__left
+                        span.select-ticket__age Школьникам
+                        span.select-ticket__price 150.00
+                    .select-ticket__right
+                        button.select-ticket__button.select-ticket__button--minus(aria-label="убрать один билет")
+                        span.select-ticket__current 0
+                        button.select-ticket__button.select-ticket__button--plus(aria-label="добавить один билет")
+            p.excursions-ticket__total.ticket-modal__total Итого: <span class="js-enter-ticket__total">1850,00</span>
+            .excursions-ticket__accept
+                input.excursions-ticket__checkbox(type="checkbox" id="enter-ticket__checkbox" checked)
+                label.excursions-ticket__label(for="enter-ticket__checkbox") Купить входной билет в парк
+    .excursions-ticket__form
+        include form-confirm/form-confirm

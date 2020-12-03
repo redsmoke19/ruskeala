@@ -1,7 +1,7 @@
 section.excursions
 	h1.visually-hidden Страница с возможными экскурсиями в парке Рускеала
 	ul.excursions__list
-		li.excursions__item
+		li.excursions__item.excursions__item--canyon
 			.excursions__images.swiper-container.excursions__slider--canyon
 				ul.excursions__image-list.excursions-images.swiper-wrapper
 					li.excursions-images__item.swiper-slide
@@ -28,10 +28,6 @@ section.excursions
 							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/excursions/canyon-4-desktop1x.png 1x, static/images/content/excursions/canyon-4-desktop2x.png 2x")
 							img.excursions__img(src="static/images/content/excursions/canyon-4-mobile1x.png" srcset="static/images/content/excursions/canyon-4-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон")
-				.slider__button.slider__button--prev.slider__button--white.excursions__slider-button.excursions__slider-button--prev
-					+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '30', '30')
-				.slider__button.slider__button--next.slider__button--white.excursions__slider-button.excursions__slider-button--next
-					+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--next', '30', '30')
 			.excursions__content
 				.container
 					span.excursions__sub-title Экскурсия
@@ -59,14 +55,18 @@ section.excursions
 							.excursions__price
 								span.excursions__count 500
 								span.excursions__person руб. / чел
-							button.button.button--white.excursions__buy Купить билет
+							button.button.button--white.excursions__buy(data-excursion-name="Мраморный каньон") Купить билет
 						.excursions__map
 							.excursions__box
 								+icon('icon-location-map', 'excursions__icon excursions__icon--location-map', '32', '32')
 								a.excursions__link(href="#") Интерактивная карта
 							p.excursions__note <b>Важно!</b>  Стоимость входного билета не входит в стоимость экскурсии. Входной билет <span class="js-buyticket-open">приобретается отдельно</span>.
 							button.button.button--transparent.button--dashed.excursions__add Дополнительно
-		li.excursions__item
+					.excursions__slider-button.excursions__slider-button.excursions__slider-button--prev.slider__button
+						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '30', '30')
+					.excursions__slider-button.excursions__slider-button.excursions__slider-button--next.slider__button
+						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--next', '30', '30')
+		li.excursions__item.excursions__item--master
 			.excursions__images.swiper-container.excursions__slider--master
 				ul.excursions__image-list.excursions-images.swiper-wrapper
 					li.excursions-images__item.swiper-slide
@@ -93,10 +93,6 @@ section.excursions
 							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							//source(media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.png 1x, static/images/content/index-can-desktop2x.png 2x")
 							img.excursions__img(src="static/images/content/excursions/master-4-mobile1x.png" srcset="static/images/content/excursions/master-4-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон")
-				.slider__button.slider__button--prev.slider__button--white.excursions__slider-button.excursions__slider-button--prev
-					+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '30', '30')
-				.slider__button.slider__button--next.slider__button--white.excursions__slider-button.excursions__slider-button--next
-					+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--next', '30', '30')
 			.excursions__content
 				.container
 					span.excursions__sub-title Экскурсия
@@ -124,14 +120,18 @@ section.excursions
 							.excursions__price
 								span.excursions__count 550
 								span.excursions__person руб. / чел
-							button.button.button--white.excursions__buy Купить билет
+							button.button.button--white.excursions__buy(data-excursion-name="Дорога горных мастеров") Купить билет
 						.excursions__map
 							.excursions__box
 								+icon('icon-location-map', 'excursions__icon excursions__icon--location-map', '32', '32')
 								a.excursions__link(href="#") Интерактивная карта
 							p.excursions__note <b>Важно!</b>  Стоимость входного билета не входит в стоимость экскурсии. Входной билет <span class="js-buyticket-open">приобретается отдельно</span>.
 							button.button.button--transparent.button--dashed.excursions__add Дополнительно
-		li.excursions__item
+					.excursions__slider-button.excursions__slider-button.excursions__slider-button--prev.slider__button
+						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '30', '30')
+					.excursions__slider-button.excursions__slider-button.excursions__slider-button--next.slider__button
+						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--next', '30', '30')
+		li.excursions__item.excursions__item--under-ruskeala
 			.excursions__images.swiper-container.excursions__slider--under-ruskeala
 				ul.excursions__image-list.excursions-images.swiper-wrapper
 					li.excursions-images__item.swiper-slide
@@ -158,10 +158,6 @@ section.excursions
 							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							//source(media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.png 1x, static/images/content/index-can-desktop2x.png 2x")
 							img.excursions__img(src="static/images/content/excursions/under-ruskeala-4-mobile1x.png" srcset="static/images/content/excursions/under-ruskeala-4-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон")
-				.slider__button.slider__button--prev.slider__button--white.excursions__slider-button.excursions__slider-button--prev
-					+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '30', '30')
-				.slider__button.slider__button--next.slider__button--white.excursions__slider-button.excursions__slider-button--next
-					+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--next', '30', '30')
 			.excursions__content
 				.container
 					span.excursions__sub-title Экскурсия
@@ -189,10 +185,14 @@ section.excursions
 							.excursions__price
 								span.excursions__count 1 500
 								span.excursions__person руб. / чел
-							button.button.button--white.excursions__buy Купить билет
+							button.button.button--white.excursions__buy(data-excursion-name="Подземная Рускеала") Купить билет
 						.excursions__map
 							.excursions__box
 								+icon('icon-location-map', 'excursions__icon excursions__icon--location-map', '32', '32')
 								a.excursions__link(href="#") Интерактивная карта
 							p.excursions__note <b>Важно!</b>  Стоимость входного билета не входит в стоимость экскурсии. Входной билет <span class="js-buyticket-open">приобретается отдельно</span>.
 							button.button.button--transparent.button--dashed.excursions__add Дополнительно
+					.excursions__slider-button.excursions__slider-button.excursions__slider-button--prev.slider__button
+						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '30', '30')
+					.excursions__slider-button.excursions__slider-button.excursions__slider-button--next.slider__button
+						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--next', '30', '30')

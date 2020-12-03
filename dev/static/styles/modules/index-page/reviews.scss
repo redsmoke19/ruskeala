@@ -124,9 +124,6 @@
     }
   }
   &__button {
-    &.swiper-button-disabled svg {
-      fill: $grey-color;
-    }
     @media screen and (min-width: $desktop-size) {
       height: 48px;
       width: 48px;

@@ -1,0 +1,53 @@
+.enter-ticket {
+  &--open {
+    height: 100vh;
+    overflow: auto;
+    pointer-events: all;
+    transform: translate(0, 0);
+  }
+  &__form {
+    background: url("../images/common/confirm-form-bg1x.png") no-repeat center right;
+    background-size: cover;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      background-image: url("../images/common/confirm-form-bg2x.png");
+    }
+    @media screen and (min-width: $desktop-size) {
+      align-items: center;
+      background-image: url("../images/common/confirm-form-bg-desktop1x.png");
+      display: flex;
+      flex-basis: 50%;
+      justify-content: center;
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        background-image: url("../images/common/confirm-form-bg-desktop2x.png");
+      }
+    }
+  }
+  &__close {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding: 0;
+    @media screen and (min-width: $desktop-size) {
+      fill: $white;
+      right: 60px;
+      top: 60px;
+    }
+    &:hover {
+      svg {
+        opacity: 0.7;
+      }
+    }
+  }
+  &__datepicker {
+    &--park {
+      @media screen and (min-width: $desktop-size) {
+        width: 165px;
+      }
+    }
+  }
+}
+
+@import "form-confirm/form-confirm";

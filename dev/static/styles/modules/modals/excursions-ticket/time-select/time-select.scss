@@ -2,6 +2,16 @@
   font-size: 13px;
   line-height: 16px;
   position: relative;
+  @media screen and (min-width: $desktop-size) {
+    font-size: 18px;
+    line-height: 22px;
+    margin-left: 20px;
+    &:hover {
+      .select-time__header {
+        box-shadow: 0 0 10px rgba(48, 51, 129, 0.1);
+      }
+    }
+  }
   &.is-open {
     .select-time__body { display: block; }
   }
@@ -11,6 +21,7 @@
     cursor: pointer;
     display: flex;
     padding: 11px 15px;
+    transition: all ease-out 0.15s;
   }
   &__current {
     font-weight: 400;

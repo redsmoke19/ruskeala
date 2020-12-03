@@ -1,17 +1,16 @@
-section.enter-ticket
-	.enter-ticket__inner
-		.enter-ticket__wrapper
+section.enter-ticket.ticket-modal
+	.enter-ticket__inner.ticket-modal__inner
+		.enter-ticket__wrapper.ticket-modal__wrapper
 			button.enter-ticket__close
 				+icon('icon-small-close', 'enter-ticket__icon enter-ticket__icon--close', '18', '18')
-			h2.enter-ticket__title Входной билет
-			.enter-ticket__date-wrap
-				span.enter-ticket__selected-date.enter-ticket__selected-date--park 1 августа, суббота
-				.enter-ticket__day.enter-ticket__day--park
+			h2.enter-ticket__title.ticket-modal__title Входной билет
+			.enter-ticket__date-wrap.ticket-modal__date-wrap
+				span.enter-ticket__selected-date.ticket-modal__selected-date.ticket-modal__selected-date--park 1 августа, суббота
+				.enter-ticket__day.ticket-modal__day.ticket-modal__day--park
 					.enter-ticket__date.datepicker__wrapper.datepicker__wrapper--enter-ticket
 						input(type="text").enter-ticket__datepicker.datepicker__input
 						+icon('icon-calendar', 'datepicker__icon datepicker__icon--enter-ticket', '18', '20')
-					//include time-select/time-select
-			.enter-ticket__table.select-ticket
+			.enter-ticket__table.ticket-modal__table.select-ticket
 				.select-ticket__row
 					.select-ticket__left
 						span.select-ticket__age Взрослый
@@ -44,9 +43,6 @@ section.enter-ticket
 						button.select-ticket__button.select-ticket__button--minus(aria-label="убрать один билет")
 						span.select-ticket__current 0
 						button.select-ticket__button.select-ticket__button--plus(aria-label="добавить один билет")
-			p.enter-ticket__total Итого: <span class="js-enter-ticket__total">1850,00</span>
-			//.enter-ticket__accept
-			//	input.enter-ticket__checkbox(type="checkbox" id="enter-ticket__checkbox" checked)
-			//	label.enter-ticket__label(for="enter-ticket__checkbox") Купить входной билет в парк
+			p.enter-ticket__total.ticket-modal__total Итого: <span class="js-enter-ticket__total">1850,00</span>
 	.enter-ticket__form
 		include form-confirm/form-confirm
