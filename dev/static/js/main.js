@@ -31,12 +31,12 @@
 
   // Open Close Modal
   const modalToggle = function() {
-    let modalOpen = function(element, className) {
+    window.modalOpen = function(element, className) {
       document.body.classList.add('overflow-hidden');
       wrapper.classList.add('overflow-hidden');
       element.classList.add(className);
     }
-    let modalClose = function(element, className) {
+    window.modalClose = function(element, className) {
       document.body.classList.remove('overflow-hidden');
       wrapper.classList.remove('overflow-hidden');
       element.classList.remove(className);
@@ -164,4 +164,14 @@
     });
   }
   datePickers();
+
+
+  let map;
+  window.initMap = function() {
+    map = new google.maps.Map(document.querySelector(".map__frame"), {
+      center: { lat: -34.397, lng: 150.644 },
+      zoom: 8,
+    });
+  }
+
 })();

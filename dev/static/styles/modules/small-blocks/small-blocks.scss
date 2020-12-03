@@ -28,3 +28,16 @@
     line-height: 49px;
   }
 }
+
+.close-button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  padding: 0;
+  &:hover {
+    svg {
+      opacity: 0.7;
+    }
+  }
+}

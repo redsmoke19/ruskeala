@@ -35,32 +35,35 @@
   };
   sliders();
 
-  // Open Close Modal
+  // Open Close Modals
   const modalToggle = function() {
     let buyTicketButtons = document.querySelectorAll('.excursions__buy');
     let buyTicketModal = document.querySelector('.excursions-ticket');
     let buyTicketModalClose = document.querySelector('.excursions-ticket__close');
     let ticketTitle = document.querySelector('.excursions-ticket__title');
+    let additionallyModal = document.querySelector('.excursions-add');
+    let additionallyButtons = document.querySelectorAll('.js-additionally-open');
+    let additionallyClose = document.querySelector('.excursions-add__close');
 
-    let modalOpen = function(element, className, title) {
-      document.body.classList.add('overflow-hidden');
-      wrapper.classList.add('overflow-hidden');
-      element.classList.add(className);
-    }
-    let modalClose = function(element, className) {
-      document.body.classList.remove('overflow-hidden');
-      wrapper.classList.remove('overflow-hidden');
-      element.classList.remove(className);
-    }
-
+    // Buy tickets
     buyTicketButtons.forEach(item => {
       item.addEventListener('click', () => {
         ticketTitle.textContent = `"${item.dataset.excursionName}"`;
-        modalOpen(buyTicketModal, 'excursions-ticket--open');
+        window.modalOpen(buyTicketModal, 'excursions-ticket--open');
       });
     });
     buyTicketModalClose.addEventListener('click', () => {
-      modalClose(buyTicketModal, 'excursions-ticket--open');
+      window.modalClose(buyTicketModal, 'excursions-ticket--open');
+    })
+
+    // Additionally modal
+    additionallyButtons.forEach(item => {
+      item.addEventListener('click', () => {
+        window.modalOpen(additionallyModal, 'excursions-add--open');
+      });
+    });
+    additionallyClose.addEventListener('click', () => {
+      window.modalClose(additionallyModal, 'excursions-add--open');
     })
   };
   modalToggle();

@@ -1,0 +1,141 @@
+.excursions-add {
+  background-color: $white;
+  bottom: 0;
+  font-size: 15px;
+  height: 0;
+  line-height: 18px;
+  left: 0;
+  overflow: hidden;
+  padding: 40px 20px;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(0, -100%);
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1) 0s;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 6;
+  @media screen and (min-width: $desktop-size) {
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+    line-height: 22px;
+    justify-content: center;
+    padding: 0;
+  }
+  &--open {
+    height: 100vh;
+    overflow: auto;
+    pointer-events: all;
+    transform: translate(0, 0);
+  }
+  &__close {
+    right: 27px;
+    top: 27px;
+    @media screen and (min-width: $desktop-size) {
+      right: 80px;
+      top: 80px;
+      svg {
+        height: 33px;
+        width: 33px;
+      }
+    }
+  }
+  &__content {
+    @media screen and (min-width: $desktop-size) {
+      max-width: 1156px;
+      margin: 0 auto;
+    }
+  }
+  &__title {
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 30px;
+    margin-bottom: 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 40px;
+      line-height: 49px;
+      margin-bottom: 40px;
+    }
+  }
+  &__privileges {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 25px;
+      line-height: 30px;
+      margin-bottom: 40px;
+    }
+  }
+  &__wrapper {
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__col {
+    @media screen and (min-width: $desktop-size) {
+      &--left {
+        flex-basis: 37.5%;
+        flex-shrink: 0;
+      }
+      &--right {
+        flex-basis: 57%;
+        flex-shrink: 0;
+      }
+    }
+  }
+  &__inner-row {
+    align-items: center;
+    border-bottom: 1px solid $black;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    width: 100%;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 24px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 15px;
+      line-height: 25px;
+      margin-bottom: 0;
+      margin-top: 40px;
+    }
+    &--add {
+      margin-bottom: 40px;
+      @media screen and (min-width: $desktop-size) {
+        margin-bottom: 60px;
+        margin-top: 0;
+      }
+    }
+  }
+  &__note-title {
+    color: $red-dark-color;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 22px;
+    margin-bottom: 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 25px;
+      line-height: 30px;
+      margin-bottom: 40px;
+    }
+  }
+  &__note {
+    font-size: 14px;
+    font-style: italic;
+    line-height: 24px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+}

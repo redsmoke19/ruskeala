@@ -12,6 +12,7 @@ html(lang="ru-RU")
 		meta(name="viewport" content="width=device-width,initial-scale=1")
 		meta(name="keywords" content="")
 		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsImbyX3XiB5qJb02e3lp2ELmM6UHKda4&callback=initMap&libraries=&v=weekly" defer)
 	body
 		.wrapper
 			include ../modules/header/header
@@ -22,6 +23,7 @@ html(lang="ru-RU")
 			include ../modules/modals/enterTicket/enterTicket
 			if pageClass === 'excursions-page'
 				include ../modules/modals/excursionsTicket/excursions-ticket
+				include ../modules/modals/excursions-additionally/excursions-additionally
 		//script(src="static/js/vendor/jquery-3.3.1.min.js")
 		block script
 			script(src="static/js/libs.js")
