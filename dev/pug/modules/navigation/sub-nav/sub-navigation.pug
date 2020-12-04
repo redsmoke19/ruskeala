@@ -10,7 +10,7 @@ nav.sub-nav
 					+icon('icon-ecscur', 'sub-nav__icon sub-nav__icon--ecscur', '26', '26')
 					span.sub-nav__label Экскурсии
 			li.swiper-slide.sub-nav__item
-				a.sub-nav__link(href="#")
+				a.sub-nav__link(href= pageClass === "entertainment-page" ? false : "entertainment.html")
 					+icon('icon-entertainment', 'sub-nav__icon sub-nav__icon--entertainment', '26', '26')
 					span.sub-nav__label Развлечения
 			li.swiper-slide.sub-nav__item

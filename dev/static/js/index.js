@@ -51,7 +51,7 @@
         preventClicksPropagation: true,
       });
 
-      entertainmentSlider = new Swiper('.entertainment__slider', {
+      entertainmentSlider = new Swiper('.entertainment-index__slider', {
         direction: 'horizontal',
         spaceBetween: 20,
         slidesPerView: 'auto',

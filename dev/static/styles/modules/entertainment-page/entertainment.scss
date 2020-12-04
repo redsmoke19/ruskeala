@@ -1,0 +1,223 @@
+.entertainment {
+  &__item {
+    @media screen and (min-width: $desktop-size) {
+      position: relative;
+    }
+  }
+  &__images {
+    @media screen and (min-width: $desktop-size) {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48%;
+      &--left {
+        left: 0;
+        right: auto;
+      }
+    }
+  }
+  &__img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      height: auto;
+    }
+  }
+  &__slider-buttons {
+    fill: $white;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1;
+    @media screen and (min-width: $desktop-size) {
+      bottom: 80px;
+      left: 80px;
+    }
+  }
+  &__slider-button {
+    @media screen and (min-width: $desktop-size) {
+      height: 48px;
+      width: 48px;
+      svg {
+        height: 48px;
+        width: 48px;
+      }
+    }
+    &--next {
+      margin-left: 10px;
+      transform: rotate(180deg);
+      @media screen and (min-width: $desktop-size) {
+        margin-left: 30px;
+      }
+    }
+  }
+  &__content {
+    padding: 20px 0 60px;
+    .container {
+      position: relative;
+    }
+    @media screen and (min-width: $desktop-size) {
+      padding: 5% 0;
+    }
+  }
+  &__inner {
+    @media screen and (min-width: $desktop-size) {
+      width: 48%;
+      &--right {
+        margin-left: auto;
+      }
+    }
+  }
+  &__sub-title {
+    color: $button-light-blue-color;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 5px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+  &__title {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 27px;
+    margin-bottom: 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 40px;
+      line-height: 49px;
+      margin-bottom: 30px;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    margin-bottom: 10px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+      line-height: 27px;
+      margin-bottom: 20px;
+    }
+  }
+  &__read-more {
+    color: $orange-dark-color;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 27px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+      line-height: 27px;
+      margin-bottom: 30px;
+    }
+  }
+  &__bottom {
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__ticket {
+    border-bottom: 2px solid $border-grey-light;
+    padding-bottom: 10px;
+    @media screen and (min-width: $desktop-size) {
+      border-bottom: none;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      padding-bottom: 0;
+    }
+  }
+  &__attention {
+    padding-top: 10px;
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      flex-basis: 55%;
+      flex-direction: column;
+      padding-top: 0;
+    }
+  }
+  &__cost {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-bottom: 10px;
+  }
+  &__price {
+    align-items: center;
+    display: flex;
+    margin-bottom: 8px;
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 28px;
+    }
+  }
+  &__count {
+    font-size: 40px;
+    line-height: 50px;
+    margin-right: 15px;
+  }
+  &__person {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  &__buy {
+    border: 2px solid $orange-dark-color;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+      line-height: 26px;
+      padding: 15px 30px;
+      margin-top: auto;
+      width: auto;
+    }
+  }
+  &__note {
+    font-size: 14px;
+    font-style: italic;
+    line-height: 22px;
+    margin-bottom: 20px;
+    b {
+      color: $red-dark-color;
+    }
+    span {
+      text-decoration: underline;
+    }
+    @media screen and (min-width: $desktop-size) {
+      font-size: 15px;
+      line-height: 24px;
+      margin-bottom: 33px;
+    }
+  }
+  &__add {
+    color: $black;
+    border-color: $black;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+      line-height: 26px;
+      padding: 15px 30px;
+    }
+  }
+}
+
+.entertainment-info {
+  &__item {
+    &:not(:last-child) {
+      @media screen and (min-width: $desktop-size) {
+        padding-right: 30px;
+      }
+    }
+    &:not(:first-child) {
+      @media screen and (min-width: $desktop-size) {
+        padding-left: 30px;
+      }
+    }
+  }
+  &__icon {
+    stroke: $button-light-blue-color;
+  }
+}
