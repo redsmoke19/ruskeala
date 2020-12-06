@@ -14,6 +14,11 @@
       &--left {
         left: 0;
         right: auto;
+        .entertainment__img { margin-left: auto; }
+        .entertainment__slider-buttons {
+          left: auto;
+          right: 80px;
+        }
       }
     }
   }
@@ -23,6 +28,7 @@
     width: 100%;
     @media screen and (min-width: $desktop-size) {
       height: auto;
+      max-width: 922px;
     }
   }
   &__slider-buttons {
@@ -58,9 +64,8 @@
     .container {
       position: relative;
     }
-    @media screen and (min-width: $desktop-size) {
-      padding: 5% 0;
-    }
+    @media screen and (min-width: $desktop-size) { padding: 7% 0; }
+    @media screen and (min-width: $large-size) { padding: 132px 0; }
   }
   &__inner {
     @media screen and (min-width: $desktop-size) {
@@ -104,6 +109,7 @@
   }
   &__read-more {
     color: $orange-dark-color;
+    cursor: pointer;
     display: inline-block;
     font-size: 14px;
     font-weight: 700;
@@ -114,6 +120,7 @@
       font-size: 16px;
       line-height: 27px;
       margin-bottom: 30px;
+      &:hover { color: $orange-light-color; }
     }
   }
   &__bottom {
@@ -185,6 +192,7 @@
       color: $red-dark-color;
     }
     span {
+      cursor: pointer;
       text-decoration: underline;
     }
     @media screen and (min-width: $desktop-size) {

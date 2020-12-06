@@ -1,0 +1,70 @@
+.excursions-route {
+  position: fixed;
+  background-color: #2A303C;
+  bottom: 0;
+  height: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transform: translate(0, -100%);
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1) 0s;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 6;
+  @media screen and (min-width: $desktop-size) {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  &--open {
+    height: 100vh;
+    overflow: auto;
+    pointer-events: all;
+    transform: translate(0, 0);
+  }
+  &__close {
+    height: 33px;
+    line-height: 0;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 33px;
+    z-index: 12;
+    @media screen and (min-width: $desktop-size) {
+      right: 80px;
+      top: 80px;
+    }
+    svg {
+      fill: $white;
+      height: 33px;
+      width: 33px;
+    }
+  }
+  &__picture {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: block;
+    overflow: auto;
+    @media screen and (min-width: $desktop-size) {
+      height: 742px;
+      top: 50%;
+      transform: translateY(-50%);
+      overflow: auto;
+    }
+  }
+  &__img {
+    height: 581px;
+    left: -200px;
+    max-width: 1494px;
+    position: absolute;
+    width: 1494px;
+    @media screen and (min-width: $desktop-size) {
+      height: auto;
+      left: 50%;
+      max-width: 1909px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+  }
+}

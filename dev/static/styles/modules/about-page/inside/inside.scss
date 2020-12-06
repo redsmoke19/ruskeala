@@ -1,0 +1,23 @@
+.inside-park {
+  background: url("../images/common/about-inside-bg-mobile@1x.png") no-repeat;
+  background-position: 0 600px;
+  background-size: contain;
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  background-image: url("../images/common/about-inside-bg-mobile@2x.png");
+  background-size: contain;
+  }
+  @media screen and (min-width: $desktop-size) {
+    background-image: url("../images/common/about-inside-bg-desktop@1x.png");
+    background-position: top;
+    background-size: contain;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      background-image: url("../images/common/about-inside-bg-desktop@2x.png");
+      background-position: top;
+      background-size: contain;
+    }
+  }
+}
+
+@import "infrastructure-park";
+@import "events-park";
+@import "history-park";

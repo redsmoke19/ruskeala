@@ -85,6 +85,11 @@
     padding: 10px 20px;
     @media screen and (min-width: $desktop-size) {
       padding: 10px 30px;
+      &:hover {
+        color: $black;
+        background-color: $white;
+        border-color: $white;
+      }
     }
   }
 }

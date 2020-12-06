@@ -1,0 +1,81 @@
+.entertainment-read-more {
+  background-color: $white;
+  bottom: 0;
+  height: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(0, -100%);
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1) 0s;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 6;
+  @media screen and (min-width: $desktop-size) {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  &--open {
+    height: 100vh;
+    overflow: auto;
+    pointer-events: all;
+    transform: translate(0, 0);
+  }
+  &__close {
+    background-color: $white;
+    padding: 8px;
+    right: 20px;
+    top: 20px;
+    @media screen and (min-width: $desktop-size) {
+      padding: 0;
+      right: 80px;
+      top: 80px;
+      svg {
+        height: 33px;
+        width: 33px;
+      }
+    }
+  }
+  &__img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+    }
+  }
+  &__content {
+    padding: 30px 20px;
+    z-index: 1;
+    @media screen and (min-width: $desktop-size) {
+      background-color: $white;
+      padding: 60px;
+      width: 66%;
+    }
+  }
+  &__title {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 30px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 40px;
+      line-height: 49px;
+      margin-bottom: 60px;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 22px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+}

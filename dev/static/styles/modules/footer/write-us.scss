@@ -1,9 +1,11 @@
 .write-us {
   margin-bottom: 40px;
+  padding: 0 20px;
   @media screen and (min-width: $desktop-size) {
     flex-basis: 48.6%;
     order: 1;
     margin-bottom: 0;
+    padding: 0;
   }
   .container {
     @media screen and (min-width: $desktop-size) {

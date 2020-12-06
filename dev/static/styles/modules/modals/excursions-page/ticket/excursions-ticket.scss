@@ -14,12 +14,12 @@
     }
     @media screen and (min-width: $desktop-size) {
       align-items: center;
-      background-image: url("../images/common/confirm-form-bg-desktop1x.png");
+      background-image: url("../images/common/confirm-form-bg-excursions-mobile1x.png");
       display: flex;
       flex-basis: 50%;
       justify-content: center;
       @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-        background-image: url("../images/common/confirm-form-bg-desktop2x.png");
+        background-image: url("../images/common/confirm-form-bg-excursions-mobile2x.png");
       }
     }
   }

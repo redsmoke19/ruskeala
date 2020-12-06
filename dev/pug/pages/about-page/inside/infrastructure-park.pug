@@ -1,0 +1,34 @@
+section.infrastructure-park
+	.container
+		.infrastructure-park__content
+			h2.infrastructure-park__title Инфраструктура
+			picture.infrastructure-park__picture
+				//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-tablet1x.webp, static/images/content/index-can-tablet2x.webp 2x")
+				//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+				source(media="(min-width: 1280px)" srcset="static/images/content/about/infrastructure-desktop@1x.png 1x, static/images/content/about/infrastructure-desktop@2x.png 2x")
+				img.infrastructure-park__img(src="static/images/content/about/infrastructure-mobile@1x.png" srcset="static/images/content/about/infrastructure-mobile@2x.png 2x" width="320" height="520" alt="Инфраструктура парка")
+			ul.infrastructure-park__list
+				li.infrastructure-park__item
+					+icon('icon-parking', 'infrastructure-park__icon infrastructure-park__icon--parking', '48', '48')
+					h3.infrastructure-park__name Парковка
+					p.infrastructure-park__text Для всех гостей парка доступна бесплатная парковка
+				li.infrastructure-park__item
+					+icon('icon-castle', 'infrastructure-park__icon infrastructure-park__icon--castle', '48', '48')
+					h3.infrastructure-park__name Детская прощадка
+					p.infrastructure-park__text Самые маленькие гости парка могут поиграть на детской площадке
+				li.infrastructure-park__item
+					+icon('icon-light-lamp', 'infrastructure-park__icon infrastructure-park__icon--light-lamp', '48', '48')
+					h3.infrastructure-park__name Художественная подсветка
+					p.infrastructure-park__text В холодное время года, с наступлением темноты благодаря световой иллюминации можно любоваться мраморными склонами
+				li.infrastructure-park__item
+					+icon('icon-tualets', 'infrastructure-park__icon infrastructure-park__icon--tualets', '48', '48')
+					h3.infrastructure-park__name Уличные туалеты
+					p.infrastructure-park__text В парке можно бесплатно воспользоваться удобствами
+				li.infrastructure-park__item
+					+icon('icon-destinations', 'infrastructure-park__icon infrastructure-park__icon--destinations', '48', '48')
+					h3.infrastructure-park__name Тропы
+					p.infrastructure-park__text Для более удобного посещения в парке есть специально оборудованные тропы
+				li.infrastructure-park__item
+					+icon('icon-binoculars', 'infrastructure-park__icon infrastructure-park__icon--binoculars', '48', '48')
+					h3.infrastructure-park__name Парковка
+					p.infrastructure-park__text Для всех гостей парка доступна бесплатная парковка

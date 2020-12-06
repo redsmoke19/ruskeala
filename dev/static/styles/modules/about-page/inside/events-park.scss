@@ -1,0 +1,148 @@
+.events-park {
+  margin-bottom: 80px;
+  @media screen and (min-width: $desktop-size) {
+    margin-bottom: 100px;
+  }
+  .container {
+    padding-right: 0;
+    @media screen and (min-width: $desktop-size) {
+      max-width: 1920px;
+      width: 100%;
+    }
+  }
+  &__top {
+    align-items: center;
+    display: flex;
+    margin-bottom: 20px;
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 auto 50px;
+      max-width: 1420px;
+      width: 74%;
+    }
+  }
+  &__logo {
+    @media screen and (min-width: $desktop-size) {
+      height: 154px;
+      width: 144px;
+    }
+  }
+  &__title {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 30px;
+    margin-left: 15px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 60px;
+      line-height: 73px;
+      margin-left: 60px;
+    }
+  }
+  &__wrapper {
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 40px;
+    }
+  }
+  &__item {
+    position: relative;
+    width: 80%;
+    @media screen and (min-width: $desktop-size) {
+      width: 40%;
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 0;
+  }
+  &__year {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 24px;
+    margin-bottom: 30px;
+    padding-left: 43px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+  &__inner {
+    background-color: $white;
+    box-shadow: 0 0 40px rgba(26, 47, 78, 0.15);
+    border-radius: 10px;
+    padding: 15px;
+    @media screen and (min-width: $desktop-size) {
+      padding: 30px;
+    }
+  }
+  &__name {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 16px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+  &__descripion {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 10px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 14px;
+      line-height: 24px;
+      margin-top: 20px;
+    }
+  }
+}
+
+.scrollbar {
+  display: none;
+  @media screen and (min-width: $desktop-size) {
+    background-color: $scrollbar-color;
+    border-radius: 10px;
+    display: block;
+    height: 5px;
+    margin: 0 auto;
+    max-width: 1420px;
+    width: 74%;
+  }
+  &__drag {
+    background-color: $button-light-blue-color;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 5px;
+    position: relative;
+    width: 281px;
+    &::after {
+      content: "";
+      background-color: $white;
+      border-radius: 50%;
+      box-shadow: 0 0 50px rgba(48, 51, 129, 0.15);
+      height: 80px;
+      left: 50%;
+      position: absolute;
+      width: 80px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__mouse {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+  }
+  &__icon {
+    fill: $orange-dark-color;
+    left: 50%;
+    position: absolute;
+    top: 15px;
+    transform: translateX(-50%);
+    z-index: 1;
+    &--left { left: 34%; }
+    &--right {
+      transform: rotate(180deg);
+      left: 64%;
+    }
+  }
+}

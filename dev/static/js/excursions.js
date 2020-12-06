@@ -44,6 +44,10 @@
     let additionallyModal = document.querySelector('.excursions-add');
     let additionallyButtons = document.querySelectorAll('.js-additionally-open');
     let additionallyClose = document.querySelector('.excursions-add__close');
+    let routeModal = document.querySelector('.excursions-route');
+    let routeButtons = document.querySelectorAll('.js-route-open');
+    let routeClose = document.querySelector('.excursions-route__close');
+
 
     // Buy tickets
     buyTicketButtons.forEach(item => {
@@ -54,7 +58,7 @@
     });
     buyTicketModalClose.addEventListener('click', () => {
       window.modalClose(buyTicketModal, 'excursions-ticket--open');
-    })
+    });
 
     // Additionally modal
     additionallyButtons.forEach(item => {
@@ -64,7 +68,17 @@
     });
     additionallyClose.addEventListener('click', () => {
       window.modalClose(additionallyModal, 'excursions-add--open');
-    })
+    });
+
+    // Route modal
+    routeButtons.forEach(item => {
+      item.addEventListener('click', () => {
+        window.modalOpen(routeModal, 'excursions-route--open', true);
+      });
+    });
+    routeClose.addEventListener('click', () => {
+      window.modalClose(routeModal, 'excursions-route--open');
+    });
   };
   modalToggle();
 

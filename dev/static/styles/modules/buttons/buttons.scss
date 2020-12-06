@@ -10,7 +10,10 @@
   border-radius: 54px;
   cursor: pointer;
   transition: all ease-out .15s;
-  &:hover { background-color: $orange-light-color; }
+  &:hover {
+    background-color: $orange-light-color;
+    border-color: $orange-light-color;
+  }
   &:active { background-color: $orange-active-color; }
   @media screen and (min-width: $desktop-size) {
     padding: 15px 35px;
@@ -20,8 +23,8 @@
     border: 2px solid $white;
     &:hover {
       background-color: transparent;
-      border-color: rgba($white, 0.7);
-      color: $border-grey-color;
+      border-color: $orange-light-color;
+      color: $orange-light-color;
     }
   }
   &--orange-transparent {
@@ -31,6 +34,7 @@
     &:hover {
       color: $white;
       background-color: $orange-dark-color;
+      border-color: $orange-dark-color;
     }
     &:active { background-color: $orange-active-color; }
   }

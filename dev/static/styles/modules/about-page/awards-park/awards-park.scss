@@ -1,0 +1,106 @@
+.awards-park {
+  margin-bottom: 60px;
+  @media screen and (min-width: $desktop-size) {
+    margin-bottom: 100px;
+  }
+  .container {
+    padding: 0;
+  }
+  &__slider-buttons {
+    margin-bottom: 20px;
+    @media screen and (min-width: $desktop-size) {
+      //bottom: -100px;
+      margin: 0;
+      //position: absolute;
+      order: 2;
+    }
+  }
+  &__slider-button {
+    @media screen and (min-width: $desktop-size) {
+      height: 48px;
+      width: 48px;
+      svg {
+        height: 48px;
+        width: 48px;
+      }
+    }
+    &--next {
+      margin-left: 10px;
+      transform: rotate(180deg);
+      @media screen and (min-width: $desktop-size) {
+        margin-left: 30px;
+      }
+    }
+  }
+  &__images {
+    @media screen and (min-width: $desktop-size) {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48%;
+    }
+  }
+  &__title {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 30px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 40px;
+      line-height: 49px;
+      margin-bottom: 40px;
+      padding: 0;
+    }
+  }
+  &__picture {
+    display: block;
+    height: 271px;
+    width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      height: 780px;
+      max-width: 922px;
+      margin-right: auto;
+    }
+  }
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      height: 100%;
+    }
+  }
+  &__inner {
+    padding: 20px 20px 0 20px;
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      width: 44.6%;
+    }
+  }
+  &__item {
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 50px;
+    }
+  }
+  &__name {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 30px;
+    margin-bottom: 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 24px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+}

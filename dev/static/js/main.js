@@ -31,10 +31,10 @@
 
   // Open Close Modal
   const modalToggle = function() {
-    window.modalOpen = function(element, className) {
+    window.modalOpen = function(element, className, wrap) {
       document.body.classList.add('overflow-hidden');
-      wrapper.classList.add('overflow-hidden');
       element.classList.add(className);
+      if (!wrap) wrapper.classList.add('overflow-hidden');
     }
     window.modalClose = function(element, className) {
       document.body.classList.remove('overflow-hidden');
@@ -43,7 +43,8 @@
     }
     let buyTicketButtons = document.querySelectorAll('.js-buyticket-open');
     let buyTicketModal = document.querySelector('.enter-ticket');
-    let buyTicketModalClose = document.querySelector('.enter-ticket__close')
+    let buyTicketModalClose = document.querySelector('.enter-ticket__close');
+
     buyTicketButtons.forEach(item => {
       item.addEventListener('click', () => {
         modalOpen(buyTicketModal, 'enter-ticket--open');

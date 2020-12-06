@@ -38,6 +38,10 @@ img {
   display: block;
 }
 
+a {
+  transition: all ease-out 0.15s;
+}
+
 input,
 button,
 textarea,
@@ -54,10 +58,6 @@ textarea { vertical-align: middle; }
 textarea { resize: none; }
 
 section { position: relative; }
-
-// input,
-// select,
-// button { outline: none; }
 
 .wrapper {
   display: flex;

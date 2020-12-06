@@ -1,0 +1,32 @@
+section.awards-park
+	.container
+		.awards-park__content
+			h2.awards-park__title Награды парка
+			.awards-park__images.swiper-container
+				ul.awards-park__img-list.swiper-wrapper
+					li.awards-park__img-item.swiper-slide
+						picture.awards-park__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-tablet1x.webp, static/images/content/index-can-tablet2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/about/awards-1-desktop@1x.png 1x, static/images/content/about/awards-1-desktop@2x.png 2x")
+							img.awards-park__img(src="static/images/content/about/awards-1-mobile@1x.png" srcset="static/images/content/about/awards-1-mobile@2x.png 2x" width="320" height="271" alt="Награда парка Феникс")
+					li.awards-park__img-item.swiper-slide
+						picture.awards-park__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-tablet1x.webp, static/images/content/index-can-tablet2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/about/awards-1-desktop@1x.png 1x, static/images/content/about/awards-1-desktop@2x.png 2x")
+							img.awards-park__img(src="static/images/content/about/awards-1-mobile@1x.png" srcset="static/images/content/about/awards-1-mobile@2x.png 2x" width="320" height="271" alt="Награда парка Феникс")
+			.awards-park__inner
+				.awards-park__slider-buttons
+					.awards-park__slider-button.awards-park__slider-button--prev.slider__button
+						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '32', '32')
+					.awards-park__slider-button.awards-park__slider-button--next.slider__button
+						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--next', '32', '32')
+				.awards-park__wrapper.swiper-container
+					ul.awards-park__list.swiper-wrapper
+						li.awards-park__item.swiper-slide
+							h3.awards-park__name АУИПИК, 2015
+							p.awards-park__text В декабре 2015 года Горный парк "Рускеала" получил важную культурную премию АУИПИК (Федерального агентства по управлению и использованию памятников истории и культуры). Номинация - «За лучший осуществленный проект сохранения и приспособления объектов культурного наследия к современному использованию». Награждение состоялось в Российском этнографическом музее в Санкт-Петербурге. Награда была вручена Генеральному директору ООО "Колмас Карелия" - Александру Борисовичу Артемьеву.  В церемонии принимал участие Министр культуры Российской Федерации Владимир Мединский. Провёл церемонию главный редактор журнала «Охраняется государством» Андрей Новиков-Ланской, а гостями мероприятия стали руководитель ФГБУК АУИПИК Олег Рыжков, художественный руководитель Государственного Малого театра Юрий Соломин, генеральный директор Государственного Малого театра Тамара Михайлова, многие директора строительных и реставрационных компаний, а также члены жюри, номинанты и победители из разных регионов России.
+						li.awards-park__item.swiper-slide
+							h3.awards-park__name АУИПИК, 2015
+							p.awards-park__text В декабре 2015 года Горный парк "Рускеала" получил важную культурную премию АУИПИК (Федерального агентства по управлению и использованию памятников истории и культуры). Номинация - «За лучший осуществленный проект сохранения и приспособления объектов культурного наследия к современному использованию».

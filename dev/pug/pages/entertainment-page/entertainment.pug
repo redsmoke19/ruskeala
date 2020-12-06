@@ -1,114 +1,320 @@
 section.entertainment
-    h1.visually-hidden Страница с возможными развлечениями в парке Рускеала
-    ul.entertainment__list
-        li.entertainment__item
-            .entertainment__images.swiper-container.entertainment__slider--kalevala
-                ul.entertainment__image-list.entertainment-images.swiper-wrapper
-                    li.entertainment-images__item.swiper-slide
-                        picture.entertainment__picture
-                            //source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-                            //source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
-                            //- source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/canyon-1-desktop1x.png 1x, static/images/content/entertainment/canyon-1-desktop2x.png 2x")
-                            img.entertainment__img(src="static/images/content/entertainment/kavevala-1-mobile@1x.png" srcset="static/images/content/entertainment/kavevala-1-mobile@2x.png 2x" width="320" height="250" alt="Тайные тропы земли KALEVARA")
-                    li.entertainment-images__item.swiper-slide
-                        picture.entertainment__picture
-                            //source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-                            //source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
-                            //- source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/canyon-2-desktop1x.png 1x, static/images/content/entertainment/canyon-2-desktop2x.png 2x")
-                            img.entertainment__img(src="static/images/content/entertainment/kavevala-2-mobile@1x.png" srcset="static/images/content/entertainment/kavevala-2-mobile@2x.png 2x" width="320" height="250" alt="Тайные тропы земли KALEVARA")
-                    li.entertainment-images__item.swiper-slide
-                        picture.entertainment__picture
-                            //source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-                            //source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
-                            //- source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/canyon-3-desktop1x.png 1x, static/images/content/entertainment/canyon-3-desktop2x.png 2x")
-                            img.entertainment__img(src="static/images/content/entertainment/kavevala-3-mobile@1x.png" srcset="static/images/content/entertainment/kavevala-3-mobile@2x.png 2x" width="320" height="250" alt="Тайные тропы земли KALEVARA")
-                    li.entertainment-images__item.swiper-slide
-                        picture.entertainment__picture
-                            //source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-                            //source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
-                            //- source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/canyon-4-desktop1x.png 1x, static/images/content/entertainment/canyon-4-desktop2x.png 2x")
-                            img.entertainment__img(src="static/images/content/entertainment/kavevala-4-mobile@1x.png" srcset="static/images/content/entertainment/kavevala-4-mobile@2x.png 2x" width="320" height="250" alt="Тайные тропы земли KALEVARA")
-                .entertainment__slider-buttons
-                    .entertainment__slider-button.entertainment__slider-button--prev.slider__button
-                        +icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '32', '32')
-                    .entertainment__slider-button.entertainment__slider-button--next.slider__button
-                        +icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--next', '32', '32')
-            .entertainment__content
-                .container
-                    .entertainment__inner
-                        span.entertainment__sub-title Активный отдых
-                        h2.entertainment__title Тайные тропы Земли KALEVALA
-                        p.entertainment__text 190 лет назад финский фольклорист Элиас Леннрот записал в окрестностях Сортавалы первые народные песни, ставшие основой известного на весь мир народного эпоса «Калевала». А теперь каждый желающий может побывать в мире «Калевалы» - пускай, не в настоящем, но очень интригующем и красивом.
-                        a.entertainment__read-more Читать полностью
-                        .entertainment__bottom
-                            .entertainment__ticket
-                                span.entertainment__cost Стоимость входа
-                                .entertainment__price
-                                    span.entertainment__count 100
-                                    span.entertainment__person руб. / чел
-                                button.button.entertainment__buy Купить билет
-                            .entertainment__attention
-                                p.entertainment__note <b>Внимание!</b> Для получения услуги дополнительно требуется <span class="js-buyticket-open">входной билет</span> в парк.
-                                button.button.button--transparent.button--dashed.entertainment__add Дополнительно
-        li.entertainment__item
-            .entertainment__images.swiper-container.entertainment__slider--boat-trip.entertainment__images--left
-                ul.entertainment__image-list.entertainment-images.swiper-wrapper
-                    li.entertainment-images__item.swiper-slide
-                        picture.entertainment__picture
-                            //source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-                            //source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
-                            //- source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/canyon-1-desktop1x.png 1x, static/images/content/entertainment/canyon-1-desktop2x.png 2x")
-                            img.entertainment__img(src="static/images/content/entertainment/kavevala-1-mobile@1x.png" srcset="static/images/content/entertainment/kavevala-1-mobile@2x.png 2x" width="320" height="250" alt="Тайные тропы земли KALEVARA")
-                    li.entertainment-images__item.swiper-slide
-                        picture.entertainment__picture
-                            //source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-                            //source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
-                            //- source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/canyon-2-desktop1x.png 1x, static/images/content/entertainment/canyon-2-desktop2x.png 2x")
-                            img.entertainment__img(src="static/images/content/entertainment/kavevala-2-mobile@1x.png" srcset="static/images/content/entertainment/kavevala-2-mobile@2x.png 2x" width="320" height="250" alt="Тайные тропы земли KALEVARA")
-                    li.entertainment-images__item.swiper-slide
-                        picture.entertainment__picture
-                            //source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-                            //source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
-                            //- source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/canyon-3-desktop1x.png 1x, static/images/content/entertainment/canyon-3-desktop2x.png 2x")
-                            img.entertainment__img(src="static/images/content/entertainment/kavevala-3-mobile@1x.png" srcset="static/images/content/entertainment/kavevala-3-mobile@2x.png 2x" width="320" height="250" alt="Тайные тропы земли KALEVARA")
-                    li.entertainment-images__item.swiper-slide
-                        picture.entertainment__picture
-                            //source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-                            //source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
-                            //- source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/canyon-4-desktop1x.png 1x, static/images/content/entertainment/canyon-4-desktop2x.png 2x")
-                            img.entertainment__img(src="static/images/content/entertainment/kavevala-4-mobile@1x.png" srcset="static/images/content/entertainment/kavevala-4-mobile@2x.png 2x" width="320" height="250" alt="Тайные тропы земли KALEVARA")
-                .entertainment__slider-buttons
-                    .entertainment__slider-button.entertainment__slider-button--prev.slider__button
-                        +icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '32', '32')
-                    .entertainment__slider-button.entertainment__slider-button--next.slider__button
-                        +icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--next', '32', '32')
-            .entertainment__content
-                .container
-                    .entertainment__inner.entertainment__inner--right
-                        span.entertainment__sub-title Активный отдых
-                        h2.entertainment__title Водная прогулка по мраморному озеру
-                        ul.entertainment__info.entertainment-info.excursion-info
-                            li.entertainment-info__item.excursion-info__item
-                                +icon('icon-chronometer', 'excursion-info__icon entertainment-info__icon entertainment-info__icon--chrono', '24', '24')
-                                span.entertainment-info__limit.excursion-info__limit 60 мин.
-                            li.entertainment-info__item.excursion-info__item
-                                +icon('icon-route', 'excursion-info__icon entertainment-info__icon entertainment-info__icon--route', '24', '24')
-                                span.entertainment-info__limit.excursion-info__limit 2600 м.
-                            li.entertainment-info__item.excursion-info__item
-                                +icon('icon-baby-boy', 'excursion-info__icon entertainment-info__icon entertainment-info__icon--baby-boy', '24', '24')
-                                span.entertainment-info__limit.excursion-info__limit 3+
-                            li.entertainment-info__item.excursion-info__item
-                                +icon('icon-group-people', 'excursion-info__icon entertainment-info__icon entertainment-info__icon--group-people', '24', '24')
-                                span.entertainment-info__limit.excursion-info__limit 4 чел.
-                        p.entertainment__text Водная прогулка по мраморному каньону оставит незабываемые впечатления и позволит насладится видами на каньон и красотами мраморных пещер, которые доступны только из воды.
-                        a.entertainment__read-more Читать полностью
-                        .entertainment__bottom
-                            .entertainment__ticket
-                                span.entertainment__cost Стоимость входа
-                                .entertainment__price
-                                    span.entertainment__count 800
-                                    span.entertainment__person руб. / 1 час
-                                button.button.entertainment__buy Купить билет
-                            .entertainment__attention
-                                p.entertainment__note <b>Внимание!</b> Для получения услуги дополнительно требуется <span class="js-buyticket-open">входной билет</span> в парк.
-                                button.button.button--transparent.button--dashed.entertainment__add Дополнительно
+	h1.visually-hidden Страница с возможными развлечениями в парке Рускеала
+	ul.entertainment__list
+		li.entertainment__item
+			.entertainment__images.swiper-container.entertainment__slider--kalevala
+				ul.entertainment__image-list.entertainment-images.swiper-wrapper
+					li.entertainment-images__item.swiper-slide
+						picture.entertainment__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/kavevala-1-desktop@1x.png 1x, static/images/content/entertainment/kavevala-1-desktop@2x.png 2x")
+							img.entertainment__img(src="static/images/content/entertainment/kavevala-1-mobile@1x.png" srcset="static/images/content/entertainment/kavevala-1-mobile@2x.png 2x" width="320" height="250" alt="Тайные тропы земли KALEVARA")
+					li.entertainment-images__item.swiper-slide
+						picture.entertainment__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/kavevala-2-desktop@1x.png 1x, static/images/content/entertainment/kavevala-2-desktop@2x.png 2x")
+							img.entertainment__img(src="static/images/content/entertainment/kavevala-2-mobile@1x.png" srcset="static/images/content/entertainment/kavevala-2-mobile@2x.png 2x" width="320" height="250" alt="Тайные тропы земли KALEVARA")
+					li.entertainment-images__item.swiper-slide
+						picture.entertainment__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/kavevala-3-desktop@1x.png 1x, static/images/content/entertainment/kavevala-3-desktop@2x.png 2x")
+							img.entertainment__img(src="static/images/content/entertainment/kavevala-3-mobile@1x.png" srcset="static/images/content/entertainment/kavevala-3-mobile@2x.png 2x" width="320" height="250" alt="Тайные тропы земли KALEVARA")
+					li.entertainment-images__item.swiper-slide
+						picture.entertainment__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/kavevala-4-desktop@1x.png 1x, static/images/content/entertainment/kavevala-4-desktop@2x.png 2x")
+							img.entertainment__img(src="static/images/content/entertainment/kavevala-4-mobile@1x.png" srcset="static/images/content/entertainment/kavevala-4-mobile@2x.png 2x" width="320" height="250" alt="Тайные тропы земли KALEVARA")
+				.entertainment__slider-buttons
+					.entertainment__slider-button.entertainment__slider-button--prev.slider__button
+						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '32', '32')
+					.entertainment__slider-button.entertainment__slider-button--next.slider__button
+						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--next', '32', '32')
+			.entertainment__content
+				.container
+					.entertainment__inner
+						span.entertainment__sub-title Активный отдых
+						h2.entertainment__title Тайные тропы Земли KALEVALA
+						p.entertainment__text 190 лет назад финский фольклорист Элиас Леннрот записал в окрестностях Сортавалы первые народные песни, ставшие основой известного на весь мир народного эпоса «Калевала». А теперь каждый желающий может побывать в мире «Калевалы» - пускай, не в настоящем, но очень интригующем и красивом.
+						a.entertainment__read-more Читать полностью
+						p.entertainment__full-text.visually-hidden Парк расположился на живописной территории Горного парка "Рускеала" рядом с итальянским карьером. Он представляет собой интерактивную площадку для знакомства с героями эпоса, а следующим летом на территории парка на полтора километра протянется эко-тропа для прогулок. Уже сейчас готовы первые обитатели парка - каменные фигуры древних богов из эпоса и деревянные фигуры главных героев.  Территория парка поделена на две части: темная - Похьяла, где обитает старуха Лоухи, и светлая - Вяйнола, откуда родом Вяйнямёйнен. Эти «стороны» стилизованы самой природой, первая - мрачный, каменный обрыв с огороженной смотровой площадкой, вторая - красивая и просторная поляна.  На входе в парк посетителям раздадут буклеты со сказкой о «Калевале» - кто-то освежит воспоминания об эпосе, а кто-то познакомится с героями впервые. Осенью в парке запустят квест: желающие смогут преодолеть несколько испытаний и проверить свои знания. Когда путь будет пройден, вам подарят памятный сувенир.  Парк подразумевает не просто обзор скульптур, а интерактив - например, можно будет сыграть на кантеле Вяйнямёйнена и попробовать поймать дикого коня Хийси с помощью веревки подобно отважному охотнику Лемминкяйнену.  Для более подробного ознакомления с эпосом можно будет заказать экскурсию. Парк будет работать круглый год. Идея создания парка принадлежит команде проекта «KareliaSportFest».
+						.entertainment__bottom
+							.entertainment__ticket
+								span.entertainment__cost Стоимость входа
+								.entertainment__price
+									span.entertainment__count 100
+									span.entertainment__person руб. / чел
+								button.button.entertainment__buy Купить билет
+							.entertainment__attention
+								p.entertainment__note <b>Внимание!</b> Для получения услуги дополнительно требуется <span class="js-buyticket-open">входной билет</span> в парк.
+								button.button.button--transparent.button--dashed.entertainment__add Дополнительно
+		li.entertainment__item
+			.entertainment__images.swiper-container.entertainment__slider--boat-trip.entertainment__images--left
+				ul.entertainment__image-list.entertainment-images.swiper-wrapper
+					li.entertainment-images__item.swiper-slide
+						picture.entertainment__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/boat-trip-1-desktop@1x.png 1x, static/images/content/entertainment/boat-trip-1-desktop@2x.png 2x")
+							img.entertainment__img(src="static/images/content/entertainment/boat-trip-1-mobile@1x.png" srcset="static/images/content/entertainment/boat-trip-1-mobile@2x.png 2x" width="320" height="250" alt="Водная прогулка по мраморному озеру")
+					li.entertainment-images__item.swiper-slide
+						picture.entertainment__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/boat-trip-2-desktop@1x.png 1x, static/images/content/entertainment/boat-trip-2-desktop@2x.png 2x")
+							img.entertainment__img(src="static/images/content/entertainment/boat-trip-2-mobile@1x.png" srcset="static/images/content/entertainment/boat-trip-2-mobile@2x.png 2x" width="320" height="250" alt="Водная прогулка по мраморному озеру")
+					li.entertainment-images__item.swiper-slide
+						picture.entertainment__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/boat-trip-3-desktop@1x.png 1x, static/images/content/entertainment/boat-trip-3-desktop@2x.png 2x")
+							img.entertainment__img(src="static/images/content/entertainment/boat-trip-3-mobile@1x.png" srcset="static/images/content/entertainment/boat-trip-3-mobile@2x.png 2x" width="320" height="250" alt="Водная прогулка по мраморному озеру")
+					li.entertainment-images__item.swiper-slide
+						picture.entertainment__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/boat-trip-4-desktop@1x.png 1x, static/images/content/entertainment/boat-trip-4-desktop@2x.png 2x")
+							img.entertainment__img(src="static/images/content/entertainment/boat-trip-4-mobile@1x.png" srcset="static/images/content/entertainment/boat-trip-4-mobile@2x.png 2x" width="320" height="250" alt="Водная прогулка по мраморному озеру")
+				.entertainment__slider-buttons
+					.entertainment__slider-button.entertainment__slider-button--prev.slider__button
+						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '32', '32')
+					.entertainment__slider-button.entertainment__slider-button--next.slider__button
+						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--next', '32', '32')
+			.entertainment__content
+				.container
+					.entertainment__inner.entertainment__inner--right
+						span.entertainment__sub-title Активный отдых
+						h2.entertainment__title Водная прогулка по мраморному озеру
+						ul.entertainment__info.entertainment-info.excursion-info
+							li.entertainment-info__item.excursion-info__item
+								+icon('icon-chronometer', 'excursion-info__icon entertainment-info__icon entertainment-info__icon--chrono', '24', '24')
+								span.entertainment-info__limit.excursion-info__limit 60 мин.
+							li.entertainment-info__item.excursion-info__item
+								+icon('icon-route', 'excursion-info__icon entertainment-info__icon entertainment-info__icon--route', '24', '24')
+								span.entertainment-info__limit.excursion-info__limit 2600 м.
+							li.entertainment-info__item.excursion-info__item
+								+icon('icon-baby-boy', 'excursion-info__icon entertainment-info__icon entertainment-info__icon--baby-boy', '24', '24')
+								span.entertainment-info__limit.excursion-info__limit 3+
+							li.entertainment-info__item.excursion-info__item
+								+icon('icon-group-people', 'excursion-info__icon entertainment-info__icon entertainment-info__icon--group-people', '24', '24')
+								span.entertainment-info__limit.excursion-info__limit 4 чел.
+						p.entertainment__text Водная прогулка по мраморному каньону оставит незабываемые впечатления и позволит насладится видами на каньон и красотами мраморных пещер, которые доступны только из воды.
+						a.entertainment__read-more Читать полностью
+						p.entertainment__full-text.visually-hidden Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet asperiores aspernatur, assumenda consequatur dolore eos excepturi inventore libero maxime natus nemo nihil obcaecati possimus rerum sapiente sequi suscipit voluptates!
+						.entertainment__bottom
+							.entertainment__ticket
+								span.entertainment__cost Стоимость входа
+								.entertainment__price
+									span.entertainment__count 800
+									span.entertainment__person руб. / 1 час
+								button.button.entertainment__buy Купить билет
+							.entertainment__attention
+								p.entertainment__note <b>Внимание!</b> Для получения услуги дополнительно требуется <span class="js-buyticket-open">входной билет</span> в парк.
+								button.button.button--transparent.button--dashed.entertainment__add Дополнительно
+		li.entertainment__item
+			.entertainment__images.swiper-container.entertainment__slider--zip-line
+				ul.entertainment__image-list.entertainment-images.swiper-wrapper
+					li.entertainment-images__item.swiper-slide
+						picture.entertainment__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/zip-line-1-desktop@1x.png 1x, static/images/content/entertainment/zip-line-1-desktop@2x.png 2x")
+							img.entertainment__img(src="static/images/content/entertainment/zip-line-1-mobile@1x.png" srcset="static/images/content/entertainment/zip-line-1-mobile@2x.png 2x" width="320" height="250" alt="Троллей (zip-line)")
+					li.entertainment-images__item.swiper-slide
+						picture.entertainment__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/zip-line-2-desktop@1x.png 1x, static/images/content/entertainment/zip-line-2-desktop@2x.png 2x")
+							img.entertainment__img(src="static/images/content/entertainment/zip-line-2-mobile@1x.png" srcset="static/images/content/entertainment/zip-line-2-mobile@2x.png 2x" width="320" height="250" alt="Троллей (zip-line)")
+					li.entertainment-images__item.swiper-slide
+						picture.entertainment__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/zip-line-3-desktop@1x.png 1x, static/images/content/entertainment/zip-line-3-desktop@2x.png 2x")
+							img.entertainment__img(src="static/images/content/entertainment/zip-line-3-mobile@1x.png" srcset="static/images/content/entertainment/zip-line-3-mobile@2x.png 2x" width="320" height="250" alt="Троллей (zip-line)")
+				.entertainment__slider-buttons
+					.entertainment__slider-button.entertainment__slider-button--prev.slider__button
+						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '32', '32')
+					.entertainment__slider-button.entertainment__slider-button--next.slider__button
+						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--next', '32', '32')
+			.entertainment__content
+				.container
+					.entertainment__inner
+						span.entertainment__sub-title Активный отдых
+						h2.entertainment__title Троллей (Zip-line)
+						ul.entertainment__info.entertainment-info.excursion-info
+							li.entertainment-info__item.excursion-info__item
+								+icon('icon-chronometer', 'excursion-info__icon entertainment-info__icon entertainment-info__icon--chrono', '24', '24')
+								span.entertainment-info__limit.excursion-info__limit 120 кг
+							li.entertainment-info__item.excursion-info__item
+								+icon('icon-route', 'excursion-info__icon entertainment-info__icon entertainment-info__icon--route', '24', '24')
+								span.entertainment-info__limit.excursion-info__limit 2600 м.
+							li.entertainment-info__item.excursion-info__item
+								+icon('icon-baby-boy', 'excursion-info__icon entertainment-info__icon entertainment-info__icon--baby-boy', '24', '24')
+								span.entertainment-info__limit.excursion-info__limit 7+
+						p.entertainment__text Ощущение скорости, адреналина и незабываемые впечатления!
+						.entertainment__bottom
+							.entertainment__ticket
+								span.entertainment__cost Стоимость входа
+								.entertainment__price
+									span.entertainment__count 1200
+									span.entertainment__person руб. / чел.
+								button.button.entertainment__buy Купить билет
+							.entertainment__attention
+								p.entertainment__note <b>Внимание!</b> Для получения услуги дополнительно требуется <span class="js-buyticket-open">входной билет</span> в парк.
+								button.button.button--transparent.button--dashed.entertainment__add Дополнительно
+		li.entertainment__item
+			.entertainment__images.swiper-container.entertainment__slider--skating.entertainment__images.entertainment__images--left
+				ul.entertainment__image-list.entertainment-images.swiper-wrapper
+					li.entertainment-images__item.swiper-slide
+						picture.entertainment__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/skating-1-desktop@1x.png 1x, static/images/content/entertainment/skating-1-desktop@2x.png 2x")
+							img.entertainment__img(src="static/images/content/entertainment/skating-1-mobile@1x.png" srcset="static/images/content/entertainment/skating-1-mobile@2x.png 2x" width="320" height="250" alt="Катание на снегоходах / квадроциклах")
+					li.entertainment-images__item.swiper-slide
+						picture.entertainment__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/skating-2-desktop@1x.png 1x, static/images/content/entertainment/skating-2-desktop@2x.png 2x")
+							img.entertainment__img(src="static/images/content/entertainment/skating-2-mobile@1x.png" srcset="static/images/content/entertainment/skating-2-mobile@2x.png 2x" width="320" height="250" alt="Катание на снегоходах / квадроциклах")
+					li.entertainment-images__item.swiper-slide
+						picture.entertainment__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/skating-3-desktop@1x.png 1x, static/images/content/entertainment/skating-3-desktop@2x.png 2x")
+							img.entertainment__img(src="static/images/content/entertainment/skating-3-mobile@1x.png" srcset="static/images/content/entertainment/skating-3-mobile@2x.png 2x" width="320" height="250" alt="Катание на снегоходах / квадроциклах")
+					li.entertainment-images__item.swiper-slide
+						picture.entertainment__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/skating-4-desktop@1x.png 1x, static/images/content/entertainment/skating-4-desktop@2x.png 2x")
+							img.entertainment__img(src="static/images/content/entertainment/skating-4-mobile@1x.png" srcset="static/images/content/entertainment/skating-4-mobile@2x.png 2x" width="320" height="250" alt="Катание на снегоходах / квадроциклах")
+				.entertainment__slider-buttons
+					.entertainment__slider-button.entertainment__slider-button--prev.slider__button
+						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '32', '32')
+					.entertainment__slider-button.entertainment__slider-button--next.slider__button
+						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--next', '32', '32')
+			.entertainment__content
+				.container
+					.entertainment__inner.entertainment__inner--right
+						span.entertainment__sub-title Активный отдых
+						h2.entertainment__title Катание на снегоходах / квадроциклах
+						ul.entertainment__info.entertainment-info.excursion-info
+							li.entertainment-info__item.excursion-info__item
+								+icon('icon-chronometer', 'excursion-info__icon entertainment-info__icon entertainment-info__icon--chrono', '24', '24')
+								span.entertainment-info__limit.excursion-info__limit 60 мин
+							li.entertainment-info__item.excursion-info__item
+								+icon('icon-route', 'excursion-info__icon entertainment-info__icon entertainment-info__icon--route', '24', '24')
+								span.entertainment-info__limit.excursion-info__limit 10 км - 20 км
+							li.entertainment-info__item.excursion-info__item
+								+icon('icon-baby-boy', 'excursion-info__icon entertainment-info__icon entertainment-info__icon--baby-boy', '24', '24')
+								span.entertainment-info__limit.excursion-info__limit 16+
+						p.entertainment__text Катание на снегоходе или квадроцикле, в зависимости от поры года, только в сопровождении инструктора по подготовленным трассам. Опытные инструкторы подробно расскажут, покажут и раскроют секреты управления снегоходом или квадроциклом, проведут по маршруту и предостерегут от опасных ситуаций на трассе.
+						.entertainment__bottom
+							.entertainment__ticket
+								span.entertainment__cost Стоимость входа
+								.entertainment__price
+									span.entertainment__count 2500
+									span.entertainment__person руб. / час
+								button.button.entertainment__buy Купить билет
+							.entertainment__attention
+								p.entertainment__note <b>Внимание!</b> Для получения услуги дополнительно требуется <span class="js-buyticket-open">входной билет</span> в парк.
+								button.button.button--transparent.button--dashed.entertainment__add Дополнительно
+		li.entertainment__item
+			.entertainment__images.swiper-container.entertainment__slider--diving.entertainment__images
+				ul.entertainment__image-list.entertainment-images.swiper-wrapper
+					li.entertainment-images__item.swiper-slide
+						picture.entertainment__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/diving-1-desktop@1x.png 1x, static/images/content/entertainment/diving-1-desktop@2x.png 2x")
+							img.entertainment__img(src="static/images/content/entertainment/diving-1-mobile@1x.png" srcset="static/images/content/entertainment/diving-1-mobile@2x.png 2x" width="320" height="250" alt="Фото дайвинг")
+					li.entertainment-images__item.swiper-slide
+						picture.entertainment__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/diving-2-desktop@1x.png 1x, static/images/content/entertainment/diving-2-desktop@2x.png 2x")
+							img.entertainment__img(src="static/images/content/entertainment/diving-2-mobile@1x.png" srcset="static/images/content/entertainment/diving-2-mobile@2x.png 2x" width="320" height="250" alt="Фото дайвинг")
+				.entertainment__slider-buttons
+					.entertainment__slider-button.entertainment__slider-button--prev.slider__button
+						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '32', '32')
+					.entertainment__slider-button.entertainment__slider-button--next.slider__button
+						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--next', '32', '32')
+			.entertainment__content
+				.container
+					.entertainment__inner
+						span.entertainment__sub-title Активный отдых
+						h2.entertainment__title Дайвинг
+						p.entertainment__text Для дайверов мы предлагаем аренду плавучей платформы для погружений. <br><br><b>Важно!</b> Услуга доступна только при наличии удостоверения дайвера и собственного оборудования для погружения. Необходимо предварительное бронирование по телефону: +7 (921) 461 40 13. Услуга доступна только в тёплое время года (с 1 мая по 1 октября).
+						.entertainment__bottom
+							.entertainment__ticket
+								span.entertainment__cost За 1 погружение
+								.entertainment__price
+									span.entertainment__count 300
+									span.entertainment__person руб. / чел.
+								button.button.entertainment__buy Купить билет
+							.entertainment__attention
+								p.entertainment__note <b>Внимание!</b> Для получения услуги дополнительно требуется <span class="js-buyticket-open">входной билет</span> в парк.
+								button.button.button--transparent.button--dashed.entertainment__add Дополнительно
+		li.entertainment__item
+			.entertainment__images.swiper-container.entertainment__slider--tarzan.entertainment__images--left
+				ul.entertainment__image-list.entertainment-images.swiper-wrapper
+					li.entertainment-images__item.swiper-slide
+						picture.entertainment__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/tarzan-1-desktop@1x.png 1x, static/images/content/entertainment/tarzan-1-desktop@2x.png 2x")
+							img.entertainment__img(src="static/images/content/entertainment/tarzan-1-mobile@1x.png" srcset="static/images/content/entertainment/tarzan-1-mobile@2x.png 2x" width="320" height="250" alt="Тарзанка")
+					li.entertainment-images__item.swiper-slide
+						picture.entertainment__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/tarzan-2-desktop@1x.png 1x, static/images/content/entertainment/tarzan-2-desktop@2x.png 2x")
+							img.entertainment__img(src="static/images/content/entertainment/tarzan-2-mobile@1x.png" srcset="static/images/content/entertainment/tarzan-2-mobile@2x.png 2x" width="320" height="250" alt="Тарзанка")
+					li.entertainment-images__item.swiper-slide
+						picture.entertainment__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/tarzan-3-desktop@1x.png 1x, static/images/content/entertainment/tarzan-3-desktop@2x.png 2x")
+							img.entertainment__img(src="static/images/content/entertainment/tarzan-3-mobile@1x.png" srcset="static/images/content/entertainment/tarzan-3-mobile@2x.png 2x" width="320" height="250" alt="Тарзанка")
+					li.entertainment-images__item.swiper-slide
+						picture.entertainment__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/tarzan-4-desktop@1x.png 1x, static/images/content/entertainment/tarzan-4-desktop@2x.png 2x")
+							img.entertainment__img(src="static/images/content/entertainment/tarzan-4-mobile@1x.png" srcset="static/images/content/entertainment/tarzan-4-mobile@2x.png 2x" width="320" height="250" alt="Тарзанка")
+				.entertainment__slider-buttons
+					.entertainment__slider-button.entertainment__slider-button--prev.slider__button
+						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '32', '32')
+					.entertainment__slider-button.entertainment__slider-button--next.slider__button
+						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--next', '32', '32')
+			.entertainment__content
+				.container
+					.entertainment__inner.entertainment__inner--right
+						span.entertainment__sub-title Активный отдых
+						h2.entertainment__title Тарзанка (прыжок с верёвкой)
+						ul.entertainment__info.entertainment-info.excursion-info
+							li.entertainment-info__item.excursion-info__item
+								+icon('icon-chronometer', 'excursion-info__icon entertainment-info__icon entertainment-info__icon--chrono', '24', '24')
+								span.entertainment-info__limit.excursion-info__limit 100 кг
+							li.entertainment-info__item.excursion-info__item
+								+icon('icon-route', 'excursion-info__icon entertainment-info__icon entertainment-info__icon--route', '24', '24')
+								span.entertainment-info__limit.excursion-info__limit 20 м.
+							li.entertainment-info__item.excursion-info__item
+								+icon('icon-baby-boy', 'excursion-info__icon entertainment-info__icon entertainment-info__icon--baby-boy', '24', '24')
+								span.entertainment-info__limit.excursion-info__limit 7+
+						p.entertainment__text Катание на снегоходе или квадроцикле, в зависимости от поры года, только в сопровождении инструктора по подготовленным трассам. Опытные инструкторы подробно расскажут, покажут и раскроют секреты управления снегоходом или квадроциклом, проведут по маршруту и предостерегут от опасных ситуаций на трассе.
+						.entertainment__bottom
+							.entertainment__ticket
+								span.entertainment__cost Стоимость входа
+								.entertainment__price
+									span.entertainment__count 1500
+									span.entertainment__person руб. / чел.
+								button.button.entertainment__buy Купить билет
+							.entertainment__attention
+								p.entertainment__note <b>Внимание!</b> Для получения услуги дополнительно требуется <span class="js-buyticket-open">входной билет</span> в парк.
+								button.button.button--transparent.button--dashed.entertainment__add Дополнительно

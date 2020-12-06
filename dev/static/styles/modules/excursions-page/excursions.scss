@@ -1,4 +1,7 @@
 .excursions {
+  @media screen and (min-width: $desktop-size) {
+    margin-bottom: 140px;
+  }
   &-images {
     &__item {
       @media screen and (min-width: $desktop-size) {
@@ -163,9 +166,13 @@
     font-size: 15px;
     font-weight: 900;
     line-height: 27px;
+    text-decoration: underline;
     @media screen and (min-width: $desktop-size) {
       font-size: 16px;
       line-height: 27px;
+      &:hover {
+        color: $orange-dark-color;
+      }
     }
   }
   &__cost {
@@ -268,12 +275,5 @@
       font-size: 15px;
       line-height: 26px;
     }
-  }
-}
-
-.excursions-page .map {
-  @media screen and (min-width: $desktop-size) {
-    margin-bottom: 0;
-    margin-top: 140px;    
   }
 }

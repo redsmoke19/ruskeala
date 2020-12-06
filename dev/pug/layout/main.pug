@@ -23,7 +23,10 @@ html(lang="ru-RU")
 			include ../modules/modals/enterTicket/enterTicket
 			if pageClass === 'excursions-page'
 				include ../modules/modals/excursionsTicket/excursions-ticket
-				include ../modules/modals/excursions-additionally/excursions-additionally
+				include ../modules/modals/excursions/excursions-additionally
+				include ../modules/modals/excursions/excursions-route
+			if pageClass === "entertainment-page"
+				include ../modules/modals/entertainment-read-more/entertainment-read-more
 		//script(src="static/js/vendor/jquery-3.3.1.min.js")
 		block script
 			script(src="static/js/libs.js")
@@ -34,3 +37,5 @@ html(lang="ru-RU")
 				script(src="static/js/excursions.js")
 			if pageClass === 'entertainment-page'
 				script(src="static/js/entertainment.js")
+			if pageClass === 'about-page'
+				script(src="static/js/about.js")

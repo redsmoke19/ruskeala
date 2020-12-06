@@ -1,0 +1,12 @@
+extends layout/main
+
+block variables
+	-var title = 'О парке Рускеала'
+	-var pageClass = 'about-page'
+
+block content
+	main(class=pageClass)
+		include pages/about-page/about-park
+		include pages/about-page/inside/inside
+		include pages/about-page/gallery-park
+		include pages/about-page/awards-park

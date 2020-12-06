@@ -1,0 +1,10 @@
+extends layout/main
+
+block variables
+	-var title = 'Рестораны в парке Рускеала'
+	-var pageClass = 'eat-page'
+
+block content
+	main(class=pageClass)
+		include pages/where-to-eat/where-to-eat
+		include modules/map/map

@@ -1,0 +1,186 @@
+.eat-park {
+  margin-bottom: 60px;
+  @media screen and (min-width: $desktop-size) {
+    margin-bottom: 100px;
+  }
+  .container {
+    padding: 0;
+  }
+  &__picture {
+    display: block;
+    height: 320px;
+    width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      height: 725px;
+    }
+  }
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      height: 100%;
+    }
+  }
+  &__list {
+    margin-bottom: 60px;
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__item {
+    @media screen and (min-width: $desktop-size) {
+      flex-shrink: 0;
+      position: relative;
+      width: 47.3%;
+    }
+    &:first-child {
+      margin-bottom: 40px;
+      @media screen and (min-width: $desktop-size) {
+        margin: 0;
+      }
+    }
+  }
+  &__inner {
+    background-color: $white;
+    margin-top: -145px;
+    padding: 20px;
+    position: relative;
+    width: 94%;
+    @media screen and (min-width: $desktop-size) {
+      bottom: 0;
+      left: 0;
+      margin: 0;
+      padding: 30px;
+      position: absolute;
+      width: 70%;
+    }
+    @media screen and (min-width: 1600px) {
+      width: 50%;
+    }
+    &--right {
+      margin-left: auto;
+      @media screen and (min-width: $desktop-size) {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+  &__name {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 30px;
+    margin-bottom: 10px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 35px;
+      line-height: 43px;
+      margin-bottom: 30px;
+    }
+  }
+  &__text {
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 15px;
+      line-height: 25px;
+      margin-bottom: 30px;
+    }
+  }
+  &__button {
+    width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+      line-height: 27px;
+      padding: 15px 45px;
+      width: auto;
+    }
+  }
+}
+
+.souvenirs-park {
+  @media screen and (min-width: $desktop-size) {
+    position: relative;
+  }
+  &__title {
+    color: $button-light-blue-color;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 49px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 60px;
+      line-height: 73px;
+      margin-bottom: 40px;
+      padding: 0;
+    }
+  }
+  &__picture {
+    display: block;
+    height: 214px;
+    margin-bottom: 20px;
+    width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      height: 100%;
+      right: 0;
+      margin: 0;
+      max-height: 617px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48.125%;
+    }
+  }
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      height: 100%;
+      max-width: 924px;
+    }
+  }
+  &__inner {
+    padding: 0 20px;
+    @media screen and (min-width: $desktop-size) {
+      padding: 0;
+      width: 47.324%;
+    }
+  }
+  &__name {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 30px;
+    margin-bottom: 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 40px;
+      line-height: 49px;
+      margin-bottom: 30px;
+    }
+  }
+  &__text {
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+      line-height: 27px;
+      margin-bottom: 30px;
+    }
+  }
+  &__button {
+    width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+      line-height: 26px;
+      padding: 15px 30px;
+      width: auto;
+    }
+  }
+}
+
+.eat-page .map {
+  @media screen and (min-width: $desktop-size) {
+    margin-bottom: 0;
+  }
+}

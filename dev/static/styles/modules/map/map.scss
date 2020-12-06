@@ -89,3 +89,16 @@
     }
   }
 }
+
+.excursions-page .map,
+.entertainment-page .map {
+  @media screen and (min-width: $desktop-size) {
+    margin-bottom: 0;
+  }
+}
+
+.entertainment-page .map {
+  @media screen and (min-width: $desktop-size) {
+    margin-top: 50px;
+  }
+}

@@ -14,7 +14,7 @@ nav.sub-nav
 					+icon('icon-entertainment', 'sub-nav__icon sub-nav__icon--entertainment', '26', '26')
 					span.sub-nav__label Развлечения
 			li.swiper-slide.sub-nav__item
-				a.sub-nav__link(href="#")
+				a.sub-nav__link(href= pageClass === "eat-page" ? false : "where-to-eat.html")
 					+icon('icon-food', 'sub-nav__icon sub-nav__icon--food', '26', '26')
 					span.sub-nav__label Где поесть
 			li.swiper-slide.sub-nav__item
