@@ -1,6 +1,9 @@
 .hotel-park {
   &__hero {
     @media screen and (min-width: $desktop-size) {
+      display: flex;
+      height: 800px;
+      padding-bottom: 165px;
       position: relative;
     }
   }
@@ -11,25 +14,53 @@
     position: relative;
     @media screen and (min-width: $desktop-size) {
       background-color: transparent;
+      margin-top: auto;
+      padding: 0;
+      width: 100%;
       z-index: 2;
+    }
+    .container {
+      @media screen and (min-width: $desktop-size) {
+        position: relative;
+      }
+    }
+  }
+  &__box {
+    @media screen and (min-width: $desktop-size) {
+      width: 42.3%;
     }
   }
   &__sub-title {
     font-size: 18px;
     line-height: 22px;
     margin-bottom: 10px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 30px;
+      line-height: 37px;
+      margin-bottom: 0;
+    }
   }
   &__title {
     font-size: 22px;
-    font-weight: 900;
+    font-weight: 800;
     line-height: 27px;
     margin-bottom: 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 40px;
+      line-height: 49px;
+      margin-bottom: 30px;
+    }
   }
   &__text {
     font-size: 14px;
     font-weight: 500;
     line-height: 22px;
     margin-bottom: 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+      line-height: 27px;
+      margin-bottom: 30px;
+    }
   }
   &__reserv {
     font-size: 16px;
@@ -37,6 +68,10 @@
     padding: 18px 61px 18px 24px;
     position: relative;
     width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      padding: 18px 72px 18px 30px;
+      width: auto;
+    }
   }
   &__icon--arrow {
     fill: $white;
@@ -50,17 +85,34 @@
     position: absolute;
     top: -44px;
     z-index: 2;
+    @media screen and (min-width: $desktop-size) {
+      bottom: 0;
+      left: auto;
+      right: 0;
+      top: auto;
+    }
   }
   &__slider-button {
     height: 24px;
     width: 24px;
+    @media screen and (min-width: $desktop-size) {
+      height: 48px;
+      width: 48px;
+    }
     &--next {
       margin-left: 10px;
+      @media screen and (min-width: $desktop-size) {
+        margin-left: 30px;
+      }
     }
     svg {
       fill: $white;
       height: 24px;
       width: 24px;
+      @media screen and (min-width: $desktop-size) {
+        height: 48px;
+        width: 48px;
+      }
     }
   }
 }
@@ -71,7 +123,7 @@
     position: absolute;
     width: 100%;
   }
-  &__title {
+  &__wrap {
     bottom: 65px;
     color: $white;
     font-size: 25px;
@@ -80,10 +132,24 @@
     left: 20px;
     position: absolute;
     z-index: 2;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 80px;
+      font-weight: 800;
+      line-height: 98px;
+      left: 50%;
+      max-width: 1420px;
+      top: 92px;
+      transform: translateX(-50%);
+      text-align: right;
+      width: 74%;
+    }
   }
   &__img {
     object-fit: cover;
     width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      height: 100%;
+    }
   }
   &__item {
     position: relative;
@@ -121,6 +187,7 @@
     }
     &--standart {
       background: url("../images/content/hotel/rooms-standart-1-mobile@1x.png") no-repeat center;
+      background-size: cover;
       @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         background-image: url("../images/content/hotel/rooms-standart-1-mobile@2x.png");
         background-size: cover;
@@ -128,6 +195,7 @@
     }
     &--vip {
       background: url("../images/content/hotel/rooms-vip-1-mobile@1x.png") no-repeat center;
+      background-size: cover;
       @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         background-image: url("../images/content/hotel/rooms-vip-1-mobile@2x.png");
         background-size: cover;
@@ -135,6 +203,7 @@
     }
     &--separated {
       background: url("../images/content/hotel/rooms-separated-1-mobile@1x.png") no-repeat center;
+      background-size: cover;
       @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         background-image: url("../images/content/hotel/rooms-separated-1-mobile@2x.png");
         background-size: cover;
@@ -158,5 +227,11 @@
     line-height: 26px;
     padding: 15px 38px;
     width: auto;
+  }
+}
+
+.hotel-page .map {
+  @media screen and (min-width: $desktop-size) {
+    margin-bottom: 0;
   }
 }
