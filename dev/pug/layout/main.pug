@@ -27,6 +27,8 @@ html(lang="ru-RU")
 				include ../modules/modals/excursions/excursions-route
 			if pageClass === "entertainment-page"
 				include ../modules/modals/entertainment-read-more/entertainment-read-more
+			if pageClass === "eat-page"
+				include ../modules/modals/food/menu
 		//script(src="static/js/vendor/jquery-3.3.1.min.js")
 		block script
 			script(src="static/js/libs.js")
@@ -39,3 +41,5 @@ html(lang="ru-RU")
 				script(src="static/js/entertainment.js")
 			if pageClass === 'about-page'
 				script(src="static/js/about.js")
+			if pageClass === 'hotel-page'
+				script(src="static/js/hotel.js")

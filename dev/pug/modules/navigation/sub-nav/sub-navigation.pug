@@ -18,7 +18,7 @@ nav.sub-nav
 					+icon('icon-food', 'sub-nav__icon sub-nav__icon--food', '26', '26')
 					span.sub-nav__label Где поесть
 			li.swiper-slide.sub-nav__item
-				a.sub-nav__link(href="#")
+				a.sub-nav__link(href= pageClass === "hotel-page" ? false : "hotel.html")
 					+icon('icon-hotel', 'sub-nav__icon sub-nav__icon--hotel', '26', '26')
 					span.sub-nav__label Гостиница
 			li.swiper-slide.sub-nav__item
