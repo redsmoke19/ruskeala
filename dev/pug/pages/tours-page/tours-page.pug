@@ -1,0 +1,42 @@
+section.tours-park
+	h1.visually-hidden Страница с турами в парк Рускеала
+	include ../../modules/breadcrumbs/breadcrumbs
+	ul.tours-park__tours
+		li.tours-park__tour
+			.tours-park__images.tours-park__slider--weekend.swiper-container
+				ul.tours-park__image-list.swiper-wrapper
+					li.tours-park-images__image-item.swiper-slide
+						picture.tours-park__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/tours/weekend-1-desktop@1x.png 1x, static/images/content/tours/weekend-1-desktop@2x.png 2x")
+							img.tours-park__img(src="static/images/content/tours/weekend-1-mobile@1x.png" srcset="static/images/content/tours/weekend-1-mobile@2x.png 2x" width="320" height="250" alt="Выходные в Карелии")
+					li.tours-park-images__image-item.swiper-slide
+						picture.tours-park__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/tours/weekend-2-desktop@1x.png 1x, static/images/content/tours/weekend-2-desktop@2x.png 2x")
+							img.tours-park__img(src="static/images/content/tours/weekend-2-mobile@1x.png" srcset="static/images/content/tours/weekend-2-mobile@2x.png 2x" width="320" height="250" alt="Выходные в Карелии")
+					li.tours-park-images__image-item.swiper-slide
+						picture.tours-park__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/tours/weekend-3-desktop@1x.png 1x, static/images/content/tours/weekend-3-desktop@2x.png 2x")
+							img.tours-park__img(src="static/images/content/tours/weekend-3-mobile@1x.png" srcset="static/images/content/tours/weekend-3-mobile@2x.png 2x" width="320" height="250" alt="Выходные в Карелии")
+					li.tours-park-images__image-item.swiper-slide
+						picture.tours-park__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/tours/weekend-4-desktop@1x.png 1x, static/images/content/tours/weekend-4-desktop@2x.png 2x")
+							img.tours-park__img(src="static/images/content/tours/weekend-4-mobile@1x.png" srcset="static/images/content/tours/weekend-4-mobile@2x.png 2x" width="320" height="250" alt="Выходные в Карелии")
+					li.tours-park-images__image-item.swiper-slide
+						picture.tours-park__picture
+							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+							source(media="(min-width: 1280px)" srcset="static/images/content/tours/weekend-5-desktop@1x.png 1x, static/images/content/tours/weekend-5-desktop@2x.png 2x")
+							img.tours-park__img(src="static/images/content/tours/weekend-5-mobile@1x.png" srcset="static/images/content/tours/weekend-5-mobile@2x.png 2x" width="320" height="250" alt="Выходные в Карелии")
+				.tours-park__slider-buttons
+					.tours-park__slider-button.tours-park__slider-button--prev.slider__button
+						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '32', '32')
+					.tours-park__slider-button.tours-park__slider-button--next.slider__button
+						+icon('icon-arrow--right', 'slider__icon slider__icon--white slider__icon--next', '32', '32')

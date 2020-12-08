@@ -1,0 +1,10 @@
+extends layout/main
+
+block variables
+	-var title = 'Комплекстные туры в парк Рускеала'
+	-var pageClass = 'tours-page'
+
+block content
+	main(class=pageClass)
+		include pages/tours-page/tours-page
+		include modules/map/map

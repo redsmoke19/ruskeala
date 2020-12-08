@@ -1,0 +1,28 @@
+.breadcrumbs {
+  color: $border-black-light-color;
+  display: flex;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 18px;
+  padding: 10px 0;
+  & > * {
+    &:not(:last-child) { margin-right: 50px; }
+  }
+  &__item {
+    white-space: nowrap;
+  }
+  &__link {
+    color: $orange-dark-color;
+    position: relative;
+    text-decoration: none;
+    &::after {
+      color: $border-black-light-color;
+      content: "»";
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 18px;
+      position: absolute;
+      right: -30px;
+    }
+  }
+}
