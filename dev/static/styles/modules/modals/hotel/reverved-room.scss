@@ -1,0 +1,200 @@
+.reserved-room {
+  background-color: $scrollbar-color;
+  bottom: 0;
+  height: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: fixed;
+  transform: translate(0, -100%);
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1) 0s;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 6;
+  @media screen and (min-width: $desktop-size) {
+    display: flex;
+  }
+  &--open {
+    height: 100vh;
+    overflow: auto;
+    pointer-events: all;
+    transform: translate(0, 0);
+  }
+  &__close {
+    @media screen and (min-width: $desktop-size) {
+      box-shadow: none;
+      height: 33px;
+      right: 80px;
+      top: 80px;
+      width: 33px;
+      svg {
+        height: 33px;
+        width: 33px;
+      }
+    }
+  }
+  &__images {
+    @media screen and (min-width: $desktop-size) {
+      margin: 0;
+      width: 41.6%;
+    }
+  }
+  &__picture {
+    display: block;
+    height: 270px;
+    @media screen and (min-width: $desktop-size) {
+      height: 100vh;
+    }
+  }
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+  &__slider-buttons {
+    bottom: 20px;
+    left: 20px;
+    position: absolute;
+    z-index: 2;
+    @media screen and (min-width: $desktop-size) {
+      bottom: 80px;
+      left: 80px;
+    }
+  }
+  &__slider-button {
+    @media screen and (min-width: $desktop-size) {
+      height: 48px;
+      width: 48px;
+    }
+    &--next {
+      margin-left: 10px;
+      @media screen and (min-width: $desktop-size) {
+        margin-left: 30px;
+      }
+    }
+    svg {
+      fill: $white;
+      @media screen and (min-width: $desktop-size) {
+        height: 48px;
+        width: 48px;
+      }
+    }
+  }
+  &__content {
+    padding: 20px 20px 50px;
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 10% 0 4.2%;
+      width: 58.4%;
+    }
+    @media screen and (min-width: $large-size) {
+        padding: 0 18.3% 0 4.2%;
+    }
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 27px;
+    margin-bottom: 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 22px;
+      line-height: 27px;
+      margin-bottom: 30px;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    margin-bottom: 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 15px;
+      line-height: 25px;
+      margin-bottom: 40px;
+    }
+  }
+  &__dates {
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+  }
+  &__date {
+    margin-bottom: 10px;
+    .datepicker__input {
+      background-color: $white;
+      font-size: 18px;
+      line-height: 22px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 0;
+      width: 47%;
+    }
+  }
+  &__options {
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__time {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 10px;
+    .select-time__header {
+      background-color: $white;
+    }
+    @media screen and (min-width: $desktop-size) {
+      margin: 0;
+      width: 47%;
+    }
+  }
+  &__label {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    margin-bottom: 10px;
+    &--mobile-none {
+      display: none;
+      @media screen and (min-width: $desktop-size) {
+        display: inline-block;
+      }
+    }
+    &--desktop-none {
+      display: inline-block;
+      @media screen and (min-width: $desktop-size) {
+        display: none;
+      }
+    }
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  &__icon {
+    fill: $orange-dark-color;
+    margin-right: 10px;
+    &--arrow {
+      fill: $black;
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+  &__button {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 30px;
+    padding: 15px 38px;
+    @media screen and (min-width: $desktop-size) {
+      align-self: flex-start;
+      margin-top: 40px;
+      width: auto;
+    }
+  }
+}

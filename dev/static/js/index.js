@@ -8,6 +8,7 @@
     let excursionsSlider;
     let entertainmentSlider;
     let foodSuverirsSlider;
+    let galleyRuskealaSlider;
 
     const breakpointChecker = function() {
       let resizeTimeout;
@@ -24,6 +25,7 @@
           if (excursionsSlider !== undefined) excursionsSlider.destroy(true, true);
           if (entertainmentSlider !== undefined) entertainmentSlider.destroy(true, true);
           if (foodSuverirsSlider !== undefined) foodSuverirsSlider.destroy(true, true);
+          if (galleyRuskealaSlider !== undefined) galleyRuskealaSlider.destroy(true, true);
         } else if (breakpointDesktop.matches === false) {
           enableSwiperDesktop();
         }
@@ -70,20 +72,20 @@
         preventClicks: true,
         preventClicksPropagation: true,
       });
+
+      galleyRuskealaSlider = new Swiper('.gallery-ruskeala__inner', {
+        direction: 'horizontal',
+        spaceBetween: 20,
+        slidesPerView: 'auto',
+        grabCursor: true,
+        slidesOffsetAfter: 20,
+        preventClicks: true,
+        preventClicksPropagation: true,
+      });
     };
 
     breakpointDesktop.addListener(breakpointChecker);
     breakpointChecker();
-
-    const galleyRuskealaSlider = new Swiper('.gallery-ruskeala__inner', {
-      direction: 'horizontal',
-      spaceBetween: 20,
-      slidesPerView: 'auto',
-      grabCursor: true,
-      slidesOffsetAfter: 20,
-      preventClicks: true,
-      preventClicksPropagation: true,
-    });
 
     const feedbackTextSlider = new Swiper('.feedback', {
       direction: 'horizontal',

@@ -1,0 +1,69 @@
+.reserved-room
+    button.close-button.reserved-room__close
+        +icon('icon-small-close', 'enter-ticket__icon enter-ticket__icon--close', '18', '18')
+    .reserved-room__images.swiper-container
+        ul.reserved-room__list.swiper-wrapper
+            li.reserved-room__item.swiper-slide
+                picture.reserved-room__picture
+                    //source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+                    //source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+                    source(media="(min-width: 1280px)" srcset="static/images/content/hotel/rooms-standart-1-desktop@1x.png 1x, static/images/content/hotel/rooms-standart-1-desktop@2x.png 2x")
+                    img.reserved-room__img(src="static/images/content/hotel/rooms-standart-1-mobile@1x.png" srcset="static/images/content/hotel/rooms-standart-1-mobile@2x.png 2x" width="320" height="270" alt="Стандартный двухместный номер")
+            li.reserved-room__item.swiper-slide
+                picture.reserved-room__picture
+                    //source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+                    //source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+                    source(media="(min-width: 1280px)" srcset="static/images/content/hotel/rooms-standart-2-desktop@1x.png 1x, static/images/content/hotel/rooms-standart-2-desktop@2x.png 2x")
+                    img.reserved-room__img(src="static/images/content/hotel/rooms-standart-2-mobile@1x.png" srcset="static/images/content/hotel/rooms-standart-2-mobile@2x.png 2x" width="320" height="270" alt="Стандартный двухместный номер")
+            li.reserved-room__item.swiper-slide
+                picture.reserved-room__picture
+                    //source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+                    //source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+                    source(media="(min-width: 1280px)" srcset="static/images/content/hotel/rooms-standart-3-desktop@1x.png 1x, static/images/content/hotel/rooms-standart-3-desktop@2x.png 2x")
+                    img.reserved-room__img(src="static/images/content/hotel/rooms-standart-3-mobile@1x.png" srcset="static/images/content/hotel/rooms-standart-3-mobile@2x.png 2x" width="320" height="270" alt="Стандартный двухместный номер")
+            li.reserved-room__item.swiper-slide
+                picture.reserved-room__picture
+                    //source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
+                    //source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
+                    source(media="(min-width: 1280px)" srcset="static/images/content/hotel/rooms-standart-4-desktop@1x.png 1x, static/images/content/hotel/rooms-standart-4-desktop@2x.png 2x")
+                    img.reserved-room__img(src="static/images/content/hotel/rooms-standart-4-mobile@1x.png" srcset="static/images/content/hotel/rooms-standart-4-mobile@2x.png 2x" width="320" height="270" alt="Стандартный двухместный номер")
+        .reserved-room__slider-buttons
+            .reserved-room__slider-button.reserved-room__slider-button--prev.slider__button
+                +icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '32', '32')
+            .reserved-room__slider-button.reserved-room__slider-button--next.slider__button
+                +icon('icon-arrow--right', 'slider__icon slider__icon--white slider__icon--next', '32', '32')
+    .reserved-room__content
+        h2.reserved-room__title Cтандартный двухместный номер с одной двухместной кроватью
+        p.reserved-room__text Двухместный номер с рабочей зоной и совмещенной уборной комнатой. <br>Кабельное телевидение (более 60 каналов) и сеть WiFi. <br>Номер для комфортного проживания двух человек. <br>Площадь номера: 13 м²
+        .reserved-room__dates
+            .reserved-room__date.reserved-room__date--in.datepicker__wrapper.datepicker__wrapper--reserved-room
+                label.reserved-room__label(for="reserver-room--in") Дата заезда
+                input(type="text").reserved-room--in__datepicker.datepicker__input#reserver-room--in
+                +icon('icon-calendar', 'datepicker__icon datepicker__icon--reserved-room', '18', '20')
+            .reserved-room__date.reserved-room__date--out.datepicker__wrapper.datepicker__wrapper--reserved-room
+                label.reserved-room__label(for="reserver-room--out") Дата выезда
+                input(type="text").reserved-room--out__datepicker.datepicker__input#reserver-room--out
+                +icon('icon-calendar', 'datepicker__icon datepicker__icon--reserved-room', '18', '20')
+        span.reserved-room__label.reserved-room__label--mobile-none Размещение в номере «Двухместный "Дабл"»
+        .reserved-room__options
+            .reserved-room__time.select-time
+                span.reserved-room__label.reserved-room__label--desktop-none Размещение в номере
+                .select-time__header
+                    +icon('icon-form-user', 'reserved-room__icon reserved-room__icon--user', '20', '20')
+                    span.select-time__current 2 взрослых
+                    +icon('icon-menu-arrow', 'reserved-room__icon reserved-room__icon--arrow', '12', '9')
+                .select-time__body
+                    .select-time__item 1 взрослый
+                    .select-time__item 2 взрослых
+                    .select-time__item 3 взрослых
+            .reserved-room__time.select-time
+                span.reserved-room__label.reserved-room__label--desktop-none Дети
+                .select-time__header
+                    +icon('icon-plus', 'reserved-room__icon reserved-room__icon--plus', '20', '20')
+                    span.select-time__current Добавить детей
+                    +icon('icon-menu-arrow', 'reserved-room__icon reserved-room__icon--arrow', '12', '9')
+                .select-time__body
+                    .select-time__item 1 ребенок
+                    .select-time__item 2 ребенка
+                    .select-time__item 3 ребенка
+        button.button.reserved-room__button Забронировать

@@ -77,8 +77,8 @@
 
   // Select enter ticket
   const select = function() {
-    let selectCurrent = document.querySelectorAll('.select-time__header'),
-      selectItem = document.querySelectorAll('.select-time__item');
+    let selectCurrent = document.querySelectorAll('.select-time__header');
+    let selectItem = document.querySelectorAll('.select-time__item');
     selectCurrent.forEach((item) => {
       item.addEventListener('click', (e) => {
         e.currentTarget.parentElement.classList.toggle('is-open');
@@ -115,7 +115,7 @@
     }
   };
 
-  const enableSubMenu = function () {
+  const enableSubMenu = function() {
     subMenuMobileSlider = new Swiper('.sub-nav__wrapper', {
       direction: 'horizontal',
       spaceBetween: 15,

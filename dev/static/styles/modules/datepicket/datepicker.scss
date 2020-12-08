@@ -39,6 +39,11 @@
     right: 17px;
     top: 50%;
     transform: translateY(-50%);
+    &--reserved-room {
+      bottom: 0;
+      top: auto;
+      z-index: 2;
+    }
   }
 }
 

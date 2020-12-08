@@ -1,4 +1,7 @@
 .hotel-park {
+  @media screen and (min-width: $desktop-size) {
+    margin-bottom: 100px;
+  }
   &__hero {
     @media screen and (min-width: $desktop-size) {
       display: flex;
@@ -67,6 +70,7 @@
     line-height: 26px;
     padding: 18px 61px 18px 24px;
     position: relative;
+    text-decoration: none;
     width: 100%;
     @media screen and (min-width: $desktop-size) {
       padding: 18px 72px 18px 30px;
@@ -167,6 +171,12 @@
 
 .rooms-hotel {
   color: $white;
+  @media screen and (min-width: $desktop-size) {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1920px;
+    width: 100%;
+  }
   &__item {
     background-size: cover;
     display: flex;
@@ -175,6 +185,11 @@
     justify-content: flex-end;
     padding: 30px 20px;
     position: relative;
+    @media screen and (min-width: $desktop-size) {
+      flex-basis: 33.333%;
+      height: 800px;
+      padding: 100px 100px 100px 100px;
+    }
     &::after {
       background: rgba(96, 32, 0, 1) linear-gradient(90deg, #3C1400 0%, rgba(46, 15, 0, 0.5) 29.71%, rgba(44, 14, 0, 0) 59.69%);
       content: "";
@@ -192,6 +207,14 @@
         background-image: url("../images/content/hotel/rooms-standart-1-mobile@2x.png");
         background-size: cover;
       }
+      @media screen and (min-width: $desktop-size) {
+        background: url("../images/content/hotel/rooms-standart-1-desktop@1x.png") no-repeat center;
+        background-size: cover;
+        @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+          background-image: url("../images/content/hotel/rooms-standart-1-desktop@2x.png");
+          background-size: cover;
+        }
+      }
     }
     &--vip {
       background: url("../images/content/hotel/rooms-vip-1-mobile@1x.png") no-repeat center;
@@ -199,6 +222,15 @@
       @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         background-image: url("../images/content/hotel/rooms-vip-1-mobile@2x.png");
         background-size: cover;
+      }
+      @media screen and (min-width: $desktop-size) {
+        background: url("../images/content/hotel/rooms-vip-1-desktop@1x.png") no-repeat center;
+        background-size: cover;
+        order: 2;
+        @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+          background-image: url("../images/content/hotel/rooms-vip-1-desktop@2x.png");
+          background-size: cover;
+        }
       }
     }
     &--separated {
@@ -208,6 +240,14 @@
         background-image: url("../images/content/hotel/rooms-separated-1-mobile@2x.png");
         background-size: cover;
       }
+      @media screen and (min-width: $desktop-size) {
+        background: url("../images/content/hotel/rooms-separated-1-desktop@1x.png") no-repeat center;
+      background-size: cover;
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        background-image: url("../images/content/hotel/rooms-separated-1-desktop@2x.png");
+        background-size: cover;
+      }
+      }
     }
   }
   &__inner {
@@ -215,10 +255,28 @@
     z-index: 2;
   }
   &__name {
+    display: inline-block;
     font-size: 18px;
     font-weight: 700;
     line-height: 22px;
     margin-bottom: 10px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 20px;
+      line-height: 27px;
+      margin-bottom: 20px;
+    }
+  }
+  &__count {
+    @media screen and (min-width: $desktop-size) {
+      font-size: 40px;
+      line-height: 49px;
+    }
+  }
+  &__person {
+    @media screen and (min-width: $desktop-size) {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
   &__button {
     align-self: flex-start;

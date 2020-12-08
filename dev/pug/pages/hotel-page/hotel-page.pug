@@ -57,32 +57,32 @@ section.hotel-park
 					span.hotel-park__sub-title Гостиница
 					h2.hotel-park__title "Пийпун Пиха"
 					p.hotel-park__text Мы рады предложить нашим гостям 19 номеров различной категории для комфортного проживания и уютный ресторан для приятного отдыха. Изящная классика, великолепие и оригинальный карельский колорит соединены в интерьере и обстановке гостиницы.
-					button.hotel-park__reserv.button Забронировать номер
+					a.hotel-park__reserv.button(href="#rooms-hotel") Забронировать номер
 						+icon('icon-arrow--bottom', 'hotel-park__icon--arrow', '14', '22')
 					.hotel-park__slider-buttons
 						.hotel-park__slider-button.hotel-park__slider-button--prev.slider__button
 							+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '32', '32')
 						.hotel-park__slider-button.hotel-park__slider-button--next.slider__button
 							+icon('icon-arrow--right', 'slider__icon slider__icon--white slider__icon--next', '32', '32')
-	ul.hotel-park__rooms.rooms-hotel
+	ul.hotel-park__rooms.rooms-hotel#rooms-hotel
 		li.rooms-hotel__item.rooms-hotel__item--standart
 			.rooms-hotel__inner
 				span.rooms-hotel__name Cтандартный 2-местный номер с одной двухместной кроватью
 				.excursions__price.rooms-hotel_-price
 					span.excursions__count.rooms-hotel__count 3 900
 					span.excursions__person.rooms-hotel__person руб./сутки
-				button.button.button--transparent.rooms-hotel__button.button--dashed Забронировать
+				button.button.button--transparent.rooms-hotel__button.button--dashed.js-reserved-room-open Забронировать
 		li.rooms-hotel__item.rooms-hotel__item--vip
 			.rooms-hotel__inner
 				span.rooms-hotel__name Экслюзивный 2-местный номер с одной краватью или двумя отдельными кроватями
 				.excursions__price.rooms-hotel_-price
 					span.excursions__count.rooms-hotel__count 4 500
 					span.excursions__person.rooms-hotel__person руб./сутки
-				button.button.button--transparent.rooms-hotel__button.button--dashed Забронировать
+				button.button.button--transparent.rooms-hotel__button.button--dashed.js-reserved-room-open Забронировать
 		li.rooms-hotel__item.rooms-hotel__item--separated
 			.rooms-hotel__inner
 				span.rooms-hotel__name Стандартный 2-местный номер с двумя отдельными одноместными кроватями
 				.excursions__price.rooms-hotel_-price
 					span.excursions__count.rooms-hotel__count 3 900
 					span.excursions__person.rooms-hotel__person руб./сутки
-				button.button.button--transparent.rooms-hotel__button.button--dashed Забронировать
+				button.button.button--transparent.rooms-hotel__button.button--dashed.js-reserved-room-open Забронировать
