@@ -1,3 +1,284 @@
 .tours-park {
+  &__tours {
+    margin-bottom: 20px;
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 80px;
+    }
+  }
+  &__tour {
+    @media screen and (min-width: $desktop-size) {
+      position: relative;
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+  &__images {
+    @media screen and (min-width: $desktop-size) {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48.021%;
+      &--left {
+        @media screen and (min-width: $desktop-size) {
+          left: 0;
+          right: auto;
+        }
+      }
+    }
+  }
+  &__picture {
+    display: block;
+    height: 250px;
+    width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      height: auto;
+      max-height: 725px;
+    }
+  }
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      max-height: 725px;
+      max-width: 922px;
+      &--right {
+        margin-left: auto;
+      }
+    }
+  }
+  &__slider-buttons {
+    bottom: 30px;
+    left: 20px;
+    position: absolute;
+    z-index: 2;
+    @media screen and (min-width: $desktop-size) {
+      left: 70px;
+    }
+    &--right {
+      @media screen and (min-width: $desktop-size) {
+        left: auto;
+        right: 70px;
+      }
+    }
+  }
+  &__slider-button {
+    height: 24px;
+    width: 24px;
+    @media screen and (min-width: $desktop-size) {
+      height: 48px;
+      width: 48px;
+    }
+    &--next {
+      margin-left: 10px;
+      @media screen and (min-width: $desktop-size) {
+        margin-left: 30px;
+      }
+    }
+    svg {
+      fill: $white;
+      @media screen and (min-width: $desktop-size) {
+        height: 48px;
+        width: 48px;
+      }
+    }
+  }
+  &__description {
+    padding: 20px 0 40px;
+    @media screen and (min-width: $desktop-size) {
+      align-items: center;
+      display: flex;
+      height: 600px;
+      padding: 0;
+    }
+    @media screen and (min-width: 1540px) {
+      height: 725px;
+    }
+  }
+  &__inner {
+    @media screen and (min-width: $desktop-size) {
+      width: 47.888%;
+      &--right {
+        margin-left: auto;
+      }
+    }
+  }
+  &__sub-title {
+    color: $button-light-blue-color;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 5px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+  &__title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27px;
+    margin-bottom: 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 30px;
+      line-height: 37px;
+      margin-bottom: 30px;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    margin-bottom: 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+      line-height: 27px;
+      margin-bottom: 30px;
+    }
+  }
+  &__cost {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-bottom: 10px;
+  }
+  &__price {
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 28px;
+    }
+  }
+  &__count {
+    font-size: 40px;
+    line-height: 50px;
+    margin-right: 15px;
+  }
+  &__person {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  &__bottom {
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+    }
+  }
+  &__reserved {
+    margin-bottom: 20px;
+    width: auto;
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 7% 0 0;
+      padding: 15px 30px;
+    }
+  }
+  &__more {
+    color: $black;
+    display: block;
+    border-color: $black;
+    width: auto;
+    @media screen and (min-width: $desktop-size) {
+      padding: 15px 30px;
+    }
+  }
+}
 
+.tours-vacation {
+  margin-bottom: 40px;
+  @media screen and (min-width: $desktop-size) {
+    margin-bottom: 140px;
+  }
+  .container {
+    padding: 0;
+  }
+  &__col {
+    @media screen and (min-width: $desktop-size) {
+      float: left;
+      margin-right: 20px;
+    }
+    @media screen and (min-width: $large-size) {
+      margin-right: 68px;
+    }
+  }
+  &__title {
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 55px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 60px;
+      line-height: 75px;
+      margin-bottom: 40px;
+      padding: 0;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 100px;
+      line-height: 122px;
+    }
+  }
+  &__pre-text {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    @media screen and (min-width: $desktop-size) {
+      padding: 0;
+      margin-bottom: 40px;
+    }
+    @media screen and (min-width: $large-size) {
+      font-size: 22px;
+      line-height: 32px;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 0 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+      line-height: 30px;
+      padding: 0;
+      &--clear {
+        clear: both;
+      }
+    }
+  }
+  &__picture {
+    display: block;
+    margin: 20px 0;
+    &--mobile-none { 
+      display: none;
+      @media screen and (min-width: $desktop-size) {
+        display: block;
+        margin: 0 0 20px 0;
+        width: 472px;
+      }
+      @media screen and (min-width: $large-size) {
+        margin: 0 0 80px 0;
+        width: auto;
+      }
+    }
+    @media screen and (min-width: $desktop-size) {
+      &--desktop-none { display: none; }
+    }
+  }
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      height: 360px;
+    }
+  }
+}
+
+.tours-page .map {
+  @media screen and (min-width: $desktop-size) {
+    margin-bottom: 0;
+  }
 }
