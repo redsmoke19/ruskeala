@@ -1,3 +1,27 @@
+.modal {
+  &__closed {
+    background-color: $scrollbar-color;
+    bottom: 0;
+    height: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: fixed;
+    transform: translate(0, -100%);
+    transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1) 0s;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 6;
+    &--open {
+      height: 100vh;
+      overflow: auto;
+      pointer-events: all;
+      transform: translate(0, 0);
+    }
+  }
+}
+
 @import "ticket-modal";
 @import "enterTicket/enterTicket";
 @import "excursions-page/ticket/excursions-ticket";
@@ -6,3 +30,4 @@
 @import "entertainment-read-more/entertainment-read-more";
 @import "food-page/menu";
 @import "hotel/reverved-room";
+@import "tours/tour-description";

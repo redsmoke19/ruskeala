@@ -41,4 +41,24 @@
     },
   });
 
+  const toursProgramFirstSlider = new Swiper('.tour-programs__first-day', {
+    direction: 'horizontal',
+    preventClicks: true,
+    preventClicksPropagation: true,
+    slidesPerView: 'auto',
+    spaceBetween: 40,
+    slidesOffsetBefore: 20,
+    slidesOffsetAfter: 20,
+  });
+
+  const toursProgramSecondSlider = new Swiper('.tour-programs__second-day', {
+    direction: 'horizontal',
+    preventClicks: true,
+    preventClicksPropagation: true,
+    slidesPerView: 'auto',
+    spaceBetween: 40,
+    slidesOffsetBefore: 20,
+    slidesOffsetAfter: 20,
+  });
+
 })();

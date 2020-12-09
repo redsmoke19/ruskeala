@@ -1,0 +1,288 @@
+.tour-description {
+  &__close-button {
+    background-color: $white;
+    font-size: 0;
+    line-height: 0;
+    padding: 7px;
+    top: 20px;
+    right: 20px;
+    @media screen and (min-width: $desktop-size) {
+      padding: 16px;
+      right: 80px;
+      top: 90px;
+      svg {
+        height: 32px;
+        width: 32px;
+      }
+    }
+  }
+  &__header {
+    background: url("../images/common/modal-tour-bg-mobile@1x.png") no-repeat center;
+    background-size: cover;
+    color: $white;
+    margin-bottom: 20px;
+    padding: 43px 0;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      background-image: url("../images/common/modal-tour-bg-mobile@2x.png");
+      background-size: cover;
+    }
+    @media screen and (min-width: $desktop-size) {
+      background: url("../images/common/modal-tour-bg-desktop@1x.png") no-repeat center;
+      background-size: cover;
+      padding: 60px 0;
+      margin-bottom: 40px;
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        background-image: url("../images/common/modal-tour-bg-desktop@2x.png");
+        background-size: cover;
+      }
+    }
+  }
+  &__note {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 5px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+  &__title {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 27px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 40px;
+      line-height: 49px;
+    }
+  }
+  &__sub-title {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 27px;
+    margin-bottom: 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 22px;
+      line-height: 27px;
+      margin-bottom: 40px;
+    }
+    &--big {
+      @media screen and (min-width: $desktop-size) {
+        font-size: 40px;
+        line-height: 49px;
+      }
+    }
+  }
+  &__picture {
+    display: block;
+    position: relative;
+    height: 582px;
+    overflow-x: auto;
+    @media screen and (min-width: $desktop-size) {
+      height: 676px;
+    }
+  }
+  &__img {
+    left: -250px;
+    object-fit: contain;
+    position: absolute;
+    width: 1494px;
+    max-width: 1494px;
+    @media screen and (min-width: $desktop-size) {
+      height: 100%;
+      left: 0;
+      object-fit: cover;
+      max-width: none;
+      position: relative;
+      width: 100%;
+    }
+  }
+}
+
+.tour-cost {
+  &__list {
+    margin-bottom: 40px;
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 50px;
+    }
+  }
+  &__item {
+    align-items: flex-start;
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      @media screen and (min-width: $desktop-size) {
+        margin: 0;
+      }
+    }
+    @media screen and (min-width: $desktop-size) {
+      width: 22.747%;
+      &:not(:nth-child(n+13)) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  &__icon {
+    fill: $orange-dark-color;
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+}
+
+.tour-need-visited {
+  background-color: $white;
+  box-shadow: 0 0 50px rgba(48, 51, 129, 0.15);
+  border-radius: 10px;
+  margin-top: -80px;
+  margin-bottom: 40px;
+  padding: 20px 20px 30px 20px;
+  position: relative;
+  @media screen and (min-width: $desktop-size) {
+    margin-top: -245px;
+    margin-bottom: 80px;
+    padding: 40px 40px 18px 40px;
+    width: 61%;
+  }
+  &__top {
+    align-items: center;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  &__icon {
+    fill: transparent;
+    margin-right: 15px;
+    stroke: $orange-dark-color;
+    stroke-width: 2px;
+  }
+  &__title {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 27px;
+  }
+  &__list {
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  &__item {
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 22px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      width: 40%;
+      &:nth-child(even) { width: 55%; }
+      &:last-child { margin-bottom: 22px; }
+    }
+  }
+  &__text {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    padding-left: 16px;
+    &::before {
+      background-color: $orange-dark-color;
+      border-radius: 50%;
+      content: "";
+      height: 6px;
+      left: 0;
+      position: absolute;
+      top: calc(50% - 3px);
+      width: 6px;
+    }
+  }
+}
+
+.tour-programs {
+  &__title {
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+  &__sub-title {
+    color: $button-light-blue-color;
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 27px;
+    margin-bottom: 20px;
+  }
+  &__list {
+    margin-bottom: 40px;
+  }
+  &__item {
+    display: flex;
+    height: 203px;
+    position: relative;
+    width: 203px;
+    &:not(:last-child) {
+      &::after {
+        background-color: $black;
+        content: "";
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        right: -71px;
+        width: 98px;
+      }
+    }
+  }
+  &__times {
+    align-items: center;
+    color: $light-black-color;
+    display: flex;
+    font-size: 16px;
+    font-weight: 900;
+    height: 85px;
+    justify-content: center;
+    line-height: 20px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85px;
+    &::before {
+      border: 3px solid $light-black-color;
+      border-radius: 50%;
+      content: "";
+      height: 85px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 85px;
+    }
+    &::after {
+      border: 1px solid $light-black-color;
+      border-radius: 50%;
+      content: "";
+      height: 65px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 65px;
+    }
+    &--orange {
+      color: $orange-dark-color;
+      &::before, &::after {
+        border-color: $orange-dark-color;
+      }
+    }
+  }
+  &__text {
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    &--bottom {
+      margin-top: auto;
+    }
+  }
+}
