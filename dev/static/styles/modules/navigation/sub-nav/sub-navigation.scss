@@ -15,6 +15,10 @@
     width: auto;
     @media screen and (min-width: $desktop-size) {
       &:not(:last-child) { margin-right: 10px; }
+      &--last {
+        order: 3;
+        margin-left: 10px;
+      }
     }
   }
   &__icon {
