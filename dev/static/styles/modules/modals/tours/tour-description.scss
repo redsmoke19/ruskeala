@@ -1,4 +1,5 @@
 .tour-description {
+  background-color: $white;
   &__close-button {
     background-color: $white;
     font-size: 0;
@@ -91,9 +92,15 @@
       height: 100%;
       left: 0;
       object-fit: cover;
+      object-position: center;
       max-width: none;
       position: relative;
       width: 100%;
+    }
+  }
+  &__programs {
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 134px;
     }
   }
 }
@@ -142,6 +149,7 @@
   margin-bottom: 40px;
   padding: 20px 20px 30px 20px;
   position: relative;
+  z-index: 2;
   @media screen and (min-width: $desktop-size) {
     margin-top: -245px;
     margin-bottom: 80px;
@@ -201,6 +209,13 @@
 }
 
 .tour-programs {
+  &__days {
+    margin: 0 auto 40px auto;
+    max-width: 1920px;
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 60px;
+    }
+  }
   &__title {
     font-size: 25px;
     line-height: 30px;
@@ -213,9 +228,6 @@
     font-weight: 900;
     line-height: 27px;
     margin-bottom: 20px;
-  }
-  &__list {
-    margin-bottom: 40px;
   }
   &__item {
     display: flex;
@@ -283,6 +295,19 @@
     text-align: center;
     &--bottom {
       margin-top: auto;
+    }
+  }
+  &__scrollbar {
+    @media screen and (min-width: $desktop-size) {
+      margin-top: 106px;
+      max-width: none;
+      width: 100%;
+      &--first {
+        margin-bottom: 74px;
+        @media screen and (min-width: $large-size) {
+          display: none;
+        }
+      }
     }
   }
 }

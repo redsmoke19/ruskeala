@@ -41,6 +41,7 @@
       wrapper.classList.remove('overflow-hidden');
       element.classList.remove(className);
     }
+
     let buyTicketButtons = document.querySelectorAll('.js-buyticket-open');
     let buyTicketModal = document.querySelector('.enter-ticket');
     let buyTicketModalClose = document.querySelector('.enter-ticket__close');
@@ -96,6 +97,7 @@
   //Sliders
   const breakpointDesktop = window.matchMedia('(min-width: 1280px)');
   let subMenuMobileSlider;
+  let tourPriceSlider;
 
   const breakpointChecker = function() {
     let resizeTimeout;
@@ -109,6 +111,7 @@
     function resizeHandlerDesktop() {
       if (breakpointDesktop.matches === true) {
         if (subMenuMobileSlider !== undefined) subMenuMobileSlider.destroy(true, true);
+        if (tourPriceSlider !== undefined) tourPriceSlider.destroy(true, true);
       } else if (breakpointDesktop.matches === false) {
         enableSubMenu();
       }
@@ -116,6 +119,17 @@
   };
 
   const enableSubMenu = function() {
+    tourPriceSlider = new Swiper('.tour-price__slider', {
+      direction: 'horizontal',
+      spaceBetween: 10,
+      slidesPerView: 'auto',
+      grabCursor: true,
+      slidesOffsetAfter: 20,
+      slidesOffsetBefore: 20,
+      preventClicks: true,
+      preventClicksPropagation: true,
+    });
+
     subMenuMobileSlider = new Swiper('.sub-nav__wrapper', {
       direction: 'horizontal',
       spaceBetween: 15,

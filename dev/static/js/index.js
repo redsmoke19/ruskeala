@@ -33,6 +33,7 @@
     };
 
     const enableSwiperDesktop = function() {
+
       chooseTicketSlider = new Swiper('.buy-ticket__slider', {
         direction: 'horizontal',
         spaceBetween: 20,

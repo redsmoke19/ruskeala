@@ -10,3 +10,69 @@
     &--next { transform: rotate(180deg); }
   }
 }
+
+.scrollbar {
+  display: none;
+  @media screen and (min-width: $desktop-size) {
+    background-color: $scrollbar-color;
+    border-radius: 10px;
+    display: block;
+    height: 5px;
+    margin: 0 auto;
+    max-width: 1420px;
+    width: 74%;
+  }
+  &__drag {
+    background-color: $button-light-blue-color;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 5px;
+    position: relative;
+    width: 281px;
+    &::after {
+      content: "";
+      background-color: $white;
+      border-radius: 50%;
+      box-shadow: 0 0 50px rgba(48, 51, 129, 0.15);
+      height: 80px;
+      left: 50%;
+      position: absolute;
+      width: 80px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &--small {
+      &::after {
+        box-shadow: 0 0 20px rgba(48, 51, 129, 0.15);
+        height: 60px;
+        width: 60px;
+      }
+    }
+  }
+  &__mouse {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+  }
+  &__walk {
+    fill: transparent;
+    stroke: $orange-dark-color;
+  }
+  &__icon {
+    fill: $orange-dark-color;
+    left: 50%;
+    position: absolute;
+    top: 15px;
+    transform: translateX(-50%);
+    z-index: 1;
+    &--left { 
+      left: calc(50% - 50px); 
+    }
+    &--right {
+      transform: rotate(180deg);
+      left: calc(50% + 44px);
+    }
+  }
+}

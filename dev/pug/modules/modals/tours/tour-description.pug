@@ -1,4 +1,4 @@
-.tour-description.modal__closed.modal__closed--open
+.tour-description.modal__closed
 	button.close-button.tour-description__close-button
 		+icon('icon-small-close', 'enter-ticket__icon enter-ticket__icon--close', '18', '18')
 	.tour-description__header
@@ -90,7 +90,7 @@
 		.container
 			h2.tour-programs__title Программа тура
 			h3.tour-programs__sub-title День 1
-		.tour-programs__first-day.swiper-container
+		.tour-programs__first-day.tour-programs__days.swiper-container
 			ul.tour-programs__list.swiper-wrapper
 				li.tour-programs__item.swiper-slide
 					span.tour-programs__times.tour-programs__times--orange 8:00
@@ -111,8 +111,13 @@
 					p.tour-programs__text Прибытие в Сортавалу. Расселение по отелям. Ужин и отдых
 					span.tour-programs__times.tour-programs__times--orange 20:00
 		.container
+			.tour-programs__scrollbar.tour-programs__scrollbar--first.scrollbar
+				.scrollbar__drag.scrollbar__drag--small
+					+icon('icon-walk', 'scrollbar__mouse scrollbar__walk', '28', '40')
+					+icon('icon-arrow', 'scrollbar__icon scrollbar__icon--left', '12', '7')
+					+icon('icon-arrow', 'scrollbar__icon scrollbar__icon--right', '12', '7')
 			h3.tour-programs__sub-title День 2
-		.tour-programs__second-day.swiper-container
+		.tour-programs__second-day.tour-programs__days.swiper-container
 			ul.tour-programs__list.swiper-wrapper
 				li.tour-programs__item.swiper-slide
 					span.tour-programs__times.tour-programs__times--orange 9:00
@@ -138,6 +143,14 @@
 				li.tour-programs__item.swiper-slide
 					p.tour-programs__text Ориентировочное время возвращения в Санкт-Петербург
 					span.tour-programs__times.tour-programs__times--orange 23:00
+		.container
+			.tour-programs__scrollbar.tour-programs__scrollbar--second.scrollbar
+				.scrollbar__drag.scrollbar__drag--small
+					+icon('icon-walk', 'scrollbar__mouse scrollbar__walk', '28', '40')
+					+icon('icon-arrow', 'scrollbar__icon scrollbar__icon--left', '12', '7')
+					+icon('icon-arrow', 'scrollbar__icon scrollbar__icon--right', '12', '7')
+	.tour-description__tour-cost
+		include ../modal-tour-cost/modal-tour-cost
 
 
 

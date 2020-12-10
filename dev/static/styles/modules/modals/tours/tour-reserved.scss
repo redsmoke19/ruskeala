@@ -1,0 +1,24 @@
+.tour-reserved {
+    background-color: $white;
+    padding-top: 40px;
+    @media screen and (min-width: $desktop-size) {
+        padding-top: 62px;
+    }
+  &__close-button {
+    background-color: transparent;
+    font-size: 0;
+    line-height: 0;
+    padding: 7px;
+    top: 20px;
+    right: 20px;
+    @media screen and (min-width: $desktop-size) {
+      padding: 16px;
+      right: 80px;
+      top: 90px;
+      svg {
+        height: 32px;
+        width: 32px;
+      }
+    }
+  }
+}
