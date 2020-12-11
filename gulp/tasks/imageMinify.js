@@ -6,23 +6,23 @@ const imagemin = require('gulp-imagemin');
 
 module.exports = function imageMinify() {
   return gulp.src(
-    ['dev/static/images/**/**/*.{gif,png,jpg,svg,webp}',
+    ['dev/static/images/**/**/*.{gif,png,jpg,svg}',
     '!dev/static/images/sprite/**/*']
   )
     .pipe(buffer())
     .pipe(imagemin([
-      imagemin.gifsicle({interlaced: true}),
-      imagemin.mozjpeg({
-        quality: 75,
-        progressive: true
-      }),
-      imagemin.optipng({optimizationLevel: 5}),
-      imagemin.svgo({
-        plugins: [
-          {removeViewBox: true},
-          {cleanupIDs: false}
-        ]
-      })
+      // imagemin.gifsicle({interlaced: true}),
+      // imagemin.mozjpeg({
+      //   quality: 75,
+      //   progressive: true
+      // }),
+      // imagemin.optipng({optimizationLevel: 5}),
+      // imagemin.svgo({
+      //   plugins: [
+      //     {removeViewBox: true},
+      //     {cleanupIDs: false}
+      //   ]
+      // })
     ]))
     .pipe(gulp.dest('dist/static/images/'))
 };

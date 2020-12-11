@@ -11,8 +11,14 @@ html(lang="ru-RU")
 		<![endif]-->
 		meta(name="viewport" content="width=device-width,initial-scale=1")
 		meta(name="keywords" content="")
+		link(rel="preload" href="static/fonts/montserrat/montserratbold/Montserrat-Bold.woff2" as="font" crossorigin="anonymous")
+		link(rel="preload" href="static/fonts/montserrat/montserratblack/Montserrat-Black.woff2" as="font" crossorigin="anonymous")
+		link(rel="preload" href="static/fonts/montserrat/montserratextrabold/Montserrat-ExtraBold.woff2" as="font" crossorigin="anonymous")
+		link(rel="preload" href="static/fonts/montserrat/montserratmedium/Montserrat-Medium.woff2" as="font" crossorigin="anonymous")
+		link(rel="preload" href="static/fonts/montserrat/montserratregular/Montserrat-Regular.woff2" as="font" crossorigin="anonymous")
+		link(rel="preload" href="static/fonts/montserrat/montserratsemibold/Montserrat-SemiBold.woff2" as="font" crossorigin="anonymous")
 		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
-		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsImbyX3XiB5qJb02e3lp2ELmM6UHKda4&callback=initMap&libraries=&v=weekly" defer)
+		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsImbyX3XiB5qJb02e3lp2ELmM6UHKda4&callback=initMap&libraries=&v=weekly" async)
 	body
 		.wrapper
 			include ../modules/header/header
@@ -38,19 +44,19 @@ html(lang="ru-RU")
 				include ../modules/modals/tours/tour-reserved
 		//script(src="static/js/vendor/jquery-3.3.1.min.js")
 		block script
-			script(src="static/js/libs.js")
-			script(src="static/js/main.js")
+			script(src="static/js/libs.js" defer)
+			script(src="static/js/main.js" defer)
 			if pageClass === 'index-page'
-				script(src="static/js/index.js")
+				script(src="static/js/index.js" defer)
 			if pageClass === 'excursions-page'
-				script(src="static/js/excursions.js")
+				script(src="static/js/excursions.js" defer)
 			if pageClass === 'entertainment-page'
-				script(src="static/js/entertainment.js")
+				script(src="static/js/entertainment.js" defer)
 			if pageClass === 'about-page'
-				script(src="static/js/about.js")
+				script(src="static/js/about.js" defer)
 			if pageClass === 'eat-page'
-				script(src="static/js/where-to-eat.js")
+				script(src="static/js/where-to-eat.js" defer)
 			if pageClass === 'hotel-page'
-				script(src="static/js/hotel.js")
+				script(src="static/js/hotel.js" defer)
 			if pageClass === 'tours-page'
-				script(src="static/js/tours.js")
+				script(src="static/js/tours.js" defer)

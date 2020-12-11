@@ -2,12 +2,12 @@
   @font-face {
     font-family: quote($font-name);
     src:
-      url(#{$path}.woff) format("woff"),
-      url(#{$path}.woff2) format("woff2"),
-      url(#{$path}.ttf) format("truetype");
+      // url(#{$path}.woff) format("woff"),
+      url(#{$path}.woff2) format("woff2");
+      // url(#{$path}.ttf) format("truetype");
+      font-display: swap;
     font-weight: $weight;
     font-style: $style;
-    font-display: swap;
   }
 }
 @include font-face('Montserrat', '../fonts/montserrat/montserratregular/Montserrat-Regular', 400, 'normal');
