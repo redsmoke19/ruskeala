@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const buffer = require('vinyl-buffer');
 const imagemin = require('gulp-imagemin');
+const webp = require('imagemin-webp');
 
 // Минификация и оптимизация изображений
 
@@ -11,18 +12,23 @@ module.exports = function imageMinify() {
   )
     .pipe(buffer())
     .pipe(imagemin([
-      // imagemin.gifsicle({interlaced: true}),
-      // imagemin.mozjpeg({
-      //   quality: 75,
-      //   progressive: true
-      // }),
-      // imagemin.optipng({optimizationLevel: 5}),
-      // imagemin.svgo({
-      //   plugins: [
-      //     {removeViewBox: true},
-      //     {cleanupIDs: false}
-      //   ]
-      // })
+      webp({quality: 75})
     ]))
     .pipe(gulp.dest('dist/static/images/'))
 };
+
+
+// .pipe(imagemin([
+//   imagemin.gifsicle({interlaced: true}),
+//   imagemin.mozjpeg({
+//     quality: 75,
+//     progressive: true
+//   }),
+//   imagemin.optipng({optimizationLevel: 5}),
+//   imagemin.svgo({
+//     plugins: [
+//       {removeViewBox: true},
+//       {cleanupIDs: false}
+//     ]
+//   })
+// ]))
