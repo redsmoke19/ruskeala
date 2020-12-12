@@ -18,7 +18,6 @@ html(lang="ru-RU")
 		link(rel="preload" href="static/fonts/montserrat/montserratregular/Montserrat-Regular.woff2" as="font" crossorigin="anonymous")
 		link(rel="preload" href="static/fonts/montserrat/montserratsemibold/Montserrat-SemiBold.woff2" as="font" crossorigin="anonymous")
 		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
-		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsImbyX3XiB5qJb02e3lp2ELmM6UHKda4&callback=initMap&libraries=&v=weekly" async)
 	body
 		.wrapper
 			include ../modules/header/header
@@ -42,10 +41,10 @@ html(lang="ru-RU")
 			if pageClass === "tours-page"
 				include ../modules/modals/tours/tour-description
 				include ../modules/modals/tours/tour-reserved
-		//script(src="static/js/vendor/jquery-3.3.1.min.js")
 		block script
 			script(src="static/js/libs.js" defer)
 			script(src="static/js/main.js" defer)
+			script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsImbyX3XiB5qJb02e3lp2ELmM6UHKda4&callback=initMap&libraries=&v=weekly" defer)
 			if pageClass === 'index-page'
 				script(src="static/js/index.js" defer)
 			if pageClass === 'excursions-page'

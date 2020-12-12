@@ -1,15 +1,13 @@
 (function() {
   'use strict';
-
+  window.initMap = function() {
+    let map = new google.maps.Map(document.querySelector(".map__frame"), {
+      center: {lat: -34.397, lng: 150.644},
+      zoom: 8,
+    });
+  }
 
   document.addEventListener('DOMContentLoaded', function() {
-    let map;
-    window.initMap = function() {
-      map = new google.maps.Map(document.querySelector(".map__frame"), {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 8,
-      });
-    }
 
     let wrapper = document.querySelector('.wrapper');
     // Sandwich
