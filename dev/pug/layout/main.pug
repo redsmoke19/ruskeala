@@ -17,7 +17,9 @@ html(lang="ru-RU")
 		link(rel="preload" href="static/fonts/montserrat/montserratmedium/Montserrat-Medium.woff2" as="font" crossorigin="anonymous")
 		link(rel="preload" href="static/fonts/montserrat/montserratregular/Montserrat-Regular.woff2" as="font" crossorigin="anonymous")
 		link(rel="preload" href="static/fonts/montserrat/montserratsemibold/Montserrat-SemiBold.woff2" as="font" crossorigin="anonymous")
-		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+		//link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+		link(rel="preload" href="static/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'")
+		<noscript><link rel="stylesheet" href="static/css/styles.css"></noscript>
 	body
 		.wrapper
 			include ../modules/header/header
