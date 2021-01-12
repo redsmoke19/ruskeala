@@ -22,6 +22,7 @@
     width: auto;
     @media screen and (min-width: $desktop-size) {
       height: auto;
+      max-height: 270px;
       &:nth-child(-n+4) { margin-bottom: 18px; }
       &:nth-child(1) { width: 19.085%; }
       &:nth-child(2) { width: 19.367%; }

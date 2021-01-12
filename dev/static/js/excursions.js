@@ -48,6 +48,9 @@
       let routeModal = document.querySelector('.excursions-route');
       let routeButtons = document.querySelectorAll('.js-route-open');
       let routeClose = document.querySelector('.excursions-route__close');
+      let interactiveMapModal = document.querySelector('.interactive-map');
+      let interactiveMapButtons = document.querySelectorAll('.js-interactive-map');
+      let interactiveMapClose = document.querySelector('.interactive-map__close-button');
 
 
       // Buy tickets
@@ -79,6 +82,16 @@
       });
       routeClose.addEventListener('click', () => {
         window.modalClose(routeModal, 'excursions-route--open');
+      });
+
+      //Interactive Map
+      interactiveMapButtons.forEach(item => {
+        item.addEventListener('click', () => {
+          window.modalOpen(interactiveMapModal, 'modal__closed--open');
+        });
+        interactiveMapClose.addEventListener('click', () => {
+          window.modalClose(interactiveMapModal, 'modal__closed--open');
+        })
       });
     };
     modalToggle();

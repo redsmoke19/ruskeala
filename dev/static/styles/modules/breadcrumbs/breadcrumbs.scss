@@ -5,8 +5,10 @@
   font-weight: 800;
   line-height: 18px;
   padding: 10px 0;
-  & > * {
-    &:not(:last-child) { margin-right: 50px; }
+  &>* {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
   }
   &__item {
     white-space: nowrap;
