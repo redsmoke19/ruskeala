@@ -7,13 +7,13 @@ li.menu-nav__item
 				li.menu-sub-nav__item
 					span.menu-sub-nav__title.menu-sub-nav__title--white Экскурсии
 				li.menu-sub-nav__item
-					a.menu-sub-nav__link.menu-sub-nav__link--white(href="#") «Мраморный каньон»
+					a.menu-sub-nav__link.menu-sub-nav__link--white(href="excursions.html#excursions--canyon") «Мраморный каньон»
 				li.menu-sub-nav__item
-					a.menu-sub-nav__link.menu-sub-nav__link--white(href="#") «Подземная Рускеала»
+					a.menu-sub-nav__link.menu-sub-nav__link--white(href="excursions.html#excursions--master") «Подземная Рускеала»
 				li.menu-sub-nav__item
-					a.menu-sub-nav__link.menu-sub-nav__link--white(href="#") «Мраморный каньон»
+					a.menu-sub-nav__link.menu-sub-nav__link--white(href="excursions.html#excursions--under-ruskeala") «Мраморный каньон»
 				li.menu-sub-nav__item
-					button.menu-sub-nav__button.button.button--orange-transparent Купить билет
+					button.menu-sub-nav__button.button.button--orange-transparent.js-buyticket-open Купить билет
 		li.menu-sub-nav__column
 			ul
 				li.menu-sub-nav__item
@@ -21,21 +21,21 @@ li.menu-nav__item
 				li.menu-sub-nav__item
 					a.menu-sub-nav__link(href="#") Вход в парк
 				li.menu-sub-nav__item
-					a.menu-sub-nav__link(href="#") Водная прогулка по мраморному озеру
+					a.menu-sub-nav__link(href="entertainment.html#entertainment--boat-trip") Водная прогулка по мраморному озеру
 				li.menu-sub-nav__item
 					a.menu-sub-nav__link(href="#") Водная прогулка на самоходной платформе
 				li.menu-sub-nav__item
 					a.menu-sub-nav__link(href="#") Экспозиция «Обитель Ангелов»
 				li.menu-sub-nav__item
-					a.menu-sub-nav__link(href="#") Троллей (Zip-line)
+					a.menu-sub-nav__link(href="entertainment.html#entertainment--zip-line") Троллей (Zip-line)
 				li.menu-sub-nav__item
-					a.menu-sub-nav__link(href="#") Снегоходы / Квадроциклы
+					a.menu-sub-nav__link(href="entertainment.html#entertainment--skating") Снегоходы / Квадроциклы
 				li.menu-sub-nav__item
-					a.menu-sub-nav__link(href="#") Тайные тропы Земли KALEVALA
+					a.menu-sub-nav__link(href="entertainment.html#entertainment--kalevala") Тайные тропы Земли KALEVALA
 				li.menu-sub-nav__item
-					a.menu-sub-nav__link(href="#") Дайвинг
+					a.menu-sub-nav__link(href="entertainment.html#entertainment--diving") Дайвинг
 				li.menu-sub-nav__item
-					a.menu-sub-nav__link(href="#") Тарзанка (прыжок с верёвкой)
+					a.menu-sub-nav__link(href="entertainment.html#entertainment--tarzan") Тарзанка (прыжок с верёвкой)
 				li.menu-sub-nav__item
 					a.menu-sub-nav__link(href="#") Верёвочный парк «Кубик»
 li.menu-nav__item
@@ -53,7 +53,7 @@ li.menu-nav__item
 		li.menu-sub-nav__item
 			a.menu-sub-nav__link(href="#") Виртуальный тур
 		li.menu-sub-nav__item
-			a.menu-sub-nav__link(href="#") Кафе и магазины
+			a.menu-sub-nav__link(href= pageClass === "eat-page" ? false : "where-to-eat.html") Кафе и магазины
 		li.menu-sub-nav__item
 			a.menu-sub-nav__link(href="#") Правила парка
 		li.menu-sub-nav__item
@@ -61,7 +61,7 @@ li.menu-nav__item
 		li.menu-sub-nav__item
 			a.menu-sub-nav__link(href= pageClass === "tours-page" ? false : "tours.html") Туры
 		li.menu-sub-nav__item
-			a.menu-sub-nav__link(href="#") Гостиница
+			a.menu-sub-nav__link(href= pageClass === "hotel-page" ? false : "hotel.html") Гостиница
 li.menu-nav__item
 	a.menu-nav__link(href="#") Партнёрам
 li.menu-nav__item

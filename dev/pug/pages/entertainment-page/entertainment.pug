@@ -1,31 +1,23 @@
 section.entertainment
 	h1.visually-hidden Страница с возможными развлечениями в парке Рускеала
 	ul.entertainment__list
-		li.entertainment__item
+		li.entertainment__item#entertainment--kalevala
 			.entertainment__images.swiper-container.entertainment__slider--kalevala
 				ul.entertainment__image-list.entertainment-images.swiper-wrapper
 					li.entertainment-images__item.swiper-slide
 						picture.entertainment__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/kavevala-1-desktop@1x.png 1x, static/images/content/entertainment/kavevala-1-desktop@2x.png 2x")
 							img.entertainment__img(src="static/images/content/entertainment/kavevala-1-mobile@1x.png" srcset="static/images/content/entertainment/kavevala-1-mobile@2x.png 2x" width="320" height="250" alt="Тайные тропы земли KALEVARA" loading="lazy")
 					li.entertainment-images__item.swiper-slide
 						picture.entertainment__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/kavevala-2-desktop@1x.png 1x, static/images/content/entertainment/kavevala-2-desktop@2x.png 2x")
 							img.entertainment__img(src="static/images/content/entertainment/kavevala-2-mobile@1x.png" srcset="static/images/content/entertainment/kavevala-2-mobile@2x.png 2x" width="320" height="250" alt="Тайные тропы земли KALEVARA" loading="lazy")
 					li.entertainment-images__item.swiper-slide
 						picture.entertainment__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/kavevala-3-desktop@1x.png 1x, static/images/content/entertainment/kavevala-3-desktop@2x.png 2x")
 							img.entertainment__img(src="static/images/content/entertainment/kavevala-3-mobile@1x.png" srcset="static/images/content/entertainment/kavevala-3-mobile@2x.png 2x" width="320" height="250" alt="Тайные тропы земли KALEVARA" loading="lazy")
 					li.entertainment-images__item.swiper-slide
 						picture.entertainment__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/entertainment/kavevala-4-desktop@1x.png 1x, static/images/content/entertainment/kavevala-4-desktop@2x.png 2x")
 							img.entertainment__img(src="static/images/content/entertainment/kavevala-4-mobile@1x.png" srcset="static/images/content/entertainment/kavevala-4-mobile@2x.png 2x" width="320" height="250" alt="Тайные тропы земли KALEVARA" loading="lazy")
 				.entertainment__slider-buttons
@@ -51,7 +43,7 @@ section.entertainment
 							.entertainment__attention
 								p.entertainment__note <b>Внимание!</b> Для получения услуги дополнительно требуется <span class="js-buyticket-open">входной билет</span> в парк.
 								button.button.button--transparent.button--dashed.entertainment__add.js-additionally-open Дополнительно
-		li.entertainment__item
+		li.entertainment__item#entertainment--boat-trip
 			.entertainment__images.swiper-container.entertainment__slider--boat-trip.entertainment__images--left
 				ul.entertainment__image-list.entertainment-images.swiper-wrapper
 					li.entertainment-images__item.swiper-slide
@@ -114,7 +106,7 @@ section.entertainment
 							.entertainment__attention
 								p.entertainment__note <b>Внимание!</b> Для получения услуги дополнительно требуется <span class="js-buyticket-open">входной билет</span> в парк.
 								button.button.button--transparent.button--dashed.entertainment__add.js-additionally-open Дополнительно
-		li.entertainment__item
+		li.entertainment__item#entertainment--zip-line
 			.entertainment__images.swiper-container.entertainment__slider--zip-line
 				ul.entertainment__image-list.entertainment-images.swiper-wrapper
 					li.entertainment-images__item.swiper-slide
@@ -166,7 +158,7 @@ section.entertainment
 							.entertainment__attention
 								p.entertainment__note <b>Внимание!</b> Для получения услуги дополнительно требуется <span class="js-buyticket-open">входной билет</span> в парк.
 								button.button.button--transparent.button--dashed.entertainment__add.js-additionally-open Дополнительно
-		li.entertainment__item
+		li.entertainment__item#entertainment--skating
 			.entertainment__images.swiper-container.entertainment__slider--skating.entertainment__images.entertainment__images--left
 				ul.entertainment__image-list.entertainment-images.swiper-wrapper
 					li.entertainment-images__item.swiper-slide
@@ -224,7 +216,7 @@ section.entertainment
 							.entertainment__attention
 								p.entertainment__note <b>Внимание!</b> Для получения услуги дополнительно требуется <span class="js-buyticket-open">входной билет</span> в парк.
 								button.button.button--transparent.button--dashed.entertainment__add.js-additionally-open Дополнительно
-		li.entertainment__item
+		li.entertainment__item#entertainment--diving
 			.entertainment__images.swiper-container.entertainment__slider--diving.entertainment__images
 				ul.entertainment__image-list.entertainment-images.swiper-wrapper
 					li.entertainment-images__item.swiper-slide
@@ -260,7 +252,7 @@ section.entertainment
 							.entertainment__attention
 								p.entertainment__note <b>Внимание!</b> Для получения услуги дополнительно требуется <span class="js-buyticket-open">входной билет</span> в парк.
 								button.button.button--transparent.button--dashed.entertainment__add.js-additionally-open Дополнительно
-		li.entertainment__item
+		li.entertainment__item#entertainment--tarzan
 			.entertainment__images.swiper-container.entertainment__slider--tarzan.entertainment__images--left
 				ul.entertainment__image-list.entertainment-images.swiper-wrapper
 					li.entertainment-images__item.swiper-slide
