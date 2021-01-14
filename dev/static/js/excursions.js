@@ -38,16 +38,25 @@
 
     // Open Close Modals
     const modalToggle = function() {
+      let breakpoint = window.matchMedia('(min-width: 1280px)');
       let buyTicketButtons = document.querySelectorAll('.excursions__buy');
       let buyTicketModal = document.querySelector('.excursions-ticket');
       let buyTicketModalClose = document.querySelector('.excursions-ticket__close');
       let ticketTitle = document.querySelector('.excursions-ticket__title');
+
       let additionallyModal = document.querySelector('.excursions-add');
       let additionallyButtons = document.querySelectorAll('.js-additionally-open');
       let additionallyClose = document.querySelector('.excursions-add__close');
+      let additionallyFullPrice = document.querySelector('.excursions-add__price--full');
+      let additionallyStudentPrice = document.querySelector('.excursions-add__price--student');
+      let additionallySchoolPrice = document.querySelector('.excursions-add__price--school');
+      let additionallyRetireePrice = document.querySelector('.excursions-add__price--retiree');
+
       let routeModal = document.querySelector('.excursions-route');
       let routeButtons = document.querySelectorAll('.js-route-open');
       let routeClose = document.querySelector('.excursions-route__close');
+      let routeImage = document.querySelector('.excursions-route__img');
+
       let interactiveMapModal = document.querySelector('.interactive-map');
       let interactiveMapButtons = document.querySelectorAll('.js-interactive-map');
       let interactiveMapClose = document.querySelector('.interactive-map__close-button');
@@ -68,6 +77,10 @@
       additionallyButtons.forEach(item => {
         item.addEventListener('click', () => {
           window.modalOpen(additionallyModal, 'excursions-add--open');
+          additionallyFullPrice.textContent = item.dataset.full + ' руб.';
+          additionallyStudentPrice.textContent = item.dataset.student + ' руб.';
+          additionallySchoolPrice.textContent = item.dataset.school + ' руб.';
+          additionallyRetireePrice.textContent = item.dataset.retiree + ' руб.';
         });
       });
       additionallyClose.addEventListener('click', () => {
@@ -78,6 +91,13 @@
       routeButtons.forEach(item => {
         item.addEventListener('click', () => {
           window.modalOpen(routeModal, 'excursions-route--open', true);
+          if (!breakpoint.matches) {
+            routeImage.src = item.dataset.mobilesrc;
+            routeImage.srcset = item.dataset.mobilesrcset;
+          } else {
+            routeImage.src = item.dataset.desktopsrc;
+            routeImage.srcset = item.dataset.desktopsrcset;
+          }
         });
       });
       routeClose.addEventListener('click', () => {
