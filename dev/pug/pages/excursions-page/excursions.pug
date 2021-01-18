@@ -6,26 +6,18 @@ section.excursions
 				ul.excursions__image-list.excursions-images.swiper-wrapper
 					li.excursions-images__item.swiper-slide
 						picture.excursions__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/excursions/canyon-1-desktop1x.png 1x, static/images/content/excursions/canyon-1-desktop2x.png 2x")
 							img.excursions__img(src="static/images/content/excursions/canyon-1-mobile1x.png" srcset="static/images/content/excursions/canyon-1-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон" loading="lazy")
 					li.excursions-images__item.swiper-slide
 						picture.excursions__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/excursions/canyon-2-desktop1x.png 1x, static/images/content/excursions/canyon-2-desktop2x.png 2x")
 							img.excursions__img(src="static/images/content/excursions/canyon-2-mobile1x.png" srcset="static/images/content/excursions/canyon-2-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон" loading="lazy")
 					li.excursions-images__item.swiper-slide
 						picture.excursions__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/excursions/canyon-3-desktop1x.png 1x, static/images/content/excursions/canyon-3-desktop2x.png 2x")
 							img.excursions__img(src="static/images/content/excursions/canyon-3-mobile1x.png" srcset="static/images/content/excursions/canyon-3-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон" loading="lazy")
 					li.excursions-images__item.swiper-slide
 						picture.excursions__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/excursions/canyon-4-desktop1x.png 1x, static/images/content/excursions/canyon-4-desktop2x.png 2x")
 							img.excursions__img(src="static/images/content/excursions/canyon-4-mobile1x.png" srcset="static/images/content/excursions/canyon-4-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон" loading="lazy")
 			.excursions__content
@@ -62,6 +54,17 @@ section.excursions
 								a.excursions__link.js-interactive-map Интерактивная карта
 							p.excursions__note <b>Важно!</b>  Стоимость входного билета не входит в стоимость экскурсии. Входной билет <span class="js-buyticket-open">приобретается отдельно</span>.
 							button.button.button--transparent.button--dashed.excursions__add.js-additionally-open(data-full="350" data-student="150" data-school="100" data-retiree="150") Дополнительно
+							.js-additionally__contenet
+								h2.js-additionally__discounts Скидки
+								span.js-additionally__full Полный билет
+								span.js-additionally__students Студентам *
+								span.js-additionally__school Школьникам *
+								span.js-additionally__retiree Лица 60+ лет *
+								p.js-additionally__note * При покупке билета студенты должны предъявить студенческий билет, школьники — свидетельство о рождении или паспорт (при наличии), лица, старше 60 лет — паспорт или пенсионное удостоверение.
+								h2.js-additionally__privileges Льготы
+								p.js-additionally__privileges-text Ветераны Великой Отечественной войны, узники концлагерей, жители блокадного Ленинграда, дети до 7 лет, инвалиды 1-й группы (с одним сопровождающим), дети-инвалиды – бесплатно (при предъявлении удостоверения).
+								h2.js-additionally__important Важная информация
+								p.js-additionally__importatnt-text Горный парк «Рускеала» не несет ответственности за рекламные материалы, информация о которых размещена на сторонних сайтах.
 					.excursions__slider-button.excursions__slider-button.excursions__slider-button--prev.slider__button
 						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '30', '30')
 					.excursions__slider-button.excursions__slider-button.excursions__slider-button--next.slider__button
@@ -71,26 +74,18 @@ section.excursions
 				ul.excursions__image-list.excursions-images.swiper-wrapper
 					li.excursions-images__item.swiper-slide
 						picture.excursions__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/excursions/master-1-desktop1x.png 1x, static/images/content/excursions/master-1-desktop2x.png 2x")
 							img.excursions__img(src="static/images/content/excursions/master-1-mobile1x.png" srcset="static/images/content/excursions/master-1-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон" loading="lazy")
 					li.excursions-images__item.swiper-slide
 						picture.excursions__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/excursions/master-2-desktop1x.png 1x, static/images/content/excursions/master-2-desktop2x.png 2x")
 							img.excursions__img(src="static/images/content/excursions/master-2-mobile1x.png" srcset="static/images/content/excursions/master-2-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон" loading="lazy")
 					li.excursions-images__item.swiper-slide
 						picture.excursions__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/excursions/master-3-desktop1x.png 1x, static/images/content/excursions/master-3-desktop2x.png 2x")
 							img.excursions__img(src="static/images/content/excursions/master-3-mobile1x.png" srcset="static/images/content/excursions/master-3-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон" loading="lazy")
 					li.excursions-images__item.swiper-slide
 						picture.excursions__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/excursions/master-4-desktop1x.png 1x, static/images/content/excursions/master-4-desktop2x.png 2x")
 							img.excursions__img(src="static/images/content/excursions/master-4-mobile1x.png" srcset="static/images/content/excursions/master-4-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон" loading="lazy")
 			.excursions__content
@@ -127,6 +122,17 @@ section.excursions
 								a.excursions__link.js-interactive-map Интерактивная карта
 							p.excursions__note <b>Важно!</b>  Стоимость входного билета не входит в стоимость экскурсии. Входной билет <span class="js-buyticket-open">приобретается отдельно</span>.
 							button.button.button--transparent.button--dashed.excursions__add.js-additionally-open(data-full="500" data-student="100" data-school="90" data-retiree="50") Дополнительно
+							.js-additionally__contenet
+								h2.js-additionally__discounts Скидки
+								span.js-additionally__full Полный билет
+								span.js-additionally__students Студентам *
+								span.js-additionally__school Школьникам *
+								span.js-additionally__retiree Лица 60+ лет *
+								p.js-additionally__note * При покупке билета студенты должны предъявить студенческий билет, школьники — свидетельство о рождении или паспорт (при наличии), лица, старше 60 лет — паспорт или пенсионное удостоверение.
+								h2.js-additionally__privileges Льготы
+								p.js-additionally__privileges-text Ветераны Великой Отечественной войны, узники концлагерей, жители блокадного Ленинграда, дети до 7 лет, инвалиды 1-й группы (с одним сопровождающим), дети-инвалиды – бесплатно (при предъявлении удостоверения).
+								h2.js-additionally__important Важная информация
+								p.js-additionally__importatnt-text Горный парк «Рускеала» не несет ответственности за рекламные материалы, информация о которых размещена на сторонних сайтах.
 					.excursions__slider-button.excursions__slider-button.excursions__slider-button--prev.slider__button
 						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '30', '30')
 					.excursions__slider-button.excursions__slider-button.excursions__slider-button--next.slider__button
@@ -136,26 +142,18 @@ section.excursions
 				ul.excursions__image-list.excursions-images.swiper-wrapper
 					li.excursions-images__item.swiper-slide
 						picture.excursions__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/excursions/under-ruskeala-1-desktop1x.png 1x, static/images/content/excursions/under-ruskeala-1-desktop2x.png 2x")
 							img.excursions__img(src="static/images/content/excursions/under-ruskeala-1-mobile1x.png" srcset="static/images/content/excursions/under-ruskeala-1-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон" loading="lazy")
 					li.excursions-images__item.swiper-slide
 						picture.excursions__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/excursions/under-ruskeala-2-desktop1x.png 1x, static/images/content/excursions/under-ruskeala-2-desktop2x.png 2x")
 							img.excursions__img(src="static/images/content/excursions/under-ruskeala-2-mobile1x.png" srcset="static/images/content/excursions/under-ruskeala-2-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон" loading="lazy")
 					li.excursions-images__item.swiper-slide
 						picture.excursions__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/excursions/under-ruskeala-3-desktop1x.png 1x, static/images/content/excursions/under-ruskeala-3-desktop2x.png 2x")
 							img.excursions__img(src="static/images/content/excursions/under-ruskeala-3-mobile1x.png" srcset="static/images/content/excursions/under-ruskeala-3-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон" loading="lazy")
 					li.excursions-images__item.swiper-slide
 						picture.excursions__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/excursions/under-ruskeala-4-desktop1x.png 1x, static/images/content/excursions/under-ruskeala-4-desktop2x.png 2x")
 							img.excursions__img(src="static/images/content/excursions/under-ruskeala-4-mobile1x.png" srcset="static/images/content/excursions/under-ruskeala-4-mobile2x.png 2x" width="320" height="230" alt="Мраморный Каньон" loading="lazy")
 			.excursions__content
@@ -192,6 +190,17 @@ section.excursions
 								a.excursions__link.js-interactive-map Интерактивная карта
 							p.excursions__note <b>Важно!</b>  Стоимость входного билета не входит в стоимость экскурсии. Входной билет <span class="js-buyticket-open">приобретается отдельно</span>.
 							button.button.button--transparent.button--dashed.excursions__add.js-additionally-open(data-full="550" data-student="5150" data-school="222" data-retiree="111") Дополнительно
+							.js-additionally__contenet
+								h2.js-additionally__discounts Скидки
+								span.js-additionally__full Полный билет
+								span.js-additionally__students Студентам *
+								span.js-additionally__school Школьникам *
+								span.js-additionally__retiree Лица 60+ лет *
+								p.js-additionally__note * При покупке билета студенты должны предъявить студенческий билет, школьники — свидетельство о рождении или паспорт (при наличии), лица, старше 60 лет — паспорт или пенсионное удостоверение.
+								h2.js-additionally__privileges Льготы
+								p.js-additionally__privileges-text Ветераны Великой Отечественной войны, узники концлагерей, жители блокадного Ленинграда, дети до 7 лет, инвалиды 1-й группы (с одним сопровождающим), дети-инвалиды – бесплатно (при предъявлении удостоверения).
+								h2.js-additionally__important Важная информация
+								p.js-additionally__importatnt-text Горный парк «Рускеала» не несет ответственности за рекламные материалы, информация о которых размещена на сторонних сайтах.
 					.excursions__slider-button.excursions__slider-button.excursions__slider-button--prev.slider__button
 						+icon('icon-prev-next', 'slider__icon slider__icon--white slider__icon--prev', '30', '30')
 					.excursions__slider-button.excursions__slider-button.excursions__slider-button--next.slider__button

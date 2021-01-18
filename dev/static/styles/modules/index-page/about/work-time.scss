@@ -70,6 +70,7 @@
     }
   }
   &__button {
+    text-decoration: none;
     width: 100%;
     @media screen and (min-width: $desktop-size) {
       width: auto;

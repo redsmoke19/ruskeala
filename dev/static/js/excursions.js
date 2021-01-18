@@ -51,6 +51,16 @@
       let additionallyStudentPrice = document.querySelector('.excursions-add__price--student');
       let additionallySchoolPrice = document.querySelector('.excursions-add__price--school');
       let additionallyRetireePrice = document.querySelector('.excursions-add__price--retiree');
+      let additionallyTitleDiscount = document.querySelector('.excursions-add__privileges--discounts');
+      let additionallyTitlePrivileges = document.querySelector('.excursions-add__privileges--privileges');
+      let additionallyTitleNote = document.querySelector('.excursions-add__note-title');
+      let additionallyTypeFull = document.querySelector('.excursions-add__type--full');
+      let additionallyTypeStudents = document.querySelector('.excursions-add__type--students');
+      let additionallyTypeSchool = document.querySelector('.excursions-add__type--school');
+      let additionallyTypeRetiree = document.querySelector('.excursions-add__type--retiree');
+      let additionallyTextDiscount = document.querySelector('.excursions-add__text');
+      let additionallyTextPrivileges = document.querySelector('.excursions-add__text--add');
+      let additionallyTextNote = document.querySelector('.excursions-add__note');
 
       let routeModal = document.querySelector('.excursions-route');
       let routeButtons = document.querySelectorAll('.js-route-open');
@@ -81,6 +91,20 @@
           additionallyStudentPrice.textContent = item.dataset.student + ' руб.';
           additionallySchoolPrice.textContent = item.dataset.school + ' руб.';
           additionallyRetireePrice.textContent = item.dataset.retiree + ' руб.';
+          let additionallyContent = item.parentElement.querySelector('.js-additionally__contenet');
+          function addTextContent(element, content) {
+            element.textContent = additionallyContent.querySelector(content).textContent;
+          }
+          addTextContent(additionallyTitleDiscount, '.js-additionally__discounts');
+          addTextContent(additionallyTypeFull, '.js-additionally__full');
+          addTextContent(additionallyTypeStudents, '.js-additionally__students');
+          addTextContent(additionallyTypeSchool, '.js-additionally__school');
+          addTextContent(additionallyTypeRetiree, '.js-additionally__retiree');
+          addTextContent(additionallyTextDiscount, '.js-additionally__note');
+          addTextContent(additionallyTitlePrivileges, '.js-additionally__privileges');
+          addTextContent(additionallyTextPrivileges, '.js-additionally__privileges-text');
+          addTextContent(additionallyTitleNote, '.js-additionally__important');
+          addTextContent(additionallyTextNote, '.js-additionally__importatnt-text');
         });
       });
       additionallyClose.addEventListener('click', () => {

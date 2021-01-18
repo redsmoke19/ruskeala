@@ -53,6 +53,7 @@
     }
   }
   &__button {
+    display: inline-block;
     width: 100%;
     @media screen and (min-width: $desktop-size) {
       width: auto;
