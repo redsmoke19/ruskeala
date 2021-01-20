@@ -1,16 +1,25 @@
 (function() {
   'use strict';
   document.addEventListener('DOMContentLoaded', function() {
-    let menuModal = document.querySelector('.eat-menu');
-    let menuButtons = document.querySelectorAll('.js-eat-menu-open');
-    let closeMenuModal = document.querySelector('.eat-menu__close');
-    menuButtons.forEach(item => {
-      item.addEventListener('click', () => {
-        window.modalOpen(menuModal, 'eat-menu--open', true);
-      });
+    let menuRuskolkaModal = document.querySelector('.eat-menu--ruskolka');
+    let menuRuskolkaOpenButton = document.querySelector('.js-ruskolka-menu-open');
+    let menuRuskolkaCloseButton = document.querySelector('.eat-menu__close--ruskolka');
+    let menuBurgersModal = document.querySelector('.eat-menu--burgers');
+    let menuBurgersOpenButton = document.querySelector('.js-burgers-menu-open');
+    let menuBurgersCloseButton = document.querySelector('.eat-menu__close--burgers');
+
+    menuRuskolkaOpenButton.addEventListener('click', function() {
+      window.modalOpen(menuRuskolkaModal, 'eat-menu--open', true);
     });
-    closeMenuModal.addEventListener('click', () => {
-      window.modalClose(menuModal, 'eat-menu--open');
+    menuRuskolkaCloseButton.addEventListener('click', function() {
+      window.modalClose(menuRuskolkaModal, 'eat-menu--open');
+    });
+
+    menuBurgersOpenButton.addEventListener('click', function() {
+      window.modalOpen(menuBurgersModal, 'eat-menu--open', true);
+    });
+    menuBurgersCloseButton.addEventListener('click', function() {
+      window.modalClose(menuBurgersModal, 'eat-menu--open');
     });
   }, false);
 })();

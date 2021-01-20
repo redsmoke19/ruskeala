@@ -286,6 +286,9 @@
     padding: 15px 38px;
     width: auto;
   }
+  &__hidden {
+    display: none;
+  }
 }
 
 .hotel-page .map {
