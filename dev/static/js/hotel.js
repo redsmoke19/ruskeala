@@ -64,7 +64,7 @@
         reservedRoomsTitle.textContent = title.textContent;
 
         let text = item.parentElement.querySelector('.rooms-hotel__modal-text');
-        reservedRoomsText.textContent = text.textContent;
+        reservedRoomsText.innerHTML = text.innerHTML;
 
         let pictureList = item.parentElement.querySelectorAll('picture');
 

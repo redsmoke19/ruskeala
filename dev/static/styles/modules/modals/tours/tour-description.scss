@@ -111,8 +111,8 @@
     @media screen and (min-width: $desktop-size) {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      margin-bottom: 50px;
+      justify-content: flex-start;
+      margin-bottom: 0;
     }
   }
   &__item {
@@ -128,10 +128,9 @@
       }
     }
     @media screen and (min-width: $desktop-size) {
-      width: 22.747%;
-      &:not(:nth-child(n+13)) {
-        margin-bottom: 40px;
-      }
+      margin: 0 0 40px 0 !important;
+      padding: 0 16px;
+      width: 25%;
     }
   }
   &__icon {
@@ -139,6 +138,9 @@
     flex-shrink: 0;
     margin-right: 10px;
   }
+}
+.tour-park__hidden {
+  display: none;
 }
 
 .tour-need-visited {

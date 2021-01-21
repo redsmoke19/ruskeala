@@ -10,10 +10,10 @@ module.exports = function imageMinify() {
     ['dev/static/images/**/**/*.{gif,png,jpg,svg}',
     '!dev/static/images/sprite/**/*']
   )
-    .pipe(buffer())
-    .pipe(imagemin([
-      webp({quality: 75})
-    ]))
+    // .pipe(buffer())
+    // .pipe(imagemin([
+    //   webp({quality: 75})
+    // ]))
     .pipe(gulp.dest('dist/static/images/'))
 };
 
