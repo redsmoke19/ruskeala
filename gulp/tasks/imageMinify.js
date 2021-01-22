@@ -10,25 +10,9 @@ module.exports = function imageMinify() {
     ['dev/static/images/**/**/*.{gif,png,jpg,svg}',
     '!dev/static/images/sprite/**/*']
   )
-    // .pipe(buffer())
-    // .pipe(imagemin([
-    //   webp({quality: 75})
-    // ]))
+    .pipe(buffer())
+    .pipe(imagemin([
+      webp({quality: 75})
+    ]))
     .pipe(gulp.dest('dist/static/images/'))
 };
-
-
-// .pipe(imagemin([
-//   imagemin.gifsicle({interlaced: true}),
-//   imagemin.mozjpeg({
-//     quality: 75,
-//     progressive: true
-//   }),
-//   imagemin.optipng({optimizationLevel: 5}),
-//   imagemin.svgo({
-//     plugins: [
-//       {removeViewBox: true},
-//       {cleanupIDs: false}
-//     ]
-//   })
-// ]))

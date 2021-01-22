@@ -1,0 +1,11 @@
+extends layout/main
+
+block variables
+	-var title = 'Новости парка Рускеала'
+	-var pageClass = 'news-page'
+
+block content
+	main(class=pageClass)
+		include modules/breadcrumbs/breadcrumbs
+		include pages/news-page/news-page
+		include modules/map/map

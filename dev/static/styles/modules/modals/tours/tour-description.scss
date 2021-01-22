@@ -247,6 +247,19 @@
         width: 98px;
       }
     }
+    &:first-child, &:last-child {
+      span {
+        color: $orange-dark-color;
+        &::before, &::after {
+          border-color: $orange-dark-color;
+        }
+      }
+    }
+    &:nth-child(odd) {
+      p {
+        margin-top: auto;
+      }
+    }
   }
   &__times {
     align-items: center;
@@ -284,20 +297,12 @@
       transform: translate(-50%, -50%);
       width: 65px;
     }
-    &--orange {
-      color: $orange-dark-color;
-      &::before, &::after {
-        border-color: $orange-dark-color;
-      }
-    }
   }
   &__text {
     font-size: 13px;
     line-height: 16px;
     text-align: center;
-    &--bottom {
-      margin-top: auto;
-    }
+    margin: 0 auto;
   }
   &__scrollbar {
     @media screen and (min-width: $desktop-size) {

@@ -4,7 +4,13 @@ mixin breadcrumbs-item(text,href)
 			a.breadcrumbs__link(href=href)=text
 		else
 			span.breadcrumbs__text=text
-.container
-	ul.breadcrumbs
-		+breadcrumbs-item('Посетителям','#')
-		+breadcrumbs-item('Туры')
+if pageClass === "tours-page"
+	.container
+		ul.breadcrumbs
+			+breadcrumbs-item('Посетителям','#')
+			+breadcrumbs-item('Туры')
+if pageClass === "news-page"
+	.container
+		ul.breadcrumbs
+			+breadcrumbs-item('Главная','/')
+			+breadcrumbs-item('Новости')

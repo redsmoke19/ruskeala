@@ -1,0 +1,119 @@
+.news-page {
+  .breadcrumbs {
+    margin-bottom: 10px;
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 20px;
+    }
+  }
+  .map {
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.news {
+  &__title {
+    display: none;
+    @media screen and (min-width: $desktop-size) {
+      display: block;
+      font-size: 60px;
+      font-weight: 900;
+      line-height: 73px;
+      margin: 0 0 40px 0;
+    }
+  }
+  &__list {
+    margin-bottom: 40px;
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  &__item {
+    border: 1px solid $border-dark-grey-color;
+    padding: 10px;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      align-items: center;
+      display: flex;
+      flex: 0 0 48.6%;
+      padding: 20px;
+      margin-bottom: 40px;
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  &__date {
+    background-color: $orange-dark-color;
+    color: $white;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 18px;
+    left: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    @media screen and (min-width: $desktop-size) {
+      left: 0;
+      top: 0;
+    }
+  }
+  &__picture {
+    @media screen and (min-width: $desktop-size) {
+      flex: 0 0 45%;
+      margin-right: 20px;
+    }
+    @media screen and (min-width: $large-size) {
+      flex: 0 0 50%;
+      margin-right: 40px;
+    }
+  }
+  &__img {
+    object-fit: cover;
+    margin-bottom: 10px;
+    width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      height: auto;
+      margin-bottom: 0;
+    }
+  }
+  &__head {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 22px;
+    margin: 0 0 10px 0;
+    @media screen and (min-width: $large-size) {
+      font-size: 20px;
+      line-height: 24px;
+      margin: 0 0 20px 0;
+    }
+  }
+  &__text {
+    font-size: 13px;
+    line-height: 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+  &__link {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 60px;
+    position: relative;
+    left: 50%;
+    text-decoration: none;
+    transform: translateX(-50%);
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 140px;
+    }
+  }
+}

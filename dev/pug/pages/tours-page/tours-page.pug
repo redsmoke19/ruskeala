@@ -7,32 +7,22 @@ section.tours-park
 				ul.tours-park__image-list.swiper-wrapper
 					li.tours-park-images__image-item.swiper-slide
 						picture.tours-park__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/tours/weekend-1-desktop@1x.png 1x, static/images/content/tours/weekend-1-desktop@2x.png 2x")
 							img.tours-park__img(src="static/images/content/tours/weekend-1-mobile@1x.png" srcset="static/images/content/tours/weekend-1-mobile@2x.png 2x" width="320" height="250" alt="Выходные в Карелии" loading="lazy")
 					li.tours-park-images__image-item.swiper-slide
 						picture.tours-park__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/tours/weekend-2-desktop@1x.png 1x, static/images/content/tours/weekend-2-desktop@2x.png 2x")
 							img.tours-park__img(src="static/images/content/tours/weekend-2-mobile@1x.png" srcset="static/images/content/tours/weekend-2-mobile@2x.png 2x" width="320" height="250" alt="Выходные в Карелии" loading="lazy")
 					li.tours-park-images__image-item.swiper-slide
 						picture.tours-park__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/tours/weekend-3-desktop@1x.png 1x, static/images/content/tours/weekend-3-desktop@2x.png 2x")
 							img.tours-park__img(src="static/images/content/tours/weekend-3-mobile@1x.png" srcset="static/images/content/tours/weekend-3-mobile@2x.png 2x" width="320" height="250" alt="Выходные в Карелии" loading="lazy")
 					li.tours-park-images__image-item.swiper-slide
 						picture.tours-park__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/tours/weekend-4-desktop@1x.png 1x, static/images/content/tours/weekend-4-desktop@2x.png 2x")
 							img.tours-park__img(src="static/images/content/tours/weekend-4-mobile@1x.png" srcset="static/images/content/tours/weekend-4-mobile@2x.png 2x" width="320" height="250" alt="Выходные в Карелии" loading="lazy")
 					li.tours-park-images__image-item.swiper-slide
 						picture.tours-park__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/tours/weekend-5-desktop@1x.png 1x, static/images/content/tours/weekend-5-desktop@2x.png 2x")
 							img.tours-park__img(src="static/images/content/tours/weekend-5-mobile@1x.png" srcset="static/images/content/tours/weekend-5-mobile@2x.png 2x" width="320" height="250" alt="Выходные в Карелии" loading="lazy")
 				.tours-park__slider-buttons
@@ -72,37 +62,70 @@ section.tours-park
 									span Посещение природного парка Ваккосалми и горы Кухавуори (подъем может быть отменен по погодным условиям)
 									span Остановка у музейного комплекса "Гора Филина"
 									span Остановка у фирменного магазина форелевого хозяйства и магазина карельских бальзамов
+								picture.js-tour-picture
+									source(data-srcset="static/images/content/tours/map-desktop@1x.png 1x, static/images/content/tours/map-desktop@2x.png 2x")
+									img(data-src="static/images/content/excursions/route-map-mobile@1x.png" data-srcset="static/images/content/excursions/route-map-mobile@2x.png 2x")
+								.js-tour-need-visited
+									span водопады Ахвенкоски
+									span Крепость Кексгольм
+									span музейный комплекс "Гора Филина"
+									span музей под открытым небом "Северная Фиваида"
+									span Горный парк Рускеала
+									span Сортавала: обзорная экскурсия
+									span залив Кирьявалахти
+									span Музей Кронида Гоголева
+									span Музей Кронида Гоголева
+								.js-tour-programs
+									p Отправление из Санкт-Петербурга
+									span 8:00
+									p Остановка в Приозерске. Внешний осмотр крепости  Корела
+									span 10:00
+									p Остановка в городе Сортавала на обед
+									span 13:30
+									p Остановка у Рускеальских водопадов
+									span 15:00
+									p Горный парк Рускеала. Экскурсия и свободное время
+									span 15:00
+									p Прибытие в Сортавалу. Расселение по отелям. Ужин и отдых
+									span 20:00
+								.js-tour-programs
+									p Завтрак в отеле. Сбор группы в автобусе
+									span 9:00
+									p Поездка по побережью залива Кирьявалахти
+									span 11:00
+									p Музей резьбы по дереву художника Кронида Гоголева
+									span 12:00
+									p Обзорная экскурсия по городу Сортавала
+									span 13:00
+									p Остановка на обед
+									span 14:00
+									p Музейный комплекс «Гора Филина»
+									span 16:00
+									p Посещение фирменного магазина форелевого хозяйства
+									span 18:00
+									p Ориентировочное время возвращения в Санкт-Петербург
+									span 23:00
 		li.tours-park__tour
 			.tours-park__images.tours-park__slider--pearl.swiper-container.tours-park__images--left
 				ul.tours-park__image-list.swiper-wrapper
 					li.tours-park-images__image-item.swiper-slide
 						picture.tours-park__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/tours/pearl-1-desktop@1x.png 1x, static/images/content/tours/pearl-1-desktop@2x.png 2x")
 							img.tours-park__img.tours-park__img--right(src="static/images/content/tours/pearl-1-mobile@1x.png" srcset="static/images/content/tours/pearl-1-mobile@2x.png 2x" width="320" height="250" alt="жемчужина Карелии" loading="lazy")
 					li.tours-park-images__image-item.swiper-slide
 						picture.tours-park__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/tours/pearl-2-desktop@1x.png 1x, static/images/content/tours/pearl-2-desktop@2x.png 2x")
 							img.tours-park__img.tours-park__img--right(src="static/images/content/tours/pearl-2-mobile@1x.png" srcset="static/images/content/tours/pearl-2-mobile@2x.png 2x" width="320" height="250" alt="жемчужина Карелии" loading="lazy")
 					li.tours-park-images__image-item.swiper-slide
 						picture.tours-park__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/tours/pearl-3-desktop@1x.png 1x, static/images/content/tours/pearl-3-desktop@2x.png 2x")
 							img.tours-park__img.tours-park__img--right(src="static/images/content/tours/pearl-3-mobile@1x.png" srcset="static/images/content/tours/pearl-3-mobile@2x.png 2x" width="320" height="250" alt="жемчужина Карелии" loading="lazy")
 					li.tours-park-images__image-item.swiper-slide
 						picture.tours-park__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/tours/pearl-4-desktop@1x.png 1x, static/images/content/tours/pearl-4-desktop@2x.png 2x")
 							img.tours-park__img.tours-park__img--right(src="static/images/content/tours/pearl-4-mobile@1x.png" srcset="static/images/content/tours/pearl-4-mobile@2x.png 2x" width="320" height="250" alt="жемчужина Карелии" loading="lazy")
 					li.tours-park-images__image-item.swiper-slide
 						picture.tours-park__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/tours/pearl-5-desktop@1x.png 1x, static/images/content/tours/pearl-5-desktop@2x.png 2x")
 							img.tours-park__img.tours-park__img--right(src="static/images/content/tours/pearl-5-mobile@1x.png" srcset="static/images/content/tours/pearl-5-mobile@2x.png 2x" width="320" height="250" alt="жемчужина Карелии" loading="lazy")
 				.tours-park__slider-buttons.tours-park__slider-buttons--right
@@ -132,37 +155,54 @@ section.tours-park
 									span Сопровождение одного из лучших гидов на протяжении двух дней тура
 									span Трассовые экскурсии и посещение достопримечательностей по программе тур
 									span Осмотр средневековой крепости Корела
+								picture.js-tour-picture
+									source(data-srcset="static/images/content/tours/map-desktop@1x.png 1x, static/images/content/tours/map-desktop@2x.png 2x")
+									img(data-src="static/images/content/excursions/route-map-mobile@1x.png" data-srcset="static/images/content/excursions/route-map-mobile@2x.png 2x")
+								.js-tour-need-visited
+									span водопады Ахвенкоски
+									span Крепость Кексгольм
+									span музейный комплекс "Гора Филина"
+								.js-tour-programs
+									p Отправление из Санкт-Петербурга
+									span 8:00
+									p Остановка в Приозерске. Внешний осмотр крепости  Корела
+									span 10:00
+									p Остановка в городе Сортавала на обед
+									span 13:30
+									p Прибытие в Сортавалу. Расселение по отелям. Ужин и отдых
+									span 20:00
+								.js-tour-programs
+									p Завтрак в отеле. Сбор группы в автобусе
+									span 9:00
+									p Поездка по побережью залива Кирьявалахти
+									span 11:00
+									p Музей резьбы по дереву художника Кронида Гоголева
+									span 12:00
+									p Посещение фирменного магазина форелевого хозяйства
+									span 18:00
+									p Ориентировочное время возвращения в Санкт-Петербург
+									span 23:00
 		li.tours-park__tour
 			.tours-park__images.tours-park__slider--pearl-day.swiper-container
 				ul.tours-park__image-list.swiper-wrapper
 					li.tours-park-images__image-item.swiper-slide
 						picture.tours-park__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/tours/pearl-day-1-desktop@1x.png 1x, static/images/content/tours/pearl-day-1-desktop@2x.png 2x")
 							img.tours-park__img(src="static/images/content/tours/pearl-day-1-mobile@1x.png" srcset="static/images/content/tours/pearl-day-1-mobile@2x.png 2x" width="320" height="250" alt="Жемчужина Карелии – Рускеала" loading="lazy")
 					li.tours-park-images__image-item.swiper-slide
 						picture.tours-park__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/tours/pearl-2-desktop@1x.png 1x, static/images/content/tours/pearl-2-desktop@2x.png 2x")
 							img.tours-park__img(src="static/images/content/tours/pearl-2-mobile@1x.png" srcset="static/images/content/tours/pearl-2-mobile@2x.png 2x" width="320" height="250" alt="Жемчужина Карелии – Рускеала" loading="lazy")
 					li.tours-park-images__image-item.swiper-slide
 						picture.tours-park__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/tours/pearl-3-desktop@1x.png 1x, static/images/content/tours/pearl-3-desktop@2x.png 2x")
 							img.tours-park__img(src="static/images/content/tours/pearl-3-mobile@1x.png" srcset="static/images/content/tours/pearl-3-mobile@2x.png 2x" width="320" height="250" alt="Жемчужина Карелии – Рускеала" loading="lazy")
 					li.tours-park-images__image-item.swiper-slide
 						picture.tours-park__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/tours/pearl-4-desktop@1x.png 1x, static/images/content/tours/pearl-4-desktop@2x.png 2x")
 							img.tours-park__img(src="static/images/content/tours/pearl-4-mobile@1x.png" srcset="static/images/content/tours/pearl-4-mobile@2x.png 2x" width="320" height="250" alt="Жемчужина Карелии – Рускеала" loading="lazy")
 					li.tours-park-images__image-item.swiper-slide
 						picture.tours-park__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/tours/pearl-5-desktop@1x.png 1x, static/images/content/tours/pearl-5-desktop@2x.png 2x")
 							img.tours-park__img(src="static/images/content/tours/pearl-5-mobile@1x.png" srcset="static/images/content/tours/pearl-5-mobile@2x.png 2x" width="320" height="250" alt="Жемчужина Карелии – Рускеала" loading="lazy")
 				.tours-park__slider-buttons
@@ -209,37 +249,57 @@ section.tours-park
 									span Остановка у фирменного магазина форелевого хозяйства и магазина карельских бальзамов
 									span Остановка у фирменного магазина форелевого хозяйства и магазина карельских бальзамов
 									span Остановка у фирменного магазина форелевого хозяйства и магазина карельских бальзамов
+								picture.js-tour-picture
+									source(data-srcset="static/images/content/tours/map-desktop@1x.png 1x, static/images/content/tours/map-desktop@2x.png 2x")
+									img(data-src="static/images/content/excursions/route-map-mobile@1x.png" data-srcset="static/images/content/excursions/route-map-mobile@2x.png 2x")
+								.js-tour-need-visited
+									span водопады Ахвенкоски
+									span Крепость Кексгольм
+									span музейный комплекс "Гора Филина"
+									span музей под открытым небом "Северная Фиваида"
+									span Горный парк Рускеала
+									span Сортавала: обзорная Экскурсия
+								.js-tour-programs
+									p Отправление из Санкт-Петербурга
+									span 8:00
+									p Остановка в Приозерске. Внешний осмотр крепости  Корела
+									span 10:00
+									p Остановка в городе Сортавала на обед
+									span 13:30
+									p Прибытие в Сортавалу. Расселение по отелям. Ужин и отдых
+									span 20:00
+								.js-tour-programs
+									p Завтрак в отеле. Сбор группы в автобусе
+									span 9:00
+									p Поездка по побережью залива Кирьявалахти
+									span 11:00
+									p Музей резьбы по дереву художника Кронида Гоголева
+									span 12:00
+									p Посещение фирменного магазина форелевого хозяйства
+									span 18:00
+									p Ориентировочное время возвращения в Санкт-Петербург
+									span 23:00
 		li.tours-park__tour
 			.tours-park__images.tours-park__slider--miracles.swiper-container.tours-park__images--left
 				ul.tours-park__image-list.swiper-wrapper
 					li.tours-park-images__image-item.swiper-slide
 						picture.tours-park__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/tours/miracles-1-desktop@1x.png 1x, static/images/content/tours/miracles-1-desktop@2x.png 2x")
 							img.tours-park__img.tours-park__img--right(src="static/images/content/tours/miracles-1-mobile@1x.png" srcset="static/images/content/tours/miracles-1-mobile@2x.png 2x" width="320" height="250" alt="10 чудес Карелии" loading="lazy")
 					li.tours-park-images__image-item.swiper-slide
 						picture.tours-park__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/tours/miracles-2-desktop@1x.png 1x, static/images/content/tours/miracles-2-desktop@2x.png 2x")
 							img.tours-park__img.tours-park__img--right(src="static/images/content/tours/miracles-2-mobile@1x.png" srcset="static/images/content/tours/miracles-2-mobile@2x.png 2x" width="320" height="250" alt="10 чудес Карелии" loading="lazy")
 					li.tours-park-images__image-item.swiper-slide
 						picture.tours-park__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/tours/miracles-3-desktop@1x.png 1x, static/images/content/tours/miracles-3-desktop@2x.png 2x")
 							img.tours-park__img.tours-park__img--right(src="static/images/content/tours/miracles-3-mobile@1x.png" srcset="static/images/content/tours/miracles-3-mobile@2x.png 2x" width="320" height="250" alt="10 чудес Карелии" loading="lazy")
 					li.tours-park-images__image-item.swiper-slide
 						picture.tours-park__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/tours/miracles-4-desktop@1x.png 1x, static/images/content/tours/miracles-4-desktop@2x.png 2x")
 							img.tours-park__img.tours-park__img--right(src="static/images/content/tours/miracles-4-mobile@1x.png" srcset="static/images/content/tours/miracles-4-mobile@2x.png 2x" width="320" height="250" alt="10 чудес Карелии" loading="lazy")
 					li.tours-park-images__image-item.swiper-slide
 						picture.tours-park__picture
-							//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-							//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 							source(media="(min-width: 1280px)" srcset="static/images/content/tours/miracles-5-desktop@1x.png 1x, static/images/content/tours/miracles-5-desktop@2x.png 2x")
 							img.tours-park__img.tours-park__img--right(src="static/images/content/tours/miracles-5-mobile@1x.png" srcset="static/images/content/tours/miracles-5-mobile@2x.png 2x" width="320" height="250" alt="10 чудес Карелии" loading="lazy")
 				.tours-park__slider-buttons.tours-park__slider-buttons--right
@@ -267,19 +327,46 @@ section.tours-park
 									span Проживание в отеле выбранной категории в регионе города Сортавала
 									span Входные билеты в горный парк Рускеала
 									span Сытные завтраки в отеле
+								picture.js-tour-picture
+									source(data-srcset="static/images/content/tours/map-desktop@1x.png 1x, static/images/content/tours/map-desktop@2x.png 2x")
+									img(data-src="static/images/content/excursions/route-map-mobile@1x.png" data-srcset="static/images/content/excursions/route-map-mobile@2x.png 2x")
+								.js-tour-need-visited
+									span водопады Ахвенкоски
+									span Крепость Кексгольм
+									span музейный комплекс "Гора Филина"
+									span музей под открытым небом "Северная Фиваида"
+									span Горный парк Рускеала
+									span Сортавала: обзорная экскурсия
+								.js-tour-programs
+									p Отправление из Санкт-Петербурга
+									span 8:00
+									p Остановка в Приозерске. Внешний осмотр крепости  Корела
+									span 10:00
+									p Остановка в городе Сортавала на обед
+									span 13:30
+									p Прибытие в Сортавалу. Расселение по отелям. Ужин и отдых
+									span 20:00
+								.js-tour-programs
+									p Завтрак в отеле. Сбор группы в автобусе
+									span 9:00
+									p Поездка по побережью залива Кирьявалахти
+									span 11:00
+									p Музей резьбы по дереву художника Кронида Гоголева
+									span 12:00
+									p Посещение фирменного магазина форелевого хозяйства
+									span 18:00
+									p Ориентировочное время возвращения в Санкт-Петербург
+									span 23:00
 	.tours-park__vacation.tours-vacation
 		.container
 			.tours-vacation__col
 				h2.tours-vacation__title Отдых<br> в Карелии
 				picture.tours-vacation__picture.tours-vacation__picture--mobile-none
-					//source(type="image/webp" media="(min-width: 1300px)" srcset="static/images/content/index-can-desktop1x.webp, static/images/content/index-can-desktop2x.webp 2x")
-					//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 					source(media="(min-width: 1280px)" srcset="static/images/content/tours/vacation-desktop@1x.png 1x, static/images/content/tours/vacation-desktop@2x.png 2x")
 					img.tours-vacation__img(src="static/images/content/tours/vacation-mobile@1x.png" srcset="static/images/content/tours/vacation-mobile@2x.png 2x" width="320" height="220" alt="Отдых в Карелии" loading="lazy")
 			p.tours-vacation__pre-text Мы подготовили для своих туристов из Санкт-Петербурга и других городов удивительные увлекательные путешествия и туры, которые понравятся взрослым и детям. За 1, 2 или 3 дня. <br>Вы получите новые знания о Карелии, увидите уникальные достопримечательности Русского Севера и, конечно, порадуетесь необычным развлечениям.
 			p.tours-vacation__text.tours-vacation__text--right Вы можете выбрать подходящую для себя по длительности и программе поездку в Карелию: <br><br>Каждый однодневный, двухдневный и трехдневный тур в Карелию организован максимально насыщенным. В рамках 1-2 дневного путешествия туристы смогут увидеть и достопримечательности городов, и уникальные природные уголки. И, конечно, путешественников ждет расслабленный отдых в комфортных гостиницах Карелии. <br><br>Бронируйте свой лучший отдых, выбирайте подходящий тур из Петербурга в Карелию. При раннем бронировании предусмотрены скидки. Успейте посетить Русский Север по выгодной стоимости.
 			picture.tours-vacation__picture.tours-vacation__picture--desktop-none
-				//source(type="image/webp" srcset="static/images/content/index-can-mobile1x.webp, static/images/content/index-can-mobile2x.webp 2x")
 				img.tours-vacation__img(src="static/images/content/tours/vacation-mobile@1x.png" srcset="static/images/content/tours/vacation-mobile@2x.png 2x" width="320" height="220" alt="Отдых в Карелии" loading="lazy")
 			p.tours-vacation__text.tours-vacation__text--clear Отдых в Карелии с каждым годом становится более популярным не только среди россиян, но и среди иностранных туристов. Новые и опытные путешественники открывают для себя Русский север с ещё неизведанной стороны, сравнивая Ладожские шхеры с Норвежскими пейзажами и просто восторгаясь красотами ландшафта и историческими памятниками. <br><br>Поездка в Карелию – это быстро, экологично, оздоровительно и вдохновляюще! Здесь каждый сможет найти для себя лучшие маршруты и точно не останется равнодушным. Отправиться в путешествие по Карелии можно в любое время года, так как республика готова порадовать вас разнообразием развлечений и всеми возможными видами отдыха вне зависимости от погодных и сезонных условий. Добраться до заветной Карелии можно самостоятельно или же воспользовавшись услугами профессионалов. Главное – выбрать подходящий тур! <br><br>Туры в Карелию разнообразны и каждый найдет для себя программу по вкусу! Выбирая тур, определитесь с его длительность, основными точками маршрута, обязательными для посещения, виды развлекательных программ. <br><br>«Горный парк Рускеала и водопады (эксклюзив)» - тур для тех, кто ловит момент! Однодневный тур до жемчужины Карелии – парка Рускеала. Проведите целый день на свежем воздухе и успейте завершить все дела! <br>Ретро поезд в Карелию – если у вас свободны только выходные, но хочется природы и комфорта, то этот тур для Вас! Однодневная поездка на ласточке доставит вас до Сортавала и подарит яркие впечатления. Изюминкой поездки, конечно же, станет поездка на настоящем ретро паровозе. <br>Если же время на вашей стороне, то обязательно совершите поездку на более долгий срок. Например, советуем рассмотреть варианты: <br>Валаам с посещением парка "Рускеала" – двухдневный тур, охватывающий знаменитый остров Валаам. В первый день туристы смогут насладиться прогулками по мраморному каньону и вокруг водопада Ахинкоски, а на второй день отправиться на Валаам. Путь проходит через Ладожские озеро. Невероятные виды Ладоги откроют для вас новый мир водных прогулок и неповторимых видов на фьорды. Валаам считается православной столицей России, а архитектура острова отражает истинные черты великого русского зодчества.
 

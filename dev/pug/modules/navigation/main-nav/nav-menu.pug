@@ -41,7 +41,7 @@ li.menu-nav__item
 li.menu-nav__item
 	a.menu-nav__link(href= pageClass === "about-page" ? false : "about.html") О парке
 li.menu-nav__item
-	a.menu-nav__link(href="#") Афиша
+	a.menu-nav__link(href= pageClass === "news-page" ? false : "news.html") Афиша
 li.menu-nav__item
 	a.menu-nav__link.js-menu-link Посетителям
 		+icon('icon-menu-arrow', 'menu-nav__icon menu-nav__icon--arrow', '10', '7.5')
