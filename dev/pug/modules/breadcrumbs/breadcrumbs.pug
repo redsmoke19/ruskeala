@@ -1,6 +1,8 @@
-mixin breadcrumbs-item(text,href)
+mixin breadcrumbs-item(text,href,link)
 	li.breadcrumbs__item
-		if(href)
+		if(link)
+			a.breadcrumbs__link.breadcrumbs__link--black(href=href)=text
+		else if(href)
 			a.breadcrumbs__link(href=href)=text
 		else
 			span.breadcrumbs__text=text
@@ -14,3 +16,9 @@ if pageClass === "news-page"
 		ul.breadcrumbs
 			+breadcrumbs-item('Главная','/')
 			+breadcrumbs-item('Новости')
+if pageClass === "post-page"
+	.container
+		ul.breadcrumbs
+			+breadcrumbs-item('Главная','/')
+			+breadcrumbs-item('Новости', 'news.html', true)
+			+breadcrumbs-item(title)

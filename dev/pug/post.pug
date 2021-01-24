@@ -1,0 +1,11 @@
+extends layout/main
+
+block variables
+	-var title = 'Сезон новогодних каникул'
+	-var pageClass = 'post-page'
+
+block content
+	main(class=pageClass)
+		include modules/breadcrumbs/breadcrumbs
+		include pages/post-page/post-page
+		include modules/map/map

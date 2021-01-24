@@ -66,22 +66,31 @@
     }
   }
   &__picture {
-    @media screen and (min-width: $desktop-size) {
-      flex: 0 0 45%;
-      margin-right: 20px;
-    }
-    @media screen and (min-width: $large-size) {
-      flex: 0 0 50%;
-      margin-right: 40px;
-    }
+    width: 100%;
   }
   &__img {
     object-fit: cover;
-    margin-bottom: 10px;
     width: 100%;
     @media screen and (min-width: $desktop-size) {
       height: auto;
       margin-bottom: 0;
+    }
+  }
+  &__post-link {
+    color: $black;
+    &--image {
+      display: flex;
+      margin-bottom: 10px;
+      width: 100%;
+      @media screen and (min-width: $desktop-size) {
+        flex: 0 0 45%;
+        margin-bottom: 0;
+        margin-right: 20px;
+      }
+      @media screen and (min-width: $large-size) {
+        flex: 0 0 50%;
+        margin-right: 40px;
+      }
     }
   }
   &__head {

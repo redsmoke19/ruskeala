@@ -26,5 +26,13 @@
       position: absolute;
       right: -30px;
     }
+    &--black {
+      color: $border-black-light-color;
+      &::after {
+        @media screen and (max-width: 1279px) {
+          content: '';
+        }
+      }
+    }
   }
 }
