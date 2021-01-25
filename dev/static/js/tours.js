@@ -112,10 +112,9 @@
     let tourDescriptionSource = tourDescriptionPicture.querySelector('source');
     let tourDescriptionImage = tourDescriptionPicture.querySelector('img');
     let tourDescriptionVisitedContainer = document.querySelector('.tour-need-visited__list');
-    let tourDescriptionProgramsFirst = document.querySelector('.tour-programs__first-day .tour-programs__list');
-    let tourDescriptionProgramsSecond = document.querySelector('.tour-programs__second-day .tour-programs__list');
     let tourDescriptionPrograms = document.querySelectorAll('.tour-programs__list');
 
+    let tourReserved = document.querySelectorAll('.tour-price');
     let tourReservedModal = document.querySelector('.tour-reserved');
     let tourReservedClose = document.querySelector('.tour-reserved__close-button');
     let tourReservedButtons = document.querySelectorAll('.js-tour-reserv-open');
@@ -155,6 +154,25 @@
       container.append(item);
     };
 
+    const createResevredContent = function(item) {
+      let reserved = item.parentElement.querySelector('.js-tour-reserve');
+      let reservedName = reserved.querySelectorAll('h3');
+      let reservedDescription = reserved.querySelectorAll('.js-tour-reserve__desc');
+      let reservedPrice = reserved.querySelectorAll('.js-tour-reserve__price');
+      for (let i = 0; i < tourReserved.length; i++) {
+        let tourReservedNames = tourReserved[i].querySelectorAll('.tour-price__name');
+        let tourReservedDescriptions = tourReserved[i].querySelectorAll('.tour-price__desc');
+        let tourReservedPrice = tourReserved[i].querySelectorAll('.tour-price__price');
+        for (let k = 0; k < reservedName.length; k++) {
+          tourReservedNames[k].textContent = reservedName[k].textContent;
+        }
+        for (let j = 0; j < reservedDescription.length; j++) {
+          tourReservedDescriptions[j].textContent = reservedDescription[j].textContent;
+          tourReservedPrice[j].textContent = reservedPrice[j].textContent + ' Р';
+        }
+      }
+    }
+
     tourDescriptionButtons.forEach(item => {
       item.addEventListener('click', () => {
         let tourModalTitle = item.parentElement.querySelector('.js-tour-title');
@@ -162,7 +180,7 @@
         let tourModalSource = item.parentElement.querySelector('.js-tour-picture source');
         let tourModalImg = item.parentElement.querySelector('.js-tour-picture img');
         let tourModalVisitedItems = item.parentElement.querySelectorAll('.js-tour-need-visited span');
-        let tourModalPrograms = item.parentElement.querySelectorAll('.js-tour-programs');        
+        let tourModalPrograms = item.parentElement.querySelectorAll('.js-tour-programs');
         tourDescriptionTitle.innerHTML = tourModalTitle.innerHTML;
         for (let i = 0; i < tourModalCostList.length; i++) {
           createCostElement(tourModalCostList[i].textContent);
@@ -183,6 +201,7 @@
         tourDescriptionSource.srcset = tourModalSource.dataset.srcset;
         tourDescriptionImage.src = tourModalImg.dataset.src;
         tourDescriptionImage.srcset = tourModalImg.dataset.srcset;
+        createResevredContent(item);
         window.modalOpen(tourDescriptionModal, 'modal__closed--open', true);
       });
     });
@@ -212,6 +231,7 @@
 
     tourReservedButtons.forEach(item => {
       item.addEventListener('click', () => {
+        createResevredContent(item);
         window.modalOpen(tourReservedModal, 'modal__closed--open', true);
       });
     });
