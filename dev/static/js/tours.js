@@ -1,6 +1,22 @@
 (function() {
   'use strict';
   document.addEventListener('DOMContentLoaded', function() {
+    let tourReservedSlider = document.querySelectorAll('.tour-price__slider');
+    let sliderTourReservedArray = [];
+    for (let slide = 0; slide < tourReservedSlider.length; slide++) {
+      let tourPriceSlider = new Swiper(tourReservedSlider[slide], {
+        direction: 'horizontal',
+        spaceBetween: 10,
+        slidesPerView: 'auto',
+        grabCursor: true,
+        slidesOffsetAfter: 20,
+        slidesOffsetBefore: 20,
+        preventClicks: true,
+        preventClicksPropagation: true,
+      });
+      sliderTourReservedArray.push(tourPriceSlider);
+    };
+
     const toursWeekendSlider = new Swiper('.tours-park__slider--weekend', {
       direction: 'horizontal',
       preventClicks: true,
@@ -114,7 +130,7 @@
     let tourDescriptionVisitedContainer = document.querySelector('.tour-need-visited__list');
     let tourDescriptionPrograms = document.querySelectorAll('.tour-programs__list');
 
-    let tourReserved = document.querySelectorAll('.tour-price');
+    let tourReservedList = document.querySelectorAll('.tour-price__list');
     let tourReservedModal = document.querySelector('.tour-reserved');
     let tourReservedClose = document.querySelector('.tour-reserved__close-button');
     let tourReservedButtons = document.querySelectorAll('.js-tour-reserv-open');
@@ -156,25 +172,50 @@
 
     const createResevredContent = function(item) {
       let reserved = item.parentElement.querySelector('.js-tour-reserve');
-      let reservedName = reserved.querySelectorAll('h3');
-      let reservedDescription = reserved.querySelectorAll('.js-tour-reserve__desc');
-      let reservedPrice = reserved.querySelectorAll('.js-tour-reserve__price');
-      for (let i = 0; i < tourReserved.length; i++) {
-        let tourReservedNames = tourReserved[i].querySelectorAll('.tour-price__name');
-        let tourReservedDescriptions = tourReserved[i].querySelectorAll('.tour-price__desc');
-        let tourReservedPrice = tourReserved[i].querySelectorAll('.tour-price__price');
-        for (let k = 0; k < reservedName.length; k++) {
-          tourReservedNames[k].textContent = reservedName[k].textContent;
-        }
-        for (let j = 0; j < reservedDescription.length; j++) {
-          tourReservedDescriptions[j].textContent = reservedDescription[j].textContent;
-          tourReservedPrice[j].textContent = reservedPrice[j].textContent + ' Р';
+      let reservedItem = reserved.querySelectorAll('li');
+
+      for (let i = 0; i < tourReservedList.length; i++) {
+        for (let j = 0; j < reservedItem.length; j++) {
+          let title = reservedItem[j].querySelector('h3');
+          let description = reservedItem[j].querySelectorAll('.js-tour-reserve__desc');
+          let price = reservedItem[j].querySelectorAll('.js-tour-reserve__price');
+          let link = reservedItem[j].querySelector('.js-tour-reserve__link');
+          let liElement = document.createElement('li');
+          let titleElement = document.createElement('h3');
+          let linkElement = document.createElement('a');
+          liElement.classList.add('tour-price__item', 'swiper-slide');
+          titleElement.classList.add('tour-price__name');
+          titleElement.textContent = title.textContent;
+          linkElement.classList.add('button', 'tour-price__link');
+          linkElement.textContent = link.textContent;
+          linkElement.href = link.dataset.link;
+          linkElement.target = '_blank';
+          liElement.append(titleElement);
+          for (let k = 0; k < description.length; k++) {
+            let divElement = document.createElement('div');
+            let descriptionElement = document.createElement('span');
+            let priceElement = document.createElement('span');
+            divElement.classList.add('tour-price__box');
+            descriptionElement.classList.add('tour-price__desc');
+            priceElement.classList.add('tour-price__price');
+            descriptionElement.textContent = description[k].textContent;
+            priceElement.textContent = price[k].textContent;
+            divElement.append(descriptionElement);
+            divElement.append(priceElement);
+            liElement.append(divElement);
+          };
+          liElement.append(linkElement);
+          tourReservedList[i].append(liElement);
         }
       }
-    }
+    };
 
     tourDescriptionButtons.forEach(item => {
       item.addEventListener('click', () => {
+        sliderTourReservedArray.forEach(item => {
+          item.removeAllSlides();
+          item.update();
+        });
         let tourModalTitle = item.parentElement.querySelector('.js-tour-title');
         let tourModalCostList = item.parentElement.querySelectorAll('.js-tour-cost-list span');
         let tourModalSource = item.parentElement.querySelector('.js-tour-picture source');
@@ -202,6 +243,9 @@
         tourDescriptionImage.src = tourModalImg.dataset.src;
         tourDescriptionImage.srcset = tourModalImg.dataset.srcset;
         createResevredContent(item);
+        sliderTourReservedArray.forEach(item => {
+          item.update();
+        });
         window.modalOpen(tourDescriptionModal, 'modal__closed--open', true);
       });
     });
@@ -226,17 +270,32 @@
       toursProgramFirstSlider.update();
       toursProgramSecondSlider.removeAllSlides();
       toursProgramSecondSlider.update();
+      sliderTourReservedArray.forEach(item => {
+        item.removeAllSlides();
+        item.update();
+      });
       window.modalClose(tourDescriptionModal, 'modal__closed--open');
     });
 
     tourReservedButtons.forEach(item => {
       item.addEventListener('click', () => {
+        sliderTourReservedArray.forEach(item => {
+          item.removeAllSlides();
+          item.update();
+        });
         createResevredContent(item);
+        sliderTourReservedArray.forEach(item => {
+          item.update();
+        });
         window.modalOpen(tourReservedModal, 'modal__closed--open', true);
       });
     });
 
     tourReservedClose.addEventListener('click', () => {
+      sliderTourReservedArray.forEach(item => {
+        item.removeAllSlides();
+        item.update();
+      });
       window.modalClose(tourReservedModal, 'modal__closed--open');
     });
   }, false);

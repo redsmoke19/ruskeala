@@ -103,7 +103,7 @@
       reservedRoomsSlider.removeAllSlides();
       reservedRoomsSlider.update();
       window.modalClose(reservedRoomsModal, 'reserved-room--open');
-    })
+    });
 
   }, false);
 })();

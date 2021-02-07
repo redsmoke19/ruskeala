@@ -84,17 +84,7 @@
           } else {
             subMenuElement.style.maxHeight = subMenuElement.scrollHeight + 'px';
           }
-          // document.addEventListener('click', menuClosed);
         });
-        // let menuClosed = function(e) {
-        //   console.log(e);
-        //   if (!e.target.closest('.menu-sub-nav')) {
-        //     item.nextElementSibling.classList.remove('menu-sub-nav--open');
-        //     item.classList.remove('menu-nav__link--active');
-        //     item.nextElementSibling.style.maxHeight = null;
-        //     document.removeEventListener('click', menuClosed);
-        //   }
-        // }
       });
     };
     menuToggle();
@@ -120,7 +110,6 @@
     //Sliders
     const breakpointDesktop = window.matchMedia('(min-width: 1280px)');
     let subMenuMobileSlider;
-    let tourPriceSlider;
 
     const breakpointChecker = function() {
       let resizeTimeout;
@@ -134,7 +123,6 @@
       function resizeHandlerDesktop() {
         if (breakpointDesktop.matches === true) {
           if (subMenuMobileSlider !== undefined) subMenuMobileSlider.destroy(true, true);
-          if (tourPriceSlider !== undefined) tourPriceSlider.destroy(true, true);
         } else if (breakpointDesktop.matches === false) {
           enableSubMenu();
         }
@@ -142,17 +130,6 @@
     };
 
     const enableSubMenu = function() {
-      tourPriceSlider = new Swiper('.tour-price__slider', {
-        direction: 'horizontal',
-        spaceBetween: 10,
-        slidesPerView: 'auto',
-        grabCursor: true,
-        slidesOffsetAfter: 20,
-        slidesOffsetBefore: 20,
-        preventClicks: true,
-        preventClicksPropagation: true,
-      });
-
       subMenuMobileSlider = new Swiper('.sub-nav__wrapper', {
         direction: 'horizontal',
         spaceBetween: 15,
@@ -163,7 +140,7 @@
         preventClicks: true,
         preventClicksPropagation: true,
       });
-    }
+    };
 
     breakpointDesktop.addListener(breakpointChecker);
     breakpointChecker();
