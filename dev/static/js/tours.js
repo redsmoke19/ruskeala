@@ -57,66 +57,66 @@
       },
     });
 
-    const toursProgramFirstSlider = new Swiper('.tour-programs__first-day', {
-      direction: 'horizontal',
-      preventClicks: true,
-      preventClicksPropagation: true,
-      slidesPerView: 'auto',
-      spaceBetween: 40,
-      slidesOffsetBefore: 20,
-      slidesOffsetAfter: 20,
-      breakpoints: {
-        1280: {
-          slidesOffsetBefore: 167,
-          slidesOffsetAfter: 167,
-        },
-        1600: {
-          slidesOffsetBefore: 208,
-          slidesOffsetAfter: 208,
-        },
-        1920: {
-          slidesOffsetBefore: 250,
-          slidesOffsetAfter: 250,
-          allowTouchMove: false,
-        },
-      },
-      scrollbar: {
-        el: '.tour-programs__scrollbar--first',
-        draggable: true,
-        dragClass: 'scrollbar__drag',
-        snapOnRelease: false,
-      },
-    });
+    // const toursProgramFirstSlider = new Swiper('.tour-programs__first-day', {
+    //   direction: 'horizontal',
+    //   preventClicks: true,
+    //   preventClicksPropagation: true,
+    //   slidesPerView: 'auto',
+    //   spaceBetween: 40,
+    //   slidesOffsetBefore: 20,
+    //   slidesOffsetAfter: 20,
+    //   breakpoints: {
+    //     1280: {
+    //       slidesOffsetBefore: 167,
+    //       slidesOffsetAfter: 167,
+    //     },
+    //     1600: {
+    //       slidesOffsetBefore: 208,
+    //       slidesOffsetAfter: 208,
+    //     },
+    //     1920: {
+    //       slidesOffsetBefore: 250,
+    //       slidesOffsetAfter: 250,
+    //       allowTouchMove: false,
+    //     },
+    //   },
+    //   scrollbar: {
+    //     el: '.tour-programs__scrollbar--first',
+    //     draggable: true,
+    //     dragClass: 'scrollbar__drag',
+    //     snapOnRelease: false,
+    //   },
+    // });
 
-    const toursProgramSecondSlider = new Swiper('.tour-programs__second-day', {
-      direction: 'horizontal',
-      preventClicks: true,
-      preventClicksPropagation: true,
-      slidesPerView: 'auto',
-      spaceBetween: 40,
-      slidesOffsetBefore: 20,
-      slidesOffsetAfter: 20,
-      breakpoints: {
-        1280: {
-          slidesOffsetBefore: 167,
-          slidesOffsetAfter: 167,
-        },
-        1600: {
-          slidesOffsetBefore: 208,
-          slidesOffsetAfter: 208,
-        },
-        1920: {
-          slidesOffsetBefore: 250,
-          slidesOffsetAfter: 250,
-        },
-      },
-      scrollbar: {
-        el: '.tour-programs__scrollbar--second',
-        draggable: true,
-        dragClass: 'scrollbar__drag',
-        snapOnRelease: false,
-      },
-    });
+    // const toursProgramSecondSlider = new Swiper('.tour-programs__second-day', {
+    //   direction: 'horizontal',
+    //   preventClicks: true,
+    //   preventClicksPropagation: true,
+    //   slidesPerView: 'auto',
+    //   spaceBetween: 40,
+    //   slidesOffsetBefore: 20,
+    //   slidesOffsetAfter: 20,
+    //   breakpoints: {
+    //     1280: {
+    //       slidesOffsetBefore: 167,
+    //       slidesOffsetAfter: 167,
+    //     },
+    //     1600: {
+    //       slidesOffsetBefore: 208,
+    //       slidesOffsetAfter: 208,
+    //     },
+    //     1920: {
+    //       slidesOffsetBefore: 250,
+    //       slidesOffsetAfter: 250,
+    //     },
+    //   },
+    //   scrollbar: {
+    //     el: '.tour-programs__scrollbar--second',
+    //     draggable: true,
+    //     dragClass: 'scrollbar__drag',
+    //     snapOnRelease: false,
+    //   },
+    // });
 
     //Modal
     let tourDescriptionModal = document.querySelector('.tour-description');
@@ -147,6 +147,7 @@
       item.append(text);
       tourDescriptionCostContainer.append(item);
     };
+
     const createVisitedElements = function(description) {
       let item = document.createElement('li');
       let text = document.createElement('p');
@@ -156,6 +157,7 @@
       item.append(text);
       tourDescriptionVisitedContainer.append(item);
     };
+
     const createProgramsElements = function(container, description, hour) {
       let item = document.createElement('li');
       let text = document.createElement('p');
@@ -168,6 +170,18 @@
       item.append(text);
       item.append(time);
       container.append(item);
+    };
+
+    const testTour = function(title) {
+      let tourProgramsWrapper = document.querySelector('.tour-programs');
+      let template = document.querySelector('template').content;
+      let templateDays = template.querySelector('.tour-programs__inner');
+      let fragment = document.createDocumentFragment();
+      let dayItem = templateDays.cloneNode(true);
+      let dayTitle = dayItem.querySelector('h3');
+      dayTitle.textContent = title.textContent;
+      fragment.append(dayItem);
+      tourProgramsWrapper.append(fragment);
     };
 
     const createResevredContent = function(item) {
@@ -229,16 +243,23 @@
         for (let y = 0; y < tourModalVisitedItems.length; y++) {
           createVisitedElements(tourModalVisitedItems[y].textContent);
         };
+
+        //Test
         for (let x = 0; x < tourModalPrograms.length; x++) {
-          let day = tourModalPrograms[x];
-          let text = day.querySelectorAll('p');
-          let time = day.querySelectorAll('span');
-          for (let z = 0; z < text.length; z++) {
-            createProgramsElements(tourDescriptionPrograms[x], text[z], time[z]);
-          }
+          let dayTitle = tourModalPrograms[x].querySelector('h3');
+          testTour(dayTitle);
         }
-        toursProgramFirstSlider.update();
-        toursProgramSecondSlider.update();
+
+        // for (let x = 0; x < tourModalPrograms.length; x++) {
+        //   let day = tourModalPrograms[x];
+        //   let text = day.querySelectorAll('p');
+        //   let time = day.querySelectorAll('span');
+        //   for (let z = 0; z < text.length; z++) {
+        //     createProgramsElements(tourDescriptionPrograms[x], text[z], time[z]);
+        //   }
+        // }
+        // toursProgramFirstSlider.update();
+        // toursProgramSecondSlider.update();
         tourDescriptionSource.srcset = tourModalSource.dataset.srcset;
         tourDescriptionImage.src = tourModalImg.dataset.src;
         tourDescriptionImage.srcset = tourModalImg.dataset.srcset;

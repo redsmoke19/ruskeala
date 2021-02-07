@@ -8,3 +8,15 @@ block content
 	main(class=pageClass)
 		include pages/tours-page/tours-page
 		include modules/map/map
+	template
+		.tour-programs__inner
+			.container
+				h3.tour-programs__sub-title День 1
+			.tour-programs__first-day.tour-programs__days.swiper-container
+				ul.tour-programs__list.swiper-wrapper
+			.container
+				.tour-programs__scrollbar.tour-programs__scrollbar--first.scrollbar
+					.scrollbar__drag.scrollbar__drag--small
+						+icon('icon-walk', 'scrollbar__mouse scrollbar__walk', '28', '40')
+						+icon('icon-arrow', 'scrollbar__icon scrollbar__icon--left', '12', '7')
+						+icon('icon-arrow', 'scrollbar__icon scrollbar__icon--right', '12', '7')
