@@ -57,36 +57,6 @@
       },
     });
 
-    // const toursProgramFirstSlider = new Swiper('.tour-programs__first-day', {
-    //   direction: 'horizontal',
-    //   preventClicks: true,
-    //   preventClicksPropagation: true,
-    //   slidesPerView: 'auto',
-    //   spaceBetween: 40,
-    //   slidesOffsetBefore: 20,
-    //   slidesOffsetAfter: 20,
-    //   breakpoints: {
-    //     1280: {
-    //       slidesOffsetBefore: 167,
-    //       slidesOffsetAfter: 167,
-    //     },
-    //     1600: {
-    //       slidesOffsetBefore: 208,
-    //       slidesOffsetAfter: 208,
-    //     },
-    //     1920: {
-    //       slidesOffsetBefore: 250,
-    //       slidesOffsetAfter: 250,
-    //       allowTouchMove: false,
-    //     },
-    //   },
-    //   scrollbar: {
-    //     el: '.tour-programs__scrollbar--first',
-    //     draggable: true,
-    //     dragClass: 'scrollbar__drag',
-    //     snapOnRelease: false,
-    //   },
-    // });
     let sliderProgramsArray = [];
     const createProgramsSlider = function() {
       let sliderPrograms = document.querySelectorAll('.tour-programs__days');
@@ -126,36 +96,6 @@
       };
     };
 
-    // const toursProgramSecondSlider = new Swiper('.tour-programs__second-day', {
-    //   direction: 'horizontal',
-    //   preventClicks: true,
-    //   preventClicksPropagation: true,
-    //   slidesPerView: 'auto',
-    //   spaceBetween: 40,
-    //   slidesOffsetBefore: 20,
-    //   slidesOffsetAfter: 20,
-    //   breakpoints: {
-    //     1280: {
-    //       slidesOffsetBefore: 167,
-    //       slidesOffsetAfter: 167,
-    //     },
-    //     1600: {
-    //       slidesOffsetBefore: 208,
-    //       slidesOffsetAfter: 208,
-    //     },
-    //     1920: {
-    //       slidesOffsetBefore: 250,
-    //       slidesOffsetAfter: 250,
-    //     },
-    //   },
-    //   scrollbar: {
-    //     el: '.tour-programs__scrollbar--second',
-    //     draggable: true,
-    //     dragClass: 'scrollbar__drag',
-    //     snapOnRelease: false,
-    //   },
-    // });
-
     //Modal
     let tourDescriptionModal = document.querySelector('.tour-description');
     let tourDescriptionClose = document.querySelector('.tour-description__close-button');
@@ -166,7 +106,6 @@
     let tourDescriptionSource = tourDescriptionPicture.querySelector('source');
     let tourDescriptionImage = tourDescriptionPicture.querySelector('img');
     let tourDescriptionVisitedContainer = document.querySelector('.tour-need-visited__list');
-    let tourDescriptionPrograms = document.querySelectorAll('.tour-programs__list');
 
     let tourReservedList = document.querySelectorAll('.tour-price__list');
     let tourReservedModal = document.querySelector('.tour-reserved');
@@ -210,7 +149,7 @@
       container.append(item);
     };
 
-    const testTour = function(title, description, hour) {
+    const createProgramsDays = function(title) {
       let tourProgramsWrapper = document.querySelector('.tour-programs');
       let template = document.querySelector('template').content;
       let templateDays = template.querySelector('.tour-programs__inner');
@@ -282,13 +221,11 @@
         for (let y = 0; y < tourModalVisitedItems.length; y++) {
           createVisitedElements(tourModalVisitedItems[y].textContent);
         };
-
-        //Test
         for (let x = 0; x < tourModalPrograms.length; x++) {
           let dayTitle = tourModalPrograms[x].querySelector('h3');
           let dayTime = tourModalPrograms[x].querySelectorAll('span');
           let dayText = tourModalPrograms[x].querySelectorAll('p');
-          testTour(dayTitle);
+          createProgramsDays(dayTitle);
           let tourInner = document.querySelectorAll('.tour-programs__inner');
           let daysWrapper = tourInner[x].querySelector('.tour-programs__list');
           for (let z = 0; z < dayText.length; z++) {
@@ -296,16 +233,6 @@
           }
         }
         createProgramsSlider();
-        // for (let n = 0; n < tourModalPrograms.length; n++) {
-        //   let day = tourModalPrograms[n];
-        //   let text = day.querySelectorAll('p');
-        //   let time = day.querySelectorAll('span');
-        //   for (let z = 0; z < text.length; z++) {
-        //     createProgramsElements(tourDescriptionPrograms[n], text[z], time[z]);
-        //   }
-        // }
-        // toursProgramFirstSlider.update();
-        // toursProgramSecondSlider.update();
         sliderProgramsArray.forEach(item => {
           item.update();
         });
@@ -368,5 +295,4 @@
       window.modalClose(tourReservedModal, 'modal__closed--open');
     });
   }, false);
-
 })();
