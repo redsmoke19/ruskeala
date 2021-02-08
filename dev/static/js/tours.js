@@ -87,6 +87,44 @@
     //     snapOnRelease: false,
     //   },
     // });
+    let sliderProgramsArray = [];
+    const createProgramsSlider = function() {
+      let sliderPrograms = document.querySelectorAll('.tour-programs__days');
+      for (let index = 0; index < sliderPrograms.length; index++) {
+        let scrollbar = sliderPrograms[index].parentElement.querySelector('.tour-programs__scrollbar');
+        scrollbar.classList.add(`tour-programs__scrollbar--${index + 1}`);
+        let toursProgramSlider = new Swiper(sliderPrograms[index], {
+          direction: 'horizontal',
+          preventClicks: true,
+          preventClicksPropagation: true,
+          slidesPerView: 'auto',
+          spaceBetween: 40,
+          slidesOffsetBefore: 20,
+          slidesOffsetAfter: 20,
+          breakpoints: {
+            1280: {
+              slidesOffsetBefore: 167,
+              slidesOffsetAfter: 167,
+            },
+            1600: {
+              slidesOffsetBefore: 208,
+              slidesOffsetAfter: 208,
+            },
+            1920: {
+              slidesOffsetBefore: 250,
+              slidesOffsetAfter: 250,
+            },
+          },
+          scrollbar: {
+            el: scrollbar,
+            draggable: true,
+            dragClass: 'scrollbar__drag',
+            snapOnRelease: false,
+          },
+        });
+        sliderProgramsArray.push(toursProgramSlider);
+      };
+    };
 
     // const toursProgramSecondSlider = new Swiper('.tour-programs__second-day', {
     //   direction: 'horizontal',
@@ -172,13 +210,14 @@
       container.append(item);
     };
 
-    const testTour = function(title) {
+    const testTour = function(title, description, hour) {
       let tourProgramsWrapper = document.querySelector('.tour-programs');
       let template = document.querySelector('template').content;
       let templateDays = template.querySelector('.tour-programs__inner');
       let fragment = document.createDocumentFragment();
       let dayItem = templateDays.cloneNode(true);
       let dayTitle = dayItem.querySelector('h3');
+
       dayTitle.textContent = title.textContent;
       fragment.append(dayItem);
       tourProgramsWrapper.append(fragment);
@@ -247,19 +286,29 @@
         //Test
         for (let x = 0; x < tourModalPrograms.length; x++) {
           let dayTitle = tourModalPrograms[x].querySelector('h3');
+          let dayTime = tourModalPrograms[x].querySelectorAll('span');
+          let dayText = tourModalPrograms[x].querySelectorAll('p');
           testTour(dayTitle);
+          let tourInner = document.querySelectorAll('.tour-programs__inner');
+          let daysWrapper = tourInner[x].querySelector('.tour-programs__list');
+          for (let z = 0; z < dayText.length; z++) {
+            createProgramsElements(daysWrapper, dayText[z], dayTime[z]);
+          }
         }
-
-        // for (let x = 0; x < tourModalPrograms.length; x++) {
-        //   let day = tourModalPrograms[x];
+        createProgramsSlider();
+        // for (let n = 0; n < tourModalPrograms.length; n++) {
+        //   let day = tourModalPrograms[n];
         //   let text = day.querySelectorAll('p');
         //   let time = day.querySelectorAll('span');
         //   for (let z = 0; z < text.length; z++) {
-        //     createProgramsElements(tourDescriptionPrograms[x], text[z], time[z]);
+        //     createProgramsElements(tourDescriptionPrograms[n], text[z], time[z]);
         //   }
         // }
         // toursProgramFirstSlider.update();
         // toursProgramSecondSlider.update();
+        sliderProgramsArray.forEach(item => {
+          item.update();
+        });
         tourDescriptionSource.srcset = tourModalSource.dataset.srcset;
         tourDescriptionImage.src = tourModalImg.dataset.src;
         tourDescriptionImage.srcset = tourModalImg.dataset.srcset;
@@ -274,6 +323,7 @@
     tourDescriptionClose.addEventListener('click', () => {
       let tourCostItems = tourDescriptionCostContainer.querySelectorAll('.tour-cost__item');
       let tourVisitedItems = tourDescriptionVisitedContainer.querySelectorAll('.tour-need-visited__item');
+      let tourProgramsInner = document.querySelectorAll('.tour-programs__inner');
       if (tourCostItems) {
         tourCostItems.forEach(item => {
           item.remove();
@@ -287,14 +337,12 @@
       tourDescriptionSource.srcset = '';
       tourDescriptionImage.src = '';
       tourDescriptionImage.srcset = '';
-      toursProgramFirstSlider.removeAllSlides();
-      toursProgramFirstSlider.update();
-      toursProgramSecondSlider.removeAllSlides();
-      toursProgramSecondSlider.update();
-      sliderTourReservedArray.forEach(item => {
+      sliderProgramsArray.forEach((item, index) => {
         item.removeAllSlides();
         item.update();
+        tourProgramsInner[index].remove();
       });
+      sliderProgramsArray = [];
       window.modalClose(tourDescriptionModal, 'modal__closed--open');
     });
 

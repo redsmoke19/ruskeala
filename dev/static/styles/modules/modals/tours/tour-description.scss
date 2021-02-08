@@ -311,9 +311,6 @@
       width: 100%;
       &--first {
         margin-bottom: 74px;
-        @media screen and (min-width: $large-size) {
-          display: none;
-        }
       }
     }
   }
