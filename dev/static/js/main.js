@@ -1,14 +1,20 @@
 (function() {
   'use strict';
   window.initMap = function() {
-    let map = new google.maps.Map(document.querySelector('.map__frame'), {
-      center: {lat: -34.397, lng: 150.644},
-      zoom: 8,
-    });
-    let exmap = new google.maps.Map(document.querySelector('.interactive-map__map'), {
-      center: {lat: -34.397, lng: 150.644},
-      zoom: 8,
-    });
+    let globalMap = document.querySelector('.map__frame');
+    let interactiveMap = document.querySelector('.interactive-map__map');
+    if (globalMap) {
+      let map = new google.maps.Map(globalMap, {
+        center: {lat: -34.397, lng: 150.644},
+        zoom: 8,
+      });
+    }
+    if (interactiveMap) {
+      let exmap = new google.maps.Map(interactiveMap, {
+        center: {lat: -34.397, lng: 150.644},
+        zoom: 8,
+      });
+    }
   };
 
   document.addEventListener('DOMContentLoaded', function() {
