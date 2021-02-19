@@ -1,0 +1,29 @@
+.contacts-partners {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  &__item {
+    margin-right: 20px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    // opacity: 0.8;
+    margin-bottom: 5px;
+    @include adaptiv-font(28, 18, 3);
+  }
+  &__link {
+    color: $orange-dark-color;
+    display: block;
+    font-weight: 500;
+    // text-decoration: underline;
+    @include adaptiv-font(26, 16, 3);
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

@@ -3,18 +3,25 @@
   window.initMap = function() {
     let globalMap = document.querySelector('.map__frame');
     let interactiveMap = document.querySelector('.interactive-map__map');
+    let partnersMap = document.querySelector('.office-partners__map');
     if (globalMap) {
       let map = new google.maps.Map(globalMap, {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 8,
+        center: {lat: 61.944186, lng: 30.581297},
+        zoom: 10,
       });
-    }
+    };
     if (interactiveMap) {
       let exmap = new google.maps.Map(interactiveMap, {
-        center: {lat: -34.397, lng: 150.644},
+        center: {lat: 61.944186, lng: 30.581297},
         zoom: 8,
       });
-    }
+    };
+    if (partnersMap) {
+      let partMap = new google.maps.Map(partnersMap, {
+        center: {lat: 61.944186, lng: 30.581297},
+        zoom: 8,
+      });
+    };
   };
 
   document.addEventListener('DOMContentLoaded', function() {

@@ -1,0 +1,58 @@
+.files-partners {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.4;
+    margin-bottom: 40px;
+    @include adaptiv-font(22, 15, 3);
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      align-items: center;
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+  &__icon {
+    display: none;
+    @media screen and (min-width: $desktop-size) {
+      display: block;
+      flex: 0 0 auto;
+      margin-right: 20px;
+    }
+  }
+  &__name {
+    font-weight: 700;
+    margin-bottom: 10px;
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 0;
+      padding-right: 80px;
+    }
+  }
+  &__size {
+    color: $text-color-grey;
+    display: block;
+    margin-top: 5px;
+    @media screen and (min-width: $desktop-size) {
+      display: inline-block;
+      margin: 0;
+      padding-left: 10px;
+    }
+  }
+  &__link {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+    max-width: 430px;
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 0 0 auto;
+      width: auto;
+    }
+  }
+}
