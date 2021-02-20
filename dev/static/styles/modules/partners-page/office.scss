@@ -1,19 +1,44 @@
 .office-partners {
+  @include adaptiv-value(margin-bottom, 70, 40, 3);
+  .container {
+    padding: 0;
+  }
   &__description {
     margin-bottom: 30px;
     padding: 0 20px;
     @include adaptiv-font(22, 14, 3);
+    @media screen and (min-width: $desktop-size) {
+      padding: 0;
+    }
+  }
+  &__location {
+    @media screen and (min-width: $desktop-size) {
+      align-items: center;
+      display: flex;
+    }
   }
   &__map {
     height: 400px;
     margin-bottom: 30px;
     width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      flex: 0 0 75%;
+      margin-bottom: 0;
+    }
   }
   &__list {
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
     padding: 0 20px;
+    @media screen and (min-width: $desktop-size) {
+      background-color: $white;
+      border-radius: 10px;
+      box-shadow: 0 0 50px rgba(32, 32, 44, 0.15);
+      margin: 0 0 0 -10%;
+      padding: 30px;
+      flex: 0 0 35%;
+      position: relative;
+    }
   }
   &__item {
     &:not(:last-child) {

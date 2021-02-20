@@ -1,16 +1,16 @@
 .files-partners {
+  @include adaptiv-value(margin-bottom, 70, 40, 3);
   &__list {
     display: flex;
     flex-direction: column;
     line-height: 1.4;
-    margin-bottom: 40px;
     @include adaptiv-font(22, 15, 3);
   }
   &__item {
     &:not(:last-child) {
       margin-bottom: 30px;
     }
-    @media screen and (min-width: $desktop-size) {
+    @media screen and (min-width: 768px) {
       display: flex;
       align-items: center;
       &:not(:last-child) {
@@ -20,7 +20,7 @@
   }
   &__icon {
     display: none;
-    @media screen and (min-width: $desktop-size) {
+    @media screen and (min-width: 768px) {
       display: block;
       flex: 0 0 auto;
       margin-right: 20px;
@@ -29,7 +29,7 @@
   &__name {
     font-weight: 700;
     margin-bottom: 10px;
-    @media screen and (min-width: $desktop-size) {
+    @media screen and (min-width: 768px) {
       margin-bottom: 0;
       padding-right: 80px;
     }
@@ -49,8 +49,8 @@
     margin: 0 auto;
     text-align: center;
     width: 80%;
-    max-width: 430px;
-    @media screen and (min-width: $desktop-size) {
+    max-width: 400px;
+    @media screen and (min-width: 768px) {
       margin: 0 0 0 auto;
       width: auto;
     }

@@ -116,7 +116,15 @@
     object-fit: cover;
     width: 100%;
     @media screen and (min-width: $desktop-size) {
-      margin-bottom: 80px;
+      width: auto;
+      margin: 0 auto 40px;
+    }
+  }
+  iframe {
+    margin-bottom: 40px;
+    padding: 0 20px;
+    @media screen and (min-width: $desktop-size) {
+      padding: 0;
     }
   }
 }

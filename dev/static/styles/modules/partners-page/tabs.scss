@@ -1,8 +1,22 @@
 .tabs-partners {
+  @include adaptiv-value(margin-bottom, 70, 40, 3);
+  .container {
+    padding: 0;
+  }
+  &__inner {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
   &__header {
     margin-bottom: 20px;
     @media screen and (min-width: 420px) {
       padding: 0 20px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      padding: 0;
     }
   }
   &__name {
@@ -41,9 +55,13 @@
     }
   }
   &__body {
-    margin-bottom: 40px;
     padding: 0 20px;
     position: relative;
+    @media screen and (min-width: 786px) {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+    }
   }
   &__text {
     opacity: 0;

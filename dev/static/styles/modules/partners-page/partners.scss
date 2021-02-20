@@ -1,4 +1,5 @@
 .partners {
+  @include adaptiv-value(margin-bottom, 70, 40, 3);
   &__title {
     @include adaptiv-font(63, 26, 3);
     font-weight: 900;
@@ -12,9 +13,11 @@
     font-weight: 700;
     line-height: 1.3;
     margin-bottom: 20px;
-    // text-align: center;
     &--tabs {
       padding: 0 20px;
+      @media screen and (min-width: $desktop-size) {
+        padding: 0;
+      }
     }
   }
   &__attention {
@@ -25,7 +28,6 @@
   }
   &__note {
     line-height: 1.4;
-    margin-bottom: 40px;
     @include adaptiv-font(18, 14, 3);
   }
 }
@@ -49,6 +51,14 @@
     @include adaptiv-value(padding-left, 40, 20, 3);
     &:not(:last-child) {
       margin-bottom: 5px;
+    }
+  }
+}
+
+.partners-page {
+  @media screen and (min-width: $desktop-size) {
+    .map {
+      margin-bottom: 0;
     }
   }
 }
