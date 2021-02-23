@@ -1,0 +1,10 @@
+extends layout/main
+
+block variables
+	-var title = 'Правила парка'
+	-var pageClass = 'rules-page'
+
+block content
+	main(class=pageClass)
+		include pages/rules-page/rules
+		include modules/map/map

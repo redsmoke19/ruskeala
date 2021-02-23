@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const script = require('./gulp/tasks/scripts');
 const fonts = require('./gulp/tasks/fonts');
+const files = require('./gulp/tasks/files');
 const vendors = require('./gulp/tasks/vendorsJS');
 const imageMinify = require('./gulp/tasks/imageMinify');
 const imageWebP = require('./gulp/tasks/imageWebp');
@@ -27,7 +28,7 @@ gulp.task('critical', () => {
     .pipe(gulp.dest('dist'));
 });
 
-const dev = gulp.parallel(pug2html, script, vendors, styles, imageMinify, spriteSVG, spritePNG, fonts, imageWebP);
+const dev = gulp.parallel(pug2html, script, vendors, styles, imageMinify, spriteSVG, spritePNG, files, fonts, imageWebP);
 
 exports.default = gulp.series(
   clean,
