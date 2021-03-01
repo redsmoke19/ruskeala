@@ -79,26 +79,65 @@
       });
       buyTicketModalClose.addEventListener('click', () => {
         modalClose(buyTicketModal, 'enter-ticket--open');
-      })
+      });
     };
     modalToggle();
-
+    
     //Open Close Menu
     const menuToggle = function() {
+      let currentTarget;
+      let menuItem;
       let linksElements = document.querySelectorAll('.js-menu-link');
-      linksElements.forEach(item => {
-        item.addEventListener('click', function() {
-          item.nextElementSibling.classList.toggle('menu-sub-nav--open');
-          item.classList.toggle('menu-nav__link--active');
+      let menu = document.querySelector('.menu-nav');
+      let menuClickHandler = (e) => {
+        let menuLink = e.target.closest('.js-menu-link');
+        if (!menuLink) {
+          return;
+        }
+        menuItem = menuLink.nextElementSibling;
+        if (menuItem.classList.contains('menu-sub-nav--open')) {
+          menuItem.classList.remove('menu-sub-nav--open');
+          menuItem.style.maxHeight = null;
+          return;
+        }
+        if (currentTarget) {
+          currentTarget.classList.remove('menu-sub-nav--open');
+          currentTarget.style.maxHeight = null;
+        }
+        menuItem.classList.add('menu-sub-nav--open');
+        menuItem.style.maxHeight = menuItem.scrollHeight + 'px';
+        currentTarget = menuItem;
+      };
 
-          let subMenuElement = this.nextElementSibling;
-          if (subMenuElement.style.maxHeight) {
-            subMenuElement.style.maxHeight = null;
+      document.addEventListener('click', (e) => {
+        if (menuItem) {
+          if (e.target === menuItem) {
+            console.log(menuItem);
           } else {
-            subMenuElement.style.maxHeight = subMenuElement.scrollHeight + 'px';
+            closeMenuClickHandler();
+            console.log(menuItem);
           }
-        });
+        }
       });
+
+      let closeMenuClickHandler = () => {
+        currentTarget.classList.remove('menu-sub-nav--open');
+        currentTarget.style.maxHeight = null;
+      };
+      menu.addEventListener('click', menuClickHandler);
+      // linksElements.forEach(item => {
+      //   item.addEventListener('click', function() {
+      //     item.nextElementSibling.classList.toggle('menu-sub-nav--open');
+      //     item.classList.toggle('menu-nav__link--active');
+
+      //     let subMenuElement = this.nextElementSibling;
+      //     if (subMenuElement.style.maxHeight) {
+      //       subMenuElement.style.maxHeight = null;
+      //     } else {
+      //       subMenuElement.style.maxHeight = subMenuElement.scrollHeight + 'px';
+      //     }
+      //   });
+      // });
     };
     menuToggle();
 
