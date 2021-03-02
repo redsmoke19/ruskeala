@@ -7,6 +7,22 @@
     margin-bottom: 20px;
     text-align: center;
   }
+  &__picture {
+    @media screen and (min-width: $desktop-size) {
+      display: block;
+      margin: 0 auto;
+      max-width: $content;
+      width: 74%;
+    }
+  }
+  &__img {
+    object-fit: cover;
+    margin-bottom: 20px;
+    width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 80px;
+    }
+  }
   &__sub-title {
     font-size: 18px;
     @include adaptiv-font(40, 30, 3);
@@ -63,8 +79,7 @@
   }
 }
 
-@import "files";
-@import "tabs";
-@import "office";
-@import "contacts";
-
+@import 'files';
+@import 'tabs';
+@import 'office';
+@import 'contacts';

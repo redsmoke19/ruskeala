@@ -1,6 +1,10 @@
 section.partners
   .container
     h1.partners__title Партнёрам
+  picture.partners__picture
+    source(media="(min-width: 1280px)" srcset="static/images/content/partners-desktop@1x.png 1x, static/images/content/partners-desktop@2x.png 2x")
+    img.partners__img(src="static/images/content/partners-mobile@1x.png" srcset="static/images/content/partners-mobile@2x.png 2x" width="320" height="320" alt="Партнерам" loading="lazy")
+  .container
     h2.partners__sub-title В Горном Парке Рускеала обслуживание туристов осуществляют две разные организации:
     ul.partners__company-list.company-partners
       li.company-partners__item 

@@ -1,6 +1,10 @@
 section.park-rules
   .container
     h1.park-rules__title Правила парка
+  picture.partners__picture
+    source(media="(min-width: 1280px)" srcset="static/images/content/rules-desktop@1x.png 1x, static/images/content/rules-desktop@2x.png 2x")
+    img.partners__img(src="static/images/content/rules-mobile@1x.png" srcset="static/images/content/rules-mobile@2x.png 2x" width="320" height="320" alt="Правила парка" loading="lazy")
+  .container
     ul.park-rules__list.rules-list
       li.rules-list__item
         .rules-list__inner

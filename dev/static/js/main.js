@@ -100,7 +100,7 @@
             currentTarget.previousElementSibling.classList.remove('menu-nav__link--active');
             currentTarget.classList.remove('menu-sub-nav--open');
             currentTarget.style.maxHeight = null;
-            menuItem.style.height = 'auto';
+            currentTarget.style.height = 'auto';
           }
         }
         if (menuItem && menuItem.matches('.menu-sub-nav')) {

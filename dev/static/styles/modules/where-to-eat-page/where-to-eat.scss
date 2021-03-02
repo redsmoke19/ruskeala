@@ -26,6 +26,8 @@
     @media screen and (min-width: $desktop-size) {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 120px;
     }
   }
   &__item {
@@ -34,10 +36,16 @@
       position: relative;
       width: 47.3%;
     }
-    &:first-child {
+    &:not(:last-child) {
       margin-bottom: 40px;
       @media screen and (min-width: $desktop-size) {
         margin: 0;
+      }
+    }
+    &--summer {
+      @media screen and (min-width: $desktop-size) {
+        margin-top: 75px;
+        width: 100%;
       }
     }
   }
@@ -63,6 +71,13 @@
       @media screen and (min-width: $desktop-size) {
         left: auto;
         right: 0;
+      }
+    }
+    &--summer {
+      @media screen and (min-width: $desktop-size) {
+        left: auto;
+        right: 0;
+        width: 27%;
       }
     }
   }
