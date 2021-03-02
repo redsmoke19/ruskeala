@@ -11,7 +11,6 @@
   &__item {
     @media screen and (min-width: $desktop-size) {
       margin-bottom: 20px;
-      // position: relative;
     }
     &:not(:last-child) {
       margin-bottom: 10px;
@@ -66,6 +65,7 @@
     &--arrow {
       margin-left: 10px;
       vertical-align: center;
+      pointer-events: none;
       @media screen and (min-width: $desktop-size) {
         margin-left: 5px;
       }
@@ -84,10 +84,10 @@
   transition: all linear 0.15s;
   opacity: 0;
   @media screen and (min-width: $desktop-size) {
+    align-items: flex-start;
     background-color: $white;
     box-shadow: 0px 0px 50px rgba(48, 51, 129, 0.15);
     display: flex;
-    max-width: 0;
     padding: 0;
     position: absolute;
     top: 40px;
@@ -107,7 +107,6 @@
     margin-top: 10px;
     pointer-events: all;
     @media screen and (min-width: $desktop-size) {
-      max-width: 1184px;
       margin-top: 0;
     }
   }
@@ -124,6 +123,7 @@
     &--excursions {
       @media screen and (min-width: $desktop-size) {
       background-color: $bg-light-black-color;
+      height: 100%;
       }
     }
   }
