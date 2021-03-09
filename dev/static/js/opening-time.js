@@ -2,8 +2,8 @@
   'use strict';
 
   //Sliders
-  const breakpointDesktop = window.matchMedia('(min-width: 420px)');
-  let partnersTabs;
+  const breakpointDesktop = window.matchMedia('(min-width: 1000px)');
+  let openTimeTabs;
 
   const breakpointChecker = function () {
     let resizeTimeout;
@@ -16,7 +16,7 @@
 
     function resizeHandlerDesktop() {
       if (breakpointDesktop.matches === true) {
-        if (partnersTabs !== undefined) partnersTabs.destroy(true, true);
+        if (openTimeTabs !== undefined) openTimeTabs.destroy(true, true);
       } else if (breakpointDesktop.matches === false) {
         enableSubMenu();
       }
@@ -24,7 +24,7 @@
   };
 
   const enableSubMenu = function () {
-    partnersTabs = new Swiper('.tabs-partners__header', {
+    openTimeTabs = new Swiper('.open-time-links', {
       direction: 'horizontal',
       spaceBetween: 15,
       slidesPerView: 'auto',
@@ -38,19 +38,4 @@
   breakpointDesktop.addListener(breakpointChecker);
   breakpointChecker();
 
-  let tabButtons = document.querySelectorAll('.tabs-partners__name');
-  let tabText = document.querySelectorAll('.tabs-partners__text');
-
-  for (let i = 0; i < tabButtons.length; i++) {
-    tabButtons[i].addEventListener('click', () => {
-      if (!tabButtons[i].classList.contains('active')) {
-        tabButtons.forEach((item, index) => {
-          item.classList.remove('active');
-          tabText[index].classList.remove('active');
-        });
-        tabButtons[i].classList.add('active');
-        tabText[i].classList.add('active');
-      }
-    });
-  }
 })();

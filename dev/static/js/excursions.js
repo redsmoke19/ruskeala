@@ -128,14 +128,14 @@
         window.modalClose(routeModal, 'excursions-route--open');
       });
 
-      //Interactive Map
+      // Interactive Map
       interactiveMapButtons.forEach(item => {
         item.addEventListener('click', () => {
           window.modalOpen(interactiveMapModal, 'modal__closed--open');
         });
         interactiveMapClose.addEventListener('click', () => {
           window.modalClose(interactiveMapModal, 'modal__closed--open');
-        })
+        });
       });
     };
     modalToggle();
