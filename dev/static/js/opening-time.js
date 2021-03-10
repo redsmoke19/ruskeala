@@ -38,4 +38,23 @@
   breakpointDesktop.addListener(breakpointChecker);
   breakpointChecker();
 
+  // Tabs
+  const scheduleLinks = document.querySelectorAll('.open-time-links__link');
+  const scheduleContent = document.querySelectorAll('.schedule__item');
+
+  for (let i = 0; i < scheduleLinks.length; i++) {
+    scheduleLinks[i].addEventListener('click', () => {
+      if (!scheduleLinks[i].classList.contains('_active')) {
+        scheduleLinks.forEach((item, index) => {
+          item.classList.remove('_active');
+          scheduleContent[index].classList.remove('_active');
+          // scheduleContent[index].style.maxHeight = null;
+        });
+        scheduleLinks[i].classList.add('_active');
+        // scheduleContent[i].style.maxHeight = scheduleContent[i].scrollHeight + 'px';
+        scheduleContent[i].classList.add('_active');
+      }
+    });
+  }
+
 })();

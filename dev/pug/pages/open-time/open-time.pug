@@ -2,17 +2,5 @@ section.open-time
     .container
         h1.open-time__title Часы работы
         .open-time__wrapper
-            .open-time__links.open-time-links.swiper-container
-                .swiper-wrapper
-                    .open-time-links__link.swiper-slide._active
-                        +icon('icon-xmas', 'open-time-links__icon open-time-links__icon--xmas', '24', '24')
-                        span.open-time-links__date 01.01 &mdash; 08.01
-                    .open-time-links__link.swiper-slide
-                        +icon('icon-ice-snow', 'open-time-links__icon open-time-links__icon--snow', '24', '24')
-                        span.open-time-links__date 09.01 &mdash; 30.04
-                    .open-time-links__link.swiper-slide
-                        +icon('icon-sunny-clear', 'open-time-links__icon open-time-links__icon--sunny', '24', '24')
-                        span.open-time-links__date 01.05 &mdash; 31.10
-                    .open-time-links__link.swiper-slide
-                        +icon('icon-ice-snow', 'open-time-links__icon open-time-links__icon--snow', '24', '24')
-                        span.open-time-links__date 01.11 &mdash; 31.12
+            include tabs-links
+            include tabs-content
