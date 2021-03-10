@@ -1,11 +1,25 @@
 .open-time-links {
   margin: 0 0 10px 0;
+  &__wrapper {
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
   &__icon {
     fill: transparent;
     margin: 0 15px 0 0;
     stroke-width: 2px;
+    @media screen and (min-width: $desktop-size) {
+      height: 30px;
+      width: 30px;
+    }
+    @media screen and (min-width: 1920px) {
+      height: 40px;
+      width: 40px;
+    }
     &--xmas {
-      stroke: #51aa1b;      
+      stroke: #51aa1b;
     }
     &--snow {
       stroke: #80b0f6;
@@ -21,15 +35,36 @@
     display: flex;
     padding: 11px 12px;
     width: auto;
+    @media screen and (min-width: $desktop-size) {
+      flex-grow: 1;
+      justify-content: center;
+      padding: 11px 5px;
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+    @media screen and (min-width: 1920px) {
+      padding: 19px 20px;
+    }
     &._active {
       border: 2px solid $black;
       color: $black;
       padding: 10px 12px;
+      @media screen and (min-width: $desktop-size) {
+        padding: 10px 5px;
+      }
+      @media screen and (min-width: 1920px) {
+        padding: 18px 20px;
+      }
     }
   }
   &__date {
     font-size: 14px;
     line-height: 17px;
     font-weight: 900;
+    @media screen and (min-width: 1920px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 }

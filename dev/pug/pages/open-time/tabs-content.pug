@@ -128,6 +128,9 @@
                     .schedule__date
                         span.schedule__day Ежедневно
                         span.schedule__time 10:00 - 19:00
+        picture.schedule__picture
+            source(media="(min-width: 1280px)" srcset="static/images/content/open-time/winter-desktop@1x.png 1x, static/images/content/open-time/winter-desktop@2x.png 2x")
+            img.schedule__img(src="static/images/content/open-time/winter-mobile@1x.png" srcset="static/images/content/open-time/winter-mobile@2x.png 2x" width="320" height="712" alt="Фото зимы в Рускеале" loading="lazy")
     .schedule__item
         .schedule__wrapper
             .schedule__top
@@ -176,6 +179,9 @@
                         .schedule__times
                             span.schedule__time 11:00 - 18:00
                             span.schedule__time Выходной
+        picture.schedule__picture
+            source(media="(min-width: 1280px)" srcset="static/images/content/open-time/winter-desktop@1x.png 1x, static/images/content/open-time/winter-desktop@2x.png 2x")
+            img.schedule__img(src="static/images/content/open-time/winter-mobile@1x.png" srcset="static/images/content/open-time/winter-mobile@2x.png 2x" width="320" height="712" alt="Фото зимы в Рускеале" loading="lazy")
     .schedule__item
         .schedule__wrapper
             .schedule__top
@@ -184,15 +190,6 @@
                 .schedule__top-date
                     span.schedule__top-day Ежедневно
                     span.schedule__top-time 10:00 - 19:00
-            .schedule__row
-                .schedule__icons
-                    img.schedule__icon-img(src="static/images/common/schedule/ticket.png" alt="Касса" width="24" height="24")
-                .schedule__inner
-                    .schedule__name
-                        span Кассы
-                    .schedule__date
-                        span.schedule__day Ежедневно
-                        span.schedule__time 10:00 - 19:00
             .schedule__row
                 .schedule__icons
                     img.schedule__icon-img(src="static/images/common/schedule/tourist-light-green.png" alt="Иконка туриста" width="24" height="24")
@@ -204,17 +201,180 @@
                         span.schedule__time 10:30 - 17:30
             .schedule__row
                 .schedule__icons
-                    img.schedule__icon-img(src="static/images/common/schedule/zip-orange.png" alt="Иконка туриста" width="24" height="24")
+                    img.schedule__icon-img(src="static/images/common/schedule/tourist-dark-green.png" alt="Иконка туриста" width="24" height="24")
+                .schedule__inner
+                    .schedule__name
+                        span Экскурсия «Дорогой горных мастеров»
+                    .schedule__date
+                        span.schedule__day Ежедневно
+                        span.schedule__time 10:30 - 17:00
+            .schedule__row
+                .schedule__icons
+                    img.schedule__icon-img(src="static/images/common/schedule/tourist-light-purple.png" alt="Иконка туриста" width="24" height="24")
+                .schedule__inner
+                    .schedule__name
+                        span Экскурсия «Подземная Рускеала»
+                    .schedule__date
+                        span.schedule__day Ежедневно
+                        span.schedule__time 9:20 - 19:40
+            .schedule__row
+                .schedule__icons
+                    img.schedule__icon-img(src="static/images/common/schedule/boat-light-blue.png" alt="Иконка лодки" width="24" height="24")
+                .schedule__inner
+                    .schedule__name
+                        span Водная прогулка на лодке
+                    .schedule__date
+                        span.schedule__day Ежедневно
+                        span.schedule__time 10:30 - 19:30
+            .schedule__row
+                .schedule__icons
+                    img.schedule__icon-img(src="static/images/common/schedule/boat-light-blue.png" alt="Иконка лодки" width="24" height="24")
+                .schedule__inner
+                    .schedule__name
+                        span Водная прогулка на платформе
+                    .schedule__date
+                        span.schedule__day Ежедневно
+                        span.schedule__time 9:30 - 20:00
+            .schedule__row
+                .schedule__icons
+                    img.schedule__icon-img(src="static/images/common/schedule/boat-light-blue.png" alt="Иконка лодки" width="24" height="24")
+                .schedule__inner
+                    .schedule__name
+                        span Детская водная прогулка
+                    .schedule__date
+                        .schedule__days
+                            span.schedule__day Пн-Пн:
+                            span.schedule__day Сб-Вс:
+                        .schedule__times
+                            span.schedule__time 10:00 - 19:00
+                            span.schedule__time 10:00 - 20:00
+            .schedule__row
+                .schedule__icons
+                    img.schedule__icon-img(src="static/images/common/schedule/zip-orange.png" alt="Иконка zip line" width="24" height="24")
                 .schedule__inner
                     .schedule__name
                         span Троллей (Zip-line)
                     .schedule__date
                         .schedule__days
-                            span.schedule__day Пт, чт-вс:
-                            span.schedule__day Вт, ср:
+                            span.schedule__day Пн-пт, вс:
+                            span.schedule__day Сб:
+                        .schedule__times
+                            span.schedule__time 11:00 - 19:00
+                            span.schedule__time 10:00 - 20:00
+            .schedule__row
+                .schedule__icons
+                    img.schedule__icon-img(src="static/images/common/schedule/zip-yellow.png" alt="Иконка zip line" width="24" height="24")
+                .schedule__inner
+                    .schedule__name
+                        span Тарзанка
+                    .schedule__date
+                        .schedule__days
+                            span.schedule__day Пн-пт, вс:
+                            span.schedule__day Сб:
+                        .schedule__times
+                            span.schedule__time 11:00 - 19:00
+                            span.schedule__time 10:00 - 20:00
+            .schedule__row
+                .schedule__icons
+                    img.schedule__icon-img(src="static/images/common/schedule/zip-green.png" alt="Иконка zip line" width="24" height="24")
+                .schedule__inner
+                    .schedule__name
+                        span Верёвочный городок «Кубик»
+                    .schedule__date
+                        .schedule__days
+                            span.schedule__day Пн-пт, вс:
+                            span.schedule__day Сб:
                         .schedule__times
                             span.schedule__time 11:00 - 18:00
-                            span.schedule__time Выходной
+                            span.schedule__time 11:00 - 19:00
+            .schedule__row
+                .schedule__icons
+                    img.schedule__icon-img(src="static/images/common/schedule/snow-car-red.png" alt="Квадрочиклы" width="24" height="24")
+                .schedule__inner
+                    .schedule__name
+                        span Квадроциклы
+                    .schedule__date
+                        span.schedule__day Ежедневно
+                        span.schedule__time 10:00 - 20:00
+            .schedule__row
+                .schedule__icons
+                    img.schedule__icon-img(src="static/images/common/schedule/ruskolka.png" alt="Иконка кафе русколка" width="24" height="24")
+                .schedule__inner
+                    .schedule__name
+                        span Кафе «Русколка»
+                    .schedule__date
+                        span.schedule__day Ежедневно
+                        span.schedule__time 10:00 - 18:00
+            .schedule__row
+                .schedule__icons
+                    img.schedule__icon-img(src="static/images/common/schedule/burger.png" alt="Иконка кафе Бургерной" width="24" height="24")
+                .schedule__inner
+                    .schedule__name
+                        span Кафе «Колмас Бургерс»
+                    .schedule__date
+                        span.schedule__day Ежедневно
+                        span.schedule__time 10:00 - 18:30
+            .schedule__row
+                .schedule__icons
+                    img.schedule__icon-img(src="static/images/common/schedule/leto.png" alt="Иконка кафе Лето" width="24" height="24")
+                .schedule__inner
+                    .schedule__name
+                        span Кафе-пекарня «Лето»
+                    .schedule__date
+                        span.schedule__day Ежедневно
+                        span.schedule__time 10:00 - 19:00
+            .schedule__row
+                .schedule__icons
+                    img.schedule__icon-img(src="static/images/common/schedule/souvenir.png" alt="Иконка кафе Лето" width="24" height="24")
+                .schedule__inner
+                    .schedule__name
+                        span Сувенирный магазин «Город мастеров»
+                    .schedule__date
+                        span.schedule__day Ежедневно
+                        span.schedule__time 10:00 - 18:00
+            .schedule__row
+                .schedule__icons
+                    img.schedule__icon-img(src="static/images/common/schedule/diamond.png" alt="Иконка кафе Лето" width="24" height="24")
+                .schedule__inner
+                    .schedule__name
+                        span Каменоломная мастерская
+                    .schedule__date
+                        span.schedule__day Ежедневно
+                        span.schedule__time 10:00 - 18:00
+            .schedule__row
+                .schedule__icons
+                    img.schedule__icon-img(src="static/images/common/schedule/kalevala.png" alt="Тематическая зона KALEVALA" width="24" height="24")
+                .schedule__inner
+                    .schedule__name
+                        span Тематическая зона KALEVALA
+                    .schedule__date
+                        .schedule__days
+                            span.schedule__day Пн-вт:
+                            span.schedule__day Ср-вс:
+                        .schedule__times
+                            span.schedule__time выходной
+                            span.schedule__time 10:00 - 19:00
+            .schedule__row
+                .schedule__icons
+                    img.schedule__icon-img(src="static/images/common/schedule/angel.png" alt="Обитель Ангелов" width="24" height="24")
+                .schedule__inner
+                    .schedule__name
+                        span Экспозиция «Обитель Ангелов»
+                    .schedule__date
+                        span.schedule__day Ежедневно
+                        span.schedule__time 11:00 - 17:00
+            .schedule__row
+                .schedule__icons
+                    img.schedule__icon-img(src="static/images/common/schedule/wc.png" alt="Туалеты" width="24" height="24")
+                .schedule__inner
+                    .schedule__name
+                        span Уличные туалеты
+                    .schedule__date
+                        span.schedule__day Ежедневно
+                        span.schedule__time 10:00 - 19:00
+        picture.schedule__picture
+            source(media="(min-width: 1280px)" srcset="static/images/content/open-time/winter-desktop@1x.png 1x, static/images/content/open-time/summer-desktop@2x.png 2x")
+            img.schedule__img(src="static/images/content/open-time/summer-mobile@1x.png" srcset="static/images/content/open-time/summer-mobile@2x.png 2x" width="320" height="712" alt="Фото лета в Рускеале" loading="lazy")
     .schedule__item
         .schedule__wrapper
             .schedule__top
@@ -245,4 +405,7 @@
                         .schedule__times
                             span.schedule__time 11:00 - 18:00
                             span.schedule__time Выходной
+        picture.schedule__picture
+            source(media="(min-width: 1280px)" srcset="static/images/content/open-time/winter-desktop@1x.png 1x, static/images/content/open-time/winter-desktop@2x.png 2x")
+            img.schedule__img(src="static/images/content/open-time/winter-mobile@1x.png" srcset="static/images/content/open-time/winter-mobile@2x.png 2x" width="320" height="712" alt="Фото зимы в Рускеале" loading="lazy")
 

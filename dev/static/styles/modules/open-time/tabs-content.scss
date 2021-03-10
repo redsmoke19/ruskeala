@@ -1,5 +1,4 @@
 .schedule {
-  padding: 0 20px;
   &__item {
     // display: none;
     opacity: 0;
@@ -13,6 +12,7 @@
   }
   &__wrapper {
     margin: 0 0 70px 0;
+    padding: 0 20px;
   }
   &__top {
     align-items: center;
@@ -89,5 +89,26 @@
   &__time {
     font-weight: 700;
     text-align: right;
+  }
+  &__picture {
+    display: block;
+    margin: 0 0 60px 0;
+    width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      margin: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 29%;
+    }
+  }
+  &__img {
+    height: auto;
+    object-fit: cover;
+    max-height: 712px;
+    width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      max-height: 905px;
+    }
   }
 }

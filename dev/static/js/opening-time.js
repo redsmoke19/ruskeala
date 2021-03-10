@@ -2,7 +2,7 @@
   'use strict';
 
   //Sliders
-  const breakpointDesktop = window.matchMedia('(min-width: 1000px)');
+  const breakpointDesktop = window.matchMedia('(min-width: 1280px)');
   let openTimeTabs;
 
   const breakpointChecker = function () {
