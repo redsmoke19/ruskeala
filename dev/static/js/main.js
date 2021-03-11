@@ -1,9 +1,10 @@
 (function () {
   'use strict';
-  window.initMap = function () {
-    let globalMap = document.querySelector('.map__frame');
-    let interactiveMap = document.querySelector('.interactive-map__map');
-    let partnersMap = document.querySelector('.office-partners__map');
+  window.initMap = function() {
+    const globalMap = document.querySelector('.map__frame');
+    const interactiveMap = document.querySelector('.interactive-map__map');
+    const partnersMap = document.querySelector('.office-partners__map');
+    const roadMap = document.querySelector('.road__map');
     if (globalMap) {
       let map = new google.maps.Map(globalMap, {
         center: {lat: 61.944186, lng: 30.581297},
@@ -13,14 +14,19 @@
     if (interactiveMap) {
       let exmap = new google.maps.Map(interactiveMap, {
         center: {lat: 61.944186, lng: 30.581297},
-        zoom: 8,
+        zoom: 10,
       });
     };
     if (partnersMap) {
       let partMap = new google.maps.Map(partnersMap, {
         center: {lat: 61.944186, lng: 30.581297},
-        center: [61.95176696337383, 30.573049973117016],
-        zoom: 8,
+        zoom: 10,
+      });
+    };
+    if (roadMap) {
+      let rdMap = new google.maps.Map(roadMap, {
+        center: {lat: 61.944186, lng: 30.581297},
+        zoom: 10,
       });
     };
   };

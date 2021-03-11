@@ -1,0 +1,23 @@
+section.road
+    .road__wrapper
+        .road__content
+            .container
+                .road__body
+                    h1.road__title Как добраться
+                    p.road__text Парк располагается в полутора километрах от посёлка Рускеала. Для упрощения навигации на дороге установлены указатели к парку.
+                    .road__contacts
+                        +icon('icon-loc', 'road__icon', '32', '32')
+                        p.road__address Ул. Мраморная, 1, п. Рускеала, Республика Карелия, Россия, 186759
+    .container._js-container
+        .road__links
+            button.road__button.road__button--car
+                +icon('icon-car', 'road__icons road__icons--car', '48', '48')
+                span На автомобиле
+            button.road__button.road__button--bus
+                +icon('icon-bus', 'road__icons road__icons--bus', '48', '48')
+                span На автобусе
+            button.road__button.road__button--train
+                +icon('icon-train', 'road__icons road__icons--train', '48', '48')
+                span На поезде
+        .road__map--wrap
+            .road__map

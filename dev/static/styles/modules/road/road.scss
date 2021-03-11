@@ -1,0 +1,145 @@
+.road {
+  .container {
+    padding: 0;
+  }
+  &__wrapper {
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      overflow: hidden;
+      margin: 0 0 80px 0;
+      padding-top: 40px;
+    }
+  }
+  &__content {
+    @media screen and (min-width: $desktop-size) {
+      flex: 0 0 100%;
+    }
+  }
+  &__body {
+    @media screen and (min-width: $desktop-size) {
+      width: 40%;
+    }
+  }
+  &__map--wrap {
+    height: 500px;
+    margin: 0 0 60px 0;
+    width: 100%;
+    overflow: hidden;
+    @media screen and (min-width: $desktop-size) {
+      flex: 0 0 55.3%;
+      height: auto;
+      margin: 0;
+      position: relative;
+      transform: translateX(-100%);
+      width: 55.3%;
+    }
+  }
+  &__map {
+    height: 100%;
+    width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      position: absolute;
+    }
+  }
+  &__title {
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 27px;
+    margin: 0 0 10px 0;
+    padding: 0 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 60px;
+      line-height: 70px;
+      margin: 0 0 40px 0;
+      padding: 0;
+    }
+    @media screen and (min-width: 1920px) {
+      font-size: 80px;
+      line-height: 98px;
+    }
+  }
+  &__text {
+    font-size: 15px;
+    line-height: 24px;
+    margin: 0 0 10px 0;
+    padding: 0 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 25px;
+      line-height: 35px;
+      margin: 0 0 40px 0;
+      padding: 0;
+    }
+  }
+  &__contacts {
+    align-items: flex-start;
+    display: flex;
+    margin: 0 0 20px 0;
+    padding: 0 20px;
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 0 28px 0;
+      padding: 0;
+    }
+  }
+  &__icon {
+    flex-shrink: 0;
+    fill: $orange-dark-color;
+    margin: 0 10px 0 0;
+  }
+  &__address {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 40px 0;
+    padding: 0 20px;
+    @media screen and (min-width: $desktop-size) {
+      flex-direction: row;
+      padding: 0;
+    }
+  }
+  &__button {
+    align-items: center;
+    display: flex;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    transition: all ease-out 0.15s;
+    &:not(:last-child) {
+      margin: 0 0 15px 0;
+      @media screen and (min-width: $desktop-size) {
+        margin: 0 80px 0 0;
+      }
+    }
+    &:hover {
+      @media screen and (min-width: $desktop-size) {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+    }
+    span {
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 35px;
+      @media screen and (min-width: $desktop-size) {
+        font-size: 25px;
+      }
+    }
+  }
+  &__icons {
+    fill: transparent;
+    margin: 0 20px 0 0;
+    stroke: $orange-dark-color;
+    stroke-width: 2px;
+    @media screen and (min-width: $desktop-size) {
+      height: 64px;
+      width: 64px;
+    }
+  }
+}

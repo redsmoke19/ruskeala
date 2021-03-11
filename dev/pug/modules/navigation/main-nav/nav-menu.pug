@@ -47,7 +47,7 @@ li.menu-nav__item
 		+icon('icon-menu-arrow', 'menu-nav__icon menu-nav__icon--arrow', '10', '7.5')
 	ul.menu-sub-nav.menu-sub-nav--guest
 		li.menu-sub-nav__item
-			a.menu-sub-nav__link(href="#") Как добраться
+			a.menu-sub-nav__link(href= pageClass === "road-page" ? false : "road.html") Как добраться
 		li.menu-sub-nav__item
 			a.menu-sub-nav__link(href= pageClass === "opening-time-page" ? false : "opening-time.html") Часы работы
 		li.menu-sub-nav__item
