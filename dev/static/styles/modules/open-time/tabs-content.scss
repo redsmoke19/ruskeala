@@ -1,6 +1,5 @@
 .schedule {
   &__item {
-    // display: none;
     opacity: 0;
     max-height: 0;
     overflow: hidden;
@@ -13,12 +12,19 @@
   &__wrapper {
     margin: 0 0 70px 0;
     padding: 0 20px;
+    @media screen and (min-width: $desktop-size) {
+      margin: 0;
+      padding: 0;
+    }
   }
   &__top {
     align-items: center;
     border-bottom: 1px solid $border-black-grey-color;
     display: flex;
     padding: 10px 0;
+    @media screen and (min-width: $desktop-size) {
+      padding: 30px 0;
+    }
   }
   &__top-name {
     color: $button-light-blue-color;
@@ -27,6 +33,15 @@
     flex: 0 0 32%;
     line-height: 16px;
     margin: 0 33px 0 0;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 22px;
+      flex-basis: 54%;
+      line-height: 27px;
+      margin: 0;
+    }
+    @media screen and (min-width: 1920px) {
+      flex-basis: 59%;
+    }
   }
   &__top-date {
     align-items: center;
@@ -36,13 +51,24 @@
     flex: 1 1 auto;
     font-size: 13px;
     line-height: 16px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
   &__top-day {    
     margin: 0 10px 0 0;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
   &__top-time {
     font-weight: 700;
     text-align: right;
+    @media screen and (min-width: 1920px) {
+      padding-right: 17px;
+    }
   }
   &__row {
     align-items: center;
@@ -51,12 +77,22 @@
     font-size: 13px;
     height: 60px;
     line-height: 16px;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 15px;
+      line-height: 18px;
+      height: 81px;
+    }
   }
   &__icons {
     flex-shrink: 0;
     height: 24px;
     margin: 0 10px 0 0;
     width: 24px;
+    @media screen and (min-width: $desktop-size) {
+      height: 40px;
+      margin: 0 20px 0 0;
+      width: 40px;
+    }
     img {
       height: 100%;
       width: 100%;
@@ -66,29 +102,67 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      align-items: center;
+      flex-direction: row;
+    }
   }
   &__name {
     flex: 0 0 100%;
     font-weight: 700;
+    @media screen and (min-width: $desktop-size) {
+      flex: 0 0 40%;
+    }
+    @media screen and (min-width: 1920px) {
+      flex: 0 0 50%;
+    }
   }
   &__date {
     display: flex;
     justify-content: space-between;
+    @media screen and (min-width: $desktop-size) {
+      align-items: center;
+      flex: 0 0 50%;
+      margin: 0 0 0 auto;
+    }
+    @media screen and (min-width: 1920px) {
+      flex: 0 0 43.6%;
+      padding-right: 27px;
+    }
   }
   &__days {
     display: flex;
     flex-direction: column;
+    @media screen and (min-width: $desktop-size) {
+      flex-basis: 57%;
+    }
   }
   &__day {
     margin: 0 10px 0 0;
+    @media screen and (min-width: $desktop-size) {
+      flex-basis: 57%;
+    }
   }
   &__times {
     display: flex;
     flex-direction: column;
+    @media screen and (min-width: $desktop-size) {
+      flex-basis: 35%;
+    }
+    @media screen and (min-width: 1920px) {
+      flex-basis: 28%;
+    }
   }
   &__time {
     font-weight: 700;
     text-align: right;
+    @media screen and (min-width: $desktop-size) {
+      flex-basis: 35%;
+      text-align: left;
+    }
+    @media screen and (min-width: 1920px) {
+      flex-basis: 28%;
+    }
   }
   &__picture {
     display: block;
@@ -105,6 +179,7 @@
   &__img {
     height: auto;
     object-fit: cover;
+    object-position: center;
     max-height: 712px;
     width: 100%;
     @media screen and (min-width: $desktop-size) {

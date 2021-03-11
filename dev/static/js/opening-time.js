@@ -57,4 +57,22 @@
     });
   }
 
+  // Scroll
+  const links = document.querySelector('.open-time-links');
+
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header').offsetHeight;
+    const timeWrapper = document.querySelector('.open-time__wrapper');
+    console.log(header);
+    if (window.pageYOffset > header + 40 && window.pageYOffset < (timeWrapper.offsetHeight / 2) + header) {
+      links.classList.add('_sticky');
+      links.style.top = header + 'px';
+      timeWrapper.style.paddingTop = links.offsetHeight + 'px';
+    } else {
+      links.classList.remove('_sticky');
+      links.style.top = 0;
+      timeWrapper.style.paddingTop = 0;
+    }
+  })
+
 })();

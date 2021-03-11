@@ -1,4 +1,8 @@
 .open-time {
+  margin: 0 0 40pxpx 0;
+  @media screen and (min-width: $desktop-size) {
+    margin: 0 0 140px 0;
+  }
   .container {
     overflow: hidden;
     padding: 0;
@@ -21,6 +25,14 @@
     @media screen and (min-width: $desktop-size) {
       overflow: hidden;
       width: 67.2%;
+    }
+  }
+}
+
+.opening-time-page {
+  .map {
+    @media screen and (min-width: $desktop-size) {
+      margin: 0;
     }
   }
 }
