@@ -43,6 +43,10 @@ html(lang="ru-RU")
 			if pageClass === "tours-page"
 				include ../modules/modals/tours/tour-description
 				include ../modules/modals/tours/tour-reserved
+			if pageClass === "road-page"
+				include ../modules/modals/road/road-car
+				include ../modules/modals/road/road-bus
+				include ../modules/modals/road/road-train
 		block script
 			script(src="static/js/libs.js" defer)
 			script(src="static/js/main.js" defer)

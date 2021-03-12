@@ -1,0 +1,145 @@
+.road-modal {
+	height: 100%;
+	left: 0;
+	padding: 30px 0;
+	position: fixed;
+	top: 0px;
+	transition: visibility 0.8s ease 0s;
+	visibility: hidden;
+	width: 100%;
+	z-index: 100;
+	-webkit-overflow-scrolling: touch;
+	&::before {
+		background-color: rgba(0, 0, 0, 0.9);
+		content: "";
+		height: 100%;
+		left: 0;
+		opacity: 0;
+		position: fixed;
+		top: 0;
+		transition: opacity 0.8s ease 0s;
+		width: 100%;
+	}
+  &._active {
+		overflow: auto;
+		visibility: visible;
+		&::before {
+			opacity: 1;
+		}
+		.road-modal__body {
+			transition: all 0.3s ease 0.2s;
+			transform: scale(1);
+		}
+  }
+  &__content {
+		align-items: center;
+		display: flex;
+		flex: 1 1 auto;
+		flex-direction: column;
+		justify-content: center;
+		min-height: 100%;
+		width: 100%;
+	}
+  &__body {
+		background-color: #fff;
+		max-width: 800px;
+		padding-bottom: 45px;
+		transition: all 0.3s ease 0s;
+		transform: scale(0);
+		width: 100%;
+	}
+}
+
+.road-modal {
+  &__close {
+    align-items: center;
+    background-color: $white;
+    display: flex;
+    height: 33px;
+    justify-content: center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 33px;
+  }
+  &__picture {
+    display: block;
+    height: 340px;
+    margin: 0 0 20px 0;
+    width: 100%;
+  }
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+  &__inner {
+    padding: 0 20px;
+  }
+  &__title {
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 35px;
+    margin: 0 0 20px 0;
+  }
+  &__from-city {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    margin: 0 0 10px 0;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 0 20px 0;
+  }
+  &__attantion {
+    border: 1px solid $yellow-light-color;
+    margin: 20px 0;
+    padding: 20px 20px 20px 64px;
+    position: relative;
+  }
+  &__icon--attantion {
+    fill: $yellow-light-color;
+    left: 20px;
+    position: absolute;
+    top: 20px;
+  }
+  &__attantion-text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  &__add-way {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 35px;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+  &__maps {
+    display: flex;
+    flex-direction: column;
+  }
+  &__buttons {
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid $orange-dark-color;
+    border-radius: 71px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 15px;
+    img {
+      margin: 0 10px 0 0;
+    }
+    &:first-child {
+      margin: 0 0 10px 0;
+    }
+  }
+  &__text-button {
+    color: $orange-dark-color;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 35px;
+  }
+}
