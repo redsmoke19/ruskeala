@@ -1,15 +1,15 @@
-section.road-modal.road-modal--train._active
+section.road-modal.road-modal--train
   .road-modal__content
     .road-modal__body
       .road-modal__close
         +icon('icon-small-close', 'road-modal__icon-close', '18', '18')
       picture.road-modal__picture
-        //- source(media="(min-width: 1280px)" srcset="static/images/content/footer-image-desktop1x.png 1x, static/images/content/footer-image-desktop2x.png 2x")
-        img.road-modal__img(src="static/images/content/road/train-mobile@1x.png" srcset="static/images/content/road/train-mobile@2x.png 2x" width="320" height="340" alt="Дорога на автобусе" loading="lazy")
+        source(media="(min-width: 1280px)" srcset="static/images/content/road/train-desktop@1x.png 1x, static/images/content/road/train-desktop@2x.png 2x")
+        img.road-modal__img(src="static/images/content/road/train-mobile@1x.png" srcset="static/images/content/road/train-mobile@2x.png 2x" width="320" height="340" alt="Дорога на поезде" loading="lazy")
       .road-modal__inner
         h2.road-modal__title На поезде
-        p.road-modal__text Знаменитый ретропоезд «Рускеальский экспресс» курсирует между станциями Сортавала и Горный парк «Рускеала» с 1 июня 2019 года. На сегодняшний день это единственный в России ежедневный поезд на паровозной тяге. Время в пути составляет 1 час.
-        a.road-modal__buttons(href="#")
+        p.road-modal__text.road-modal__text--big Знаменитый ретропоезд «Рускеальский экспресс» курсирует между станциями Сортавала и Горный парк «Рускеала» с 1 июня 2019 года. На сегодняшний день это единственный в России ежедневный поезд на паровозной тяге. Время в пути составляет 1 час.
+        a.road-modal__buttons(href="https://www.rzd.ru/ru/9269" target="_blank")
           img.road-modal__img-button(src="static/images/content/road/rzd.png" alt="Значек РЖД" width="32" height="32")
           span.road-modal__text-button Купить билеты на поезд
         

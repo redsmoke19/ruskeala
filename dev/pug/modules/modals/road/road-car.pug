@@ -4,7 +4,7 @@ section.road-modal.road-modal--car
       .road-modal__close
         +icon('icon-small-close', 'road-modal__icon-close', '18', '18')
       picture.road-modal__picture
-        //- source(media="(min-width: 1280px)" srcset="static/images/content/footer-image-desktop1x.png 1x, static/images/content/footer-image-desktop2x.png 2x")
+        source(media="(min-width: 1280px)" srcset="static/images/content/road/car-desktop@1x.png 1x, static/images/content/road/car-desktop@2x.png 2x")
         img.road-modal__img(src="static/images/content/road/car-mobile@1x.png" srcset="static/images/content/road/car-mobile@2x.png 2x" width="320" height="340" alt="Дорога на машине" loading="lazy")
       .road-modal__inner
         h2.road-modal__title На автомобиле
@@ -14,9 +14,9 @@ section.road-modal.road-modal--car
         p.road-modal__text Из Петрозаводска по Пряжинскому шоссе, через Колатсельгу (Р21), 260 км. Поворот направо в сторону п. Вяртсиля. По трассе А-121 до п. Рускеала. Время в пути от 4 до 5 часов. Проехав п. Рускеала повернуть налево у приветственного баннера.
         h2.road-modal__add-way Проложить маршрут
         .road-modal__maps
-          a.road-modal__buttons.road-modal__buttons--ya(href="#")
+          a.road-modal__buttons.road-modal__buttons--ya(href="https://yandex.ru/maps/-/CCUQjSGX-B" target="_blank")
             img.road-modal__img-button(src="static/images/content/road/ya-map.png" alt="Значек Яндекс карт" width="32" height="32")
             span.road-modal__text-button Яндекс карты
-          a.road-modal__buttons.road-modal__buttons--goo(href="#")
+          a.road-modal__buttons.road-modal__buttons--goo(href="https://goo.gl/maps/zcD7AMpNggkNRTVY6" target="_blank")
             img.road-modal__img-button(src="static/images/content/road/goo-map.png" alt="Значек Google карт" width="32" height="32")
             span.road-modal__text-button Google карты

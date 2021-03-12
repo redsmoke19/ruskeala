@@ -4,20 +4,20 @@ section.road-modal.road-modal--bus
       .road-modal__close
         +icon('icon-small-close', 'road-modal__icon-close', '18', '18')
       picture.road-modal__picture
-        //- source(media="(min-width: 1280px)" srcset="static/images/content/footer-image-desktop1x.png 1x, static/images/content/footer-image-desktop2x.png 2x")
+        source(media="(min-width: 1280px)" srcset="static/images/content/road/bus-desktop@1x.png 1x, static/images/content/road/bus-desktop@2x.png 2x")
         img.road-modal__img(src="static/images/content/road/bus-mobile@1x.png" srcset="static/images/content/road/bus-mobile@2x.png 2x" width="320" height="340" alt="Дорога на автобусе" loading="lazy")
       .road-modal__inner
         h2.road-modal__title На автобусе
-        p.road-modal__text автобусы приходят в поселок Рускеала, от которого до парка нужно пройти пешком 2,5 км и кнопка прокладки маршрута от автобусной остановки до входа в парк:
-        a.road-modal__buttons(href="#")
+        p.road-modal__text.road-modal__text--big автобусы приходят в поселок Рускеала, от которого до парка нужно пройти пешком 2,5 км и кнопка прокладки маршрута от автобусной остановки до входа в парк:
+        a.road-modal__buttons.road-modal__buttons--bus(href="https://bus.tutu.ru" target="_blank")
           span.road-modal__text-button Купить билеты на автобус
         .road-modal__attantion
           +icon('icon-warning', 'road-modal__icon--attantion', '24', '24')
           p.road-modal__attantion-text От остановки прибытия до парка 2,5 км. Переход от остановки до парка: приблизительно 30 мин.
         .road-modal__maps
-          a.road-modal__buttons.road-modal__buttons--ya(href="#")
+          a.road-modal__buttons.road-modal__buttons--ya(href="https://yandex.ru/maps/-/CCUM7SHCoB" target="_blank")
             img.road-modal__img-button(src="static/images/content/road/ya-map.png" alt="Значек Яндекс карт" width="32" height="32")
             span.road-modal__text-button Яндекс карты
-          a.road-modal__buttons.road-modal__buttons--goo(href="#")
+          a.road-modal__buttons.road-modal__buttons--goo(href="https://goo.gl/maps/uVtQoeCUZhRL6QXVA" target="_blank")
             img.road-modal__img-button(src="static/images/content/road/goo-map.png" alt="Значек Google карт" width="32" height="32")
             span.road-modal__text-button Google карты
