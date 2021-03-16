@@ -48,10 +48,8 @@
         scheduleLinks.forEach((item, index) => {
           item.classList.remove('_active');
           scheduleContent[index].classList.remove('_active');
-          // scheduleContent[index].style.maxHeight = null;
         });
         scheduleLinks[i].classList.add('_active');
-        // scheduleContent[i].style.maxHeight = scheduleContent[i].scrollHeight + 'px';
         scheduleContent[i].classList.add('_active');
       }
     });
@@ -63,7 +61,6 @@
   window.addEventListener('scroll', () => {
     const header = document.querySelector('.header').offsetHeight;
     const timeWrapper = document.querySelector('.open-time__wrapper');
-    console.log(header);
     if (window.pageYOffset > header + 40 && window.pageYOffset < (timeWrapper.offsetHeight / 2) + header) {
       links.classList.add('_sticky');
       links.style.top = header + 'px';
