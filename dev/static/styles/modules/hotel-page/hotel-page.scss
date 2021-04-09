@@ -171,10 +171,14 @@
 
 .rooms-hotel {
   color: $white;
+  margin-top: -96px;
+  padding-top: 96px;
   @media screen and (min-width: $desktop-size) {
     display: flex;
     margin: 0 auto;
     max-width: 1920px;
+    margin-top: -161px;
+    padding-top: 161px;
     width: 100%;
   }
   &__item {
@@ -188,7 +192,7 @@
     @media screen and (min-width: $desktop-size) {
       flex-basis: 33.333%;
       height: 800px;
-      padding: 100px 100px 100px 100px;
+      padding: 0 100px 100px 100px;
     }
     &::after {
       background: rgba(96, 32, 0, 1) linear-gradient(90deg, #3C1400 0%, rgba(46, 15, 0, 0.5) 29.71%, rgba(44, 14, 0, 0) 59.69%);

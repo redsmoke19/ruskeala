@@ -4,6 +4,7 @@
   font-size: 15px;
   font-weight: 800;
   line-height: 18px;
+  flex-wrap: wrap;
   padding: 10px 0;
   &>* {
     &:not(:last-child) {

@@ -28,6 +28,12 @@
   }
   &__item {
     position: relative;
+    padding-top: 96px;
+    margin-top: -96px;
+    @media screen and (min-width: $desktop-size) {
+      padding-top: 161px;
+      margin-top: -161px;
+    }
   }
   &__images {
     @media screen and (min-width: $desktop-size) {

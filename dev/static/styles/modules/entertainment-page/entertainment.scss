@@ -1,7 +1,11 @@
 .entertainment {
   &__item {
+    padding-top: 96px;
+    margin-top: -96px;
     @media screen and (min-width: $desktop-size) {
       position: relative;
+      padding-top: 161px;
+    margin-top: -161px;
     }
   }
   &__images {
