@@ -5,11 +5,12 @@
     @media screen and (min-width: $desktop-size) {
       position: relative;
       padding-top: 161px;
-    margin-top: -161px;
+      margin-top: -161px;
     }
   }
   &__images {
     @media screen and (min-width: $desktop-size) {
+      margin-top: 80.5px;
       position: absolute;
       right: 0;
       top: 50%;

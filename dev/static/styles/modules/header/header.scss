@@ -4,15 +4,40 @@ header {
 }
 
 .header {
-  background-color: $white;
-  padding-bottom: 10px;
-  position: sticky;
-  top: 0;
-  z-index: 5;
-  @media screen and (min-width: $desktop-size) {
-    display: flex;
-    padding: 20px 0;
+  // background-color: $white;
+  // padding-bottom: 10px;
+  // position: sticky;
+  // position: fixed;
+  // top: 0;
+  // z-index: 5;
+  // @media screen and (min-width: $desktop-size) {
+  //   display: flex;
+  //   padding: 20px 0;
+  //   z-index: 5;
+  // }
+  &__main {
+    background-color: $white;
+    min-height: 96px;
+    padding-bottom: 10px;
+    position: sticky;
+    position: relative;
+    top: 0;
+    width: 100%;
     z-index: 5;
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      min-height: 161px;
+      padding: 20px 0;
+      z-index: 5;
+    }
+  }
+  &__placeholder {
+    display: none;
+    min-height: 96px;
+    width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      min-height: 161px;
+    }
   }
   &__top {
     display: flex;

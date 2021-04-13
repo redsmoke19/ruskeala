@@ -33,6 +33,7 @@
     @media screen and (min-width: $desktop-size) {
       padding-top: 161px;
       margin-top: -161px;
+      overflow: hidden;
     }
   }
   &__images {

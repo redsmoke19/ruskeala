@@ -35,6 +35,27 @@
     'DOMContentLoaded',
     function () {
       let wrapper = document.querySelector('.wrapper');
+      // Fixed Header
+      const getFixedHeader = () => {
+        const header = document.querySelector('.header__main');
+        const headerPlaceholder = document.querySelector('.header__placeholder');
+        document.addEventListener('scroll', e => {
+          if (window.pageYOffset > 0) {
+            header.style.position = 'fixed';
+            headerPlaceholder.style.display = 'block';
+          } else {
+            header.style.position = 'relative';
+            headerPlaceholder.style.display = 'none';
+          }
+        });
+      };
+      getFixedHeader();
+
+      // Anchor Smooth
+      // const getAnchorSmooth = () => {
+
+      // }
+
       // Sandwich
       const sandwichToggle = function () {
         let sandwichElements = document.querySelectorAll('.sandwich');
