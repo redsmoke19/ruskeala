@@ -32,7 +32,8 @@
     object-position: center;
     width: 100%;
     @media screen and (min-width: $desktop-size) {
-      height: auto;
+      height: 500px;
+      object-fit: cover;
       max-width: 922px;
     }
   }
@@ -209,6 +210,8 @@
   &__add {
     color: $black;
     border-color: $black;
+    position: relative;
+    z-index: 4;
     @media screen and (min-width: $desktop-size) {
       font-size: 16px;
       line-height: 26px;
