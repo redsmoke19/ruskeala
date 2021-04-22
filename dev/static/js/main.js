@@ -11,12 +11,12 @@
         zoom: 10,
       });
     };
-    if (interactiveMap) {
-      let exmap = new google.maps.Map(interactiveMap, {
-        center: {lat: 61.944186, lng: 30.581297},
-        zoom: 10,
-      });
-    };
+    // if (interactiveMap) {
+    //   let exmap = new google.maps.Map(interactiveMap, {
+    //     center: {lat: 61.944186, lng: 30.581297},
+    //     zoom: 10,
+    //   });
+    // };
     if (partnersMap) {
       let partMap = new google.maps.Map(partnersMap, {
         center: {lat: 61.944186, lng: 30.581297},

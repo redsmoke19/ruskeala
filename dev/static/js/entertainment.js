@@ -4,7 +4,6 @@
     'DOMContentLoaded',
     function () {
       //Sliders
-      const entertainmentSlidersArray = [];
       const entertainmentSliders = document.querySelectorAll(
         '.entertainment__images'
       );
@@ -24,104 +23,6 @@
           },
         });
       });
-      // const entertainmentKalevalaSlider = new Swiper('.entertainment__slider--kalevala', {
-      //   direction: 'horizontal',
-      //   slidesPerView: 1,
-      //   grabCursor: true,
-      //   preventClicks: true,
-      //   preventClicksPropagation: true,
-      //   navigation: {
-      //     nextEl:
-      //       '.entertainment__slider--kalevala .entertainment__slider-button--next',
-      //     prevEl:
-      //       '.entertainment__slider--kalevala .entertainment__slider-button--prev',
-      //   },
-      // });
-
-      // const entertainmentBoatTripSlider = new Swiper(
-      //   '.entertainment__slider--boat-trip',
-      //   {
-      //     direction: 'horizontal',
-      //     slidesPerView: 1,
-      //     grabCursor: true,
-      //     preventClicks: true,
-      //     preventClicksPropagation: true,
-      //     navigation: {
-      //       nextEl:
-      //         '.entertainment__slider--boat-trip .entertainment__slider-button--next',
-      //       prevEl:
-      //         '.entertainment__slider--boat-trip .entertainment__slider-button--prev',
-      //     },
-      //   }
-      // );
-
-      // const entertainmentZipLineSlider = new Swiper(
-      //   '.entertainment__slider--zip-line',
-      //   {
-      //     direction: 'horizontal',
-      //     slidesPerView: 1,
-      //     grabCursor: true,
-      //     preventClicks: true,
-      //     preventClicksPropagation: true,
-      //     navigation: {
-      //       nextEl:
-      //         '.entertainment__slider--zip-line .entertainment__slider-button--next',
-      //       prevEl:
-      //         '.entertainment__slider--zip-line .entertainment__slider-button--prev',
-      //     },
-      //   }
-      // );
-
-      // const entertainmentSkatingSlider = new Swiper(
-      //   '.entertainment__slider--skating',
-      //   {
-      //     direction: 'horizontal',
-      //     slidesPerView: 1,
-      //     grabCursor: true,
-      //     preventClicks: true,
-      //     preventClicksPropagation: true,
-      //     navigation: {
-      //       nextEl:
-      //         '.entertainment__slider--skating .entertainment__slider-button--next',
-      //       prevEl:
-      //         '.entertainment__slider--skating .entertainment__slider-button--prev',
-      //     },
-      //   }
-      // );
-
-      // const entertainmentDivingSlider = new Swiper(
-      //   '.entertainment__slider--diving',
-      //   {
-      //     direction: 'horizontal',
-      //     slidesPerView: 1,
-      //     grabCursor: true,
-      //     preventClicks: true,
-      //     preventClicksPropagation: true,
-      //     navigation: {
-      //       nextEl:
-      //         '.entertainment__slider--diving .entertainment__slider-button--next',
-      //       prevEl:
-      //         '.entertainment__slider--diving .entertainment__slider-button--prev',
-      //     },
-      //   }
-      // );
-
-      // const entertainmentTarzanSlider = new Swiper(
-      //   '.entertainment__slider--tarzan',
-      //   {
-      //     direction: 'horizontal',
-      //     slidesPerView: 1,
-      //     grabCursor: true,
-      //     preventClicks: true,
-      //     preventClicksPropagation: true,
-      //     navigation: {
-      //       nextEl:
-      //         '.entertainment__slider--tarzan .entertainment__slider-button--next',
-      //       prevEl:
-      //         '.entertainment__slider--tarzan .entertainment__slider-button--prev',
-      //     },
-      //   }
-      // );
 
       // Modal read more
 

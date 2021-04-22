@@ -67,9 +67,9 @@
       let routeClose = document.querySelector('.excursions-route__close');
       let routeImage = document.querySelector('.excursions-route__img');
 
-      let interactiveMapModal = document.querySelector('.interactive-map');
+      let interactiveMapModal = document.querySelectorAll('.interactive-map');
       let interactiveMapButtons = document.querySelectorAll('.js-interactive-map');
-      let interactiveMapClose = document.querySelector('.interactive-map__close-button');
+      let interactiveMapClose = document.querySelectorAll('.interactive-map__close-button');
 
 
       // Buy tickets
@@ -129,12 +129,16 @@
       });
 
       // Interactive Map
-      interactiveMapButtons.forEach(item => {
+      interactiveMapButtons.forEach((item, i) => {
         item.addEventListener('click', () => {
-          window.modalOpen(interactiveMapModal, 'modal__closed--open');
+          window.modalOpen(interactiveMapModal[i], 'modal__closed--open');
+
+          console.log(item.dataset.excursionMap);
         });
-        interactiveMapClose.addEventListener('click', () => {
-          window.modalClose(interactiveMapModal, 'modal__closed--open');
+        interactiveMapClose.forEach((item, i) => {
+          item.addEventListener('click', () => {
+            window.modalClose(interactiveMapModal[i], 'modal__closed--open');
+          });
         });
       });
     };
