@@ -24,7 +24,7 @@
   }
   &__link {
     border-radius: 35px;
-    color: $black;
+    color: $border-black-light-color;
     cursor: pointer;
     display: inline-block;
     font-weight: 800;
@@ -63,6 +63,7 @@
   }
   &__icon {
     &--arrow {
+      fill: $border-black-light-color;
       margin-left: 10px;
       vertical-align: center;
       pointer-events: none;

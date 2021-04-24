@@ -44,8 +44,11 @@
     top: 0;
     width: 100%;
     z-index: 2;
+    svg {
+      fill: $border-black-light-color;
+    }
     a {
-      color: $black;
+      color: $border-black-light-color;
       margin-left: 10px;
       text-decoration: none;
     }

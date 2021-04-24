@@ -122,28 +122,22 @@
         let menuClickHandler = (e) => {
           let menuItem = e.target.nextElementSibling;
           if (menuItem && menuItem.matches('.menu-sub-nav--open')) {
-            menuItem.previousElementSibling.classList.remove(
-              'menu-nav__link--active'
-            );
+            menuItem.previousElementSibling.classList.remove('menu-nav__link--active');
             menuItem.classList.remove('menu-sub-nav--open');
             menuItem.style.maxHeight = null;
             menuItem.style.height = 'auto';
             return;
           }
           if (currentTarget) {
-            if (!e.target.closest('.menu-sub-nav--open')) {
-              currentTarget.previousElementSibling.classList.remove(
-                'menu-nav__link--active'
-              );
+            if (!e.target.closest('.menu-sub-nav--open') || e.target.closest('.menu-sub-nav__link')) {
+              currentTarget.previousElementSibling.classList.remove('menu-nav__link--active');
               currentTarget.classList.remove('menu-sub-nav--open');
               currentTarget.style.maxHeight = null;
               currentTarget.style.height = 'auto';
             }
           }
           if (menuItem && menuItem.matches('.menu-sub-nav')) {
-            menuItem.previousElementSibling.classList.add(
-              'menu-nav__link--active'
-            );
+            menuItem.previousElementSibling.classList.add('menu-nav__link--active');
             menuItem.classList.add('menu-sub-nav--open');
             menuItem.style.maxHeight = menuItem.scrollHeight + 'px';
             menuItem.style.height = menuItem.scrollHeight + 'px';

@@ -18,6 +18,7 @@
     }
   }
   &__link {
+    color: $black;
     @media screen and (min-width: $desktop-size) {
       color: $black;
       cursor: pointer;

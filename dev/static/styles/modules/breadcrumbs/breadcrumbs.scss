@@ -8,10 +8,14 @@
   padding: 10px 0;
   &>* {
     &:not(:last-child) {
-      margin-right: 50px;
+      padding-right: 50px;
     }
   }
   &__item {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
     white-space: nowrap;
   }
   &__link {

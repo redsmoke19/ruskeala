@@ -137,7 +137,7 @@
   }
   &__ticket {
     border-bottom: 2px solid $border-grey-light;
-    padding-bottom: 10px;
+    padding-bottom: 25px;
     @media screen and (min-width: $desktop-size) {
       border-bottom: none;
       display: flex;
@@ -147,7 +147,7 @@
     }
   }
   &__attention {
-    padding-top: 10px;
+    padding-top: 25px;
     @media screen and (min-width: $desktop-size) {
       display: flex;
       flex-basis: 55%;
