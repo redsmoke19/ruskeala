@@ -41,3 +41,63 @@
     }
   }
 }
+
+.not-found {
+  &__title {
+    color: $orange-dark-color;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 55px;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    text-align: center;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 75px;
+      line-height: 80px;
+      margin: 0 0 60px 0;
+    }
+  }
+  &__img {
+    display: block;
+    margin: 0 auto 20px;
+    height: auto;
+    width: 80%;
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 50px;
+    }
+  }
+  &__subtitle {
+    color: #8a8a8a;
+    font-size: 22px;
+    line-height: 26px;
+    margin: 0 0 20px 0;
+    text-align: center;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 60px;
+      line-height: 73px;
+      margin: 0 0 50px 0;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 0 20px 0;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 24px;
+      line-height: 30px;
+      margin: 0 0 50px 0;
+    }
+  }
+  &__link {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 50px 0;
+    width: 100%;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 24px;
+      padding: 25px;
+      width: 30%;
+    }
+  }
+}

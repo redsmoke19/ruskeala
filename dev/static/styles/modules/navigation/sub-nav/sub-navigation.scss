@@ -6,23 +6,26 @@
     display: flex;
     @media screen and (min-width: $desktop-size) {
       justify-content: space-between;
-      margin: 0 -10px;
+      margin: 0 -5px;
       width: auto;
     }
     @media screen and (min-width: $large-size) {
-      justify-content: space-between;
+      margin: 0 -10px;
     }
   }
   &__item {
     width: auto;
     @media screen and (min-width: $desktop-size) {
       flex: 1 0 auto;
-      margin: 0 10px;
+      margin: 0 5px;
       // &:not(:last-child) { margin-right: 10px; }
       &--last {
         order: 3;
         // margin-left: 10px;
       }
+    }
+    @media screen and (min-width: $large-size) {
+      margin: 0 10px;
     }
   }
   &__icon {
@@ -52,7 +55,7 @@
     @media screen and (min-width: $large-size) {
       border-width: 2px;
       font-size: 16px;
-      padding: 10px 33px;
+      padding: 10px 31px;
     }
     &:hover {
       color: $orange-dark-color;

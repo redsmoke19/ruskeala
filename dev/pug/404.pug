@@ -1,0 +1,17 @@
+extends layout/main
+
+block variables
+	-var title = 'Страница не найдена'
+	-var pageClass = '404-page'
+
+block content
+	main(class=pageClass)
+		section.not-found
+			.container
+				h1.not-found__title Опаньки!
+				picture.not-found__picture
+					source(media="(min-width: 1280px)" srcset="static/images/content/404--desktop.png")
+					img.not-found__img(src="static/images/content/404--mobile.png" width="270" height="94" alt="404" loading="lazy")
+				p.not-found__subtitle Страница не найдена
+				p.not-found__text Такой страницы нет. Возможно она удалена или набран неверный адрес. Перейдите на главную страницу и попробуйте найти необходимую информацию там.
+				a(href="/").button.not-found__link На главную
