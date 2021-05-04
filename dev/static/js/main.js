@@ -5,12 +5,12 @@
     const interactiveMap = document.querySelector('.interactive-map__map');
     const partnersMap = document.querySelector('.office-partners__map');
     const roadMap = document.querySelector('.road__map');
-    if (globalMap) {
-      let map = new google.maps.Map(globalMap, {
-        center: {lat: 61.944186, lng: 30.581297},
-        zoom: 10,
-      });
-    };
+    // if (globalMap) {
+    //   let map = new google.maps.Map(globalMap, {
+    //     center: {lat: 61.944186, lng: 30.581297},
+    //     zoom: 10,
+    //   });
+    // };
     // if (interactiveMap) {
     //   let exmap = new google.maps.Map(interactiveMap, {
     //     center: {lat: 61.944186, lng: 30.581297},
@@ -50,11 +50,6 @@
         });
       };
       getFixedHeader();
-
-      // Anchor Smooth
-      // const getAnchorSmooth = () => {
-
-      // }
 
       // Sandwich
       const sandwichToggle = function () {
@@ -107,12 +102,28 @@
 
         buyTicketButtons.forEach((item) => {
           item.addEventListener('click', () => {
-            modalOpen(buyTicketModal, 'enter-ticket--open');
+            window.modalOpen(buyTicketModal, 'enter-ticket--open');
           });
         });
         buyTicketModalClose.addEventListener('click', () => {
-          modalClose(buyTicketModal, 'enter-ticket--open');
+          window.modalClose(buyTicketModal, 'enter-ticket--open');
         });
+
+        // Interective Map
+        // let interactiveMapModal = document.querySelector('.interactive-map');
+        // let interactiveMapButtons = document.querySelectorAll('.js-interactive-map');
+        // let interactiveMapClose = document.querySelectorAll('.interactive-map__close-button');
+
+        // interactiveMapButtons.forEach((item) => {
+        //   item.addEventListener('click', () => {
+        //     window.modalOpen(interactiveMapModal, 'modal__closed--open');
+        //   });
+        //   interactiveMapClose.forEach((item) => {
+        //     item.addEventListener('click', () => {
+        //       window.modalClose(interactiveMapModal, 'modal__closed--open');
+        //     });
+        //   });
+        // });
       };
       modalToggle();
 

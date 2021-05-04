@@ -10,7 +10,6 @@
       entertainmentSliders.forEach((item, index) => {
         let buttonPrev = item.querySelector('.entertainment__slider-button--prev');
         let buttonNext = item.querySelector('.entertainment__slider-button--next');
-        console.log(buttonNext);
         let entertainmentSlid = new Swiper(entertainmentSliders[index], {
           direction: 'horizontal',
           slidesPerView: 1,

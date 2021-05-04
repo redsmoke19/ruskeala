@@ -105,3 +105,15 @@
     margin-top: 50px;
   }
 }
+.map-modal__title {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+._js-page-map, ._js-modal-map {
+  height: 100%;
+  width: 100%;
+}
+.ymaps-2-1-78-listbox__list-item_selected_yes .ymaps-2-1-78-listbox__list-item-text:before {
+  display: none;
+}

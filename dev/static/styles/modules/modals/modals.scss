@@ -3,6 +3,7 @@
     background-color: $scrollbar-color;
     bottom: 0;
     height: 0;
+    // opacity: 0;
     left: 0;
     overflow: hidden;
     pointer-events: none;
@@ -15,6 +16,7 @@
     z-index: 6;
     &--open {
       height: 100vh;
+      // opacity: 1;
       overflow: auto;
       pointer-events: all;
       transform: translate(0, 0);

@@ -62,15 +62,6 @@
       let additionallyTextPrivileges = document.querySelector('.excursions-add__text--add');
       let additionallyTextNote = document.querySelector('.excursions-add__note');
 
-      let routeModal = document.querySelector('.excursions-route');
-      let routeButtons = document.querySelectorAll('.js-route-open');
-      let routeClose = document.querySelector('.excursions-route__close');
-      let routeImage = document.querySelector('.excursions-route__img');
-
-      let interactiveMapModal = document.querySelectorAll('.interactive-map');
-      let interactiveMapButtons = document.querySelectorAll('.js-interactive-map');
-      let interactiveMapClose = document.querySelectorAll('.interactive-map__close-button');
-
 
       // Buy tickets
       buyTicketButtons.forEach(item => {
@@ -109,37 +100,6 @@
       });
       additionallyClose.addEventListener('click', () => {
         window.modalClose(additionallyModal, 'excursions-add--open');
-      });
-
-      // Route modal
-      routeButtons.forEach(item => {
-        item.addEventListener('click', () => {
-          window.modalOpen(routeModal, 'excursions-route--open', true);
-          if (!breakpoint.matches) {
-            routeImage.src = item.dataset.mobilesrc;
-            routeImage.srcset = item.dataset.mobilesrcset;
-          } else {
-            routeImage.src = item.dataset.desktopsrc;
-            routeImage.srcset = item.dataset.desktopsrcset;
-          }
-        });
-      });
-      routeClose.addEventListener('click', () => {
-        window.modalClose(routeModal, 'excursions-route--open');
-      });
-
-      // Interactive Map
-      interactiveMapButtons.forEach((item, i) => {
-        item.addEventListener('click', () => {
-          window.modalOpen(interactiveMapModal[i], 'modal__closed--open');
-
-          console.log(item.dataset.excursionMap);
-        });
-        interactiveMapClose.forEach((item, i) => {
-          item.addEventListener('click', () => {
-            window.modalClose(interactiveMapModal[i], 'modal__closed--open');
-          });
-        });
       });
     };
     modalToggle();

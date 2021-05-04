@@ -18,6 +18,7 @@ html(lang="ru-RU")
 		link(rel="preload" href="static/fonts/montserrat/montserratregular/Montserrat-Regular.woff2" as="font" crossorigin="anonymous")
 		link(rel="preload" href="static/fonts/montserrat/montserratsemibold/Montserrat-SemiBold.woff2" as="font" crossorigin="anonymous")
 		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+		script(src="https://api-maps.yandex.ru/2.1/?apikey=be9704ec-98d7-4471-a8a3-95caaa54ee8e&lang=ru_RU" type="text/javascript")
 	body
 		.wrapper
 			include ../modules/header/header
@@ -26,13 +27,13 @@ html(lang="ru-RU")
 			include ../modules/footer/footer
 		.modal
 			include ../modules/modals/enterTicket/enterTicket
+			include ../modules/modals/interactive-map/interactive-map
 			if pageClass === 'excursions-page'
 				include ../modules/modals/excursionsTicket/excursions-ticket
 				include ../modules/modals/excursions/excursions-additionally
-				include ../modules/modals/excursions/excursions-route
-				include ../modules/modals/interactive-map/interactive-map-canyon
-				include ../modules/modals/interactive-map/interactive-map-road
-				include ../modules/modals/interactive-map/interactive-map-under
+				include ../modules/modals/excursions/excursions-route--canyon
+				include ../modules/modals/excursions/excursions-route--road
+				include ../modules/modals/excursions/excursions-route--under
 			if pageClass === "entertainment-page"
 				include ../modules/modals/entertainment-read-more/entertainment-read-more
 				include ../modules/modals/excursions/excursions-additionally
@@ -53,7 +54,8 @@ html(lang="ru-RU")
 		block script
 			script(src="static/js/libs.js" defer)
 			script(src="static/js/main.js" defer)
-			script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsImbyX3XiB5qJb02e3lp2ELmM6UHKda4&callback=initMap&libraries=&v=weekly" defer)
+			script(src="static/js/map.js" defer)
+			//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsImbyX3XiB5qJb02e3lp2ELmM6UHKda4&callback=initMap&libraries=&v=weekly" defer)
 			if pageClass === 'index-page'
 				script(src="static/js/index.js" defer)
 			if pageClass === 'excursions-page'
