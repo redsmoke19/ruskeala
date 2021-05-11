@@ -300,6 +300,18 @@ const init = function () {
           {
             preset: 'islands#darkOrangeStretchyIcon',
           });
+          var endRoat = new ymaps.GeoObject({
+            geometry: {
+              type: "Point",
+              coordinates: [61.944852, 30.580601]
+            },
+            properties: {
+              iconContent: 'Конец маршрута "Подземная Рускеала"',
+            },
+          },
+          {
+            preset: 'islands#darkOrangeStretchyIcon',
+          });
           var myPolyline = new ymaps.Polyline([
             [61.947258, 30.576327],
             [61.947382, 30.576943],
@@ -344,6 +356,7 @@ const init = function () {
           });
           routeUnder.geoObjects
             .add(beginRoat)
+            .add(endRoat)
             .add(myPolyline);
         }
         setTimeout(mapUnderUpdate, 1000);
@@ -361,52 +374,52 @@ const init = function () {
 
   let myCollection = new ymaps.GeoObjectCollection();
   let myPoints = [
-    { coords: [61.949382, 30.583694], text: 'Касса', number: '1', link: '' },
-    { coords: [61.951547, 30.573714], text: 'Касса', number: '1', link: '' },
-    { coords: [61.944516, 30.581208], text: 'Билетный терминал', number: '1A', link: '' },
-    { coords: [61.947236, 30.576168], text: 'Билетный терминал', number: '1A', link: '' },
-    { coords: [61.951433, 30.572922], text: 'Камеры хранения', number: '2', link: '' },
-    { coords: [61.949382, 30.583624], text: 'Камеры хранения', number: '2', link: '' },
-    { coords: [61.948111, 30.585434], text: 'Туалет', number: '3', link: '' },
-    { coords: [61.944117, 30.582034], text: 'Туалет', number: '3', link: '' },
-    { coords: [61.944148, 30.579814], text: 'Туалет', number: '3', link: '' },
-    { coords: [61.951409, 30.572356], text: 'Туалет', number: '3', link: '' },
-    { coords: [61.945538, 30.580670], text: 'Обзорная площадка', number: '4', link: '' },
-    { coords: [61.946433, 30.580756], text: 'Обзорная площадка', number: '4', link: '' },
-    { coords: [61.946784, 30.580611], text: 'Обзорная площадка', number: '4', link: '' },
-    { coords: [61.948130, 30.580594], text: 'Обзорная площадка', number: '4', link: '' },
-    { coords: [61.947315, 30.578944], text: 'Обзорная площадка', number: '4', link: '' },
-    { coords: [61.944142, 30.581347], text: 'Сувенирный магазин', number: '5', link: 'ruskeala.ru/cafe#souvenirs' },
-    { coords: [61.944301, 30.581772], text: 'Сувенирный магазин', number: '5', link: 'ruskeala.ru/cafe#souvenirs' },
-    { coords: [61.949539, 30.583964], text: 'Сувенирный магазин', number: '5', link: 'ruskeala.ru/cafe#souvenirs' },
-    { coords: [61.948595, 30.584804], text: 'Парковка', number: '6', link: '' },
-    { coords: [61.951592, 30.572590], text: 'Ж/Д Платформа', number: '7', link: '' },
-    { coords: [61.951395, 30.572779], text: 'Ж/Д Касса', number: '8', link: '' },
-    { coords: [61.951378, 30.574056], text: 'Вход в парк', number: '9', link: '' },
-    { coords: [61.949018, 30.582885], text: 'Вход в парк', number: '9', link: '' },
-    { coords: [61.944237, 30.579593], text: 'Детская площадка', number: '10', link: '' },
-    { coords: [61.949704, 30.573535], text: 'Итальянский карьер', number: '11', link: '' },
-    { coords: [61.948785, 30.577940], text: 'Подземное озеро', number: '12', link: '' },
-    { coords: [61.948249, 30.581249], text: 'Шахта №2', number: '13', link: '' },
-    { coords: [61.945907, 30.582366], text: 'Гора Белая', number: '14', link: '' },
-    { coords: [61.944438, 30.581542], text: 'Кафе Колмас Бургерс', number: '15', link: 'ruskeala.ru/cafe#kolmas-burgers' },
-    { coords: [61.944303, 30.581074], text: 'Кафе Лето', number: '16', link: 'ruskeala.ru/cafe#leto' },
-    { coords: [61.949521, 30.583866], text: 'Кафе Лето', number: '16', link: 'ruskeala.ru/cafe#leto' },
-    { coords: [61.944465, 30.579182], text: 'Кафе Русколка', number: '17', link: 'ruskeala.ru/cafe#ruskolka' },
-    { coords: [61.951592, 30.572590], text: 'Кафе Рускеальский Экспресс', number: '18', link: 'ruskeala.ru/cafe#ruskeala-express' },
-    { coords: [61.948841, 30.580898], text: 'Место сбора групп наземных экскурсий', number: '19', link: 'ruskeala.ru/excursions#basic' },
-    { coords: [61.947258, 30.576327], text: 'Подземная Рускеала', number: '20', link: 'ruskeala.ru/excursions#underground' },
-    { coords: [61.944852, 30.580601], text: 'Водная прогулка', number: '21', link: 'ruskeala.ru/pastime#boat-trip' },
-    { coords: [61.945574, 30.577725], text: 'Детская водная прогулка', number: '22', link: 'ruskeala.ru/pastime#children\'s-boat-trip' },
-    { coords: [61.948472, 30.579306], text: 'Троллей', number: '23', link: 'ruskeala.ru/pastime#zip-line' },
-    { coords: [61.945410, 30.579552], text: 'Тарзанка', number: '24', link: 'ruskeala.ru/pastime#rope-jump' },
-    { coords: [61.944651, 30.580011], text: 'Конные прогулки', number: '25', link: 'ruskeala.ru/pastime#horse-carriage' },
-    { coords: [61.949512, 30.585076], text: 'Квадроциклы / Снегоходы', number: '26', link: 'ruskeala.ru/pastime#atvs' },
-    { coords: [61.948869, 30.573965], text: 'Калевала', number: '27', link: 'ruskeala.ru/pastime#kalevala' },
-    { coords: [61.947905, 30.573343], text: 'Экспозиция Обитель Ангелов', number: '28', link: 'ruskeala.ru/pastime#home-of-angels' },
-    { coords: [61.945131, 30.579098], text: 'Дайвинг', number: '29', link: 'ruskeala.ru/pastime#diving' },
-    { coords: [61.944407, 30.580560], text: 'Трансферы', number: '30', link: 'ruskeala.ru/pastime#transfer-achinkoski' },
-    { coords: [61.951432, 30.573021], text: 'Медицинский пункт', number: '+', link: '' },
+    { coords: [61.949382, 30.583694], text: 'Касса', number: '1', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFOxQ-C' },
+    { coords: [61.951547, 30.573714], text: 'Касса', number: '1', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFSqjLD' },
+    { coords: [61.944516, 30.581208], text: 'Билетный терминал', number: '1A', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFSurHB' },
+    { coords: [61.947236, 30.576168], text: 'Билетный терминал', number: '1A', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFSRs~B' },
+    { coords: [61.951433, 30.572922], text: 'Камеры хранения', number: '2', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFSVT8D' },
+    { coords: [61.949382, 30.583624], text: 'Камеры хранения', number: '2', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFSbjLB' },
+    { coords: [61.948111, 30.585434], text: 'Туалет', number: '3', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFSf0WB' },
+    { coords: [61.944117, 30.582034], text: 'Туалет', number: '3', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFSSSgC' },
+    { coords: [61.944148, 30.579814], text: 'Туалет', number: '3', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFSWW9C' },
+    { coords: [61.951409, 30.572356], text: 'Туалет', number: '3', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFScjgD' },
+    { coords: [61.945538, 30.580670], text: 'Обзорная площадка', number: '4', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFSwC1C' },
+    { coords: [61.946433, 30.580756], text: 'Обзорная площадка', number: '4', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFSD9oC' },
+    { coords: [61.946784, 30.580611], text: 'Обзорная площадка', number: '4', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFSHioC' },
+    { coords: [61.948130, 30.580594], text: 'Обзорная площадка', number: '4', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFSHThA' },
+    { coords: [61.947315, 30.578944], text: 'Обзорная площадка', number: '4', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFSTjdC' },
+    { coords: [61.944142, 30.581347], text: 'Сувенирный магазин', number: '5', link: '/cafe#souvenirs', linkText: 'Подробнее', mapLink: 'https://yandex.ru/maps/-/CCUYFSX69D' },
+    { coords: [61.944301, 30.581772], text: 'Сувенирный магазин', number: '5', link: '/cafe#souvenirs', linkText: 'Подробнее', mapLink: 'https://yandex.ru/maps/-/CCUYFShQpB' },
+    { coords: [61.949539, 30.583964], text: 'Сувенирный магазин', number: '5', link: '/cafe#souvenirs', linkText: 'Подробнее', mapLink: 'https://yandex.ru/maps/-/CCUYFShoDC' },
+    { coords: [61.948595, 30.584804], text: 'Парковка', number: '6', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFSt8TD' },
+    { coords: [61.951592, 30.572590], text: 'Ж/Д Платформа', number: '7', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFSxvcC' },
+    { coords: [61.951395, 30.572779], text: 'Ж/Д Касса', number: '8', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFWAVhC' },
+    { coords: [61.951378, 30.574056], text: 'Вход в парк', number: '9', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFWEATC' },
+    { coords: [61.949018, 30.582885], text: 'Вход в парк', number: '9', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFWQ4hC' },
+    { coords: [61.944237, 30.579593], text: 'Детская площадка', number: '10', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFWUA0D' },
+    { coords: [61.949704, 30.573535], text: 'Итальянский карьер', number: '11', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFWefLA' },
+    { coords: [61.948785, 30.577940], text: 'Подземное озеро', number: '12', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFWqyGB' },
+    { coords: [61.948249, 30.581249], text: 'Шахта №2', number: '13', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFWqwOB' },
+    { coords: [61.945907, 30.582366], text: 'Гора Белая', number: '14', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFWuu2B' },
+    { coords: [61.944438, 30.581542], text: 'Кафе Колмас Бургерс', number: '15', link: '/cafe#kolmas-burgers', linkText: 'Подробнее', mapLink: 'https://yandex.ru/maps/-/CCUYFWuT2D' },
+    { coords: [61.944303, 30.581074], text: 'Кафе Лето', number: '16', link: '/cafe#leto', linkText: 'Подробнее', mapLink: 'https://yandex.ru/maps/-/CCUYFWB3dA' },
+    { coords: [61.949521, 30.583866], text: 'Кафе Лето', number: '16', link: '/cafe#leto', linkText: 'Подробнее', mapLink: 'https://yandex.ru/maps/-/CCUYFWRgdB' },
+    { coords: [61.944465, 30.579182], text: 'Кафе Русколка', number: '17', link: '/cafe#ruskolka', linkText: 'Подробнее', mapLink: 'https://yandex.ru/maps/-/CCUYFWVNhD' },
+    { coords: [61.951592, 30.572590], text: 'Кафе Рускеальский Экспресс', number: '18', link: '/cafe#press', linkText: 'Подробнее', mapLink: 'https://yandex.ru/maps/-/CCUYFWV3kD' },
+    { coords: [61.948841, 30.580898], text: 'Место сбора групп наземных экскурсий', number: '19', link: '/excursions#basic', linkText: 'Подробнее', mapLink: 'https://yandex.ru/maps/-/CCUYFWfsOD' },
+    { coords: [61.947258, 30.576327], text: 'Подземная Рускеала', number: '20', link: '/excursions#underground', linkText: 'Подробнее', mapLink: 'https://yandex.ru/maps/-/CCUYFWrH3C' },
+    { coords: [61.944852, 30.580601], text: 'Водная прогулка', number: '21', link: '/pastime#boat-trip', linkText: 'Подробнее', mapLink: 'https://yandex.ru/maps/-/CCUYFWCADB' },
+    { coords: [61.945574, 30.577725], text: 'Детская водная прогулка', number: '22', link: '/pastime#children\'s-boat-trip', linkText: 'Подробнее', mapLink: 'https://yandex.ru/maps/-/CCUYFWClOB' },
+    { coords: [61.948472, 30.579306], text: 'Троллей', number: '23', link: '/pastime#zip-line', linkText: 'Подробнее', mapLink: 'https://yandex.ru/maps/-/CCUYFWGH1B' },
+    { coords: [61.945410, 30.579552], text: 'Тарзанка', number: '24', link: '/pastime#rope-jump', linkText: 'Подробнее', mapLink: 'https://yandex.ru/maps/-/CCUYFWSsgC' },
+    { coords: [61.944651, 30.580011], text: 'Конные прогулки', number: '25', link: '/pastime#horse-carriage', linkText: 'Подробнее', mapLink: 'https://yandex.ru/maps/-/CCUYFWWJLB' },
+    { coords: [61.949512, 30.585076], text: 'Квадроциклы / Снегоходы', number: '26', link: '/pastime#atvs', linkText: 'Подробнее', mapLink: 'https://yandex.ru/maps/-/CCUYFWWLSD' },
+    { coords: [61.948869, 30.573965], text: 'Калевала', number: '27', link: '/pastime#kalevala', linkText: 'Подробнее', mapLink: 'https://yandex.ru/maps/-/CCUYFWcFGD' },
+    { coords: [61.947905, 30.573343], text: 'Экспозиция Обитель Ангелов', number: '28', link: '/pastime#home-of-angels', linkText: 'Подробнее', mapLink: 'https://yandex.ru/maps/-/CCUYFWcC9B' },
+    { coords: [61.945131, 30.579098], text: 'Дайвинг', number: '29', link: '/pastime#diving', linkText: 'Подробнее', mapLink: 'https://yandex.ru/maps/-/CCUYF0aj0B' },
+    { coords: [61.944407, 30.580560], text: 'Трансферы', number: '30', link: '/pastime#transfer-achinkoski', linkText: 'Подробнее', mapLink: 'https://yandex.ru/maps/-/CCUYF0e~~B' },
+    { coords: [61.951432, 30.573021], text: 'Медицинский пункт', number: '+', link: '', linkText: '', mapLink: 'https://yandex.ru/maps/-/CCUYFWDQTC' },
   ];
 
   for (var i = 0, l = myPoints.length; i < l; i++) {
@@ -421,8 +434,9 @@ const init = function () {
             '</p>',
           ].join(''),
           balloonContentBody: [
-            '<p>',
-            `<a href="${point.link}">${point.link}</a>`,
+            '<p class="map-modal__wrapper">',
+            `<a href="${point.link}" class="map-modal__button ${point.linkText ? '' : 'map-modal__button--none'}">${point.linkText}</a>`,
+            `<a href="${point.mapLink}" class="map-modal__button" target="_blank">Проложить маршрут</a>`,
             '</p>',
           ].join(''),
           balloonContentFooter: 'Горный парк «Рускеала»',
@@ -455,7 +469,7 @@ const init = function () {
       content: 'Выберете интересующий Вас объект',
     },
     items: [
-      new ymaps.control.ListBoxItem('1. Кассы'),
+      new ymaps.control.ListBoxItem('1. Кассы',),
       new ymaps.control.ListBoxItem('1. Кассы'),
       new ymaps.control.ListBoxItem('1A. Билетный терминал'),
       new ymaps.control.ListBoxItem('1A. Билетный терминал'),
@@ -503,17 +517,23 @@ const init = function () {
       new ymaps.control.ListBoxItem('+. Медицинский пункт'),
     ],
   });
+  
   for (let fff = 0; fff < myPoints.length; fff++) {
     cityList.get(fff).events.add('click', function () {
       interMap.setCenter(myPoints[fff].coords);
       interMap.setZoom(18);
+      cityList.collapse();
     });
   }
   interMap.controls.add(cityList, { floatIndex: 0 });
 
   // Interective Map
   const mapUpdate = function () {
+    const breakpointDesktop = window.matchMedia('(min-width: 1280px)');
     interMap.container.fitToViewport();
+    if (breakpointDesktop.matches === true) {
+      cityList.expand();
+    }
   };
   let interactiveMapModal = document.querySelector('.interactive-map');
   let interactiveMapButtons = document.querySelectorAll('.js-interactive-map');

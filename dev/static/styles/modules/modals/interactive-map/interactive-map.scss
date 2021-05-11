@@ -3,14 +3,14 @@
     background-color: transparent;
     font-size: 0;
     line-height: 0;
-    left: 20px;
     padding: 7px;
-    top: 20px;
+    top: 65px;
+    right: 20px;
     z-index: 10;
     @media screen and (min-width: $desktop-size) {
       left: auto;
       padding: 16px;
-      right: 80px;
+      right: 20px;
       top: 90px;
       svg {
         height: 32px;

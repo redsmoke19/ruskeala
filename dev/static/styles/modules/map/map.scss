@@ -117,3 +117,27 @@
 .ymaps-2-1-78-listbox__list-item_selected_yes .ymaps-2-1-78-listbox__list-item-text:before {
   display: none;
 }
+
+.map-modal {
+  &__wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__button {
+    background-color: $orange-dark-color;
+    border-radius: 20px;
+    color: $white;
+    display: block;
+    font-weight: 600;
+    margin: 10px 0;
+    padding: 5px 15px;
+    text-align: center;
+    &:not(:last-child) {
+      margin: 0 15px 0 0;
+    }
+    &--none {
+      display: none;
+    }
+  }
+}
